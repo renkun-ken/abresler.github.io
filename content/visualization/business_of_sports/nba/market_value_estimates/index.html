@@ -1,0 +1,359 @@
+
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='http://www.aragorn.org/scripts/morris.css'>
+    
+    <script src='http://www.aragorn.org/scripts/jquery-1.8.2.min.js' type='text/javascript'></script>
+    <script src='http://www.aragorn.org/scripts/raphael-2.1.0.min.js' type='text/javascript'></script>
+    <script src='http://www.aragorn.org/scripts/morris.min.js' type='text/javascript'></script>
+    <style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>  
+
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 450px;
+    }  
+    </style>
+    <meta name="description" content="Exploring NBA Major Market Estimated Values 1991-92 to 2013-14" />
+<link rel="canonical" href="http://aragorn.org/visualization/business_of_sports/nba/major_market_value_estimates" />
+<meta property="og:description" content="Exploring NBA Major Market Estimated Values 1992 to 2014" />
+<meta property="og:image" content="http://aragorn.org/visualization/business_of_sports/nba/major_market_value_estimates/screen.png" />
+<meta property="og:site_name" content="Aragorn" />
+<meta property="og:title" content="http://aragorn.org/visualization/business_of_sports/nba/major_market_value_estimates" />
+<meta property="og:type" content="article" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="http://aragorn.org/visualization/business_of_sports/nba/major_market_value_estimates" />
+        <meta name="twitter:title" content="Exploring NBA Major Market Estimated Values 1992 to 2014" />
+        <meta name="twitter:description" content="Exploring NBA Major Market Estimated Values 1992 to 2014" />
+        <meta name="twitter:image" content="http://aragorn.org/visualization/business_of_sports/nba/major_market_value_estimates/screen.png" />
+        <meta name="twitter:site" content="Aragorn" />
+     <!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  <center>
+    <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 650px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: 0.25px"><strong>Exploring Major Market Estimated<img src="http://upload.wikimedia.org/wikipedia/fr/8/87/NBA_Logo.svg" height="50" width="60" alt="nba"> Franchise Values, 1991-92 to 2013-2014</strong><br><small><font color = 'black'>Data Collected from <a href="http://http://en.wikipedia.org/wiki/Financial_World/" target="_blank">Financial World Magazine</a> [1992-1998] and <a href="http://www.forbes.com/nba-valuations/" target="_blank">Forbes</a> [1998-2014]</font></small></div></center>
+  </head>
+  <body >
+    
+    <div id = 'nba_values' class = 'rChart morris'></div>    
+    <script type='text/javascript'>
+    var chartParams = {
+ "element": "nba_values",
+"width":            800,
+"height":            450,
+"xkey": "year",
+"ykeys": [
+ "nbaMean",
+"nbaMin",
+"Knicks",
+"Lakers",
+"Celtics",
+"Nets",
+"Clippers" 
+],
+"data": [
+ {
+ "year": 1991,
+"nbaTotal":           1900,
+"nbaMean": 70.37,
+"nbaMax":            200,
+"nbaMin":           33.3,
+"Celtics":            180,
+"Clippers":           42.9,
+"Knicks":            100,
+"Lakers":            200,
+"Nets":           42.6 
+},
+{
+ "year": 1992,
+"nbaTotal":           1886,
+"nbaMean": 69.85,
+"nbaMax":            150,
+"nbaMin":             43,
+"Celtics":            110,
+"Clippers":             54,
+"Knicks":             83,
+"Lakers":            150,
+"Nets":             54 
+},
+{
+ "year": 1994,
+"nbaTotal":           2662,
+"nbaMean": 98.59,
+"nbaMax":            168,
+"nbaMin":             67,
+"Celtics":            117,
+"Clippers":             83,
+"Knicks":            136,
+"Lakers":            168,
+"Nets":             79 
+},
+{
+ "year": 1995,
+"nbaTotal":           3054,
+"nbaMean": 113.11,
+"nbaMax":            180,
+"nbaMin":             77,
+"Celtics":            127,
+"Clippers":             87,
+"Knicks":            173,
+"Lakers":            169,
+"Nets":             92 
+},
+{
+ "year": 1996,
+"nbaTotal":           3421,
+"nbaMean": 126.70,
+"nbaMax":            205,
+"nbaMin":             88,
+"Celtics":            134,
+"Clippers":             88,
+"Knicks":            205,
+"Lakers":            171,
+"Nets":            108 
+},
+{
+ "year": 1997,
+"nbaTotal":           4302,
+"nbaMean": 148.35,
+"nbaMax":            250,
+"nbaMin":             95,
+"Celtics":            155,
+"Clippers":             95,
+"Knicks":            250,
+"Lakers":            211,
+"Nets":            137 
+},
+{
+ "year": 1999,
+"nbaTotal":        4848.49,
+"nbaMean": 167.19,
+"nbaMax":         303.96,
+"nbaMin":          94.07,
+"Celtics":         176.42,
+"Clippers":         101.98,
+"Knicks":         295.58,
+"Lakers":         268.57,
+"Nets":          156.6 
+},
+{
+ "year": 2000,
+"nbaTotal":           5309,
+"nbaMean": 183.07,
+"nbaMax":            334,
+"nbaMin":            103,
+"Celtics":            187,
+"Clippers":            103,
+"Knicks":            334,
+"Lakers":            282,
+"Nets":            166 
+},
+{
+ "year": 2001,
+"nbaTotal":           6014,
+"nbaMean": 207.38,
+"nbaMax":            395,
+"nbaMin":            118,
+"Celtics":            212,
+"Clippers":            154,
+"Knicks":            395,
+"Lakers":            360,
+"Nets":            179 
+},
+{
+ "year": 2002,
+"nbaTotal":           6465,
+"nbaMean": 222.93,
+"nbaMax":            403,
+"nbaMin":            135,
+"Celtics":            218,
+"Clippers":            170,
+"Knicks":            392,
+"Lakers":            403,
+"Nets":            169 
+},
+{
+ "year": 2003,
+"nbaTotal":           7187,
+"nbaMean": 247.83,
+"nbaMax":            426,
+"nbaMin":            168,
+"Celtics":            274,
+"Clippers":            205,
+"Knicks":            398,
+"Lakers":            426,
+"Nets":            218 
+},
+{
+ "year": 2004,
+"nbaTotal":           7672,
+"nbaMean": 264.55,
+"nbaMax":            447,
+"nbaMin":            174,
+"Celtics":            290,
+"Clippers":            208,
+"Knicks":            401,
+"Lakers":            447,
+"Nets":            244 
+},
+{
+ "year": 2005,
+"nbaTotal":           8750,
+"nbaMean":  301.72,
+"nbaMax":            510,
+"nbaMin":            199,
+"Celtics":            334,
+"Clippers":            224,
+"Knicks":            494,
+"Lakers":            510,
+"Nets":            296 
+},
+{
+ "year": 2006,
+"nbaTotal":          10596,
+"nbaMean":          353.2,
+"nbaMax":            592,
+"nbaMin":            230,
+"Celtics":            367,
+"Clippers":            285,
+"Knicks":            592,
+"Lakers":            568,
+"Nets":            325 
+},
+{
+ "year": 2007,
+"nbaTotal":          11174,
+"nbaMean": 372.47,
+"nbaMax":            608,
+"nbaMin":            253,
+"Celtics":            391,
+"Clippers":            294,
+"Knicks":            608,
+"Lakers":            560,
+"Nets":            338 
+},
+{
+ "year": 2008,
+"nbaTotal":          11384,
+"nbaMean": 379.47,
+"nbaMax":            613,
+"nbaMin":            278,
+"Celtics":            447,
+"Clippers":            297,
+"Knicks":            613,
+"Lakers":            584,
+"Nets":            295 
+},
+{
+ "year": 2009,
+"nbaTotal":          11010,
+"nbaMean":            367,
+"nbaMax":            607,
+"nbaMin":            254,
+"Celtics":            433,
+"Clippers":            295,
+"Knicks":            586,
+"Lakers":            607,
+"Nets":            269 
+},
+{
+ "year": 2010,
+"nbaTotal":          11063,
+"nbaMean": 368.77,
+"nbaMax":            655,
+"nbaMin":            258,
+"Celtics":            452,
+"Clippers":            305,
+"Knicks":            655,
+"Lakers":            643,
+"Nets":            312 
+},
+{
+ "year": 2011,
+"nbaTotal":          11776,
+"nbaMean": 392.53,
+"nbaMax":            900,
+"nbaMin":            268,
+"Celtics":            482,
+"Clippers":            324,
+"Knicks":            780,
+"Lakers":            900,
+"Nets":            357 
+},
+{
+ "year": 2012,
+"nbaTotal":          15271,
+"nbaMean": 509.03,
+"nbaMax":           1100,
+"nbaMin":            312,
+"Celtics":            730,
+"Clippers":            430,
+"Knicks":           1100,
+"Lakers":           1000,
+"Nets":            530 
+},
+{
+ "year": 2013,
+"nbaTotal":          19029,
+"nbaMean":          634.3,
+"nbaMax":           1400,
+"nbaMin":            405,
+"Celtics":            875,
+"Clippers":            575,
+"Knicks":           1400,
+"Lakers":           1350,
+"Nets":            780 
+} 
+],
+"labels": [ "NBA Mean Team Value", "NBA Minimum Team Value", "Knicks", "Lakers", "Celtics", "Nets", "Clippers" ],
+"parseTime": false,
+"lineColors": [ "#FFCC00", "#FF0000", "#FF7518", "#4A2583", "#009E60", "#000000", "#146AA2" ],
+"pointSize":              1,
+"lineWidth":              3,
+"hideHover": "auto",
+"smooth": "true",
+"gridTextSize":             10,
+"gridTextColor": "black",
+"ymin":             0,
+"xLabels": "year",
+"id": "nba_values"
+},
+      chartType = "Line"
+    new Morris[chartType](chartParams)
+</script>
+    
+    <script></script>    
+  </body>
+<center><div style="display:table;width:320px;height:10px;font-size:12px" class='gray'>
+  <a href="http://twitter.com/abresler" target="_blank"><strong>Visualized and Analyzed by Alex Bresler</strong></a><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div></center>
+</html>
+</html>

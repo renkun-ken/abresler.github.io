@@ -1,0 +1,3182 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <title>Project Atlantic</title>
+  <head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/cosmo/bootstrap.min.css">
+     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" >
+    <link rel='stylesheet' href="http://getbootstrap.com/2.3.2/assets/js/google-code-prettify/prettify.css">
+    <link rel='stylesheet' href="http://aozora.github.io/bootplus/assets/css/docs.css">
+    <link rel='stylesheet' href='http://nvd3.org/src/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v2.min.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/nv.d3.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 140%;
+      height: 425px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+                <!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+  </head>
+  <body ng-app>
+      <center>
+       
+      <h2>Project Atlantic, Estimated Recapitalization Valuations <b>EMPOWERED by <a href="http://aragorn.org/"><img src="http://aragorn.org/img/aragorn.png" height="26" width="137" alt="aragorn"></a></b></h2>
+    </center>
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='span3'>
+      <form class='well'>
+        <label><b>Select  y :</b></label>
+    		<select ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+    		</select><br>
+        <label><b>Select  x :</b></label>
+    		<select ng-model="opts.x" 
+          ng-options="ctl for ctl in controls.x.values">   
+    		</select><br>
+      </form>
+    </div>
+    <div class='span8'>
+      <div class="bs-docs-example">
+        <div id='chart11bf5d7501bb' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart11bf5d7501bb",
+"width":    700,
+"height":    400,
+"x": "gross_cash_out",
+"y": "equity_per_unit",
+"type": "multiBarChart",
+"id": "chart11bf5d7501bb" 
+}
+  $scope.data = [
+ {
+ "equity_per_unit":             25,
+"equity_value_millions":            160,
+"fcrc_partners_equity":             48,
+"greenland_equity":            112,
+"gross_cash_out":        -485.79,
+"gross_multiple":           0.19 
+},
+{
+ "equity_per_unit":             26,
+"equity_value_millions":          166.4,
+"fcrc_partners_equity":          49.92,
+"greenland_equity":         116.48,
+"gross_cash_out":        -481.31,
+"gross_multiple":           0.19 
+},
+{
+ "equity_per_unit":             27,
+"equity_value_millions":          172.8,
+"fcrc_partners_equity":          51.84,
+"greenland_equity":         120.96,
+"gross_cash_out":        -476.83,
+"gross_multiple":            0.2 
+},
+{
+ "equity_per_unit":             28,
+"equity_value_millions":          179.2,
+"fcrc_partners_equity":          53.76,
+"greenland_equity":         125.44,
+"gross_cash_out":        -472.35,
+"gross_multiple":           0.21 
+},
+{
+ "equity_per_unit":             29,
+"equity_value_millions":          185.6,
+"fcrc_partners_equity":          55.68,
+"greenland_equity":         129.92,
+"gross_cash_out":        -467.87,
+"gross_multiple":           0.22 
+},
+{
+ "equity_per_unit":             30,
+"equity_value_millions":            192,
+"fcrc_partners_equity":           57.6,
+"greenland_equity":          134.4,
+"gross_cash_out":        -463.39,
+"gross_multiple":           0.22 
+},
+{
+ "equity_per_unit":             31,
+"equity_value_millions":          198.4,
+"fcrc_partners_equity":          59.52,
+"greenland_equity":         138.88,
+"gross_cash_out":        -458.91,
+"gross_multiple":           0.23 
+},
+{
+ "equity_per_unit":             32,
+"equity_value_millions":          204.8,
+"fcrc_partners_equity":          61.44,
+"greenland_equity":         143.36,
+"gross_cash_out":        -454.43,
+"gross_multiple":           0.24 
+},
+{
+ "equity_per_unit":             33,
+"equity_value_millions":          211.2,
+"fcrc_partners_equity":          63.36,
+"greenland_equity":         147.84,
+"gross_cash_out":        -449.95,
+"gross_multiple":           0.25 
+},
+{
+ "equity_per_unit":             34,
+"equity_value_millions":          217.6,
+"fcrc_partners_equity":          65.28,
+"greenland_equity":         152.32,
+"gross_cash_out":        -445.47,
+"gross_multiple":           0.25 
+},
+{
+ "equity_per_unit":             35,
+"equity_value_millions":            224,
+"fcrc_partners_equity":           67.2,
+"greenland_equity":          156.8,
+"gross_cash_out":        -440.99,
+"gross_multiple":           0.26 
+},
+{
+ "equity_per_unit":             36,
+"equity_value_millions":          230.4,
+"fcrc_partners_equity":          69.12,
+"greenland_equity":         161.28,
+"gross_cash_out":        -436.51,
+"gross_multiple":           0.27 
+},
+{
+ "equity_per_unit":             37,
+"equity_value_millions":          236.8,
+"fcrc_partners_equity":          71.04,
+"greenland_equity":         165.76,
+"gross_cash_out":        -432.03,
+"gross_multiple":           0.28 
+},
+{
+ "equity_per_unit":             38,
+"equity_value_millions":          243.2,
+"fcrc_partners_equity":          72.96,
+"greenland_equity":         170.24,
+"gross_cash_out":        -427.55,
+"gross_multiple":           0.28 
+},
+{
+ "equity_per_unit":             39,
+"equity_value_millions":          249.6,
+"fcrc_partners_equity":          74.88,
+"greenland_equity":         174.72,
+"gross_cash_out":        -423.07,
+"gross_multiple":           0.29 
+},
+{
+ "equity_per_unit":             40,
+"equity_value_millions":            256,
+"fcrc_partners_equity":           76.8,
+"greenland_equity":          179.2,
+"gross_cash_out":        -418.59,
+"gross_multiple":            0.3 
+},
+{
+ "equity_per_unit":             41,
+"equity_value_millions":          262.4,
+"fcrc_partners_equity":          78.72,
+"greenland_equity":         183.68,
+"gross_cash_out":        -414.11,
+"gross_multiple":           0.31 
+},
+{
+ "equity_per_unit":             42,
+"equity_value_millions":          268.8,
+"fcrc_partners_equity":          80.64,
+"greenland_equity":         188.16,
+"gross_cash_out":        -409.63,
+"gross_multiple":           0.31 
+},
+{
+ "equity_per_unit":             43,
+"equity_value_millions":          275.2,
+"fcrc_partners_equity":          82.56,
+"greenland_equity":         192.64,
+"gross_cash_out":        -405.15,
+"gross_multiple":           0.32 
+},
+{
+ "equity_per_unit":             44,
+"equity_value_millions":          281.6,
+"fcrc_partners_equity":          84.48,
+"greenland_equity":         197.12,
+"gross_cash_out":        -400.67,
+"gross_multiple":           0.33 
+},
+{
+ "equity_per_unit":             45,
+"equity_value_millions":            288,
+"fcrc_partners_equity":           86.4,
+"greenland_equity":          201.6,
+"gross_cash_out":        -396.19,
+"gross_multiple":           0.34 
+},
+{
+ "equity_per_unit":             46,
+"equity_value_millions":          294.4,
+"fcrc_partners_equity":          88.32,
+"greenland_equity":         206.08,
+"gross_cash_out":        -391.71,
+"gross_multiple":           0.34 
+},
+{
+ "equity_per_unit":             47,
+"equity_value_millions":          300.8,
+"fcrc_partners_equity":          90.24,
+"greenland_equity":         210.56,
+"gross_cash_out":        -387.23,
+"gross_multiple":           0.35 
+},
+{
+ "equity_per_unit":             48,
+"equity_value_millions":          307.2,
+"fcrc_partners_equity":          92.16,
+"greenland_equity":         215.04,
+"gross_cash_out":        -382.75,
+"gross_multiple":           0.36 
+},
+{
+ "equity_per_unit":             49,
+"equity_value_millions":          313.6,
+"fcrc_partners_equity":          94.08,
+"greenland_equity":         219.52,
+"gross_cash_out":        -378.27,
+"gross_multiple":           0.37 
+},
+{
+ "equity_per_unit":             50,
+"equity_value_millions":            320,
+"fcrc_partners_equity":             96,
+"greenland_equity":            224,
+"gross_cash_out":        -373.79,
+"gross_multiple":           0.37 
+},
+{
+ "equity_per_unit":             51,
+"equity_value_millions":          326.4,
+"fcrc_partners_equity":          97.92,
+"greenland_equity":         228.48,
+"gross_cash_out":        -369.31,
+"gross_multiple":           0.38 
+},
+{
+ "equity_per_unit":             52,
+"equity_value_millions":          332.8,
+"fcrc_partners_equity":          99.84,
+"greenland_equity":         232.96,
+"gross_cash_out":        -364.83,
+"gross_multiple":           0.39 
+},
+{
+ "equity_per_unit":             53,
+"equity_value_millions":          339.2,
+"fcrc_partners_equity":         101.76,
+"greenland_equity":         237.44,
+"gross_cash_out":        -360.35,
+"gross_multiple":            0.4 
+},
+{
+ "equity_per_unit":             54,
+"equity_value_millions":          345.6,
+"fcrc_partners_equity":         103.68,
+"greenland_equity":         241.92,
+"gross_cash_out":        -355.87,
+"gross_multiple":            0.4 
+},
+{
+ "equity_per_unit":             55,
+"equity_value_millions":            352,
+"fcrc_partners_equity":          105.6,
+"greenland_equity":          246.4,
+"gross_cash_out":        -351.39,
+"gross_multiple":           0.41 
+},
+{
+ "equity_per_unit":             56,
+"equity_value_millions":          358.4,
+"fcrc_partners_equity":         107.52,
+"greenland_equity":         250.88,
+"gross_cash_out":        -346.91,
+"gross_multiple":           0.42 
+},
+{
+ "equity_per_unit":             57,
+"equity_value_millions":          364.8,
+"fcrc_partners_equity":         109.44,
+"greenland_equity":         255.36,
+"gross_cash_out":        -342.43,
+"gross_multiple":           0.43 
+},
+{
+ "equity_per_unit":             58,
+"equity_value_millions":          371.2,
+"fcrc_partners_equity":         111.36,
+"greenland_equity":         259.84,
+"gross_cash_out":        -337.95,
+"gross_multiple":           0.43 
+},
+{
+ "equity_per_unit":             59,
+"equity_value_millions":          377.6,
+"fcrc_partners_equity":         113.28,
+"greenland_equity":         264.32,
+"gross_cash_out":        -333.47,
+"gross_multiple":           0.44 
+},
+{
+ "equity_per_unit":             60,
+"equity_value_millions":            384,
+"fcrc_partners_equity":          115.2,
+"greenland_equity":          268.8,
+"gross_cash_out":        -328.99,
+"gross_multiple":           0.45 
+},
+{
+ "equity_per_unit":             61,
+"equity_value_millions":          390.4,
+"fcrc_partners_equity":         117.12,
+"greenland_equity":         273.28,
+"gross_cash_out":        -324.51,
+"gross_multiple":           0.46 
+},
+{
+ "equity_per_unit":             62,
+"equity_value_millions":          396.8,
+"fcrc_partners_equity":         119.04,
+"greenland_equity":         277.76,
+"gross_cash_out":        -320.03,
+"gross_multiple":           0.46 
+},
+{
+ "equity_per_unit":             63,
+"equity_value_millions":          403.2,
+"fcrc_partners_equity":         120.96,
+"greenland_equity":         282.24,
+"gross_cash_out":        -315.55,
+"gross_multiple":           0.47 
+},
+{
+ "equity_per_unit":             64,
+"equity_value_millions":          409.6,
+"fcrc_partners_equity":         122.88,
+"greenland_equity":         286.72,
+"gross_cash_out":        -311.07,
+"gross_multiple":           0.48 
+},
+{
+ "equity_per_unit":             65,
+"equity_value_millions":            416,
+"fcrc_partners_equity":          124.8,
+"greenland_equity":          291.2,
+"gross_cash_out":        -306.59,
+"gross_multiple":           0.49 
+},
+{
+ "equity_per_unit":             66,
+"equity_value_millions":          422.4,
+"fcrc_partners_equity":         126.72,
+"greenland_equity":         295.68,
+"gross_cash_out":        -302.11,
+"gross_multiple":           0.49 
+},
+{
+ "equity_per_unit":             67,
+"equity_value_millions":          428.8,
+"fcrc_partners_equity":         128.64,
+"greenland_equity":         300.16,
+"gross_cash_out":        -297.63,
+"gross_multiple":            0.5 
+},
+{
+ "equity_per_unit":             68,
+"equity_value_millions":          435.2,
+"fcrc_partners_equity":         130.56,
+"greenland_equity":         304.64,
+"gross_cash_out":        -293.15,
+"gross_multiple":           0.51 
+},
+{
+ "equity_per_unit":             69,
+"equity_value_millions":          441.6,
+"fcrc_partners_equity":         132.48,
+"greenland_equity":         309.12,
+"gross_cash_out":        -288.67,
+"gross_multiple":           0.52 
+},
+{
+ "equity_per_unit":             70,
+"equity_value_millions":            448,
+"fcrc_partners_equity":          134.4,
+"greenland_equity":          313.6,
+"gross_cash_out":        -284.19,
+"gross_multiple":           0.52 
+},
+{
+ "equity_per_unit":             71,
+"equity_value_millions":          454.4,
+"fcrc_partners_equity":         136.32,
+"greenland_equity":         318.08,
+"gross_cash_out":        -279.71,
+"gross_multiple":           0.53 
+},
+{
+ "equity_per_unit":             72,
+"equity_value_millions":          460.8,
+"fcrc_partners_equity":         138.24,
+"greenland_equity":         322.56,
+"gross_cash_out":        -275.23,
+"gross_multiple":           0.54 
+},
+{
+ "equity_per_unit":             73,
+"equity_value_millions":          467.2,
+"fcrc_partners_equity":         140.16,
+"greenland_equity":         327.04,
+"gross_cash_out":        -270.75,
+"gross_multiple":           0.55 
+},
+{
+ "equity_per_unit":             74,
+"equity_value_millions":          473.6,
+"fcrc_partners_equity":         142.08,
+"greenland_equity":         331.52,
+"gross_cash_out":        -266.27,
+"gross_multiple":           0.55 
+},
+{
+ "equity_per_unit":             75,
+"equity_value_millions":            480,
+"fcrc_partners_equity":            144,
+"greenland_equity":            336,
+"gross_cash_out":        -261.79,
+"gross_multiple":           0.56 
+},
+{
+ "equity_per_unit":             76,
+"equity_value_millions":          486.4,
+"fcrc_partners_equity":         145.92,
+"greenland_equity":         340.48,
+"gross_cash_out":        -257.31,
+"gross_multiple":           0.57 
+},
+{
+ "equity_per_unit":             77,
+"equity_value_millions":          492.8,
+"fcrc_partners_equity":         147.84,
+"greenland_equity":         344.96,
+"gross_cash_out":        -252.83,
+"gross_multiple":           0.58 
+},
+{
+ "equity_per_unit":             78,
+"equity_value_millions":          499.2,
+"fcrc_partners_equity":         149.76,
+"greenland_equity":         349.44,
+"gross_cash_out":        -248.35,
+"gross_multiple":           0.58 
+},
+{
+ "equity_per_unit":             79,
+"equity_value_millions":          505.6,
+"fcrc_partners_equity":         151.68,
+"greenland_equity":         353.92,
+"gross_cash_out":        -243.87,
+"gross_multiple":           0.59 
+},
+{
+ "equity_per_unit":             80,
+"equity_value_millions":            512,
+"fcrc_partners_equity":          153.6,
+"greenland_equity":          358.4,
+"gross_cash_out":        -239.39,
+"gross_multiple":            0.6 
+},
+{
+ "equity_per_unit":             81,
+"equity_value_millions":          518.4,
+"fcrc_partners_equity":         155.52,
+"greenland_equity":         362.88,
+"gross_cash_out":        -234.91,
+"gross_multiple":           0.61 
+},
+{
+ "equity_per_unit":             82,
+"equity_value_millions":          524.8,
+"fcrc_partners_equity":         157.44,
+"greenland_equity":         367.36,
+"gross_cash_out":        -230.43,
+"gross_multiple":           0.61 
+},
+{
+ "equity_per_unit":             83,
+"equity_value_millions":          531.2,
+"fcrc_partners_equity":         159.36,
+"greenland_equity":         371.84,
+"gross_cash_out":        -225.95,
+"gross_multiple":           0.62 
+},
+{
+ "equity_per_unit":             84,
+"equity_value_millions":          537.6,
+"fcrc_partners_equity":         161.28,
+"greenland_equity":         376.32,
+"gross_cash_out":        -221.47,
+"gross_multiple":           0.63 
+},
+{
+ "equity_per_unit":             85,
+"equity_value_millions":            544,
+"fcrc_partners_equity":          163.2,
+"greenland_equity":          380.8,
+"gross_cash_out":        -216.99,
+"gross_multiple":           0.64 
+},
+{
+ "equity_per_unit":             86,
+"equity_value_millions":          550.4,
+"fcrc_partners_equity":         165.12,
+"greenland_equity":         385.28,
+"gross_cash_out":        -212.51,
+"gross_multiple":           0.64 
+},
+{
+ "equity_per_unit":             87,
+"equity_value_millions":          556.8,
+"fcrc_partners_equity":         167.04,
+"greenland_equity":         389.76,
+"gross_cash_out":        -208.03,
+"gross_multiple":           0.65 
+},
+{
+ "equity_per_unit":             88,
+"equity_value_millions":          563.2,
+"fcrc_partners_equity":         168.96,
+"greenland_equity":         394.24,
+"gross_cash_out":        -203.55,
+"gross_multiple":           0.66 
+},
+{
+ "equity_per_unit":             89,
+"equity_value_millions":          569.6,
+"fcrc_partners_equity":         170.88,
+"greenland_equity":         398.72,
+"gross_cash_out":        -199.07,
+"gross_multiple":           0.67 
+},
+{
+ "equity_per_unit":             90,
+"equity_value_millions":            576,
+"fcrc_partners_equity":          172.8,
+"greenland_equity":          403.2,
+"gross_cash_out":        -194.59,
+"gross_multiple":           0.67 
+},
+{
+ "equity_per_unit":             91,
+"equity_value_millions":          582.4,
+"fcrc_partners_equity":         174.72,
+"greenland_equity":         407.68,
+"gross_cash_out":        -190.11,
+"gross_multiple":           0.68 
+},
+{
+ "equity_per_unit":             92,
+"equity_value_millions":          588.8,
+"fcrc_partners_equity":         176.64,
+"greenland_equity":         412.16,
+"gross_cash_out":        -185.63,
+"gross_multiple":           0.69 
+},
+{
+ "equity_per_unit":             93,
+"equity_value_millions":          595.2,
+"fcrc_partners_equity":         178.56,
+"greenland_equity":         416.64,
+"gross_cash_out":        -181.15,
+"gross_multiple":            0.7 
+},
+{
+ "equity_per_unit":             94,
+"equity_value_millions":          601.6,
+"fcrc_partners_equity":         180.48,
+"greenland_equity":         421.12,
+"gross_cash_out":        -176.67,
+"gross_multiple":            0.7 
+},
+{
+ "equity_per_unit":             95,
+"equity_value_millions":            608,
+"fcrc_partners_equity":          182.4,
+"greenland_equity":          425.6,
+"gross_cash_out":        -172.19,
+"gross_multiple":           0.71 
+},
+{
+ "equity_per_unit":             96,
+"equity_value_millions":          614.4,
+"fcrc_partners_equity":         184.32,
+"greenland_equity":         430.08,
+"gross_cash_out":        -167.71,
+"gross_multiple":           0.72 
+},
+{
+ "equity_per_unit":             97,
+"equity_value_millions":          620.8,
+"fcrc_partners_equity":         186.24,
+"greenland_equity":         434.56,
+"gross_cash_out":        -163.23,
+"gross_multiple":           0.73 
+},
+{
+ "equity_per_unit":             98,
+"equity_value_millions":          627.2,
+"fcrc_partners_equity":         188.16,
+"greenland_equity":         439.04,
+"gross_cash_out":        -158.75,
+"gross_multiple":           0.73 
+},
+{
+ "equity_per_unit":             99,
+"equity_value_millions":          633.6,
+"fcrc_partners_equity":         190.08,
+"greenland_equity":         443.52,
+"gross_cash_out":        -154.27,
+"gross_multiple":           0.74 
+},
+{
+ "equity_per_unit":            100,
+"equity_value_millions":            640,
+"fcrc_partners_equity":            192,
+"greenland_equity":            448,
+"gross_cash_out":        -149.79,
+"gross_multiple":           0.75 
+},
+{
+ "equity_per_unit":            101,
+"equity_value_millions":          646.4,
+"fcrc_partners_equity":         193.92,
+"greenland_equity":         452.48,
+"gross_cash_out":        -145.31,
+"gross_multiple":           0.76 
+},
+{
+ "equity_per_unit":            102,
+"equity_value_millions":          652.8,
+"fcrc_partners_equity":         195.84,
+"greenland_equity":         456.96,
+"gross_cash_out":        -140.83,
+"gross_multiple":           0.76 
+},
+{
+ "equity_per_unit":            103,
+"equity_value_millions":          659.2,
+"fcrc_partners_equity":         197.76,
+"greenland_equity":         461.44,
+"gross_cash_out":        -136.35,
+"gross_multiple":           0.77 
+},
+{
+ "equity_per_unit":            104,
+"equity_value_millions":          665.6,
+"fcrc_partners_equity":         199.68,
+"greenland_equity":         465.92,
+"gross_cash_out":        -131.87,
+"gross_multiple":           0.78 
+},
+{
+ "equity_per_unit":            105,
+"equity_value_millions":            672,
+"fcrc_partners_equity":          201.6,
+"greenland_equity":          470.4,
+"gross_cash_out":        -127.39,
+"gross_multiple":           0.79 
+},
+{
+ "equity_per_unit":            106,
+"equity_value_millions":          678.4,
+"fcrc_partners_equity":         203.52,
+"greenland_equity":         474.88,
+"gross_cash_out":        -122.91,
+"gross_multiple":           0.79 
+},
+{
+ "equity_per_unit":            107,
+"equity_value_millions":          684.8,
+"fcrc_partners_equity":         205.44,
+"greenland_equity":         479.36,
+"gross_cash_out":        -118.43,
+"gross_multiple":            0.8 
+},
+{
+ "equity_per_unit":            108,
+"equity_value_millions":          691.2,
+"fcrc_partners_equity":         207.36,
+"greenland_equity":         483.84,
+"gross_cash_out":        -113.95,
+"gross_multiple":           0.81 
+},
+{
+ "equity_per_unit":            109,
+"equity_value_millions":          697.6,
+"fcrc_partners_equity":         209.28,
+"greenland_equity":         488.32,
+"gross_cash_out":        -109.47,
+"gross_multiple":           0.82 
+},
+{
+ "equity_per_unit":            110,
+"equity_value_millions":            704,
+"fcrc_partners_equity":          211.2,
+"greenland_equity":          492.8,
+"gross_cash_out":        -104.99,
+"gross_multiple":           0.82 
+},
+{
+ "equity_per_unit":            111,
+"equity_value_millions":          710.4,
+"fcrc_partners_equity":         213.12,
+"greenland_equity":         497.28,
+"gross_cash_out":        -100.51,
+"gross_multiple":           0.83 
+},
+{
+ "equity_per_unit":            112,
+"equity_value_millions":          716.8,
+"fcrc_partners_equity":         215.04,
+"greenland_equity":         501.76,
+"gross_cash_out":         -96.03,
+"gross_multiple":           0.84 
+},
+{
+ "equity_per_unit":            113,
+"equity_value_millions":          723.2,
+"fcrc_partners_equity":         216.96,
+"greenland_equity":         506.24,
+"gross_cash_out":         -91.55,
+"gross_multiple":           0.85 
+},
+{
+ "equity_per_unit":            114,
+"equity_value_millions":          729.6,
+"fcrc_partners_equity":         218.88,
+"greenland_equity":         510.72,
+"gross_cash_out":         -87.07,
+"gross_multiple":           0.85 
+},
+{
+ "equity_per_unit":            115,
+"equity_value_millions":            736,
+"fcrc_partners_equity":          220.8,
+"greenland_equity":          515.2,
+"gross_cash_out":         -82.59,
+"gross_multiple":           0.86 
+},
+{
+ "equity_per_unit":            116,
+"equity_value_millions":          742.4,
+"fcrc_partners_equity":         222.72,
+"greenland_equity":         519.68,
+"gross_cash_out":         -78.11,
+"gross_multiple":           0.87 
+},
+{
+ "equity_per_unit":            117,
+"equity_value_millions":          748.8,
+"fcrc_partners_equity":         224.64,
+"greenland_equity":         524.16,
+"gross_cash_out":         -73.63,
+"gross_multiple":           0.88 
+},
+{
+ "equity_per_unit":            118,
+"equity_value_millions":          755.2,
+"fcrc_partners_equity":         226.56,
+"greenland_equity":         528.64,
+"gross_cash_out":         -69.15,
+"gross_multiple":           0.88 
+},
+{
+ "equity_per_unit":            119,
+"equity_value_millions":          761.6,
+"fcrc_partners_equity":         228.48,
+"greenland_equity":         533.12,
+"gross_cash_out":         -64.67,
+"gross_multiple":           0.89 
+},
+{
+ "equity_per_unit":            120,
+"equity_value_millions":            768,
+"fcrc_partners_equity":          230.4,
+"greenland_equity":          537.6,
+"gross_cash_out":         -60.19,
+"gross_multiple":            0.9 
+},
+{
+ "equity_per_unit":            121,
+"equity_value_millions":          774.4,
+"fcrc_partners_equity":         232.32,
+"greenland_equity":         542.08,
+"gross_cash_out":         -55.71,
+"gross_multiple":           0.91 
+},
+{
+ "equity_per_unit":            122,
+"equity_value_millions":          780.8,
+"fcrc_partners_equity":         234.24,
+"greenland_equity":         546.56,
+"gross_cash_out":         -51.23,
+"gross_multiple":           0.91 
+},
+{
+ "equity_per_unit":            123,
+"equity_value_millions":          787.2,
+"fcrc_partners_equity":         236.16,
+"greenland_equity":         551.04,
+"gross_cash_out":         -46.75,
+"gross_multiple":           0.92 
+},
+{
+ "equity_per_unit":            124,
+"equity_value_millions":          793.6,
+"fcrc_partners_equity":         238.08,
+"greenland_equity":         555.52,
+"gross_cash_out":         -42.27,
+"gross_multiple":           0.93 
+},
+{
+ "equity_per_unit":            125,
+"equity_value_millions":            800,
+"fcrc_partners_equity":            240,
+"greenland_equity":            560,
+"gross_cash_out":         -37.79,
+"gross_multiple":           0.94 
+},
+{
+ "equity_per_unit":            126,
+"equity_value_millions":          806.4,
+"fcrc_partners_equity":         241.92,
+"greenland_equity":         564.48,
+"gross_cash_out":         -33.31,
+"gross_multiple":           0.94 
+},
+{
+ "equity_per_unit":            127,
+"equity_value_millions":          812.8,
+"fcrc_partners_equity":         243.84,
+"greenland_equity":         568.96,
+"gross_cash_out":         -28.83,
+"gross_multiple":           0.95 
+},
+{
+ "equity_per_unit":            128,
+"equity_value_millions":          819.2,
+"fcrc_partners_equity":         245.76,
+"greenland_equity":         573.44,
+"gross_cash_out":         -24.35,
+"gross_multiple":           0.96 
+},
+{
+ "equity_per_unit":            129,
+"equity_value_millions":          825.6,
+"fcrc_partners_equity":         247.68,
+"greenland_equity":         577.92,
+"gross_cash_out":         -19.87,
+"gross_multiple":           0.97 
+},
+{
+ "equity_per_unit":            130,
+"equity_value_millions":            832,
+"fcrc_partners_equity":          249.6,
+"greenland_equity":          582.4,
+"gross_cash_out":         -15.39,
+"gross_multiple":           0.97 
+},
+{
+ "equity_per_unit":            131,
+"equity_value_millions":          838.4,
+"fcrc_partners_equity":         251.52,
+"greenland_equity":         586.88,
+"gross_cash_out":         -10.91,
+"gross_multiple":           0.98 
+},
+{
+ "equity_per_unit":            132,
+"equity_value_millions":          844.8,
+"fcrc_partners_equity":         253.44,
+"greenland_equity":         591.36,
+"gross_cash_out":          -6.43,
+"gross_multiple":           0.99 
+},
+{
+ "equity_per_unit":            133,
+"equity_value_millions":          851.2,
+"fcrc_partners_equity":         255.36,
+"greenland_equity":         595.84,
+"gross_cash_out":          -1.95,
+"gross_multiple":              1 
+},
+{
+ "equity_per_unit":            134,
+"equity_value_millions":          857.6,
+"fcrc_partners_equity":         257.28,
+"greenland_equity":         600.32,
+"gross_cash_out":           2.53,
+"gross_multiple":              1 
+},
+{
+ "equity_per_unit":            135,
+"equity_value_millions":            864,
+"fcrc_partners_equity":          259.2,
+"greenland_equity":          604.8,
+"gross_cash_out":           7.01,
+"gross_multiple":           1.01 
+},
+{
+ "equity_per_unit":            136,
+"equity_value_millions":          870.4,
+"fcrc_partners_equity":         261.12,
+"greenland_equity":         609.28,
+"gross_cash_out":          11.49,
+"gross_multiple":           1.02 
+},
+{
+ "equity_per_unit":            137,
+"equity_value_millions":          876.8,
+"fcrc_partners_equity":         263.04,
+"greenland_equity":         613.76,
+"gross_cash_out":          15.97,
+"gross_multiple":           1.03 
+},
+{
+ "equity_per_unit":            138,
+"equity_value_millions":          883.2,
+"fcrc_partners_equity":         264.96,
+"greenland_equity":         618.24,
+"gross_cash_out":          20.45,
+"gross_multiple":           1.03 
+},
+{
+ "equity_per_unit":            139,
+"equity_value_millions":          889.6,
+"fcrc_partners_equity":         266.88,
+"greenland_equity":         622.72,
+"gross_cash_out":          24.93,
+"gross_multiple":           1.04 
+},
+{
+ "equity_per_unit":            140,
+"equity_value_millions":            896,
+"fcrc_partners_equity":          268.8,
+"greenland_equity":          627.2,
+"gross_cash_out":          29.41,
+"gross_multiple":           1.05 
+},
+{
+ "equity_per_unit":            141,
+"equity_value_millions":          902.4,
+"fcrc_partners_equity":         270.72,
+"greenland_equity":         631.68,
+"gross_cash_out":          33.89,
+"gross_multiple":           1.06 
+},
+{
+ "equity_per_unit":            142,
+"equity_value_millions":          908.8,
+"fcrc_partners_equity":         272.64,
+"greenland_equity":         636.16,
+"gross_cash_out":          38.37,
+"gross_multiple":           1.06 
+},
+{
+ "equity_per_unit":            143,
+"equity_value_millions":          915.2,
+"fcrc_partners_equity":         274.56,
+"greenland_equity":         640.64,
+"gross_cash_out":          42.85,
+"gross_multiple":           1.07 
+},
+{
+ "equity_per_unit":            144,
+"equity_value_millions":          921.6,
+"fcrc_partners_equity":         276.48,
+"greenland_equity":         645.12,
+"gross_cash_out":          47.33,
+"gross_multiple":           1.08 
+},
+{
+ "equity_per_unit":            145,
+"equity_value_millions":            928,
+"fcrc_partners_equity":          278.4,
+"greenland_equity":          649.6,
+"gross_cash_out":          51.81,
+"gross_multiple":           1.09 
+},
+{
+ "equity_per_unit":            146,
+"equity_value_millions":          934.4,
+"fcrc_partners_equity":         280.32,
+"greenland_equity":         654.08,
+"gross_cash_out":          56.29,
+"gross_multiple":           1.09 
+},
+{
+ "equity_per_unit":            147,
+"equity_value_millions":          940.8,
+"fcrc_partners_equity":         282.24,
+"greenland_equity":         658.56,
+"gross_cash_out":          60.77,
+"gross_multiple":            1.1 
+},
+{
+ "equity_per_unit":            148,
+"equity_value_millions":          947.2,
+"fcrc_partners_equity":         284.16,
+"greenland_equity":         663.04,
+"gross_cash_out":          65.25,
+"gross_multiple":           1.11 
+},
+{
+ "equity_per_unit":            149,
+"equity_value_millions":          953.6,
+"fcrc_partners_equity":         286.08,
+"greenland_equity":         667.52,
+"gross_cash_out":          69.73,
+"gross_multiple":           1.12 
+},
+{
+ "equity_per_unit":            150,
+"equity_value_millions":            960,
+"fcrc_partners_equity":            288,
+"greenland_equity":            672,
+"gross_cash_out":          74.21,
+"gross_multiple":           1.12 
+},
+{
+ "equity_per_unit":            151,
+"equity_value_millions":          966.4,
+"fcrc_partners_equity":         289.92,
+"greenland_equity":         676.48,
+"gross_cash_out":          78.69,
+"gross_multiple":           1.13 
+},
+{
+ "equity_per_unit":            152,
+"equity_value_millions":          972.8,
+"fcrc_partners_equity":         291.84,
+"greenland_equity":         680.96,
+"gross_cash_out":          83.17,
+"gross_multiple":           1.14 
+},
+{
+ "equity_per_unit":            153,
+"equity_value_millions":          979.2,
+"fcrc_partners_equity":         293.76,
+"greenland_equity":         685.44,
+"gross_cash_out":          87.65,
+"gross_multiple":           1.15 
+},
+{
+ "equity_per_unit":            154,
+"equity_value_millions":          985.6,
+"fcrc_partners_equity":         295.68,
+"greenland_equity":         689.92,
+"gross_cash_out":          92.13,
+"gross_multiple":           1.15 
+},
+{
+ "equity_per_unit":            155,
+"equity_value_millions":            992,
+"fcrc_partners_equity":          297.6,
+"greenland_equity":          694.4,
+"gross_cash_out":          96.61,
+"gross_multiple":           1.16 
+},
+{
+ "equity_per_unit":            156,
+"equity_value_millions":          998.4,
+"fcrc_partners_equity":         299.52,
+"greenland_equity":         698.88,
+"gross_cash_out":         101.09,
+"gross_multiple":           1.17 
+},
+{
+ "equity_per_unit":            157,
+"equity_value_millions":         1004.8,
+"fcrc_partners_equity":         301.44,
+"greenland_equity":         703.36,
+"gross_cash_out":         105.57,
+"gross_multiple":           1.18 
+},
+{
+ "equity_per_unit":            158,
+"equity_value_millions":         1011.2,
+"fcrc_partners_equity":         303.36,
+"greenland_equity":         707.84,
+"gross_cash_out":         110.05,
+"gross_multiple":           1.18 
+},
+{
+ "equity_per_unit":            159,
+"equity_value_millions":         1017.6,
+"fcrc_partners_equity":         305.28,
+"greenland_equity":         712.32,
+"gross_cash_out":         114.53,
+"gross_multiple":           1.19 
+},
+{
+ "equity_per_unit":            160,
+"equity_value_millions":           1024,
+"fcrc_partners_equity":          307.2,
+"greenland_equity":          716.8,
+"gross_cash_out":         119.01,
+"gross_multiple":            1.2 
+},
+{
+ "equity_per_unit":            161,
+"equity_value_millions":         1030.4,
+"fcrc_partners_equity":         309.12,
+"greenland_equity":         721.28,
+"gross_cash_out":         123.49,
+"gross_multiple":           1.21 
+},
+{
+ "equity_per_unit":            162,
+"equity_value_millions":         1036.8,
+"fcrc_partners_equity":         311.04,
+"greenland_equity":         725.76,
+"gross_cash_out":         127.97,
+"gross_multiple":           1.21 
+},
+{
+ "equity_per_unit":            163,
+"equity_value_millions":         1043.2,
+"fcrc_partners_equity":         312.96,
+"greenland_equity":         730.24,
+"gross_cash_out":         132.45,
+"gross_multiple":           1.22 
+},
+{
+ "equity_per_unit":            164,
+"equity_value_millions":         1049.6,
+"fcrc_partners_equity":         314.88,
+"greenland_equity":         734.72,
+"gross_cash_out":         136.93,
+"gross_multiple":           1.23 
+},
+{
+ "equity_per_unit":            165,
+"equity_value_millions":           1056,
+"fcrc_partners_equity":          316.8,
+"greenland_equity":          739.2,
+"gross_cash_out":         141.41,
+"gross_multiple":           1.24 
+},
+{
+ "equity_per_unit":            166,
+"equity_value_millions":         1062.4,
+"fcrc_partners_equity":         318.72,
+"greenland_equity":         743.68,
+"gross_cash_out":         145.89,
+"gross_multiple":           1.24 
+},
+{
+ "equity_per_unit":            167,
+"equity_value_millions":         1068.8,
+"fcrc_partners_equity":         320.64,
+"greenland_equity":         748.16,
+"gross_cash_out":         150.37,
+"gross_multiple":           1.25 
+},
+{
+ "equity_per_unit":            168,
+"equity_value_millions":         1075.2,
+"fcrc_partners_equity":         322.56,
+"greenland_equity":         752.64,
+"gross_cash_out":         154.85,
+"gross_multiple":           1.26 
+},
+{
+ "equity_per_unit":            169,
+"equity_value_millions":         1081.6,
+"fcrc_partners_equity":         324.48,
+"greenland_equity":         757.12,
+"gross_cash_out":         159.33,
+"gross_multiple":           1.27 
+},
+{
+ "equity_per_unit":            170,
+"equity_value_millions":           1088,
+"fcrc_partners_equity":          326.4,
+"greenland_equity":          761.6,
+"gross_cash_out":         163.81,
+"gross_multiple":           1.27 
+},
+{
+ "equity_per_unit":            171,
+"equity_value_millions":         1094.4,
+"fcrc_partners_equity":         328.32,
+"greenland_equity":         766.08,
+"gross_cash_out":         168.29,
+"gross_multiple":           1.28 
+},
+{
+ "equity_per_unit":            172,
+"equity_value_millions":         1100.8,
+"fcrc_partners_equity":         330.24,
+"greenland_equity":         770.56,
+"gross_cash_out":         172.77,
+"gross_multiple":           1.29 
+},
+{
+ "equity_per_unit":            173,
+"equity_value_millions":         1107.2,
+"fcrc_partners_equity":         332.16,
+"greenland_equity":         775.04,
+"gross_cash_out":         177.25,
+"gross_multiple":            1.3 
+},
+{
+ "equity_per_unit":            174,
+"equity_value_millions":         1113.6,
+"fcrc_partners_equity":         334.08,
+"greenland_equity":         779.52,
+"gross_cash_out":         181.73,
+"gross_multiple":            1.3 
+},
+{
+ "equity_per_unit":            175,
+"equity_value_millions":           1120,
+"fcrc_partners_equity":            336,
+"greenland_equity":            784,
+"gross_cash_out":         186.21,
+"gross_multiple":           1.31 
+},
+{
+ "equity_per_unit":            176,
+"equity_value_millions":         1126.4,
+"fcrc_partners_equity":         337.92,
+"greenland_equity":         788.48,
+"gross_cash_out":         190.69,
+"gross_multiple":           1.32 
+},
+{
+ "equity_per_unit":            177,
+"equity_value_millions":         1132.8,
+"fcrc_partners_equity":         339.84,
+"greenland_equity":         792.96,
+"gross_cash_out":         195.17,
+"gross_multiple":           1.33 
+},
+{
+ "equity_per_unit":            178,
+"equity_value_millions":         1139.2,
+"fcrc_partners_equity":         341.76,
+"greenland_equity":         797.44,
+"gross_cash_out":         199.65,
+"gross_multiple":           1.33 
+},
+{
+ "equity_per_unit":            179,
+"equity_value_millions":         1145.6,
+"fcrc_partners_equity":         343.68,
+"greenland_equity":         801.92,
+"gross_cash_out":         204.13,
+"gross_multiple":           1.34 
+},
+{
+ "equity_per_unit":            180,
+"equity_value_millions":           1152,
+"fcrc_partners_equity":          345.6,
+"greenland_equity":          806.4,
+"gross_cash_out":         208.61,
+"gross_multiple":           1.35 
+},
+{
+ "equity_per_unit":            181,
+"equity_value_millions":         1158.4,
+"fcrc_partners_equity":         347.52,
+"greenland_equity":         810.88,
+"gross_cash_out":         213.09,
+"gross_multiple":           1.36 
+},
+{
+ "equity_per_unit":            182,
+"equity_value_millions":         1164.8,
+"fcrc_partners_equity":         349.44,
+"greenland_equity":         815.36,
+"gross_cash_out":         217.57,
+"gross_multiple":           1.36 
+},
+{
+ "equity_per_unit":            183,
+"equity_value_millions":         1171.2,
+"fcrc_partners_equity":         351.36,
+"greenland_equity":         819.84,
+"gross_cash_out":         222.05,
+"gross_multiple":           1.37 
+},
+{
+ "equity_per_unit":            184,
+"equity_value_millions":         1177.6,
+"fcrc_partners_equity":         353.28,
+"greenland_equity":         824.32,
+"gross_cash_out":         226.53,
+"gross_multiple":           1.38 
+},
+{
+ "equity_per_unit":            185,
+"equity_value_millions":           1184,
+"fcrc_partners_equity":          355.2,
+"greenland_equity":          828.8,
+"gross_cash_out":         231.01,
+"gross_multiple":           1.39 
+},
+{
+ "equity_per_unit":            186,
+"equity_value_millions":         1190.4,
+"fcrc_partners_equity":         357.12,
+"greenland_equity":         833.28,
+"gross_cash_out":         235.49,
+"gross_multiple":           1.39 
+},
+{
+ "equity_per_unit":            187,
+"equity_value_millions":         1196.8,
+"fcrc_partners_equity":         359.04,
+"greenland_equity":         837.76,
+"gross_cash_out":         239.97,
+"gross_multiple":            1.4 
+},
+{
+ "equity_per_unit":            188,
+"equity_value_millions":         1203.2,
+"fcrc_partners_equity":         360.96,
+"greenland_equity":         842.24,
+"gross_cash_out":         244.45,
+"gross_multiple":           1.41 
+},
+{
+ "equity_per_unit":            189,
+"equity_value_millions":         1209.6,
+"fcrc_partners_equity":         362.88,
+"greenland_equity":         846.72,
+"gross_cash_out":         248.93,
+"gross_multiple":           1.42 
+},
+{
+ "equity_per_unit":            190,
+"equity_value_millions":           1216,
+"fcrc_partners_equity":          364.8,
+"greenland_equity":          851.2,
+"gross_cash_out":         253.41,
+"gross_multiple":           1.42 
+},
+{
+ "equity_per_unit":            191,
+"equity_value_millions":         1222.4,
+"fcrc_partners_equity":         366.72,
+"greenland_equity":         855.68,
+"gross_cash_out":         257.89,
+"gross_multiple":           1.43 
+},
+{
+ "equity_per_unit":            192,
+"equity_value_millions":         1228.8,
+"fcrc_partners_equity":         368.64,
+"greenland_equity":         860.16,
+"gross_cash_out":         262.37,
+"gross_multiple":           1.44 
+},
+{
+ "equity_per_unit":            193,
+"equity_value_millions":         1235.2,
+"fcrc_partners_equity":         370.56,
+"greenland_equity":         864.64,
+"gross_cash_out":         266.85,
+"gross_multiple":           1.45 
+},
+{
+ "equity_per_unit":            194,
+"equity_value_millions":         1241.6,
+"fcrc_partners_equity":         372.48,
+"greenland_equity":         869.12,
+"gross_cash_out":         271.33,
+"gross_multiple":           1.45 
+},
+{
+ "equity_per_unit":            195,
+"equity_value_millions":           1248,
+"fcrc_partners_equity":          374.4,
+"greenland_equity":          873.6,
+"gross_cash_out":         275.81,
+"gross_multiple":           1.46 
+},
+{
+ "equity_per_unit":            196,
+"equity_value_millions":         1254.4,
+"fcrc_partners_equity":         376.32,
+"greenland_equity":         878.08,
+"gross_cash_out":         280.29,
+"gross_multiple":           1.47 
+},
+{
+ "equity_per_unit":            197,
+"equity_value_millions":         1260.8,
+"fcrc_partners_equity":         378.24,
+"greenland_equity":         882.56,
+"gross_cash_out":         284.77,
+"gross_multiple":           1.48 
+},
+{
+ "equity_per_unit":            198,
+"equity_value_millions":         1267.2,
+"fcrc_partners_equity":         380.16,
+"greenland_equity":         887.04,
+"gross_cash_out":         289.25,
+"gross_multiple":           1.48 
+},
+{
+ "equity_per_unit":            199,
+"equity_value_millions":         1273.6,
+"fcrc_partners_equity":         382.08,
+"greenland_equity":         891.52,
+"gross_cash_out":         293.73,
+"gross_multiple":           1.49 
+},
+{
+ "equity_per_unit":            200,
+"equity_value_millions":           1280,
+"fcrc_partners_equity":            384,
+"greenland_equity":            896,
+"gross_cash_out":         298.21,
+"gross_multiple":            1.5 
+},
+{
+ "equity_per_unit":            201,
+"equity_value_millions":         1286.4,
+"fcrc_partners_equity":         385.92,
+"greenland_equity":         900.48,
+"gross_cash_out":         302.69,
+"gross_multiple":           1.51 
+},
+{
+ "equity_per_unit":            202,
+"equity_value_millions":         1292.8,
+"fcrc_partners_equity":         387.84,
+"greenland_equity":         904.96,
+"gross_cash_out":         307.17,
+"gross_multiple":           1.51 
+},
+{
+ "equity_per_unit":            203,
+"equity_value_millions":         1299.2,
+"fcrc_partners_equity":         389.76,
+"greenland_equity":         909.44,
+"gross_cash_out":         311.65,
+"gross_multiple":           1.52 
+},
+{
+ "equity_per_unit":            204,
+"equity_value_millions":         1305.6,
+"fcrc_partners_equity":         391.68,
+"greenland_equity":         913.92,
+"gross_cash_out":         316.13,
+"gross_multiple":           1.53 
+},
+{
+ "equity_per_unit":            205,
+"equity_value_millions":           1312,
+"fcrc_partners_equity":          393.6,
+"greenland_equity":          918.4,
+"gross_cash_out":         320.61,
+"gross_multiple":           1.54 
+},
+{
+ "equity_per_unit":            206,
+"equity_value_millions":         1318.4,
+"fcrc_partners_equity":         395.52,
+"greenland_equity":         922.88,
+"gross_cash_out":         325.09,
+"gross_multiple":           1.54 
+},
+{
+ "equity_per_unit":            207,
+"equity_value_millions":         1324.8,
+"fcrc_partners_equity":         397.44,
+"greenland_equity":         927.36,
+"gross_cash_out":         329.57,
+"gross_multiple":           1.55 
+},
+{
+ "equity_per_unit":            208,
+"equity_value_millions":         1331.2,
+"fcrc_partners_equity":         399.36,
+"greenland_equity":         931.84,
+"gross_cash_out":         334.05,
+"gross_multiple":           1.56 
+},
+{
+ "equity_per_unit":            209,
+"equity_value_millions":         1337.6,
+"fcrc_partners_equity":         401.28,
+"greenland_equity":         936.32,
+"gross_cash_out":         338.53,
+"gross_multiple":           1.57 
+},
+{
+ "equity_per_unit":            210,
+"equity_value_millions":           1344,
+"fcrc_partners_equity":          403.2,
+"greenland_equity":          940.8,
+"gross_cash_out":         343.01,
+"gross_multiple":           1.57 
+},
+{
+ "equity_per_unit":            211,
+"equity_value_millions":         1350.4,
+"fcrc_partners_equity":         405.12,
+"greenland_equity":         945.28,
+"gross_cash_out":         347.49,
+"gross_multiple":           1.58 
+},
+{
+ "equity_per_unit":            212,
+"equity_value_millions":         1356.8,
+"fcrc_partners_equity":         407.04,
+"greenland_equity":         949.76,
+"gross_cash_out":         351.97,
+"gross_multiple":           1.59 
+},
+{
+ "equity_per_unit":            213,
+"equity_value_millions":         1363.2,
+"fcrc_partners_equity":         408.96,
+"greenland_equity":         954.24,
+"gross_cash_out":         356.45,
+"gross_multiple":            1.6 
+},
+{
+ "equity_per_unit":            214,
+"equity_value_millions":         1369.6,
+"fcrc_partners_equity":         410.88,
+"greenland_equity":         958.72,
+"gross_cash_out":         360.93,
+"gross_multiple":            1.6 
+},
+{
+ "equity_per_unit":            215,
+"equity_value_millions":           1376,
+"fcrc_partners_equity":          412.8,
+"greenland_equity":          963.2,
+"gross_cash_out":         365.41,
+"gross_multiple":           1.61 
+},
+{
+ "equity_per_unit":            216,
+"equity_value_millions":         1382.4,
+"fcrc_partners_equity":         414.72,
+"greenland_equity":         967.68,
+"gross_cash_out":         369.89,
+"gross_multiple":           1.62 
+},
+{
+ "equity_per_unit":            217,
+"equity_value_millions":         1388.8,
+"fcrc_partners_equity":         416.64,
+"greenland_equity":         972.16,
+"gross_cash_out":         374.37,
+"gross_multiple":           1.63 
+},
+{
+ "equity_per_unit":            218,
+"equity_value_millions":         1395.2,
+"fcrc_partners_equity":         418.56,
+"greenland_equity":         976.64,
+"gross_cash_out":         378.85,
+"gross_multiple":           1.63 
+},
+{
+ "equity_per_unit":            219,
+"equity_value_millions":         1401.6,
+"fcrc_partners_equity":         420.48,
+"greenland_equity":         981.12,
+"gross_cash_out":         383.33,
+"gross_multiple":           1.64 
+},
+{
+ "equity_per_unit":            220,
+"equity_value_millions":           1408,
+"fcrc_partners_equity":          422.4,
+"greenland_equity":          985.6,
+"gross_cash_out":         387.81,
+"gross_multiple":           1.65 
+},
+{
+ "equity_per_unit":            221,
+"equity_value_millions":         1414.4,
+"fcrc_partners_equity":         424.32,
+"greenland_equity":         990.08,
+"gross_cash_out":         392.29,
+"gross_multiple":           1.66 
+},
+{
+ "equity_per_unit":            222,
+"equity_value_millions":         1420.8,
+"fcrc_partners_equity":         426.24,
+"greenland_equity":         994.56,
+"gross_cash_out":         396.77,
+"gross_multiple":           1.66 
+},
+{
+ "equity_per_unit":            223,
+"equity_value_millions":         1427.2,
+"fcrc_partners_equity":         428.16,
+"greenland_equity":         999.04,
+"gross_cash_out":         401.25,
+"gross_multiple":           1.67 
+},
+{
+ "equity_per_unit":            224,
+"equity_value_millions":         1433.6,
+"fcrc_partners_equity":         430.08,
+"greenland_equity":        1003.52,
+"gross_cash_out":         405.73,
+"gross_multiple":           1.68 
+},
+{
+ "equity_per_unit":            225,
+"equity_value_millions":           1440,
+"fcrc_partners_equity":            432,
+"greenland_equity":           1008,
+"gross_cash_out":         410.21,
+"gross_multiple":           1.69 
+},
+{
+ "equity_per_unit":            226,
+"equity_value_millions":         1446.4,
+"fcrc_partners_equity":         433.92,
+"greenland_equity":        1012.48,
+"gross_cash_out":         414.69,
+"gross_multiple":           1.69 
+},
+{
+ "equity_per_unit":            227,
+"equity_value_millions":         1452.8,
+"fcrc_partners_equity":         435.84,
+"greenland_equity":        1016.96,
+"gross_cash_out":         419.17,
+"gross_multiple":            1.7 
+},
+{
+ "equity_per_unit":            228,
+"equity_value_millions":         1459.2,
+"fcrc_partners_equity":         437.76,
+"greenland_equity":        1021.44,
+"gross_cash_out":         423.65,
+"gross_multiple":           1.71 
+},
+{
+ "equity_per_unit":            229,
+"equity_value_millions":         1465.6,
+"fcrc_partners_equity":         439.68,
+"greenland_equity":        1025.92,
+"gross_cash_out":         428.13,
+"gross_multiple":           1.72 
+},
+{
+ "equity_per_unit":            230,
+"equity_value_millions":           1472,
+"fcrc_partners_equity":          441.6,
+"greenland_equity":         1030.4,
+"gross_cash_out":         432.61,
+"gross_multiple":           1.72 
+},
+{
+ "equity_per_unit":            231,
+"equity_value_millions":         1478.4,
+"fcrc_partners_equity":         443.52,
+"greenland_equity":        1034.88,
+"gross_cash_out":         437.09,
+"gross_multiple":           1.73 
+},
+{
+ "equity_per_unit":            232,
+"equity_value_millions":         1484.8,
+"fcrc_partners_equity":         445.44,
+"greenland_equity":        1039.36,
+"gross_cash_out":         441.57,
+"gross_multiple":           1.74 
+},
+{
+ "equity_per_unit":            233,
+"equity_value_millions":         1491.2,
+"fcrc_partners_equity":         447.36,
+"greenland_equity":        1043.84,
+"gross_cash_out":         446.05,
+"gross_multiple":           1.75 
+},
+{
+ "equity_per_unit":            234,
+"equity_value_millions":         1497.6,
+"fcrc_partners_equity":         449.28,
+"greenland_equity":        1048.32,
+"gross_cash_out":         450.53,
+"gross_multiple":           1.75 
+},
+{
+ "equity_per_unit":            235,
+"equity_value_millions":           1504,
+"fcrc_partners_equity":          451.2,
+"greenland_equity":         1052.8,
+"gross_cash_out":         455.01,
+"gross_multiple":           1.76 
+},
+{
+ "equity_per_unit":            236,
+"equity_value_millions":         1510.4,
+"fcrc_partners_equity":         453.12,
+"greenland_equity":        1057.28,
+"gross_cash_out":         459.49,
+"gross_multiple":           1.77 
+},
+{
+ "equity_per_unit":            237,
+"equity_value_millions":         1516.8,
+"fcrc_partners_equity":         455.04,
+"greenland_equity":        1061.76,
+"gross_cash_out":         463.97,
+"gross_multiple":           1.78 
+},
+{
+ "equity_per_unit":            238,
+"equity_value_millions":         1523.2,
+"fcrc_partners_equity":         456.96,
+"greenland_equity":        1066.24,
+"gross_cash_out":         468.45,
+"gross_multiple":           1.78 
+},
+{
+ "equity_per_unit":            239,
+"equity_value_millions":         1529.6,
+"fcrc_partners_equity":         458.88,
+"greenland_equity":        1070.72,
+"gross_cash_out":         472.93,
+"gross_multiple":           1.79 
+},
+{
+ "equity_per_unit":            240,
+"equity_value_millions":           1536,
+"fcrc_partners_equity":          460.8,
+"greenland_equity":         1075.2,
+"gross_cash_out":         477.41,
+"gross_multiple":            1.8 
+},
+{
+ "equity_per_unit":            241,
+"equity_value_millions":         1542.4,
+"fcrc_partners_equity":         462.72,
+"greenland_equity":        1079.68,
+"gross_cash_out":         481.89,
+"gross_multiple":           1.81 
+},
+{
+ "equity_per_unit":            242,
+"equity_value_millions":         1548.8,
+"fcrc_partners_equity":         464.64,
+"greenland_equity":        1084.16,
+"gross_cash_out":         486.37,
+"gross_multiple":           1.81 
+},
+{
+ "equity_per_unit":            243,
+"equity_value_millions":         1555.2,
+"fcrc_partners_equity":         466.56,
+"greenland_equity":        1088.64,
+"gross_cash_out":         490.85,
+"gross_multiple":           1.82 
+},
+{
+ "equity_per_unit":            244,
+"equity_value_millions":         1561.6,
+"fcrc_partners_equity":         468.48,
+"greenland_equity":        1093.12,
+"gross_cash_out":         495.33,
+"gross_multiple":           1.83 
+},
+{
+ "equity_per_unit":            245,
+"equity_value_millions":           1568,
+"fcrc_partners_equity":          470.4,
+"greenland_equity":         1097.6,
+"gross_cash_out":         499.81,
+"gross_multiple":           1.84 
+},
+{
+ "equity_per_unit":            246,
+"equity_value_millions":         1574.4,
+"fcrc_partners_equity":         472.32,
+"greenland_equity":        1102.08,
+"gross_cash_out":         504.29,
+"gross_multiple":           1.84 
+},
+{
+ "equity_per_unit":            247,
+"equity_value_millions":         1580.8,
+"fcrc_partners_equity":         474.24,
+"greenland_equity":        1106.56,
+"gross_cash_out":         508.77,
+"gross_multiple":           1.85 
+},
+{
+ "equity_per_unit":            248,
+"equity_value_millions":         1587.2,
+"fcrc_partners_equity":         476.16,
+"greenland_equity":        1111.04,
+"gross_cash_out":         513.25,
+"gross_multiple":           1.86 
+},
+{
+ "equity_per_unit":            249,
+"equity_value_millions":         1593.6,
+"fcrc_partners_equity":         478.08,
+"greenland_equity":        1115.52,
+"gross_cash_out":         517.73,
+"gross_multiple":           1.87 
+},
+{
+ "equity_per_unit":            250,
+"equity_value_millions":           1600,
+"fcrc_partners_equity":            480,
+"greenland_equity":           1120,
+"gross_cash_out":         522.21,
+"gross_multiple":           1.87 
+},
+{
+ "equity_per_unit":            251,
+"equity_value_millions":         1606.4,
+"fcrc_partners_equity":         481.92,
+"greenland_equity":        1124.48,
+"gross_cash_out":         526.69,
+"gross_multiple":           1.88 
+},
+{
+ "equity_per_unit":            252,
+"equity_value_millions":         1612.8,
+"fcrc_partners_equity":         483.84,
+"greenland_equity":        1128.96,
+"gross_cash_out":         531.17,
+"gross_multiple":           1.89 
+},
+{
+ "equity_per_unit":            253,
+"equity_value_millions":         1619.2,
+"fcrc_partners_equity":         485.76,
+"greenland_equity":        1133.44,
+"gross_cash_out":         535.65,
+"gross_multiple":            1.9 
+},
+{
+ "equity_per_unit":            254,
+"equity_value_millions":         1625.6,
+"fcrc_partners_equity":         487.68,
+"greenland_equity":        1137.92,
+"gross_cash_out":         540.13,
+"gross_multiple":            1.9 
+},
+{
+ "equity_per_unit":            255,
+"equity_value_millions":           1632,
+"fcrc_partners_equity":          489.6,
+"greenland_equity":         1142.4,
+"gross_cash_out":         544.61,
+"gross_multiple":           1.91 
+},
+{
+ "equity_per_unit":            256,
+"equity_value_millions":         1638.4,
+"fcrc_partners_equity":         491.52,
+"greenland_equity":        1146.88,
+"gross_cash_out":         549.09,
+"gross_multiple":           1.92 
+},
+{
+ "equity_per_unit":            257,
+"equity_value_millions":         1644.8,
+"fcrc_partners_equity":         493.44,
+"greenland_equity":        1151.36,
+"gross_cash_out":         553.57,
+"gross_multiple":           1.93 
+},
+{
+ "equity_per_unit":            258,
+"equity_value_millions":         1651.2,
+"fcrc_partners_equity":         495.36,
+"greenland_equity":        1155.84,
+"gross_cash_out":         558.05,
+"gross_multiple":           1.93 
+},
+{
+ "equity_per_unit":            259,
+"equity_value_millions":         1657.6,
+"fcrc_partners_equity":         497.28,
+"greenland_equity":        1160.32,
+"gross_cash_out":         562.53,
+"gross_multiple":           1.94 
+},
+{
+ "equity_per_unit":            260,
+"equity_value_millions":           1664,
+"fcrc_partners_equity":          499.2,
+"greenland_equity":         1164.8,
+"gross_cash_out":         567.01,
+"gross_multiple":           1.95 
+},
+{
+ "equity_per_unit":            261,
+"equity_value_millions":         1670.4,
+"fcrc_partners_equity":         501.12,
+"greenland_equity":        1169.28,
+"gross_cash_out":         571.49,
+"gross_multiple":           1.96 
+},
+{
+ "equity_per_unit":            262,
+"equity_value_millions":         1676.8,
+"fcrc_partners_equity":         503.04,
+"greenland_equity":        1173.76,
+"gross_cash_out":         575.97,
+"gross_multiple":           1.96 
+},
+{
+ "equity_per_unit":            263,
+"equity_value_millions":         1683.2,
+"fcrc_partners_equity":         504.96,
+"greenland_equity":        1178.24,
+"gross_cash_out":         580.45,
+"gross_multiple":           1.97 
+},
+{
+ "equity_per_unit":            264,
+"equity_value_millions":         1689.6,
+"fcrc_partners_equity":         506.88,
+"greenland_equity":        1182.72,
+"gross_cash_out":         584.93,
+"gross_multiple":           1.98 
+},
+{
+ "equity_per_unit":            265,
+"equity_value_millions":           1696,
+"fcrc_partners_equity":          508.8,
+"greenland_equity":         1187.2,
+"gross_cash_out":         589.41,
+"gross_multiple":           1.99 
+},
+{
+ "equity_per_unit":            266,
+"equity_value_millions":         1702.4,
+"fcrc_partners_equity":         510.72,
+"greenland_equity":        1191.68,
+"gross_cash_out":         593.89,
+"gross_multiple":           1.99 
+},
+{
+ "equity_per_unit":            267,
+"equity_value_millions":         1708.8,
+"fcrc_partners_equity":         512.64,
+"greenland_equity":        1196.16,
+"gross_cash_out":         598.37,
+"gross_multiple":              2 
+},
+{
+ "equity_per_unit":            268,
+"equity_value_millions":         1715.2,
+"fcrc_partners_equity":         514.56,
+"greenland_equity":        1200.64,
+"gross_cash_out":         602.85,
+"gross_multiple":           2.01 
+},
+{
+ "equity_per_unit":            269,
+"equity_value_millions":         1721.6,
+"fcrc_partners_equity":         516.48,
+"greenland_equity":        1205.12,
+"gross_cash_out":         607.33,
+"gross_multiple":           2.02 
+},
+{
+ "equity_per_unit":            270,
+"equity_value_millions":           1728,
+"fcrc_partners_equity":          518.4,
+"greenland_equity":         1209.6,
+"gross_cash_out":         611.81,
+"gross_multiple":           2.02 
+},
+{
+ "equity_per_unit":            271,
+"equity_value_millions":         1734.4,
+"fcrc_partners_equity":         520.32,
+"greenland_equity":        1214.08,
+"gross_cash_out":         616.29,
+"gross_multiple":           2.03 
+},
+{
+ "equity_per_unit":            272,
+"equity_value_millions":         1740.8,
+"fcrc_partners_equity":         522.24,
+"greenland_equity":        1218.56,
+"gross_cash_out":         620.77,
+"gross_multiple":           2.04 
+},
+{
+ "equity_per_unit":            273,
+"equity_value_millions":         1747.2,
+"fcrc_partners_equity":         524.16,
+"greenland_equity":        1223.04,
+"gross_cash_out":         625.25,
+"gross_multiple":           2.05 
+},
+{
+ "equity_per_unit":            274,
+"equity_value_millions":         1753.6,
+"fcrc_partners_equity":         526.08,
+"greenland_equity":        1227.52,
+"gross_cash_out":         629.73,
+"gross_multiple":           2.05 
+},
+{
+ "equity_per_unit":            275,
+"equity_value_millions":           1760,
+"fcrc_partners_equity":            528,
+"greenland_equity":           1232,
+"gross_cash_out":         634.21,
+"gross_multiple":           2.06 
+},
+{
+ "equity_per_unit":            276,
+"equity_value_millions":         1766.4,
+"fcrc_partners_equity":         529.92,
+"greenland_equity":        1236.48,
+"gross_cash_out":         638.69,
+"gross_multiple":           2.07 
+},
+{
+ "equity_per_unit":            277,
+"equity_value_millions":         1772.8,
+"fcrc_partners_equity":         531.84,
+"greenland_equity":        1240.96,
+"gross_cash_out":         643.17,
+"gross_multiple":           2.08 
+},
+{
+ "equity_per_unit":            278,
+"equity_value_millions":         1779.2,
+"fcrc_partners_equity":         533.76,
+"greenland_equity":        1245.44,
+"gross_cash_out":         647.65,
+"gross_multiple":           2.08 
+},
+{
+ "equity_per_unit":            279,
+"equity_value_millions":         1785.6,
+"fcrc_partners_equity":         535.68,
+"greenland_equity":        1249.92,
+"gross_cash_out":         652.13,
+"gross_multiple":           2.09 
+},
+{
+ "equity_per_unit":            280,
+"equity_value_millions":           1792,
+"fcrc_partners_equity":          537.6,
+"greenland_equity":         1254.4,
+"gross_cash_out":         656.61,
+"gross_multiple":            2.1 
+},
+{
+ "equity_per_unit":            281,
+"equity_value_millions":         1798.4,
+"fcrc_partners_equity":         539.52,
+"greenland_equity":        1258.88,
+"gross_cash_out":         661.09,
+"gross_multiple":           2.11 
+},
+{
+ "equity_per_unit":            282,
+"equity_value_millions":         1804.8,
+"fcrc_partners_equity":         541.44,
+"greenland_equity":        1263.36,
+"gross_cash_out":         665.57,
+"gross_multiple":           2.11 
+},
+{
+ "equity_per_unit":            283,
+"equity_value_millions":         1811.2,
+"fcrc_partners_equity":         543.36,
+"greenland_equity":        1267.84,
+"gross_cash_out":         670.05,
+"gross_multiple":           2.12 
+},
+{
+ "equity_per_unit":            284,
+"equity_value_millions":         1817.6,
+"fcrc_partners_equity":         545.28,
+"greenland_equity":        1272.32,
+"gross_cash_out":         674.53,
+"gross_multiple":           2.13 
+},
+{
+ "equity_per_unit":            285,
+"equity_value_millions":           1824,
+"fcrc_partners_equity":          547.2,
+"greenland_equity":         1276.8,
+"gross_cash_out":         679.01,
+"gross_multiple":           2.14 
+},
+{
+ "equity_per_unit":            286,
+"equity_value_millions":         1830.4,
+"fcrc_partners_equity":         549.12,
+"greenland_equity":        1281.28,
+"gross_cash_out":         683.49,
+"gross_multiple":           2.14 
+},
+{
+ "equity_per_unit":            287,
+"equity_value_millions":         1836.8,
+"fcrc_partners_equity":         551.04,
+"greenland_equity":        1285.76,
+"gross_cash_out":         687.97,
+"gross_multiple":           2.15 
+},
+{
+ "equity_per_unit":            288,
+"equity_value_millions":         1843.2,
+"fcrc_partners_equity":         552.96,
+"greenland_equity":        1290.24,
+"gross_cash_out":         692.45,
+"gross_multiple":           2.16 
+},
+{
+ "equity_per_unit":            289,
+"equity_value_millions":         1849.6,
+"fcrc_partners_equity":         554.88,
+"greenland_equity":        1294.72,
+"gross_cash_out":         696.93,
+"gross_multiple":           2.17 
+},
+{
+ "equity_per_unit":            290,
+"equity_value_millions":           1856,
+"fcrc_partners_equity":          556.8,
+"greenland_equity":         1299.2,
+"gross_cash_out":         701.41,
+"gross_multiple":           2.17 
+},
+{
+ "equity_per_unit":            291,
+"equity_value_millions":         1862.4,
+"fcrc_partners_equity":         558.72,
+"greenland_equity":        1303.68,
+"gross_cash_out":         705.89,
+"gross_multiple":           2.18 
+},
+{
+ "equity_per_unit":            292,
+"equity_value_millions":         1868.8,
+"fcrc_partners_equity":         560.64,
+"greenland_equity":        1308.16,
+"gross_cash_out":         710.37,
+"gross_multiple":           2.19 
+},
+{
+ "equity_per_unit":            293,
+"equity_value_millions":         1875.2,
+"fcrc_partners_equity":         562.56,
+"greenland_equity":        1312.64,
+"gross_cash_out":         714.85,
+"gross_multiple":            2.2 
+},
+{
+ "equity_per_unit":            294,
+"equity_value_millions":         1881.6,
+"fcrc_partners_equity":         564.48,
+"greenland_equity":        1317.12,
+"gross_cash_out":         719.33,
+"gross_multiple":            2.2 
+},
+{
+ "equity_per_unit":            295,
+"equity_value_millions":           1888,
+"fcrc_partners_equity":          566.4,
+"greenland_equity":         1321.6,
+"gross_cash_out":         723.81,
+"gross_multiple":           2.21 
+},
+{
+ "equity_per_unit":            296,
+"equity_value_millions":         1894.4,
+"fcrc_partners_equity":         568.32,
+"greenland_equity":        1326.08,
+"gross_cash_out":         728.29,
+"gross_multiple":           2.22 
+},
+{
+ "equity_per_unit":            297,
+"equity_value_millions":         1900.8,
+"fcrc_partners_equity":         570.24,
+"greenland_equity":        1330.56,
+"gross_cash_out":         732.77,
+"gross_multiple":           2.23 
+},
+{
+ "equity_per_unit":            298,
+"equity_value_millions":         1907.2,
+"fcrc_partners_equity":         572.16,
+"greenland_equity":        1335.04,
+"gross_cash_out":         737.25,
+"gross_multiple":           2.23 
+},
+{
+ "equity_per_unit":            299,
+"equity_value_millions":         1913.6,
+"fcrc_partners_equity":         574.08,
+"greenland_equity":        1339.52,
+"gross_cash_out":         741.73,
+"gross_multiple":           2.24 
+},
+{
+ "equity_per_unit":            300,
+"equity_value_millions":           1920,
+"fcrc_partners_equity":            576,
+"greenland_equity":           1344,
+"gross_cash_out":         746.21,
+"gross_multiple":           2.25 
+},
+{
+ "equity_per_unit":            301,
+"equity_value_millions":         1926.4,
+"fcrc_partners_equity":         577.92,
+"greenland_equity":        1348.48,
+"gross_cash_out":         750.69,
+"gross_multiple":           2.26 
+},
+{
+ "equity_per_unit":            302,
+"equity_value_millions":         1932.8,
+"fcrc_partners_equity":         579.84,
+"greenland_equity":        1352.96,
+"gross_cash_out":         755.17,
+"gross_multiple":           2.26 
+},
+{
+ "equity_per_unit":            303,
+"equity_value_millions":         1939.2,
+"fcrc_partners_equity":         581.76,
+"greenland_equity":        1357.44,
+"gross_cash_out":         759.65,
+"gross_multiple":           2.27 
+},
+{
+ "equity_per_unit":            304,
+"equity_value_millions":         1945.6,
+"fcrc_partners_equity":         583.68,
+"greenland_equity":        1361.92,
+"gross_cash_out":         764.13,
+"gross_multiple":           2.28 
+},
+{
+ "equity_per_unit":            305,
+"equity_value_millions":           1952,
+"fcrc_partners_equity":          585.6,
+"greenland_equity":         1366.4,
+"gross_cash_out":         768.61,
+"gross_multiple":           2.29 
+},
+{
+ "equity_per_unit":            306,
+"equity_value_millions":         1958.4,
+"fcrc_partners_equity":         587.52,
+"greenland_equity":        1370.88,
+"gross_cash_out":         773.09,
+"gross_multiple":           2.29 
+},
+{
+ "equity_per_unit":            307,
+"equity_value_millions":         1964.8,
+"fcrc_partners_equity":         589.44,
+"greenland_equity":        1375.36,
+"gross_cash_out":         777.57,
+"gross_multiple":            2.3 
+},
+{
+ "equity_per_unit":            308,
+"equity_value_millions":         1971.2,
+"fcrc_partners_equity":         591.36,
+"greenland_equity":        1379.84,
+"gross_cash_out":         782.05,
+"gross_multiple":           2.31 
+},
+{
+ "equity_per_unit":            309,
+"equity_value_millions":         1977.6,
+"fcrc_partners_equity":         593.28,
+"greenland_equity":        1384.32,
+"gross_cash_out":         786.53,
+"gross_multiple":           2.32 
+},
+{
+ "equity_per_unit":            310,
+"equity_value_millions":           1984,
+"fcrc_partners_equity":          595.2,
+"greenland_equity":         1388.8,
+"gross_cash_out":         791.01,
+"gross_multiple":           2.32 
+},
+{
+ "equity_per_unit":            311,
+"equity_value_millions":         1990.4,
+"fcrc_partners_equity":         597.12,
+"greenland_equity":        1393.28,
+"gross_cash_out":         795.49,
+"gross_multiple":           2.33 
+},
+{
+ "equity_per_unit":            312,
+"equity_value_millions":         1996.8,
+"fcrc_partners_equity":         599.04,
+"greenland_equity":        1397.76,
+"gross_cash_out":         799.97,
+"gross_multiple":           2.34 
+},
+{
+ "equity_per_unit":            313,
+"equity_value_millions":         2003.2,
+"fcrc_partners_equity":         600.96,
+"greenland_equity":        1402.24,
+"gross_cash_out":         804.45,
+"gross_multiple":           2.35 
+},
+{
+ "equity_per_unit":            314,
+"equity_value_millions":         2009.6,
+"fcrc_partners_equity":         602.88,
+"greenland_equity":        1406.72,
+"gross_cash_out":         808.93,
+"gross_multiple":           2.35 
+},
+{
+ "equity_per_unit":            315,
+"equity_value_millions":           2016,
+"fcrc_partners_equity":          604.8,
+"greenland_equity":         1411.2,
+"gross_cash_out":         813.41,
+"gross_multiple":           2.36 
+},
+{
+ "equity_per_unit":            316,
+"equity_value_millions":         2022.4,
+"fcrc_partners_equity":         606.72,
+"greenland_equity":        1415.68,
+"gross_cash_out":         817.89,
+"gross_multiple":           2.37 
+},
+{
+ "equity_per_unit":            317,
+"equity_value_millions":         2028.8,
+"fcrc_partners_equity":         608.64,
+"greenland_equity":        1420.16,
+"gross_cash_out":         822.37,
+"gross_multiple":           2.38 
+},
+{
+ "equity_per_unit":            318,
+"equity_value_millions":         2035.2,
+"fcrc_partners_equity":         610.56,
+"greenland_equity":        1424.64,
+"gross_cash_out":         826.85,
+"gross_multiple":           2.38 
+},
+{
+ "equity_per_unit":            319,
+"equity_value_millions":         2041.6,
+"fcrc_partners_equity":         612.48,
+"greenland_equity":        1429.12,
+"gross_cash_out":         831.33,
+"gross_multiple":           2.39 
+},
+{
+ "equity_per_unit":            320,
+"equity_value_millions":           2048,
+"fcrc_partners_equity":          614.4,
+"greenland_equity":         1433.6,
+"gross_cash_out":         835.81,
+"gross_multiple":            2.4 
+},
+{
+ "equity_per_unit":            321,
+"equity_value_millions":         2054.4,
+"fcrc_partners_equity":         616.32,
+"greenland_equity":        1438.08,
+"gross_cash_out":         840.29,
+"gross_multiple":           2.41 
+},
+{
+ "equity_per_unit":            322,
+"equity_value_millions":         2060.8,
+"fcrc_partners_equity":         618.24,
+"greenland_equity":        1442.56,
+"gross_cash_out":         844.77,
+"gross_multiple":           2.41 
+},
+{
+ "equity_per_unit":            323,
+"equity_value_millions":         2067.2,
+"fcrc_partners_equity":         620.16,
+"greenland_equity":        1447.04,
+"gross_cash_out":         849.25,
+"gross_multiple":           2.42 
+},
+{
+ "equity_per_unit":            324,
+"equity_value_millions":         2073.6,
+"fcrc_partners_equity":         622.08,
+"greenland_equity":        1451.52,
+"gross_cash_out":         853.73,
+"gross_multiple":           2.43 
+},
+{
+ "equity_per_unit":            325,
+"equity_value_millions":           2080,
+"fcrc_partners_equity":            624,
+"greenland_equity":           1456,
+"gross_cash_out":         858.21,
+"gross_multiple":           2.44 
+},
+{
+ "equity_per_unit":            326,
+"equity_value_millions":         2086.4,
+"fcrc_partners_equity":         625.92,
+"greenland_equity":        1460.48,
+"gross_cash_out":         862.69,
+"gross_multiple":           2.44 
+},
+{
+ "equity_per_unit":            327,
+"equity_value_millions":         2092.8,
+"fcrc_partners_equity":         627.84,
+"greenland_equity":        1464.96,
+"gross_cash_out":         867.17,
+"gross_multiple":           2.45 
+},
+{
+ "equity_per_unit":            328,
+"equity_value_millions":         2099.2,
+"fcrc_partners_equity":         629.76,
+"greenland_equity":        1469.44,
+"gross_cash_out":         871.65,
+"gross_multiple":           2.46 
+},
+{
+ "equity_per_unit":            329,
+"equity_value_millions":         2105.6,
+"fcrc_partners_equity":         631.68,
+"greenland_equity":        1473.92,
+"gross_cash_out":         876.13,
+"gross_multiple":           2.47 
+},
+{
+ "equity_per_unit":            330,
+"equity_value_millions":           2112,
+"fcrc_partners_equity":          633.6,
+"greenland_equity":         1478.4,
+"gross_cash_out":         880.61,
+"gross_multiple":           2.47 
+},
+{
+ "equity_per_unit":            331,
+"equity_value_millions":         2118.4,
+"fcrc_partners_equity":         635.52,
+"greenland_equity":        1482.88,
+"gross_cash_out":         885.09,
+"gross_multiple":           2.48 
+},
+{
+ "equity_per_unit":            332,
+"equity_value_millions":         2124.8,
+"fcrc_partners_equity":         637.44,
+"greenland_equity":        1487.36,
+"gross_cash_out":         889.57,
+"gross_multiple":           2.49 
+},
+{
+ "equity_per_unit":            333,
+"equity_value_millions":         2131.2,
+"fcrc_partners_equity":         639.36,
+"greenland_equity":        1491.84,
+"gross_cash_out":         894.05,
+"gross_multiple":            2.5 
+},
+{
+ "equity_per_unit":            334,
+"equity_value_millions":         2137.6,
+"fcrc_partners_equity":         641.28,
+"greenland_equity":        1496.32,
+"gross_cash_out":         898.53,
+"gross_multiple":            2.5 
+},
+{
+ "equity_per_unit":            335,
+"equity_value_millions":           2144,
+"fcrc_partners_equity":          643.2,
+"greenland_equity":         1500.8,
+"gross_cash_out":         903.01,
+"gross_multiple":           2.51 
+},
+{
+ "equity_per_unit":            336,
+"equity_value_millions":         2150.4,
+"fcrc_partners_equity":         645.12,
+"greenland_equity":        1505.28,
+"gross_cash_out":         907.49,
+"gross_multiple":           2.52 
+},
+{
+ "equity_per_unit":            337,
+"equity_value_millions":         2156.8,
+"fcrc_partners_equity":         647.04,
+"greenland_equity":        1509.76,
+"gross_cash_out":         911.97,
+"gross_multiple":           2.53 
+},
+{
+ "equity_per_unit":            338,
+"equity_value_millions":         2163.2,
+"fcrc_partners_equity":         648.96,
+"greenland_equity":        1514.24,
+"gross_cash_out":         916.45,
+"gross_multiple":           2.53 
+},
+{
+ "equity_per_unit":            339,
+"equity_value_millions":         2169.6,
+"fcrc_partners_equity":         650.88,
+"greenland_equity":        1518.72,
+"gross_cash_out":         920.93,
+"gross_multiple":           2.54 
+},
+{
+ "equity_per_unit":            340,
+"equity_value_millions":           2176,
+"fcrc_partners_equity":          652.8,
+"greenland_equity":         1523.2,
+"gross_cash_out":         925.41,
+"gross_multiple":           2.55 
+},
+{
+ "equity_per_unit":            341,
+"equity_value_millions":         2182.4,
+"fcrc_partners_equity":         654.72,
+"greenland_equity":        1527.68,
+"gross_cash_out":         929.89,
+"gross_multiple":           2.56 
+},
+{
+ "equity_per_unit":            342,
+"equity_value_millions":         2188.8,
+"fcrc_partners_equity":         656.64,
+"greenland_equity":        1532.16,
+"gross_cash_out":         934.37,
+"gross_multiple":           2.56 
+},
+{
+ "equity_per_unit":            343,
+"equity_value_millions":         2195.2,
+"fcrc_partners_equity":         658.56,
+"greenland_equity":        1536.64,
+"gross_cash_out":         938.85,
+"gross_multiple":           2.57 
+},
+{
+ "equity_per_unit":            344,
+"equity_value_millions":         2201.6,
+"fcrc_partners_equity":         660.48,
+"greenland_equity":        1541.12,
+"gross_cash_out":         943.33,
+"gross_multiple":           2.58 
+},
+{
+ "equity_per_unit":            345,
+"equity_value_millions":           2208,
+"fcrc_partners_equity":          662.4,
+"greenland_equity":         1545.6,
+"gross_cash_out":         947.81,
+"gross_multiple":           2.59 
+},
+{
+ "equity_per_unit":            346,
+"equity_value_millions":         2214.4,
+"fcrc_partners_equity":         664.32,
+"greenland_equity":        1550.08,
+"gross_cash_out":         952.29,
+"gross_multiple":           2.59 
+},
+{
+ "equity_per_unit":            347,
+"equity_value_millions":         2220.8,
+"fcrc_partners_equity":         666.24,
+"greenland_equity":        1554.56,
+"gross_cash_out":         956.77,
+"gross_multiple":            2.6 
+},
+{
+ "equity_per_unit":            348,
+"equity_value_millions":         2227.2,
+"fcrc_partners_equity":         668.16,
+"greenland_equity":        1559.04,
+"gross_cash_out":         961.25,
+"gross_multiple":           2.61 
+},
+{
+ "equity_per_unit":            349,
+"equity_value_millions":         2233.6,
+"fcrc_partners_equity":         670.08,
+"greenland_equity":        1563.52,
+"gross_cash_out":         965.73,
+"gross_multiple":           2.62 
+},
+{
+ "equity_per_unit":            350,
+"equity_value_millions":           2240,
+"fcrc_partners_equity":            672,
+"greenland_equity":           1568,
+"gross_cash_out":         970.21,
+"gross_multiple":           2.62 
+},
+{
+ "equity_per_unit":            351,
+"equity_value_millions":         2246.4,
+"fcrc_partners_equity":         673.92,
+"greenland_equity":        1572.48,
+"gross_cash_out":         974.69,
+"gross_multiple":           2.63 
+},
+{
+ "equity_per_unit":            352,
+"equity_value_millions":         2252.8,
+"fcrc_partners_equity":         675.84,
+"greenland_equity":        1576.96,
+"gross_cash_out":         979.17,
+"gross_multiple":           2.64 
+},
+{
+ "equity_per_unit":            353,
+"equity_value_millions":         2259.2,
+"fcrc_partners_equity":         677.76,
+"greenland_equity":        1581.44,
+"gross_cash_out":         983.65,
+"gross_multiple":           2.65 
+},
+{
+ "equity_per_unit":            354,
+"equity_value_millions":         2265.6,
+"fcrc_partners_equity":         679.68,
+"greenland_equity":        1585.92,
+"gross_cash_out":         988.13,
+"gross_multiple":           2.65 
+},
+{
+ "equity_per_unit":            355,
+"equity_value_millions":           2272,
+"fcrc_partners_equity":          681.6,
+"greenland_equity":         1590.4,
+"gross_cash_out":         992.61,
+"gross_multiple":           2.66 
+},
+{
+ "equity_per_unit":            356,
+"equity_value_millions":         2278.4,
+"fcrc_partners_equity":         683.52,
+"greenland_equity":        1594.88,
+"gross_cash_out":         997.09,
+"gross_multiple":           2.67 
+},
+{
+ "equity_per_unit":            357,
+"equity_value_millions":         2284.8,
+"fcrc_partners_equity":         685.44,
+"greenland_equity":        1599.36,
+"gross_cash_out":        1001.57,
+"gross_multiple":           2.68 
+},
+{
+ "equity_per_unit":            358,
+"equity_value_millions":         2291.2,
+"fcrc_partners_equity":         687.36,
+"greenland_equity":        1603.84,
+"gross_cash_out":        1006.05,
+"gross_multiple":           2.68 
+},
+{
+ "equity_per_unit":            359,
+"equity_value_millions":         2297.6,
+"fcrc_partners_equity":         689.28,
+"greenland_equity":        1608.32,
+"gross_cash_out":        1010.53,
+"gross_multiple":           2.69 
+},
+{
+ "equity_per_unit":            360,
+"equity_value_millions":           2304,
+"fcrc_partners_equity":          691.2,
+"greenland_equity":         1612.8,
+"gross_cash_out":        1015.01,
+"gross_multiple":            2.7 
+},
+{
+ "equity_per_unit":            361,
+"equity_value_millions":         2310.4,
+"fcrc_partners_equity":         693.12,
+"greenland_equity":        1617.28,
+"gross_cash_out":        1019.49,
+"gross_multiple":           2.71 
+},
+{
+ "equity_per_unit":            362,
+"equity_value_millions":         2316.8,
+"fcrc_partners_equity":         695.04,
+"greenland_equity":        1621.76,
+"gross_cash_out":        1023.97,
+"gross_multiple":           2.71 
+},
+{
+ "equity_per_unit":            363,
+"equity_value_millions":         2323.2,
+"fcrc_partners_equity":         696.96,
+"greenland_equity":        1626.24,
+"gross_cash_out":        1028.45,
+"gross_multiple":           2.72 
+},
+{
+ "equity_per_unit":            364,
+"equity_value_millions":         2329.6,
+"fcrc_partners_equity":         698.88,
+"greenland_equity":        1630.72,
+"gross_cash_out":        1032.93,
+"gross_multiple":           2.73 
+},
+{
+ "equity_per_unit":            365,
+"equity_value_millions":           2336,
+"fcrc_partners_equity":          700.8,
+"greenland_equity":         1635.2,
+"gross_cash_out":        1037.41,
+"gross_multiple":           2.74 
+},
+{
+ "equity_per_unit":            366,
+"equity_value_millions":         2342.4,
+"fcrc_partners_equity":         702.72,
+"greenland_equity":        1639.68,
+"gross_cash_out":        1041.89,
+"gross_multiple":           2.74 
+},
+{
+ "equity_per_unit":            367,
+"equity_value_millions":         2348.8,
+"fcrc_partners_equity":         704.64,
+"greenland_equity":        1644.16,
+"gross_cash_out":        1046.37,
+"gross_multiple":           2.75 
+},
+{
+ "equity_per_unit":            368,
+"equity_value_millions":         2355.2,
+"fcrc_partners_equity":         706.56,
+"greenland_equity":        1648.64,
+"gross_cash_out":        1050.85,
+"gross_multiple":           2.76 
+},
+{
+ "equity_per_unit":            369,
+"equity_value_millions":         2361.6,
+"fcrc_partners_equity":         708.48,
+"greenland_equity":        1653.12,
+"gross_cash_out":        1055.33,
+"gross_multiple":           2.77 
+},
+{
+ "equity_per_unit":            370,
+"equity_value_millions":           2368,
+"fcrc_partners_equity":          710.4,
+"greenland_equity":         1657.6,
+"gross_cash_out":        1059.81,
+"gross_multiple":           2.77 
+},
+{
+ "equity_per_unit":            371,
+"equity_value_millions":         2374.4,
+"fcrc_partners_equity":         712.32,
+"greenland_equity":        1662.08,
+"gross_cash_out":        1064.29,
+"gross_multiple":           2.78 
+},
+{
+ "equity_per_unit":            372,
+"equity_value_millions":         2380.8,
+"fcrc_partners_equity":         714.24,
+"greenland_equity":        1666.56,
+"gross_cash_out":        1068.77,
+"gross_multiple":           2.79 
+},
+{
+ "equity_per_unit":            373,
+"equity_value_millions":         2387.2,
+"fcrc_partners_equity":         716.16,
+"greenland_equity":        1671.04,
+"gross_cash_out":        1073.25,
+"gross_multiple":            2.8 
+},
+{
+ "equity_per_unit":            374,
+"equity_value_millions":         2393.6,
+"fcrc_partners_equity":         718.08,
+"greenland_equity":        1675.52,
+"gross_cash_out":        1077.73,
+"gross_multiple":            2.8 
+},
+{
+ "equity_per_unit":            375,
+"equity_value_millions":           2400,
+"fcrc_partners_equity":            720,
+"greenland_equity":           1680,
+"gross_cash_out":        1082.21,
+"gross_multiple":           2.81 
+},
+{
+ "equity_per_unit":            376,
+"equity_value_millions":         2406.4,
+"fcrc_partners_equity":         721.92,
+"greenland_equity":        1684.48,
+"gross_cash_out":        1086.69,
+"gross_multiple":           2.82 
+},
+{
+ "equity_per_unit":            377,
+"equity_value_millions":         2412.8,
+"fcrc_partners_equity":         723.84,
+"greenland_equity":        1688.96,
+"gross_cash_out":        1091.17,
+"gross_multiple":           2.83 
+},
+{
+ "equity_per_unit":            378,
+"equity_value_millions":         2419.2,
+"fcrc_partners_equity":         725.76,
+"greenland_equity":        1693.44,
+"gross_cash_out":        1095.65,
+"gross_multiple":           2.83 
+},
+{
+ "equity_per_unit":            379,
+"equity_value_millions":         2425.6,
+"fcrc_partners_equity":         727.68,
+"greenland_equity":        1697.92,
+"gross_cash_out":        1100.13,
+"gross_multiple":           2.84 
+},
+{
+ "equity_per_unit":            380,
+"equity_value_millions":           2432,
+"fcrc_partners_equity":          729.6,
+"greenland_equity":         1702.4,
+"gross_cash_out":        1104.61,
+"gross_multiple":           2.85 
+},
+{
+ "equity_per_unit":            381,
+"equity_value_millions":         2438.4,
+"fcrc_partners_equity":         731.52,
+"greenland_equity":        1706.88,
+"gross_cash_out":        1109.09,
+"gross_multiple":           2.86 
+},
+{
+ "equity_per_unit":            382,
+"equity_value_millions":         2444.8,
+"fcrc_partners_equity":         733.44,
+"greenland_equity":        1711.36,
+"gross_cash_out":        1113.57,
+"gross_multiple":           2.86 
+},
+{
+ "equity_per_unit":            383,
+"equity_value_millions":         2451.2,
+"fcrc_partners_equity":         735.36,
+"greenland_equity":        1715.84,
+"gross_cash_out":        1118.05,
+"gross_multiple":           2.87 
+},
+{
+ "equity_per_unit":            384,
+"equity_value_millions":         2457.6,
+"fcrc_partners_equity":         737.28,
+"greenland_equity":        1720.32,
+"gross_cash_out":        1122.53,
+"gross_multiple":           2.88 
+},
+{
+ "equity_per_unit":            385,
+"equity_value_millions":           2464,
+"fcrc_partners_equity":          739.2,
+"greenland_equity":         1724.8,
+"gross_cash_out":        1127.01,
+"gross_multiple":           2.89 
+},
+{
+ "equity_per_unit":            386,
+"equity_value_millions":         2470.4,
+"fcrc_partners_equity":         741.12,
+"greenland_equity":        1729.28,
+"gross_cash_out":        1131.49,
+"gross_multiple":           2.89 
+},
+{
+ "equity_per_unit":            387,
+"equity_value_millions":         2476.8,
+"fcrc_partners_equity":         743.04,
+"greenland_equity":        1733.76,
+"gross_cash_out":        1135.97,
+"gross_multiple":            2.9 
+},
+{
+ "equity_per_unit":            388,
+"equity_value_millions":         2483.2,
+"fcrc_partners_equity":         744.96,
+"greenland_equity":        1738.24,
+"gross_cash_out":        1140.45,
+"gross_multiple":           2.91 
+},
+{
+ "equity_per_unit":            389,
+"equity_value_millions":         2489.6,
+"fcrc_partners_equity":         746.88,
+"greenland_equity":        1742.72,
+"gross_cash_out":        1144.93,
+"gross_multiple":           2.92 
+},
+{
+ "equity_per_unit":            390,
+"equity_value_millions":           2496,
+"fcrc_partners_equity":          748.8,
+"greenland_equity":         1747.2,
+"gross_cash_out":        1149.41,
+"gross_multiple":           2.92 
+},
+{
+ "equity_per_unit":            391,
+"equity_value_millions":         2502.4,
+"fcrc_partners_equity":         750.72,
+"greenland_equity":        1751.68,
+"gross_cash_out":        1153.89,
+"gross_multiple":           2.93 
+},
+{
+ "equity_per_unit":            392,
+"equity_value_millions":         2508.8,
+"fcrc_partners_equity":         752.64,
+"greenland_equity":        1756.16,
+"gross_cash_out":        1158.37,
+"gross_multiple":           2.94 
+},
+{
+ "equity_per_unit":            393,
+"equity_value_millions":         2515.2,
+"fcrc_partners_equity":         754.56,
+"greenland_equity":        1760.64,
+"gross_cash_out":        1162.85,
+"gross_multiple":           2.95 
+},
+{
+ "equity_per_unit":            394,
+"equity_value_millions":         2521.6,
+"fcrc_partners_equity":         756.48,
+"greenland_equity":        1765.12,
+"gross_cash_out":        1167.33,
+"gross_multiple":           2.95 
+},
+{
+ "equity_per_unit":            395,
+"equity_value_millions":           2528,
+"fcrc_partners_equity":          758.4,
+"greenland_equity":         1769.6,
+"gross_cash_out":        1171.81,
+"gross_multiple":           2.96 
+},
+{
+ "equity_per_unit":            396,
+"equity_value_millions":         2534.4,
+"fcrc_partners_equity":         760.32,
+"greenland_equity":        1774.08,
+"gross_cash_out":        1176.29,
+"gross_multiple":           2.97 
+},
+{
+ "equity_per_unit":            397,
+"equity_value_millions":         2540.8,
+"fcrc_partners_equity":         762.24,
+"greenland_equity":        1778.56,
+"gross_cash_out":        1180.77,
+"gross_multiple":           2.98 
+},
+{
+ "equity_per_unit":            398,
+"equity_value_millions":         2547.2,
+"fcrc_partners_equity":         764.16,
+"greenland_equity":        1783.04,
+"gross_cash_out":        1185.25,
+"gross_multiple":           2.98 
+},
+{
+ "equity_per_unit":            399,
+"equity_value_millions":         2553.6,
+"fcrc_partners_equity":         766.08,
+"greenland_equity":        1787.52,
+"gross_cash_out":        1189.73,
+"gross_multiple":           2.99 
+},
+{
+ "equity_per_unit":            400,
+"equity_value_millions":           2560,
+"fcrc_partners_equity":            768,
+"greenland_equity":           1792,
+"gross_cash_out":        1194.21,
+"gross_multiple":              3 
+} 
+]
+  $scope.controls = {
+ "y": {
+ "name": "y",
+"value": "equity_per_unit",
+"values": [ "equity_per_unit", "equity_value_millions", "fcrc_partners_equity", "greenland_equity", "gross_cash_out", "gross_multiple" ],
+"label": "Select  y :" 
+},
+"x": {
+ "name": "x",
+"value": "gross_cash_out",
+"values": [ "equity_per_unit", "equity_value_millions", "fcrc_partners_equity", "greenland_equity", "gross_cash_out", "gross_multiple" ],
+"label": "Select  x :" 
+} 
+}           
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+	}, true)
+}  
+ 
+function drawChart(opts, data){  
+	var data = d3.nest()
+		.key(function(d){
+			return opts.group === undefined ? 'main' : d[opts.group]
+		})
+		.entries(data)
+	
+	nv.addGraph(function() {
+		var chart = nv.models[opts.type]()
+			.x(function(d) { return d[opts.x] })
+			.y(function(d) { return d[opts.y] })
+			.width(opts.width)
+			.height(opts.height)
+		
+	chart
+  .showControls(false)
+  .tooltip( function(key, x, y, e, graph) {
+return '<p><b>' + 'Per Multifamily Unit Valuation: $' +
++ e.point.equity_per_unit + '</b></p>' +
+'<p>' + 'xAxis Value: ' +
++ x + '</p>' +
+'<p>' + 'yAxis Value: ' + + y + '</p>'
+})
+          
+	chart.xAxis
+  .tickFormat(function(d) {return d3.format('.02f')(d)})
+ 
+	
+	
+	chart.yAxis
+  .tickFormat(function(d) {return d3.format('.02f')(d)})
+ 
+	d3.select("#" + opts.id + ' svg')
+		.datum(data)
+		.transition().duration(500)
+		.call(chart);
+	
+	 nv.utils.windowResize(chart.update);
+	 return chart;
+  });
+};
+</script>
+     <script>
+  var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  </body>
+  <!-- Google Prettify -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script 
+    src='https://google-code-prettify.googlecode.com/svn-history/r232/trunk/src/lang-r.js'>
+  </script>
+  <script>
+    var pres = document.getElementsByTagName("pre");
+    for (var i=0; i < pres.length; ++i) {
+      pres[i].className = "prettyprint linenums";
+    }
+    prettyPrint();
+  </script>
+</html>

@@ -1,0 +1,368 @@
+
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <title>Peyton's Quest 2013, Week 5</title>
+    
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/cosmo/bootstrap.min.css">
+     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" >
+    <link rel='stylesheet' href="http://getbootstrap.com/2.3.2/assets/js/google-code-prettify/prettify.css">
+    <link rel='stylesheet' href="http://aozora.github.io/bootplus/assets/css/docs.css">
+    <link rel='stylesheet' href='http://nvd3.org/src/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v2.min.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/nv.d3.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 140%;
+      height: 425px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+            <!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+
+<meta name="description" content="Peyton Manning is having the season of a lifetime.  Will he break all the records?  Follow Peyton's quest each week with Aragorn's interactive visualization of Peyton's journey to the record books." />
+<link rel="canonical" href="http://aragorn.org/visualization/nfl/features/peyton_manning/peyton_quest_2013/week_5/.html" />
+<meta property="og:description" content="Peyton Manning is having the season of a lifetime.  Will he break all the records?  Follow Peyton's quest each week with Aragorn's interactive visualization of Peyton's journey to the record books." />
+<meta property="og:image" content="http://aragorn.org/visualization/nfl/features/peyton_manning/peyton_quest_2013/week_5/screen.png" />
+<meta property="og:site_name" content="Aragorn" />
+<meta property="og:title" content="Peyton's Quest 2013" />
+<meta property="og:type" content="article" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="Peyton's Quest 2013" />
+        <meta name="twitter:title" content="Peyton's Quest 2013" />
+        <meta name="twitter:description" content="Peyton Manning is having the season of a lifetime.  Will he break all the records?  Follow Peyton's quest each week with Aragorn's interactive visualization of Peyton's journey to the record books." />
+        <meta name="twitter:image" content="http://aragorn.org/visualization/nfl/features/peyton_manning/peyton_quest_2013/week_5/screen.png" />
+        <meta name="twitter:site" content="Aragorn" />
+  </head>
+  <body ng-app>
+       <center>
+       
+      <h2>Week 5: Peyton's Quest 2013, A Journey to the Record Books <b>EMPOWERED by <a href="http://aragorn.org/"><img src="http://aragorn.org/img/aragorn.png" height="26" width="137" alt="aragorn"></a></b></h2>
+    </center>
+  </head>
+   <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='span3'>
+      <form class='well'>
+        <label><b>Select  y :</b></label>
+        <select ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+        </select><br>
+        <label><b>Select  group :</b></label>
+        <select ng-model="opts.group" 
+          ng-options="ctl for ctl in controls.group.values">   
+        </select><br>
+      </form>
+    </div>
+    <div class='span8'>
+      <div class="bs-docs-example">
+        <div id='chart11bf2881cda2' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart11bf2881cda2",
+"width":    700,
+"height":    400,
+"x": "label",
+"y": "passing_touchdowns",
+"group": "player",
+"type": "multiBarChart",
+"id": "chart11bf2881cda2" 
+}
+  $scope.data = [
+ {
+ "X": 5,
+"player": "Peyton Manning",
+"season": 2013,
+"passing_touchdowns": 20,
+"qb_rating":          131.6,
+"passing_yards": 1884,
+"attempts": 198,
+"completions": 150,
+"interceptions": 1,
+"completion_percentage":          75.76,
+"team_points": 230,
+"opponent_points": 139,
+"wins": 5,
+"win_percentage": 100,
+"point_contribution_ratio":          54.78,
+"interceptions_per_attempt":           0.51,
+"yards_per_completion":          12.56,
+"yards_per_attempt":           9.52,
+"touchdowns_per_interception":             20,
+"touchdowns_per_attempt":           10.1,
+"touchdowns_per_completion":          13.33,
+"player_point_to_opponent_point_ratio":          90.65,
+"label": "Manning '13" 
+},
+{
+ "X": 6,
+"player": "Tom Brady",
+"season": 2007,
+"passing_touchdowns": 16,
+"qb_rating":         128.24,
+"passing_yards": 1383,
+"attempts": 158,
+"completions": 117,
+"interceptions": 2,
+"completion_percentage":          74.05,
+"team_points": 182,
+"opponent_points": 65,
+"wins": 5,
+"win_percentage": 100,
+"point_contribution_ratio":          52.75,
+"interceptions_per_attempt":           1.27,
+"yards_per_completion":          11.82,
+"yards_per_attempt":           8.75,
+"touchdowns_per_interception":              8,
+"touchdowns_per_attempt":          10.13,
+"touchdowns_per_completion":          13.68,
+"player_point_to_opponent_point_ratio":         147.69,
+"label": "Brady '07" 
+},
+{
+ "X": 2,
+"player": "Dan Marino",
+"season": 1984,
+"passing_touchdowns": 15,
+"qb_rating":            117,
+"passing_yards": 1527,
+"attempts": 155,
+"completions": 101,
+"interceptions": 3,
+"completion_percentage":          65.16,
+"team_points": 164,
+"opponent_points": 76,
+"wins": 5,
+"win_percentage": 100,
+"point_contribution_ratio":          54.88,
+"interceptions_per_attempt":           1.94,
+"yards_per_completion":          15.12,
+"yards_per_attempt":           9.85,
+"touchdowns_per_interception":              5,
+"touchdowns_per_attempt":           9.68,
+"touchdowns_per_completion":          14.85,
+"player_point_to_opponent_point_ratio":         118.42,
+"label": "Marino '84" 
+},
+{
+ "X": 1,
+"player": "Aaron Rodgers",
+"season": 2011,
+"passing_touchdowns": 14,
+"qb_rating":         122.98,
+"passing_yards": 1721,
+"attempts": 180,
+"completions": 129,
+"interceptions": 2,
+"completion_percentage":          71.67,
+"team_points": 173,
+"opponent_points": 111,
+"wins": 5,
+"win_percentage": 100,
+"point_contribution_ratio":          55.49,
+"interceptions_per_attempt":           1.11,
+"yards_per_completion":          13.34,
+"yards_per_attempt":           9.56,
+"touchdowns_per_interception":              7,
+"touchdowns_per_attempt":           7.78,
+"touchdowns_per_completion":          10.85,
+"player_point_to_opponent_point_ratio":          86.49,
+"label": "Rodgers '11" 
+},
+{
+ "X": 4,
+"player": "Peyton Manning",
+"season": 2004,
+"passing_touchdowns": 14,
+"qb_rating":         111.34,
+"passing_yards": 1321,
+"attempts": 157,
+"completions": 104,
+"interceptions": 3,
+"completion_percentage":          66.24,
+"team_points": 159,
+"opponent_points": 106,
+"wins": 4,
+"win_percentage": 80,
+"point_contribution_ratio":          52.83,
+"interceptions_per_attempt":           1.91,
+"yards_per_completion":           12.7,
+"yards_per_attempt":           8.41,
+"touchdowns_per_interception":           4.67,
+"touchdowns_per_attempt":           8.92,
+"touchdowns_per_completion":          13.46,
+"player_point_to_opponent_point_ratio":          79.25,
+"label": "Manning '04" 
+},
+{
+ "X": 7,
+"player": "Tom Brady",
+"season": 2011,
+"passing_touchdowns": 14,
+"qb_rating":         108.84,
+"passing_yards": 1874,
+"attempts": 196,
+"completions": 133,
+"interceptions": 6,
+"completion_percentage":          67.86,
+"team_points": 165,
+"opponent_points": 119,
+"wins": 4,
+"win_percentage": 80,
+"point_contribution_ratio":          50.91,
+"interceptions_per_attempt":           3.06,
+"yards_per_completion":          14.09,
+"yards_per_attempt":           9.56,
+"touchdowns_per_interception":           2.33,
+"touchdowns_per_attempt":           7.14,
+"touchdowns_per_completion":          10.53,
+"player_point_to_opponent_point_ratio":          70.59,
+"label": "Brady '11" 
+},
+{
+ "X": 3,
+"player": "Drew Brees",
+"season": 2011,
+"passing_touchdowns": 12,
+"qb_rating":          102.6,
+"passing_yards": 1769,
+"attempts": 219,
+"completions": 152,
+"interceptions": 5,
+"completion_percentage":          69.41,
+"team_points": 157,
+"opponent_points": 125,
+"wins": 4,
+"win_percentage": 80,
+"point_contribution_ratio":          45.86,
+"interceptions_per_attempt":           2.28,
+"yards_per_completion":          11.64,
+"yards_per_attempt":           8.08,
+"touchdowns_per_interception":            2.4,
+"touchdowns_per_attempt":           5.48,
+"touchdowns_per_completion":           7.89,
+"player_point_to_opponent_point_ratio":           57.6,
+"label": "Brees '11" 
+} 
+]
+  $scope.controls = {
+ "y": {
+ "name": "y",
+"value": "passing_touchdowns",
+"values": [ "passing_touchdowns", "qb_rating", "passing_yards", "attempts", "completions", "interceptions", "completion_percentage", "team_points", "opponent_points", "wins", "win_percentage", "point_contribution_ratio", "interceptions_per_attempt", "yards_per_completion", "yards_per_attempt", "touchdowns_per_interception", "touchdowns_per_attempt", "touchdowns_per_completion", "player_point_to_opponent_point_ratio" ],
+"label": "Select  y :" 
+},
+"group": {
+ "name": "group",
+"value": "passing_touchdowns",
+"values": [ "player", "season", "wins", "win_percentage" ],
+"label": "Select  group :" 
+} 
+}           
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+  }, true)
+}  
+ 
+function drawChart(opts, data){  
+  var data = d3.nest()
+    .key(function(d){
+      return opts.group === undefined ? 'main' : d[opts.group]
+    })
+    .entries(data)
+  
+  nv.addGraph(function() {
+    var chart = nv.models[opts.type]()
+      .x(function(d) { return d[opts.x] })
+      .y(function(d) { return d[opts.y] })
+      .width(opts.width)
+      .height(opts.height)
+    
+  chart
+  .showControls(false)
+  .color([ "#DF6108", "#0D254C", "#005E6A", "#313F36", "#C9B074" ])
+  .tooltip( function(key, x, y, e, graph) {
+return '<h3><b>' + e.point.player + '</b></h3>' +
+'<p><b>' + y + '</b></p>'
+'<p><b>' + 'After 5 Games' + '</b></p>'
+})
+          
+  
+ 
+  
+  
+  chart.yAxis
+  .tickFormat(function(d) {return d3.format('.02f')(d)})
+ 
+  d3.select("#" + opts.id + ' svg')
+    .datum(data)
+    .transition().duration(500)
+    .call(chart);
+  
+   nv.utils.windowResize(chart.update);
+   return chart;
+  });
+};
+</script>
+     <script>
+  var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  </body>
+  <!-- Google Prettify -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script 
+    src='https://google-code-prettify.googlecode.com/svn-history/r232/trunk/src/lang-r.js'>
+  </script>
+  <script>
+    var pres = document.getElementsByTagName("pre");
+    for (var i=0; i < pres.length; ++i) {
+      pres[i].className = "prettyprint linenums";
+    }
+    prettyPrint();
+  </script>
+</html>

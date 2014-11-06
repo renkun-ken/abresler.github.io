@@ -1,0 +1,6 @@
+library(shinyapps)
+setwd("~/Desktop/Github/asb_shiny_apps/nba/explorer/v3")
+terminateApp(appName = "nba_player_season_analysis")
+deployApp(appName = "nba_player_season_analysis")
+terminateApp(appName = "nba_season_player_analysis")
+deployApp(appName = "nba_season_player_analysis")

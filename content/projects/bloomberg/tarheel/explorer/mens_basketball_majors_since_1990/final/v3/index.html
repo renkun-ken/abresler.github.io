@@ -1,0 +1,2376 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<title>UNC Basketball Major Explorer</title>
+<html>
+  <head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://aragorn.org/scripts/nv.d3.css'>
+    <link rel='stylesheet' href='http://aragorn.org/scripts/rNVD3.css'>
+    
+    <script src='http://aragorn.org/scripts/jquery-1.8.2.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/nv.d3.min-new.js' type='text/javascript'></script>
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 700px;
+      height: 525px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+    <script>
+  var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+          <!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+<style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>     
+  </head>
+        <meta name="description" content="UNC Basketball Majors Since 1990" />
+<link rel="canonical" href="http://aragorn.org/projects/bloomberg/tarheel/explorer/mens_basketball_majors_since_1990/final/v3/" />
+<meta property="og:description" content="UNC Basketball Majors by Class Since 1990" />
+<meta property="og:image" content="http://aragorn.org/projects/bloomberg/tarheel/explorer/mens_basketball_majors_since_1990/final/v3/screen.png" />
+<meta property="og:site_name" content="Aragorn" />
+<meta property="og:title" content="http://aragorn.org/projects/bloomberg/tarheel/explorer/mens_basketball_majors_since_1990/final/v3/" />
+<meta property="og:type" content="article" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="http://aragorn.org/projects/bloomberg/tarheel/explorer/mens_basketball_majors_since_1990/final/v3/" />
+        <meta name="twitter:title" content="UNC Basketball Majors by Class Since 1990" />
+        <meta name="twitter:description" content="UNC Basketball Majors by Class Since 1990" />
+        <meta name="twitter:image" content="http://aragorn.org/projects/bloomberg/tarheel/explorer/mens_basketball_majors_since_1990/final/v3/screen.png" />
+        <meta name="twitter:site" content="Aragorn" />
+       <center>
+       <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 850px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: 0.25px"><strong>UNC Men's Basketball Major Explorer, 1990 to 2014</strong><br>
+     </div></center>
+  </head>
+  <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='col-md-3'>
+      <form class='well'>
+        <label><b>Select yVariable:</b></label>
+        <select class='form-control' ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+        </select>
+        <label><b>Select  groupVariable:</b></label>
+        <select class='form-control' ng-model="opts.group" 
+          ng-options="ctl for ctl in controls.group.values">   
+        </select>
+        
+        <select
+          ng-model="selected" 
+          ng-options="c as c.value group by c.variable for c in filters" 
+          class="form-control" multiple size="15">
+        </select>
+      </form>
+    </div>
+    <div class='col-md-8'>
+      <div class="bs-docs-example">
+        <div id='chartee42d0883c3' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div><script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chartee42d0883c3",
+"width":    700,
+"Height (inches)":    525,
+"x": "Class",
+"y": "Weight",
+"group": "Major Group",
+"type": "scatterChart",
+"id": "chartee42d0883c3" 
+}
+  $scope.data = [
+ {
+ "Major Group": "Communication",
+"player": "Bobby Frasor",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             75,
+"Weight": 210,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 2009,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674094&DB_OEM_ID=3350' target='_blank'> Bobby Frasor</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/JQ/JQDQXSQBVZJHGED.20120620145831.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2009<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Blue Island, IL<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Brendan Haywood",
+"Primary Major": "Communication",
+"NBA Player": true,
+"Height (inches)":             84,
+"Weight": 268,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2001,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674102&DB_OEM_ID=3350' target='_blank'> Brendan Haywood</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/RI/RIYLYLJIRKHGVHU.20121015201445.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2001<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Greensboro, NC<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Brian Morrison",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             74,
+"Weight": 184,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2004,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674021&DB_OEM_ID=3350' target='_blank'> Brian Morrison</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/TE/TEBICXOIURKFUEL.20121015202847.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2004<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Redmond, WA<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "D.J. Johnston",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             76,
+"Weight": 195,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2010,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674069&DB_OEM_ID=3350' target='_blank'> D.J. Johnston</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/XS/XSZGTTDSTRFBMRW.20120620110836.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2010<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Lower Gwynedd, PA<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Damion Grant",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             83,
+"Weight": 262,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2006,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674116&DB_OEM_ID=3350' target='_blank'> Damion Grant</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/MH/MHKLBFLQCARMUGV.20120620194213.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2006<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Portland, Jamaica<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Danny Green",
+"Primary Major": "Communication",
+"NBA Player": true,
+"Height (inches)":             78,
+"Weight": 210,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2009,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674001&DB_OEM_ID=3350' target='_blank'> Danny Green</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/MB/MBBXSUXULWBABCV.20120620145830.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2009<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> North Babylon, NY<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "David Noel",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             78,
+"Weight": 232,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2006,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674080&DB_OEM_ID=3350' target='_blank'> David Noel</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/RI/RIKNFOTIYQWWHHJ.20120620194213.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2006<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Durham, NC<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Denzel Robinson",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             76,
+"Weight": 220,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2013,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205722829&DB_OEM_ID=3350' target='_blank'> Denzel Robinson</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/LJ/LJZVWLQTZSOPKTR.20130926152409.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2013<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Chapel Hill, NC<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Dexter Strickland",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             75,
+"Weight": 180,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2013,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497515&DB_OEM_ID=3350' target='_blank'> Dexter Strickland</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/QW/QWEMKTTTVFYZDRF.20120829180406.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2013<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Rahway, NJ<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Ed Geth",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             80,
+"Weight": 230,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1996,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Ed Geth</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://graphics.fansonly.com/photos/schools/unc/sports/m-baskbl/auto_action/50004.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1996<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Norfolk, VA<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Greg Little",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             76,
+"Weight": 210,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2011,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205676807&DB_OEM_ID=3350' target='_blank'> Greg Little</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/OC/OCRDHNZRROUMPLL.20120620163333.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2011<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Durham, NC<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Jason Capel",
+"Primary Major": "Communication",
+"NBA Player": true,
+"Height (inches)":             80,
+"Weight": 237,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2002,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674125&DB_OEM_ID=3350' target='_blank'> Jason Capel</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/CK/CKWMIIOPVLOKWEC.20121015195222.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2002<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Fayetteville, NC<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Jesse Holley",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             75,
+"Weight": 190,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2007,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674017&DB_OEM_ID=3350' target='_blank'> Jesse Holley</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/FF/FFZVPDVIWWENRXC.20120619163838.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2007<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Roselle Park, NJ<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Jonathan Holmes",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             72,
+"Weight": 189,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 2003,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674083&DB_OEM_ID=3350' target='_blank'> Jonathan Holmes</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/BM/BMALNIUNQDHCHIF.20120620053321.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2003<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Bloomington, IN<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Justin Watts",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             77,
+"Weight": 210,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2012,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497518&DB_OEM_ID=3350' target='_blank'> Justin Watts</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/JU/JUSQACPFJLRHGLC.20120620142321.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2012<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Durham, NC<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Kris Lang",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             83,
+"Weight": 256,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 2002,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674016&DB_OEM_ID=3350' target='_blank'> Kris Lang</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/AE/AEWKONRXYMMFIGI.20121015202038.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2002<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Gastonia, NC<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Larry Davis",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             75,
+"Weight": 185,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1997,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Larry Davis</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://media.heraldonline.com/smedia/2013/04/22/19/38/3rdDl.AuSt.6.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1997<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Benmark, SC<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Larry Drew II",
+"Primary Major": "Communication",
+"NBA Player": true,
+"Height (inches)":             74,
+"Weight": 180,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2012,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674086&DB_OEM_ID=3350' target='_blank'> Larry Drew II</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/NY/NYSDCNWTNVDRCCV.20120620110835.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2012<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Encino, CA<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Leslie McDonald",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             77,
+"Weight": 215,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2013,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497528&DB_OEM_ID=3350' target='_blank'> Leslie McDonald</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/BY/BYHDQZKNESRMRJM.20130926152409.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2013<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Memphis, TN<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Marc Campbell",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             72,
+"Weight": 175,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2008,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674074&DB_OEM_ID=3350' target='_blank'> Marc Campbell</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/UB/UBHTETQYAKHURZD.20120620122821.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2008<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Raleigh, NC<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Marcus Ginyard",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             77,
+"Weight": 220,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2009,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674100&DB_OEM_ID=3350' target='_blank'> Marcus Ginyard</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/EK/EKUPXYMRUGVDRLN.20120620122821.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2009<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Alexandria, VA<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "P.J. Hairston",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":           77.5,
+"Weight": 220,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2015,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497519&DB_OEM_ID=3350' target='_blank'> P.J. Hairston</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/CH/CHGVFODUAXBGTJJ.20130926152408.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2015<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Greensboro, NC<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Pat Sullivan",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             80,
+"Weight": 205,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 1995,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Pat Sullivan</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://graphics.fansonly.com/photos/schools/unc/sports/m-baskbl/auto_action/a-Sullivan-P.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1995<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Bogota, NJ<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Raymond Felton",
+"Primary Major": "Communication",
+"NBA Player": true,
+"Height (inches)":             73,
+"Weight": 198,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2006,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674061&DB_OEM_ID=3350' target='_blank'> Raymond Felton</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/JF/JFETGOFKLHGFHDP.20120915055520.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2006<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Latta, SC<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Reggie Bullock",
+"Primary Major": "Communication",
+"NBA Player": true,
+"Height (inches)":             79,
+"Weight": 205,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2014,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497532&DB_OEM_ID=3350' target='_blank'> Reggie Bullock</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/WN/WNGAFGRVTXTXAMH.20120829180405.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2014<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Kinston, NC<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Sean May",
+"Primary Major": "Communication",
+"NBA Player": true,
+"Height (inches)":             81,
+"Weight": 272,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2006,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205673992&DB_OEM_ID=3350' target='_blank'> Sean May</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/RN/RNFXHVNHWEMHSYQ.20120915055520.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2006<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Bloomington, IN<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Serge Zwikker",
+"Primary Major": "Communication",
+"NBA Player": true,
+"Height (inches)":             87,
+"Weight": 273,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 1997,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Serge Zwikker</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://imspatial.files.wordpress.com/2007/02/serge_zwikker.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1997<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Maassluis, Netherlands<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Tyler Hansbrough",
+"Primary Major": "Communication",
+"NBA Player": true,
+"Height (inches)":             81,
+"Weight": 250,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 2009,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674122&DB_OEM_ID=3350' target='_blank'> Tyler Hansbrough</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/XS/XSFKXXUYHSGQMTG.20120620145830.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2009<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Poplar Bluff, MO<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Wayne Ellington",
+"Primary Major": "Communication",
+"NBA Player": true,
+"Height (inches)":             76,
+"Weight": 200,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2010,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674031&DB_OEM_ID=3350' target='_blank'> Wayne Ellington</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/ME/MEHRSSVRFUPBQOC.20120620145830.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2010<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Wynnewood, PA<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Communication",
+"player": "Will Robinson",
+"Primary Major": "Communication",
+"NBA Player": false,
+"Height (inches)":             78,
+"Weight": 220,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2005,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674047&DB_OEM_ID=3350' target='_blank'> Will Robinson</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/SJ/SJIWBSNACXPJKZB.20120620194214.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2005<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Chapel Hill, NC<br><strong>Primary Major:</strong> Communication<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              3,
+"color": "#BD0D18" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Adam Boone",
+"Primary Major": "Undeclared",
+"NBA Player": false,
+"Height (inches)":             74,
+"Weight": 202,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2004,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674101&DB_OEM_ID=3350' target='_blank'> Adam Boone</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/HY/HYBEYGULQFYJIIF.20121015194748.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2004<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Minneapolis, MN<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Alex Stepheson",
+"Primary Major": "Undeclared",
+"NBA Player": false,
+"Height (inches)":             81,
+"Weight": 235,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2010,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205673993&DB_OEM_ID=3350' target='_blank'> Alex Stepheson</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/MQ/MQLBIBLNXYZUIKR.20120620163318.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2010<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Los Angeles, CA<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Brandan Wright",
+"Primary Major": "Undeclared",
+"NBA Player": true,
+"Height (inches)":             81,
+"Weight": 205,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2010,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674110&DB_OEM_ID=3350' target='_blank'> Brandan Wright</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/QI/QIULZENMJLRRBVJ.20120620171003.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2010<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Nashville, TN<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Brice Johnson",
+"Primary Major": "Undeclared",
+"NBA Player": false,
+"Height (inches)":             81,
+"Weight": 210,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2016,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205698555&DB_OEM_ID=3350' target='_blank'> Brice Johnson</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/XG/XGZHRHQODFMOHTH.20130926152408.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2016<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Orangeburg, SC<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Brooks Foster",
+"Primary Major": "Undisclosed",
+"NBA Player": false,
+"Height (inches)":             74,
+"Weight": 190,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2008,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674113&DB_OEM_ID=3350' target='_blank'> Brooks Foster</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/FE/FEFLNFXGWRGIWCJ.20120615211809.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2008<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Boiling Springs, SC<br><strong>Primary Major:</strong> Undisclosed<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Charlie Everett",
+"Primary Major": "Undisclosed",
+"NBA Player": false,
+"Height (inches)":             75,
+"Weight": 210,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2004,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205673994&DB_OEM_ID=3350' target='_blank'> Charlie Everett</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/CP/CPDBWAHNQWUTZKQ.20120915055519.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2004<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Charlotte, NC<br><strong>Primary Major:</strong> Undisclosed<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Damien Price",
+"Primary Major": "Undisclosed",
+"NBA Player": false,
+"Height (inches)":             72,
+"Weight": 208,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2003,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674043&DB_OEM_ID=3350' target='_blank'> Damien Price</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/VG/VGGVFTPOLCCYCTR.20120620113656.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2003<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Greensboro, NC<br><strong>Primary Major:</strong> Undisclosed<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Daniel Bolick",
+"Primary Major": "Undisclosed",
+"NBA Player": false,
+"Height (inches)":             70,
+"Weight": 175,
+"Race": "Mixed Race",
+"Pro Athlete": false,
+"Class": 2010,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205675435&DB_OEM_ID=3350' target='_blank'> Daniel Bolick</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/TI/TIJGNXGKNSWDPDF.20120620110836.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2010<br><strong>Race:</strong> Mixed Race<br><strong>Hometown:</strong> Carrboro, NC<br><strong>Primary Major:</strong> Undisclosed<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "David Wear",
+"Primary Major": "Undeclared",
+"NBA Player": false,
+"Height (inches)":             82,
+"Weight": 225,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2013,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674118&DB_OEM_ID=3350' target='_blank'> David Wear</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/BP/BPWYHYLAKQDKZJN.20120620122821.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2013<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Huntington Beach, CA<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Ed Davis",
+"Primary Major": "Undeclared",
+"NBA Player": true,
+"Height (inches)":             82,
+"Weight": 225,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2012,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205673998&DB_OEM_ID=3350' target='_blank'> Ed Davis</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/MA/MANWTWSDJZUAVHV.20120620122821.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2012<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Richmond, VA<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Isaiah Hicks",
+"Primary Major": "Undeclared",
+"NBA Player": false,
+"Height (inches)":             80,
+"Weight": 220,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2017,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=209260959&DB_OEM_ID=3350' target='_blank'> Isaiah Hicks</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/ZE/ZEFEKVJVAHLVBIN.20130926152408.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2017<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Oxford, NC<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "J.P. Tokoto",
+"Primary Major": "Undeclared",
+"NBA Player": false,
+"Height (inches)":             77,
+"Weight": 200,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2016,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205698738&DB_OEM_ID=3350' target='_blank'> J.P. Tokoto</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/DB/DBZHWLBGGXIEAKF.20130926152410.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2016<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Menomonee Falls, WI<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "John Henson",
+"Primary Major": "Undeclared",
+"NBA Player": true,
+"Height (inches)":             83,
+"Weight": 220,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2013,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497517&DB_OEM_ID=3350' target='_blank'> John Henson</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/TM/TMDMXUKNUOJNSGN.20120620142320.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2013<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Tampa, FL<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Jonathan Miller",
+"Primary Major": "Undisclosed",
+"NBA Player": false,
+"Height (inches)":             74,
+"Weight": 192,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2003,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205673999&DB_OEM_ID=3350' target='_blank'> Jonathan Miller</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/CM/CMNNFMWEZJBFSGD.20120620113656.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2003<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Burlington, NC<br><strong>Primary Major:</strong> Undisclosed<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Justin Bohlander",
+"Primary Major": "Undisclosed",
+"NBA Player": false,
+"Height (inches)":             80,
+"Weight": 200,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2007,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674071&DB_OEM_ID=3350' target='_blank'> Justin Bohlander</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/NW/NWRYLJDBYQPEMBK.20120620113655.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2007<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Winston-Salem, NC<br><strong>Primary Major:</strong> Undisclosed<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Kendall Marshall",
+"Primary Major": "Undeclared",
+"NBA Player": true,
+"Height (inches)":             76,
+"Weight": 195,
+"Race": "Mixed Race",
+"Pro Athlete": true,
+"Class": 2014,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497520&DB_OEM_ID=3350' target='_blank'> Kendall Marshall</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/MR/MRLHQZZFFKUBQKW.20120620142321.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2014<br><strong>Race:</strong> Mixed Race<br><strong>Hometown:</strong> Dumfries, VA<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Kennedy Meeks",
+"Primary Major": "Undeclared",
+"NBA Player": false,
+"Height (inches)":             81,
+"Weight": 290,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2017,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=209261560&DB_OEM_ID=3350' target='_blank'> Kennedy Meeks</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/DS/DSCHGGZLHOJCHQO.20130926152409.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2017<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Charlotte, NC<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Marcus Paige",
+"Primary Major": "Undeclared",
+"NBA Player": false,
+"Height (inches)":             73,
+"Weight": 175,
+"Race": "Mixed Race",
+"Pro Athlete": false,
+"Class": 2016,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205698556&DB_OEM_ID=3350' target='_blank'> Marcus Paige</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/XP/XPOFAXKPOHMNEVY.20130926152409.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2016<br><strong>Race:</strong> Mixed Race<br><strong>Hometown:</strong> Marion, IA<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Nate Britt",
+"Primary Major": "Undeclared",
+"NBA Player": false,
+"Height (inches)":             71,
+"Weight": 165,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2017,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=209261561&DB_OEM_ID=3350' target='_blank'> Nate Britt</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/LQ/LQECGSDXZIQBQGO.20130926152408.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2017<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Upper Marlboro, MD<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Neil Fingleton",
+"Primary Major": "Undeclared",
+"NBA Player": false,
+"Height (inches)":             89,
+"Weight": 280,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2004,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674002&DB_OEM_ID=3350' target='_blank'> Neil Fingleton</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/NT/NTQUQJEAXYEEPLA.20121015200351.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2004<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Durham, England<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Phillip McLamb",
+"Primary Major": "Undisclosed",
+"NBA Player": false,
+"Height (inches)":             78,
+"Weight": 218,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2003,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674008&DB_OEM_ID=3350' target='_blank'> Phillip McLamb</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/GI/GISWJZMWQAUNQTI.20120620113656.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2003<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Charlotte, NC<br><strong>Primary Major:</strong> Undisclosed<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Stilman White",
+"Primary Major": "Undeclared",
+"NBA Player": false,
+"Height (inches)":             72,
+"Weight": 160,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2015,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497514&DB_OEM_ID=3350' target='_blank'> Stilman White</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/FJ/FJYGUKBKNFPSSMR.20120620142321.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2015<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Wilmington, NC<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Terrence Petree",
+"Primary Major": "Undisclosed",
+"NBA Player": false,
+"Height (inches)":             75,
+"Weight": 165,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2009,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205675425&DB_OEM_ID=3350' target='_blank'> Terrence Petree</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/DM/DMDPNNWVMOACDTE.20120620163335.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2009<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Winston-Salem, NC<br><strong>Primary Major:</strong> Undisclosed<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Thomas Thornton",
+"Primary Major": "Undisclosed",
+"NBA Player": false,
+"Height (inches)":             75,
+"Weight": 180,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2009,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205675430&DB_OEM_ID=3350' target='_blank'> Thomas Thornton</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/LH/LHEZIVQEGOIRBSP.20120620163335.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2009<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Greensboro, NC<br><strong>Primary Major:</strong> Undisclosed<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Travis Wear",
+"Primary Major": "Undeclared",
+"NBA Player": false,
+"Height (inches)":             82,
+"Weight": 235,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2013,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674107&DB_OEM_ID=3350' target='_blank'> Travis Wear</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/FK/FKMQQZGAOWGOXLD.20120620122821.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2013<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Huntington Beach, CA<br><strong>Primary Major:</strong> Undeclared<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "Undeclared/Undecided",
+"player": "Van Hatchell",
+"Primary Major": "Undisclosed",
+"NBA Player": false,
+"Height (inches)":             76,
+"Weight": 185,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2010,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205675424&DB_OEM_ID=3350' target='_blank'> Van Hatchell</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/KH/KHCBUXMSLHIEXMF.20120620110836.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2010<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Chapel Hill, NC<br><strong>Primary Major:</strong> Undisclosed<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#FF7A00" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Antawn Jamison",
+"Primary Major": "African Studies",
+"NBA Player": true,
+"Height (inches)":             80,
+"Weight": 235,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1999,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Antawn Jamison</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://www.ibiblio.org/craig/draft/1998_draft/Players/images/jamison.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1999<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Shreveport, LA<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Brian Reese",
+"Primary Major": "African Studies",
+"NBA Player": false,
+"Height (inches)":             78,
+"Weight": 205,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1994,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Brian Reese</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://millercards.net/im_lb_large/lb839.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1994<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Bronx, NY<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Clifford Rozier",
+"Primary Major": "African Studies",
+"NBA Player": true,
+"Height (inches)":             81,
+"Weight": 220,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1994,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clifford Rozier</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://1.bp.blogspot.com/_v0i-Cc4bNGY/S-sZRKwvcGI/AAAAAAAAB2U/-Z6SycCuyZ8/s1600/may16th.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1994<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Bradenton, FL<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Derrick Phelps",
+"Primary Major": "African Studies",
+"NBA Player": true,
+"Height (inches)":             75,
+"Weight": 181,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1994,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Derrick Phelps</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://acc.blogs.starnewsonline.com/files/2011/02/phelps.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1994<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Pleasentville, NY<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Donald Williams",
+"Primary Major": "African Studies",
+"NBA Player": true,
+"Height (inches)":             75,
+"Weight": 183,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1995,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Donald Williams</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://media.scout.com/media/image/78/784757.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1995<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Garner, NC<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Ed Cota",
+"Primary Major": "African Studies",
+"NBA Player": true,
+"Height (inches)":           74.5,
+"Weight": 200,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1999,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674076&DB_OEM_ID=3350' target='_blank'> Ed Cota</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/NJ/NJQYIZWLLHHHIIE.20121015195432.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1999<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Brooklyn, NY<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "George Lynch",
+"Primary Major": "African Studies",
+"NBA Player": true,
+"Height (inches)":             80,
+"Weight": 218,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1993,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>George Lynch</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://a.espncdn.com/photo/2012/0222/ncb_a_lynch_bl_200.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1993<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Roanoke, VA<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Jackie Manuel",
+"Primary Major": "African Studies",
+"NBA Player": true,
+"Height (inches)":             77,
+"Weight": 198,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2005,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674066&DB_OEM_ID=3350' target='_blank'> Jackie Manuel</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/HU/HUHJEUWLOAJMHLP.20120915055520.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2005<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> West Palm Beach, FL<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Jawad Williams",
+"Primary Major": "African Studies",
+"NBA Player": true,
+"Height (inches)":             81,
+"Weight": 223,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2005,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205673989&DB_OEM_ID=3350' target='_blank'> Jawad Williams</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/CP/CPKHLALBZFOFGNT.20120915055520.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2005<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Cleveland, OH<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Jeff McInnis",
+"Primary Major": "African Studies",
+"NBA Player": true,
+"Height (inches)":             76,
+"Weight": 182,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1997,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Jeff McInnis</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://rushthecourt.files.wordpress.com/2008/08/jeff-mcinnis-2.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1997<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Charlotte, NC<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Jerry Stackhouse",
+"Primary Major": "African Studies",
+"NBA Player": true,
+"Height (inches)":             78,
+"Weight": 218,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1997,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Jerry Stackhouse</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://icantcallit.files.wordpress.com/2011/12/229299-29112_display_image2.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1997<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Kinston, NC<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Julius Peppers",
+"Primary Major": "African Studies",
+"NBA Player": false,
+"Height (inches)":             79,
+"Weight": 270,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2003,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674112&DB_OEM_ID=3350' target='_blank'> Julius Peppers</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/TB/TBPSPGZKCSGBYEN.20121127213431.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2003<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Bailey, NC<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Max Owens",
+"Primary Major": "African Studies",
+"NBA Player": false,
+"Height (inches)":             77,
+"Weight": 198,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2001,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674012&DB_OEM_ID=3350' target='_blank'> Max Owens</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/GJ/GJGSLNZSFHJYTBY.20121015203244.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2001<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Macon, GA<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Melvin Scott",
+"Primary Major": "African Studies",
+"NBA Player": false,
+"Height (inches)":             74,
+"Weight": 190,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2005,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205673990&DB_OEM_ID=3350' target='_blank'> Melvin Scott</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/JU/JUFMXWCYRMIYNNR.20120915055520.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2005<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Baltimore, MD<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Mike Copeland",
+"Primary Major": "African Studies",
+"NBA Player": false,
+"Height (inches)":             79,
+"Weight": 235,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2009,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674092&DB_OEM_ID=3350' target='_blank'> Mike Copeland</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/UU/UUGNGEBYBGQFRIY.20120620163317.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2009<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Winston-Salem, NC<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Orlando Melendez",
+"Primary Major": "African Studies",
+"NBA Player": false,
+"Height (inches)":             80,
+"Weight": 200,
+"Race": "Mixed Race",
+"Pro Athlete": true,
+"Class": 2001,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674032&DB_OEM_ID=3350' target='_blank'> Orlando Melendez</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/UW/UWSQLOMTXEGKLID.20121015202618.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2001<br><strong>Race:</strong> Mixed Race<br><strong>Hometown:</strong> Juana Diaz, PR<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Quentin Thomas",
+"Primary Major": "African Studies",
+"NBA Player": false,
+"Height (inches)":             75,
+"Weight": 190,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2008,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674106&DB_OEM_ID=3350' target='_blank'> Quentin Thomas</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/HP/HPEZZVJGHGMVBQG.20120620163318.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2008<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Oakland, CA<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Rashad McCants",
+"Primary Major": "African Studies",
+"NBA Player": true,
+"Height (inches)":             76,
+"Weight": 207,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2006,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674109&DB_OEM_ID=3350' target='_blank'> Rashad McCants</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/IB/IBZYIVEFQOASKJY.20120915055520.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2006<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Asheville, NC<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Reyshawn Terry",
+"Primary Major": "African Studies",
+"NBA Player": false,
+"Height (inches)":             80,
+"Weight": 232,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2007,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674025&DB_OEM_ID=3350' target='_blank'> Reyshawn Terry</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/BV/BVPKHEGXQTSQFTW.20120620171003.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2007<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Winston-Salem, NC<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Ronald Curry",
+"Primary Major": "African Studies",
+"NBA Player": false,
+"Height (inches)":             74,
+"Weight": 202,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2002,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674119&DB_OEM_ID=3350' target='_blank'> Ronald Curry</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/GM/GMNAALBRDLTIGWX.20121015195647.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2002<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Hampton, VA<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Terrence Newby",
+"Primary Major": "African Studies",
+"NBA Player": false,
+"Height (inches)":             74,
+"Weight": 210,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 1999,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674057&DB_OEM_ID=3350' target='_blank'> Terrence Newby</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/VR/VRDSWJHEWWBQHYD.20121015203031.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1999<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Siler City, NC<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "African Studies",
+"player": "Vince Carter",
+"Primary Major": "African Studies",
+"NBA Player": true,
+"Height (inches)":             79,
+"Weight": 208,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1999,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Vince Carter</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://blogs.lib.unc.edu/morton/wp-content/uploads/2008/09/p081_prcp4_0014901.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1999<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Daytona Beach, FL<br><strong>Primary Major:</strong> African Studies<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.75,
+"color": "#000080" 
+},
+{
+ "Major Group": "Other",
+"player": "Ademola Okulaja",
+"Primary Major": "International Studies",
+"NBA Player": true,
+"Height (inches)":             80,
+"Weight": 235,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1998,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Ademola Okulaja</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://webspace.webring.com/people/tu/um_3241/ademola.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1998<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Lagos, Nigeria<br><strong>Primary Major:</strong> International Studies<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "Brian Bersticker",
+"Primary Major": "Education",
+"NBA Player": false,
+"Height (inches)":             83,
+"Weight": 241,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2001,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674044&DB_OEM_ID=3350' target='_blank'> Brian Bersticker</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/XG/XGHWDOPPTPSXVKC.20121015194546.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2001<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Virginia Beach, VA<br><strong>Primary Major:</strong> Education<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "Byron Sanders",
+"Primary Major": "Information & Library Science",
+"NBA Player": false,
+"Height (inches)":             81,
+"Weight": 238,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2006,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674055&DB_OEM_ID=3350' target='_blank'> Byron Sanders</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/UW/UWPTJAECIWRNIGG.20120620194214.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2006<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Gulfport, MS<br><strong>Primary Major:</strong> Information & Library Science<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "C.J. Hooker",
+"Primary Major": "Mathematics",
+"NBA Player": false,
+"Height (inches)":             74,
+"Weight": 188,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2004,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674035&DB_OEM_ID=3350' target='_blank'> C.J. Hooker</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/QC/QCEWHRLJKSQIRMA.20120915055519.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2004<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Palmer, AK<br><strong>Primary Major:</strong> Mathematics<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "David Neal",
+"Primary Major": "Physical Education",
+"NBA Player": false,
+"Height (inches)":             71,
+"Weight": 175,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 1996,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>David Neal</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://wwwcache.highschoolot.com/asset/content/mens_basketball/2014/01/17/13306381/13306381-1390109969-300x225.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1996<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Louisburg, NC<br><strong>Primary Major:</strong> Physical Education<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "Dewey Burke",
+"Primary Major": "Economics",
+"NBA Player": false,
+"Height (inches)":             72,
+"Weight": 195,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2006,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674097&DB_OEM_ID=3350' target='_blank'> Dewey Burke</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/AN/ANHTZAYIREYSADT.20120620171003.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2006<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Philadelphia, PA<br><strong>Primary Major:</strong> Economics<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "Eric Montross",
+"Primary Major": "Speech",
+"NBA Player": true,
+"Height (inches)":             84,
+"Weight": 270,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 1994,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Eric Montross</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://imspatial.files.wordpress.com/2007/02/montross.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1994<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Indianapolis, IN<br><strong>Primary Major:</strong> Speech<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "Hubert Davis",
+"Primary Major": "Administrative Criminal Justice",
+"NBA Player": true,
+"Height (inches)":             77,
+"Weight": 183,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1992,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Hubert Davis</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://acc.blogs.starnewsonline.com/files/2012/05/hubert-davis-at-unc.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1992<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Burke, VA<br><strong>Primary Major:</strong> Administrative Criminal Justice<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "Kevin Madden",
+"Primary Major": "Geography",
+"NBA Player": false,
+"Height (inches)":             77,
+"Weight": 214,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1990,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Kevin Madden</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://img.comc.com/zoom/331a1d9a-ec23-480a-8649-a2ced961ebf8.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1990<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Staunton, VA<br><strong>Primary Major:</strong> Geography<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "Kevin Salvadori",
+"Primary Major": "Psychology",
+"NBA Player": true,
+"Height (inches)":             84,
+"Weight": 231,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 1994,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Kevin Salvadori</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://img.beckett.com/images/items/custom/marketplace/75103120/migrated.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1994<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Pittsburgh, PA<br><strong>Primary Major:</strong> Psychology<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "Makhtar Ndiaye",
+"Primary Major": "International Studies",
+"NBA Player": true,
+"Height (inches)":             80,
+"Weight": 231,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1997,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Makhtar Ndiaye</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://webspace.webring.com/people/tu/um_3241/makhtar.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1997<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Dakar, Senegal<br><strong>Primary Major:</strong> International Studies<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "Matt Laczkowski",
+"Primary Major": "Interdisciplinary Studies",
+"NBA Player": false,
+"Height (inches)":             81,
+"Weight": 210,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 1999,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Matt Laczkowski</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics/400/107.gif' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1999<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Westminster, MD<br><strong>Primary Major:</strong> Interdisciplinary Studies<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "Rasheed Wallace",
+"Primary Major": "Philosophy",
+"NBA Player": true,
+"Height (inches)":             82,
+"Weight": 225,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1997,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Rasheed Wallace</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://28.media.tumblr.com/tumblr_kzt7qmvj6a1qay78vo1_500.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1997<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Philadelphia, PA<br><strong>Primary Major:</strong> Philosophy<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "Surry Wood",
+"Primary Major": "Economics",
+"NBA Player": false,
+"Height (inches)":             77,
+"Weight": 210,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2006,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674117&DB_OEM_ID=3350' target='_blank'> Surry Wood</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/VO/VOGPEARSCESFIEQ.20120620163318.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2006<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Raleigh, NC<br><strong>Primary Major:</strong> Economics<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "Vasco Evtimov",
+"Primary Major": "International Studies",
+"NBA Player": false,
+"Height (inches)":             82,
+"Weight": 225,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 2000,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Vasco Evtimov</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://sportsillustrated.cnn.com/basketball/college/1999/ncaa_tourney/men/west/news/1999/03/11/weberst_unc/t1_evtimov_ap.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2000<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Sofia, Bulgaria<br><strong>Primary Major:</strong> International Studies<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Other",
+"player": "Webb Tyndall",
+"Primary Major": "Health Policy Administration",
+"NBA Player": false,
+"Height (inches)":             70,
+"Weight": 156,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 1997,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Webb Tyndall</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://www.nencfca.org/Websites/nencfca/images/Webb%20Tyndall%202.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1997<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Kinston, NC<br><strong>Primary Major:</strong> Health Policy Administration<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":            2.5,
+"color": "#0088CE" 
+},
+{
+ "Major Group": "Business",
+"player": "Dante Calabria",
+"Primary Major": "Business",
+"NBA Player": true,
+"Height (inches)":             76,
+"Weight": 175,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 1996,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Dante Calabria</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://a.espncdn.com/photo/2012/0201/ncf_a_dcalabria_jh_200.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1996<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Beaver Falls, PA<br><strong>Primary Major:</strong> Business<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.25,
+"color": "#A5ACAF" 
+},
+{
+ "Major Group": "Business",
+"player": "Frank Tanner",
+"Primary Major": "Business",
+"NBA Player": false,
+"Height (inches)":             76,
+"Weight": 210,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2012,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205722805&DB_OEM_ID=3350' target='_blank'> Frank Tanner</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/HY/HYQGQZXWGNSKBBI.20121030160827.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2012<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Charlotte, NC<br><strong>Primary Major:</strong> Business<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":           2.25,
+"color": "#A5ACAF" 
+},
+{
+ "Major Group": "Business",
+"player": "Harrison Barnes",
+"Primary Major": "Business",
+"NBA Player": true,
+"Height (inches)":             80,
+"Weight": 215,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2014,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205530387&DB_OEM_ID=3350' target='_blank'> Harrison Barnes</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/US/USPPKATOSQTIWTD.20120620142320.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2014<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Ames, IA<br><strong>Primary Major:</strong> Business<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.25,
+"color": "#A5ACAF" 
+},
+{
+ "Major Group": "Business",
+"player": "J.B. Tanner",
+"Primary Major": "Business",
+"NBA Player": false,
+"Height (inches)":             72,
+"Weight": 185,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2008,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674093&DB_OEM_ID=3350' target='_blank'> J.B. Tanner</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/AC/ACDJGBJQLJTLMVV.20120620145831.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2008<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Hendersonville, NC<br><strong>Primary Major:</strong> Business<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":           2.25,
+"color": "#A5ACAF" 
+},
+{
+ "Major Group": "Business",
+"player": "James Manor",
+"Primary Major": "Business",
+"NBA Player": false,
+"Height (inches)":             78,
+"Weight": 220,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2013,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205722643&DB_OEM_ID=3350' target='_blank'> James Manor</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/ZL/ZLZAJFNAWKUIASO.20130926152408.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2013<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Carrboro, NC<br><strong>Primary Major:</strong> Business<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":           2.25,
+"color": "#A5ACAF" 
+},
+{
+ "Major Group": "Business",
+"player": "Jim Everett",
+"Primary Major": "Business",
+"NBA Player": false,
+"Height (inches)":             80,
+"Weight": 240,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2000,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674004&DB_OEM_ID=3350' target='_blank'> Jim Everett</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/QL/QLFERBDOFZRPTKY.20121015200133.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2000<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Charlotte, NC<br><strong>Primary Major:</strong> Business<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":           2.25,
+"color": "#A5ACAF" 
+},
+{
+ "Major Group": "Business",
+"player": "Joseph Forte",
+"Primary Major": "Business",
+"NBA Player": true,
+"Height (inches)":             76,
+"Weight": 192,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2003,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205673991&DB_OEM_ID=3350' target='_blank'> Joseph Forte</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/UA/UAIJVEZWZROUPHM.20121015200703.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2003<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Greenbelt, MD<br><strong>Primary Major:</strong> Business<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.25,
+"color": "#A5ACAF" 
+},
+{
+ "Major Group": "Business",
+"player": "Justin Knox",
+"Primary Major": "Business",
+"NBA Player": false,
+"Height (inches)":             81,
+"Weight": 240,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2004,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674010&DB_OEM_ID=3350' target='_blank'> Justin Knox</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/EK/EKJJSWYGNUVZBFU.20120620110835.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2004<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Tuscaloosa, AL<br><strong>Primary Major:</strong> Business<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.25,
+"color": "#A5ACAF" 
+},
+{
+ "Major Group": "Business",
+"player": "Kenny Harris",
+"Primary Major": "Business",
+"NBA Player": true,
+"Height (inches)":             73,
+"Weight": 165,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1994,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Kenny Harris</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://thumbs3.ebaystatic.com/d/l225/m/m_yTnQQi4d6EFtQBllYG4Fg.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1994<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Petersberg, VA<br><strong>Primary Major:</strong> Business<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.25,
+"color": "#A5ACAF" 
+},
+{
+ "Major Group": "Business",
+"player": "Patrick Crouch",
+"Primary Major": "Business",
+"NBA Player": false,
+"Height (inches)":             71,
+"Weight": 180,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2011,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497523&DB_OEM_ID=3350' target='_blank'> Patrick Crouch</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/DC/DCJGNVBPRUYLAOK.20120620142320.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2011<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Asheville, NC<br><strong>Primary Major:</strong> Business<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":           2.25,
+"color": "#A5ACAF" 
+},
+{
+ "Major Group": "Business",
+"player": "Scott Cherry",
+"Primary Major": "Business",
+"NBA Player": false,
+"Height (inches)":             74,
+"Weight": 170,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 1993,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Scott Cherry</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='https://lh5.googleusercontent.com/WEMBByR-D7-FHll6EQG16vd6ZoXrOtHlcLnGfGL4knxe2n3zzfBlc5itDySeMWgrIjKTJn8Lr-4GDLu1oRecRCAm_lw_HAAOzfG6fo6fW1buh69s9fq9ZdOg1Q' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1993<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Ballston Spa, NY<br><strong>Primary Major:</strong> Business<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.25,
+"color": "#A5ACAF" 
+},
+{
+ "Major Group": "Business",
+"player": "Tyler Zeller",
+"Primary Major": "Business",
+"NBA Player": true,
+"Height (inches)":             84,
+"Weight": 250,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 2012,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497525&DB_OEM_ID=3350' target='_blank'> Tyler Zeller</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/XF/XFNGCDEFRLCTYQK.20120620142321.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2012<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Washington, IN<br><strong>Primary Major:</strong> Business<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           2.25,
+"color": "#A5ACAF" 
+},
+{
+ "Major Group": "Sociology",
+"player": "Clyde Lynn",
+"Primary Major": "Sociology",
+"NBA Player": false,
+"Height (inches)":             75,
+"Weight": 204,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 1996,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clyde Lynn</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://img.comc.com/zoom/879f95f6-05e1-4c98-8c51-ee4f06174684.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1996<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Greensboro, NC<br><strong>Primary Major:</strong> Sociology<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              2,
+"color": "#000000" 
+},
+{
+ "Major Group": "Sociology",
+"player": "Deon Thompson",
+"Primary Major": "Sociology",
+"NBA Player": true,
+"Height (inches)":             81,
+"Weight": 245,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2010,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674015&DB_OEM_ID=3350' target='_blank'> Deon Thompson</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/OB/OBQVRVBIPSNQNJO.20120620122821.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2010<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Torrance, CA<br><strong>Primary Major:</strong> Sociology<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              2,
+"color": "#000000" 
+},
+{
+ "Major Group": "Sociology",
+"player": "Desmond Hubert",
+"Primary Major": "Sociology",
+"NBA Player": false,
+"Height (inches)":             82,
+"Weight": 225,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2015,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497521&DB_OEM_ID=3350' target='_blank'> Desmond Hubert</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/MG/MGFEKXJFLMHMJGW.20130926152408.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2015<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Cream Ridge, NJ<br><strong>Primary Major:</strong> Sociology<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              2,
+"color": "#000000" 
+},
+{
+ "Major Group": "Sociology",
+"player": "Luke Davis",
+"Primary Major": "Sociology",
+"NBA Player": false,
+"Height (inches)":             72,
+"Weight": 175,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2013,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497527&DB_OEM_ID=3350' target='_blank'> Luke Davis</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/TK/TKKLSKWDDCEVSES.20130926152408.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2013<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Raleigh, NC<br><strong>Primary Major:</strong> Sociology<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              2,
+"color": "#000000" 
+},
+{
+ "Major Group": "Sociology",
+"player": "Marvin Williams",
+"Primary Major": "Sociology",
+"NBA Player": true,
+"Height (inches)":             81,
+"Weight": 230,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2008,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674087&DB_OEM_ID=3350' target='_blank'> Marvin Williams</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/DW/DWKLATVRQQBBLGU.20120915055521.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2008<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Bremerton, WA<br><strong>Primary Major:</strong> Sociology<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              2,
+"color": "#000000" 
+},
+{
+ "Major Group": "Sociology",
+"player": "Octavus Barnes",
+"Primary Major": "Sociology",
+"NBA Player": false,
+"Height (inches)":             74,
+"Weight": 213,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1998,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Octavus Barnes</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/TJ/TJMXXXWTNTKSBJA.20120622195659.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1998<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Wilson, NC<br><strong>Primary Major:</strong> Sociology<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              2,
+"color": "#000000" 
+},
+{
+ "Major Group": "Sociology",
+"player": "Wade Moody",
+"Primary Major": "Sociology",
+"NBA Player": false,
+"Height (inches)":             72,
+"Weight": 175,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2013,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205722859&DB_OEM_ID=3350' target='_blank'> Wade Moody</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/FK/FKBJFUPITGROYBD.20130926152409.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2013<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Mount Airy, NC<br><strong>Primary Major:</strong> Sociology<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              2,
+"color": "#000000" 
+},
+{
+ "Major Group": "Sociology",
+"player": "William Graves",
+"Primary Major": "Sociology",
+"NBA Player": false,
+"Height (inches)":             78,
+"Weight": 260,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2010,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674005&DB_OEM_ID=3350' target='_blank'> William Graves</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/NM/NMAPKQGFMQXBACP.20120620171003.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2010<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Greensboro, NC<br><strong>Primary Major:</strong> Sociology<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              2,
+"color": "#000000" 
+},
+{
+ "Major Group": "Political Science",
+"player": "Brad Frederick",
+"Primary Major": "Political Science",
+"NBA Player": false,
+"Height (inches)":             77,
+"Weight": 190,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 1999,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Brad Frederick</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://media.scout.com/Media/Image/28/286526.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1999<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Lawerence, KS<br><strong>Primary Major:</strong> Political Science<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":           1.75,
+"color": "#FFCC00" 
+},
+{
+ "Major Group": "Political Science",
+"player": "Jack Wooten",
+"Primary Major": "Political Science",
+"NBA Player": false,
+"Height (inches)":             74,
+"Weight": 190,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2008,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205675447&DB_OEM_ID=3350' target='_blank'> Jack Wooten</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/CT/CTHGZJZGLEXGLYD.20120620145831.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2008<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Burlington, NC<br><strong>Primary Major:</strong> Political Science<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":           1.75,
+"color": "#FFCC00" 
+},
+{
+ "Major Group": "Political Science",
+"player": "Matt Wenstrom",
+"Primary Major": "Political Science",
+"NBA Player": true,
+"Height (inches)":             85,
+"Weight": 230,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 1993,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Matt Wenstrom</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://img.beckett.com/images/items/custom/marketplace/75103112/migrated.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1993<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Katy, TX<br><strong>Primary Major:</strong> Political Science<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           1.75,
+"color": "#FFCC00" 
+},
+{
+ "Major Group": "Political Science",
+"player": "Thomas Wilkins",
+"Primary Major": "Political Science",
+"NBA Player": false,
+"Height (inches)":             68,
+"Weight": 175,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2005,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674042&DB_OEM_ID=3350' target='_blank'> Thomas Wilkins</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/ZF/ZFGTXONAHOFRPZI.20120620194214.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2005<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Cary, NC<br><strong>Primary Major:</strong> Political Science<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":           1.75,
+"color": "#FFCC00" 
+},
+{
+ "Major Group": "Political Science",
+"player": "Travis Stephenson",
+"Primary Major": "Political Science",
+"NBA Player": false,
+"Height (inches)":             79,
+"Weight": 220,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 1993,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Travis Stephenson</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://wwwcache.wralsportsfan.com/asset/fishing/2011/06/13/9724439/187004-travisbigrock-640x360.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1993<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Angier, NC<br><strong>Primary Major:</strong> Political Science<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":           1.75,
+"color": "#FFCC00" 
+},
+{
+ "Major Group": "Political Science",
+"player": "Wes Miller",
+"Primary Major": "Political Science",
+"NBA Player": false,
+"Height (inches)":             71,
+"Weight": 190,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 2006,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674059&DB_OEM_ID=3350' target='_blank'> Wes Miller</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/GV/GVJDPQRIJMLTJKV.20120620171003.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2006<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Charlotte, NC<br><strong>Primary Major:</strong> Political Science<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           1.75,
+"color": "#FFCC00" 
+},
+{
+ "Major Group": "Political Science",
+"player": "Will Johnson",
+"Primary Major": "Political Science",
+"NBA Player": false,
+"Height (inches)":             80,
+"Weight": 218,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2003,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205673996&DB_OEM_ID=3350' target='_blank'> Will Johnson</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/CG/CGIKVCDGMIGCFJB.20120620053321.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2003<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Hickory, NC<br><strong>Primary Major:</strong> Political Science<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":           1.75,
+"color": "#FFCC00" 
+},
+{
+ "Major Group": "History",
+"player": "Charlie McNairy",
+"Primary Major": "History",
+"NBA Player": false,
+"Height (inches)":             78,
+"Weight": 199,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 1997,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Charlie McNairy</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://amarillo.com/images/headlines/031697/deanLR.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1997<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Kinston, NC<br><strong>Primary Major:</strong> History<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":            1.5,
+"color": "#006666" 
+},
+{
+ "Major Group": "History",
+"player": "James Michael McAdoo",
+"Primary Major": "History",
+"NBA Player": false,
+"Height (inches)":             81,
+"Weight": 230,
+"Race": "Mixed Race",
+"Pro Athlete": false,
+"Class": 2015,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497513&DB_OEM_ID=3350' target='_blank'> James Michael McAdoo</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/LS/LSNNEJFCRRHIOZZ.20130926152409.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2015<br><strong>Race:</strong> Mixed Race<br><strong>Hometown:</strong> Norfolk, VA<br><strong>Primary Major:</strong> History<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":            1.5,
+"color": "#006666" 
+},
+{
+ "Major Group": "History",
+"player": "Joel James",
+"Primary Major": "History",
+"NBA Player": false,
+"Height (inches)":             82,
+"Weight": 280,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 2016,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205697725&DB_OEM_ID=3350' target='_blank'> Joel James</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/XC/XCZRSRYHBHQCYDP.20130926152408.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2016<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> West Palm Beach, FL<br><strong>Primary Major:</strong> History<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":            1.5,
+"color": "#006666" 
+},
+{
+ "Major Group": "History",
+"player": "Rodney Hyatt",
+"Primary Major": "History",
+"NBA Player": false,
+"Height (inches)":             68,
+"Weight": 140,
+"Race": "African-American",
+"Pro Athlete": false,
+"Class": 1990,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Rodney Hyatt</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://img.comc.com/original/1df5a55b-88df-47e4-bff9-b6f84b8a4b5c.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1990<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Wadesboro, NC<br><strong>Primary Major:</strong> History<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":            1.5,
+"color": "#006666" 
+},
+{
+ "Major Group": "History",
+"player": "Stewart Cooper",
+"Primary Major": "History",
+"NBA Player": false,
+"Height (inches)":             77,
+"Weight": 205,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2011,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497530&DB_OEM_ID=3350' target='_blank'> Stewart Cooper</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/GQ/GQXJFOMQDFJRAOD.20120620142320.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2011<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Winston-Salem, NC<br><strong>Primary Major:</strong> History<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":            1.5,
+"color": "#006666" 
+},
+{
+ "Major Group": "Industrial Relations",
+"player": "Jeff Denny",
+"Primary Major": "Industrial Relations",
+"NBA Player": false,
+"Height (inches)":             76,
+"Weight": 185,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 1990,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Jeff Denny</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://ecx.images-amazon.com/images/I/21Ev8mfQaWL._AA160_.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1990<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Chapel Hill, NC<br><strong>Primary Major:</strong> Industrial Relations<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#009E60" 
+},
+{
+ "Major Group": "Industrial Relations",
+"player": "Marty Hensley",
+"Primary Major": "Industrial Relations",
+"NBA Player": false,
+"Height (inches)":             82,
+"Weight": 211,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 1990,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Marty Hensley</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://img.comc.com/biggerthumb/3ba596c0-7a6b-413e-bf78-ca9e66740f06.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1990<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Marion, NC<br><strong>Primary Major:</strong> Industrial Relations<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#009E60" 
+},
+{
+ "Major Group": "Industrial Relations",
+"player": "Pete Chilcutt",
+"Primary Major": "Industrial Relations",
+"NBA Player": true,
+"Height (inches)":             82,
+"Weight": 230,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 1991,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Pete Chilcutt</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://i.cdn.turner.com/si/multimedia/photo_gallery/1103/classic.acc.tourney.pics/images/chilcutt-hill.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1991<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Tuscaloosa, AL<br><strong>Primary Major:</strong> Industrial Relations<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#009E60" 
+},
+{
+ "Major Group": "Industrial Relations",
+"player": "Shammond Williams",
+"Primary Major": "Industrial Relations",
+"NBA Player": true,
+"Height (inches)":             74,
+"Weight": 180,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1997,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Shammond Williams</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://www.ibiblio.org/craig/draft/1998_draft/Players/images/Williams-s.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1997<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Bronx, NY<br><strong>Primary Major:</strong> Industrial Relations<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#009E60" 
+},
+{
+ "Major Group": "Radio, Television and Motion Picture",
+"player": "J.R. Reid",
+"Primary Major": "Radio, Television and Motion Picture",
+"NBA Player": true,
+"Height (inches)":             81,
+"Weight": 247,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1990,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>J.R. Reid</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://blogs2.citizen-times.com/hshuddle/files/2012/06/jrreid.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1990<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Virginia Beach, VA<br><strong>Primary Major:</strong> Radio, Television and Motion Picture<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           1.25,
+"color": "#DF6108" 
+},
+{
+ "Major Group": "Radio, Television and Motion Picture",
+"player": "King Rice",
+"Primary Major": "Radio, Television and Motion Picture",
+"NBA Player": false,
+"Height (inches)":             72,
+"Weight": 188,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1991,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>King Rice</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://acc.blogs.starnewsonline.com/files/2012/01/king-rice-player.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1991<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Binghampton, NY<br><strong>Primary Major:</strong> Radio, Television and Motion Picture<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           1.25,
+"color": "#DF6108" 
+},
+{
+ "Major Group": "Radio, Television and Motion Picture",
+"player": "Rick Fox",
+"Primary Major": "Radio, Television and Motion Picture",
+"NBA Player": true,
+"Height (inches)":             79,
+"Weight": 230,
+"Race": "Mixed Race",
+"Pro Athlete": true,
+"Class": 1991,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Rick Fox</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://uptownmagazine.com/files/2013/04/then-rick-fox.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1991<br><strong>Race:</strong> Mixed Race<br><strong>Hometown:</strong> Toronto, ON<br><strong>Primary Major:</strong> Radio, Television and Motion Picture<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           1.25,
+"color": "#DF6108" 
+},
+{
+ "Major Group": "Radio, Television and Motion Picture",
+"player": "Scott Williams",
+"Primary Major": "Radio, Television and Motion Picture",
+"NBA Player": true,
+"Height (inches)":             82,
+"Weight": 230,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 1990,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Scott Williams</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://media-cache-ak0.pinimg.com/736x/0b/19/b6/0b19b60acae1ed6d6cfe4ba7cde6bb51.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1990<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Hacienda Heights, CA<br><strong>Primary Major:</strong> Radio, Television and Motion Picture<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":           1.25,
+"color": "#DF6108" 
+},
+{
+ "Major Group": "Radio, Television and Motion Picture",
+"player": "Scott Williams",
+"Primary Major": "Business",
+"NBA Player": false,
+"Height (inches)":             71,
+"Weight": 156,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 1998,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Scott Williams</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics/400/107.gif' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1998<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Lawerence, KS<br><strong>Primary Major:</strong> Business<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":           1.25,
+"color": "#DF6108" 
+},
+{
+ "Major Group": "Biology",
+"player": "Henrik Rodl",
+"Primary Major": "Biology",
+"NBA Player": false,
+"Height (inches)":             85,
+"Weight": 200,
+"Race": "Caucasian",
+"Pro Athlete": true,
+"Class": 1993,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Henrik Rodl</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://img.beckett.com/images/items/custom/marketplace/75103111/migrated.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1993<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Heusenstamm, Germany<br><strong>Primary Major:</strong> Biology<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#4A2583" 
+},
+{
+ "Major Group": "Biology",
+"player": "Jason Burgess",
+"Primary Major": "Biology",
+"NBA Player": false,
+"Height (inches)":             75,
+"Weight": 183,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 1992,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Jason Burgess</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://www.ucomparehealthcare.com/img/profile/drs/86/jason_burgess.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1992<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Charlotte, NC<br><strong>Primary Major:</strong> Biology<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#4A2583" 
+},
+{
+ "Major Group": "Biology",
+"player": "Patrick Moody",
+"Primary Major": "Biology",
+"NBA Player": false,
+"Height (inches)":             76,
+"Weight": 195,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2008,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205675428&DB_OEM_ID=3350' target='_blank'> Patrick Moody</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/FF/FFWSRCCDMPQPNLF.20120620145830.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2008<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Asheville, NC<br><strong>Primary Major:</strong> Biology<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#4A2583" 
+},
+{
+ "Major Group": "Biology",
+"player": "Pearce Landry",
+"Primary Major": "Biology",
+"NBA Player": false,
+"Height (inches)":             77,
+"Weight": 180,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 1995,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Pearce Landry</span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='https://s3.amazonaws.com/newsle_filepicker.io_uploads/YH3kHhT1uchiXVVuzfwv_Jason-8.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 1995<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Greensboro, NC<br><strong>Primary Major:</strong> Biology<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#4A2583" 
+},
+{
+ "Major Group": "Exercise and Sport Science",
+"player": "David Dupont",
+"Primary Major": "Exercise and Sport Science",
+"NBA Player": false,
+"Height (inches)":             77,
+"Weight": 195,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2011,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497535&DB_OEM_ID=3350' target='_blank'> David Dupont</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/ZN/ZNGYYGMCFLJRROP.20120620142320.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2011<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Greensboro, NC<br><strong>Primary Major:</strong> Exercise and Sport Science<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#B4A76C" 
+},
+{
+ "Major Group": "Exercise and Sport Science",
+"player": "Jackson Simmons",
+"Primary Major": "Exercise and Sport Science",
+"NBA Player": false,
+"Height (inches)":             79,
+"Weight": 225,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2015,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205497529&DB_OEM_ID=3350' target='_blank'> Jackson Simmons</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics33/400/PB/PBBRGLZCSYOAMKO.20130926152410.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2015<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Webster, NC<br><strong>Primary Major:</strong> Exercise and Sport Science<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#B4A76C" 
+},
+{
+ "Major Group": "Exercise and Sport Science",
+"player": "Michael Brooker",
+"Primary Major": "Exercise and Sport Science",
+"NBA Player": false,
+"Height (inches)":             78,
+"Weight": 222,
+"Race": "Caucasian",
+"Pro Athlete": false,
+"Class": 2001,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674104&DB_OEM_ID=3350' target='_blank'> Michael Brooker</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/RC/RCWBXTGMSZQMXKP.20121015194904.jpg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2001<br><strong>Race:</strong> Caucasian<br><strong>Hometown:</strong> Sandervsville, GA<br><strong>Primary Major:</strong> Exercise and Sport Science<br><strong>NBA Player:</strong> FALSE<br><strong>Professional Athlete:</strong> FALSE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#B4A76C" 
+},
+{
+ "Major Group": "Exercise and Sport Science",
+"player": "Ty Lawson",
+"Primary Major": "Exercise and Sport Science",
+"NBA Player": true,
+"Height (inches)":             71,
+"Weight": 195,
+"Race": "African-American",
+"Pro Athlete": true,
+"Class": 2010,
+"detail": "<table cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><a href ='http://www.goheels.com/ViewArticle.dbml?ATCLID=205674041&DB_OEM_ID=3350' target='_blank'> Ty Lawson</a></span></span></th></tr><tr><td><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><img src='http://image.cdnllnwnl.xosnetwork.com/pics32/400/KN/KNDWNMQSKGFOHTE.20120620145830.jpeg' height='180' width='135'></span></span></td><td style='text-align: center;'><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><strong>Class:</strong> 2010<br><strong>Race:</strong> African-American<br><strong>Hometown:</strong> Clinton, MD<br><strong>Primary Major:</strong> Exercise and Sport Science<br><strong>NBA Player:</strong> TRUE<br><strong>Professional Athlete:</strong> TRUE</span></span></td></tr></tbody></table>",
+"size":              1,
+"color": "#B4A76C" 
+} 
+]
+  $scope.controls = {
+ "y": {
+ "name": "y",
+"value": "Weight",
+"values": [ "Weight", "Height (inches)" ],
+"label": "Select  y :" 
+},
+"group": {
+ "name": "group",
+"value": "Major Group",
+"values": [ "Major Group", "Class", "NBA Player", "Class", "Pro Athlete", "Race" ],
+"label": "Select  group :" 
+} 
+} 
+  $scope.filters = [
+ {
+ "variable": "Race",
+"value": "Caucasian" 
+},
+{
+ "variable": "Race",
+"value": "African-American" 
+},
+{
+ "variable": "Race",
+"value": "Mixed Race" 
+},
+{
+ "variable": "Primary Major",
+"value": "Communication" 
+},
+{
+ "variable": "Primary Major",
+"value": "Undeclared" 
+},
+{
+ "variable": "Primary Major",
+"value": "Undisclosed" 
+},
+{
+ "variable": "Primary Major",
+"value": "African Studies" 
+},
+{
+ "variable": "Primary Major",
+"value": "International Studies" 
+},
+{
+ "variable": "Primary Major",
+"value": "Education" 
+},
+{
+ "variable": "Primary Major",
+"value": "Information & Library Science" 
+},
+{
+ "variable": "Primary Major",
+"value": "Mathematics" 
+},
+{
+ "variable": "Primary Major",
+"value": "Physical Education" 
+},
+{
+ "variable": "Primary Major",
+"value": "Economics" 
+},
+{
+ "variable": "Primary Major",
+"value": "Speech" 
+},
+{
+ "variable": "Primary Major",
+"value": "Administrative Criminal Justice" 
+},
+{
+ "variable": "Primary Major",
+"value": "Geography" 
+},
+{
+ "variable": "Primary Major",
+"value": "Psychology" 
+},
+{
+ "variable": "Primary Major",
+"value": "Interdisciplinary Studies" 
+},
+{
+ "variable": "Primary Major",
+"value": "Philosophy" 
+},
+{
+ "variable": "Primary Major",
+"value": "Health Policy Administration" 
+},
+{
+ "variable": "Primary Major",
+"value": "Business" 
+},
+{
+ "variable": "Primary Major",
+"value": "Sociology" 
+},
+{
+ "variable": "Primary Major",
+"value": "Political Science" 
+},
+{
+ "variable": "Primary Major",
+"value": "History" 
+},
+{
+ "variable": "Primary Major",
+"value": "Industrial Relations" 
+},
+{
+ "variable": "Primary Major",
+"value": "Radio, Television and Motion Picture" 
+},
+{
+ "variable": "Primary Major",
+"value": "Biology" 
+},
+{
+ "variable": "Primary Major",
+"value": "Exercise and Sport Science" 
+} 
+]
+  
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  
+  $scope.$watch('selected', function(){
+    if (!(typeof($scope.selected) === "undefined")) {
+      $scope.opts.selected = $scope.selected.map(function(d){
+        selectKey={};
+        selectKey[d.variable]=d.value;
+        return selectKey;
+      })
+    }
+  }) 
+  
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+  }, true)
+}  
+
+function drawChart(opts, data){ 
+  if (_.keys(opts.selected).length > 0){
+  // for multiselect union
+    data = _.at(data,_.chain(opts.selected)
+      .map(function(d){
+        return _.compact(
+          data.map(function(val,ind){
+           if(val[_.keys(d)[0]]===d[_.keys(d)[0]]) {
+              return ind
+            } else {return false}
+          })
+        )
+      })
+      .flatten()
+      .uniq()
+      .value()
+    )
+  /* for multiselect intersection
+    data = _.chain(opts.selected)
+      .map(function(d){
+        return _.compact(
+          data.map(function(val,ind){
+           if(val[_.keys(d)[0]]===d[_.keys(d)[0]]) {
+              return ind
+            } else {return false}
+          })
+        )
+      })
+      .value();
+  
+     var intersected = _.countBy(_.flatten(testdata,function(d){return d}));
+
+     var varKeys = _.uniq(_.flatten(opts.selected.map(function(d){return _.keys(d)})));
+
+     data = _.at(data,_.chain(intersected)
+        .map(function(d,i){
+          if (d===varKeys.length) {return i} else {return false}
+        })
+        .compact()
+        .value()
+      );
+    */
+  }
+  
+  
+  var data = d3.nest()
+    .key(function(d){
+      return opts.group === undefined ? 'main' : d[opts.group]
+    })
+    .entries(data)
+  
+  nv.addGraph(function() {
+    var chart = nv.models[opts.type]()
+      .x(function(d) { return d[opts.x] })
+      .y(function(d) { return d[opts.y] })
+      .width(opts.width)
+      .height(opts.height)
+    
+  chart
+  .color([ "#BD0D18", "#FF7A00", "#000080", "#0088CE", "#A5ACAF", "#000000", "#FFCC00", "#006666", "#DF6108", "#009E60", "#B4A76C", "#4A2583" ])
+  .showControls(false)
+  .showDistX(true)
+  .showDistY(true)
+  .size( function(d){return d.size} )
+  .tooltipContent( function(key, x, y, e){
+return '<p>' + e.point.detail + '</p>'
+'<p><b>'+ 'yAxis: '+ '</b>' + y +'</p>'
+} )
+          
+  chart.xAxis
+  .tickValues([   1990,   1992,   1994,   1996,   1998,   2000,   2002,   2004,   2006,   2008,   2010,   2012,   2014,   2016 ])
+chart.legend
+  .width(1200)
+  .margin({
+ "left":     5,
+"top":     5,
+"right":     5,
+"bottom":     0 
+})
+  chart.xAxis
+  .axisLabel("Player's Class")
+  
+  .margin({
+ "left":     90,
+"top":     50,
+"right":     20,
+"bottom":     40 
+})      
+     chart.yAxis
+  .tickFormat(function(d) {return d3.format('.02f')(d)})
+  .width(    70)
+ .axisLabel( opts.y )
+
+  d3.select("#" + opts.id + ' svg')
+  // .empty()
+    .datum(data)
+    .transition().duration(300)
+    .call(chart);
+  
+   nv.utils.windowResize(chart.update);
+   return chart;
+  });
+};
+</script>
+<center><div style="display:table;width:320px;height:10px;font-size:12px" class='gray'>
+  <a href="http://twitter.com/abresler" target="_blank"><strong>Visualized and Analyzed by Alex Bresler</strong></a><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</html>

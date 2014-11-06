@@ -1,0 +1,237 @@
+<!doctype HTML>
+<title>2014 U.S. Open Bracket Breakdown by Age</title>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='http://aragorn.org/scripts/dimple.v1.1.5.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/d3.v3.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 630px;
+      height: 450px;
+    }  
+    </style>
+    <style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>
+     <script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+  </head>
+  <body >
+    <center>
+       <div style="display:table;width:450px;height:50px;" class='gray'>
+        <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 450px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: -0.5px"><strong>U.S. Open Age Breakdown by Draw</strong></div>
+    </div>
+      <a href = "http://www.ibm.com/us/en/" target = "_blank"><img src="http://www.aragorn.org/logos/ibm_630_100v3.jpg" alt="" width = "450" height="71" style="padding: 2.5px"></a>
+    <div id = 'chartb3dd7d89dd01' class = 'rChart dimple'></div>    
+    <script type="text/javascript">
+  var opts = {
+ "dom": "chartb3dd7d89dd01",
+"width":    630,
+"height":    450,
+"xAxis": {
+ "type": "addMeasureAxis",
+"showPercent": false 
+},
+"yAxis": {
+ "type": "addCategoryAxis",
+"showPercent": false,
+"orderRule": "Age" 
+},
+"zAxis": [],
+"colorAxis": [],
+"defaultColors": [
+ [ "#32bff2", "#830f58" ] 
+],
+"layers": [],
+"legend": {
+ "x":    100,
+"y":     20,
+"width":    300,
+"height":     50,
+"horizontalAlign": "center" 
+},
+"x": "Count",
+"y": "Age",
+"groups": "Draw",
+"type": "bar",
+"barGap":   0.05,
+"aggregate": "dimple.aggregateMethod.sum",
+"ylab": "Age",
+"xlab": "Count",
+"id": "chartb3dd7d89dd01" 
+},
+    data = [{"Age":15,"Count":1,"Draw":"Women's"},{"Age":17,"Count":2,"Draw":"Men's"},{"Age":17,"Count":2,"Draw":"Women's"},{"Age":18,"Count":2,"Draw":"Men's"},{"Age":18,"Count":3,"Draw":"Women's"},{"Age":19,"Count":1,"Draw":"Men's"},{"Age":19,"Count":5,"Draw":"Women's"},{"Age":20,"Count":1,"Draw":"Men's"},{"Age":20,"Count":12,"Draw":"Women's"},{"Age":21,"Count":5,"Draw":"Men's"},{"Age":21,"Count":12,"Draw":"Women's"},{"Age":22,"Count":4,"Draw":"Men's"},{"Age":22,"Count":12,"Draw":"Women's"},{"Age":23,"Count":8,"Draw":"Men's"},{"Age":23,"Count":8,"Draw":"Women's"},{"Age":24,"Count":9,"Draw":"Men's"},{"Age":24,"Count":11,"Draw":"Women's"},{"Age":25,"Count":8,"Draw":"Men's"},{"Age":25,"Count":13,"Draw":"Women's"},{"Age":26,"Count":14,"Draw":"Men's"},{"Age":26,"Count":14,"Draw":"Women's"},{"Age":27,"Count":17,"Draw":"Men's"},{"Age":27,"Count":8,"Draw":"Women's"},{"Age":28,"Count":12,"Draw":"Men's"},{"Age":28,"Count":7,"Draw":"Women's"},{"Age":29,"Count":13,"Draw":"Men's"},{"Age":29,"Count":5,"Draw":"Women's"},{"Age":30,"Count":7,"Draw":"Men's"},{"Age":30,"Count":3,"Draw":"Women's"},{"Age":31,"Count":6,"Draw":"Men's"},{"Age":31,"Count":4,"Draw":"Women's"},{"Age":32,"Count":9,"Draw":"Men's"},{"Age":32,"Count":5,"Draw":"Women's"},{"Age":33,"Count":6,"Draw":"Men's"},{"Age":34,"Count":2,"Draw":"Men's"},{"Age":34,"Count":2,"Draw":"Women's"},{"Age":35,"Count":2,"Draw":"Men's"},{"Age":43,"Count":1,"Draw":"Women's"}];
+  var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
+
+  //data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
+  var myChart = new dimple.chart(svg, data);
+  if (opts.bounds) {
+    myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+  }
+  //dimple allows use of custom CSS with noFormats
+  if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
+  //for markimekko and addAxis also have third parameter measure
+  //so need to evaluate if measure provided
+  
+  //function to build axes
+  function buildAxis(position,layer){
+    var axis;
+    var axisopts = opts[position+"Axis"];
+    
+    if(axisopts.measure) {
+      axis = myChart[axisopts.type](position,layer[position],axisopts.measure);
+    } else {
+      axis = myChart[axisopts.type](position, layer[position]);
+    };
+    if(!(axisopts.type === "addPctAxis")) axis.showPercent = axisopts.showPercent;
+    if (axisopts.orderRule) axis.addOrderRule(axisopts.orderRule);
+    if (axisopts.grouporderRule) axis.addGroupOrderRule(axisopts.grouporderRule);  
+    if (axisopts.overrideMin) axis.overrideMin = axisopts.overrideMin;
+    if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+    if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+    if (axisopts.inputFormat) axis.dateParseFormat = axisopts.inputFormat;
+    if (axisopts.outputFormat) axis.tickFormat = axisopts.outputFormat;    
+    return axis;
+  };
+  
+  var c = null;
+  if(d3.keys(opts.colorAxis).length > 0) {
+    c = myChart[opts.colorAxis.type](opts.colorAxis.colorSeries,opts.colorAxis.palette) ;
+  }
+  
+  //allow manipulation of default colors to use with dimple
+  if(opts.defaultColors.length) {
+    opts.defaultColors = opts.defaultColors[0];
+    if (typeof(opts.defaultColors) == "function") {
+      //assume this is a d3 scale
+      //for now loop through first 20 but need a better way to handle
+      defaultColorsArray = [];
+      for (var n=0;n<20;n++) {
+        defaultColorsArray.push(opts.defaultColors(n));
+      };
+      opts.defaultColors = defaultColorsArray;
+    }
+    opts.defaultColors.forEach(function(d,i) {
+      opts.defaultColors[i] = new dimple.color(d);
+    })
+    myChart.defaultColors = opts.defaultColors;
+  }  
+  
+  //do series
+  //set up a function since same for each
+  //as of now we have x,y,groups,data,type in opts for primary layer
+  //and other layers reside in opts.layers
+  function buildSeries(layer, hidden){
+    var x = buildAxis("x", layer);
+    x.hidden = hidden;
+    
+    var y = buildAxis("y", layer);
+    y.hidden = hidden;
+    
+    //z for bubbles
+    var z = null;
+    if (!(typeof(layer.zAxis) === 'undefined') && layer.zAxis.type){
+      z = buildAxis("z", layer);
+    };
+    
+    //here think I need to evaluate group and if missing do null
+    //as the group argument
+    //if provided need to use groups from layer
+    var s = new dimple.series(myChart, null, x, y, z, c, dimple.plot[layer.type], dimple.aggregateMethod.avg, dimple.plot[layer.type].stacked);
+    
+    if(layer.hasOwnProperty("groups")) {
+      s.categoryFields = (typeof layer.groups === "object") ? layer.groups : [layer.groups]; 
+    };
+    
+    //series offers an aggregate method that we will also need to check if available
+    //options available are avg, count, max, min, sum
+    if (!(typeof(layer.aggregate) === 'undefined')) {
+      s.aggregate = eval(layer.aggregate);
+    }
+    if (!(typeof(layer.lineWeight) === 'undefined')) {
+      s.lineWeight = eval(layer.lineWeight);
+    }
+    if (!(typeof(layer.barGap) === 'undefined')) {
+      s.barGap = eval(layer.barGap);
+    }
+    
+   /* if (!(typeof(layer.eventHandler) === 'undefined')) {
+      layer.eventHandler = (layer.eventHandler.length === "undefined") ? layer.eventHandler : [layer.eventHandler];
+      layer.eventHandler.forEach(function(evt){
+        s.addEventHandler(evt.event, eval(evt.handler))
+      })
+    }*/
+      
+    myChart.series.push(s);
+    return s;
+  };
+  
+  buildSeries(opts, false);
+  if (opts.layers.length > 0) {
+    opts.layers.forEach(function(layer){
+      buildSeries(layer, true);
+    })
+  }
+  //unsure if this is best but if legend is provided (not empty) then evaluate
+  if(d3.keys(opts.legend).length > 0) {
+    var l =myChart.addLegend();
+    d3.keys(opts.legend).forEach(function(d){
+      l[d] = opts.legend[d];
+    });
+  }
+  //quick way to get this going but need to make this cleaner
+  if(opts.storyboard) {
+    myChart.setStoryboard(opts.storyboard);
+  };
+  myChart.draw();
+
+</script>
+<center>
+<div style="display:table;width:220px;height:10px;font-size:12px" class='gray'>
+<center><strong>Distributed by</strong><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</center>
+</body>
+</html>

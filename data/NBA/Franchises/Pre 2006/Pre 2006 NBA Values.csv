@@ -1,0 +1,368 @@
+"","rank","team","value","value_change","revenue","operating_income","debt_percent","year","fname","player_expense","gate_receipt"
+"1",1,"New York Knicks",334,13,92.9,4,49,2000,"NBATeamValues00.xls",NA,NA
+"2",2,"Chicago Bulls",307,1,66.8,20.4,10,2000,"NBATeamValues00.xls",NA,NA
+"3",3,"Los Angeles Lakers",282,5,58.7,-0.9,56,2000,"NBATeamValues00.xls",NA,NA
+"4",4,"Portland Trail Blazers",257,5,57.1,-13.5,58,2000,"NBATeamValues00.xls",NA,NA
+"5",5,"Phoenix Suns",239,2,58.3,5.8,23,2000,"NBATeamValues00.xls",NA,NA
+"6",6,"Philadelphia 76ers",231,18,57.7,1.8,30,2000,"NBATeamValues00.xls",NA,NA
+"7",7,"Detroit Pistons",226,10,51.3,-1.7,0,2000,"NBATeamValues00.xls",NA,NA
+"8",8,"Utah Jazz",215,7,47.7,-0.7,22,2000,"NBATeamValues00.xls",NA,NA
+"9",9,"Washington Wizards",209,1,48.6,-2.8,53,2000,"NBATeamValues00.xls",NA,NA
+"10",10,"Boston Celtics",187,6,41.5,2.3,47,2000,"NBATeamValues00.xls",NA,NA
+"11",11,"Seattle Supersonics",183,8,43.6,-2.3,40,2000,"NBATeamValues00.xls",NA,NA
+"12",12,"Indiana Pacers",178,17,34.2,-19.4,32,2000,"NBATeamValues00.xls",NA,NA
+"13",13,"Cleveland Cavaliers",170,6,37.8,-0.1,0,2000,"NBATeamValues00.xls",NA,NA
+"14",14,"San Antonio Spurs",169,39,42.3,-6.7,15,2000,"NBATeamValues00.xls",NA,NA
+"15",15,"Houston Rockets",168,1,44.3,-3.6,24,2000,"NBATeamValues00.xls",NA,NA
+"16",16,"New Jersey Nets",166,6,38.6,-8.6,12,2000,"NBATeamValues00.xls",NA,NA
+"17",17,"Miami Heat",162,12,33.1,-20.7,114,2000,"NBATeamValues00.xls",NA,NA
+"18",18,"Orlando Magic",159,19,37.9,-9.1,35,2000,"NBATeamValues00.xls",NA,NA
+"19",19,"Sacramento Kings",151,27,34.3,-12.5,43,2000,"NBATeamValues00.xls",NA,NA
+"20",20,"Atlanta Hawks",150,7,28.8,-19.3,44,2000,"NBATeamValues00.xls",NA,NA
+"21",21,"Minnesota Timberwolves",146,23,41.7,4.2,14,2000,"NBATeamValues00.xls",NA,NA
+"22",22,"Dallas Mavericks",141,18,26.1,-14.7,76,2000,"NBATeamValues00.xls",NA,NA
+"23",23,"Golden State Warriors",140,8,31.8,-7.7,80,2000,"NBATeamValues00.xls",NA,NA
+"24",24,"Toronto Raptors",138,14,33.6,-8,96,2000,"NBATeamValues00.xls",NA,NA
+"25",25,"Charlotte Hornets",136,10,30.3,-2.2,37,2000,"NBATeamValues00.xls",NA,NA
+"26",26,"Vancouver Grizzlies",127,-5,28.2,-12.4,47,2000,"NBATeamValues00.xls",NA,NA
+"27",27,"Denver Nuggets",124,13,23.8,-9.8,56,2000,"NBATeamValues00.xls",NA,NA
+"28",28,"Milwaukee Bucks",111,18,25.8,-14.9,23,2000,"NBATeamValues00.xls",NA,NA
+"29",29,"Los Angeles Clippers",103,1,23,-13.2,0,2000,"NBATeamValues00.xls",NA,NA
+"30",1,"New York Knicks",395,18,152,30.7,38,2001,"NBATeamValues01.xls",74.8,43.5
+"31",2,"Los Angeles Lakers",360,28,133.2,36.6,15,2001,"NBATeamValues01.xls",57.7,50.2
+"32",3,"Chicago Bulls",314,2,112.2,48.2,10,2001,"NBATeamValues01.xls",29.5,30.5
+"33",4,"Portland Trail Blazers",272,6,97.3,-12.8,55,2001,"NBATeamValues01.xls",76.4,44
+"34",5,"Phoenix Suns",252,5,96.8,16.5,10,2001,"NBATeamValues01.xls",49,24
+"35",6,"Detroit Pistons",236,4,90.6,11.6,0,2001,"NBATeamValues01.xls",44.6,17.9
+"36",7,"Philadelphia 76ers",233,1,86.3,6.5,30,2001,"NBATeamValues01.xls",44.8,22.2
+"37",8,"Indiana Pacers",232,31,86.1,0.9,25,2001,"NBATeamValues01.xls",56.7,32
+"38",9,"Utah Jazz",226,5,87,5.2,19,2001,"NBATeamValues01.xls",51.7,33.8
+"39",10,"Miami Heat",225,39,89.9,9.7,82,2001,"NBATeamValues01.xls",53.5,29.9
+"40",11,"Boston Celtics",212,13,81.5,12.4,44,2001,"NBATeamValues01.xls",48.7,24.9
+"41",12,"Washington Wizards",210,0,75,-6.1,53,2001,"NBATeamValues01.xls",55.1,20.3
+"42",13,"Houston Rockets",206,23,79.4,-1,19,2001,"NBATeamValues01.xls",54.8,33.1
+"43",14,"San Antonio Spurs",189,12,67.4,-1.4,21,2001,"NBATeamValues01.xls",46.3,26.9
+"44",15,"Seattle SuperSonics",187,2,74.7,6.7,39,2001,"NBATeamValues01.xls",43.8,28.5
+"45",16,"Cleveland Cavaliers",185,9,68.6,-2,0,2001,"NBATeamValues01.xls",49,15.3
+"46",17,"Atlanta Hawks",184,23,70.8,-1.8,33,2001,"NBATeamValues01.xls",45.6,16.7
+"47",18,"New Jersey Nets",179,8,78,8.7,78,2001,"NBATeamValues01.xls",45.3,27.1
+"48",19,"Sacramento Kings",178,18,71.3,2.8,36,2001,"NBATeamValues01.xls",42.6,27.2
+"49",20,"Denver Nuggets",175,42,67.5,-2.7,39,2001,"NBATeamValues01.xls",45.7,15
+"50",21,"Minnesota Timberwolves",169,16,70.4,5.8,12,2001,"NBATeamValues01.xls",44.6,22.8
+"51",22,"Golden State Warriors",168,20,67.2,6,67,2001,"NBATeamValues01.xls",38.6,19.3
+"52",23,"Dallas Mavericks",167,19,59.7,-6.7,64,2001,"NBATeamValues01.xls",42,21.3
+"53",24,"Orlando Magic",165,4,66,-0.2,33,2001,"NBATeamValues01.xls",44.1,21.6
+"54",25,"Los Angeles Clippers",154,50,61.8,11.5,0,2001,"NBATeamValues01.xls",28.8,15
+"55",26,"Toronto Raptors",148,7,61.5,1.2,93,2001,"NBATeamValues01.xls",37.2,19.4
+"56",27,"Charlotte Hornets",144,6,57.8,-2.1,35,2001,"NBATeamValues01.xls",41.1,20
+"57",28,"Milwaukee Bucks",131,18,54.7,-13,19,2001,"NBATeamValues01.xls",48.3,15.3
+"58",29,"Vancouver Grizzlies",118,-7,51.3,-8.5,68,2001,"NBATeamValues01.xls",40.2,11.6
+"59",1,"Los Angeles Lakers",403,12,144,31.1,13,2002,"NBATeamValues02.xls",65.1,NA
+"60",2,"New York Knicks",392,-1,157,28.5,38,2002,"NBATeamValues02.xls",81.6,NA
+"61",3,"Chicago Bulls",329,5,117,51.7,9,2002,"NBATeamValues02.xls",32.7,NA
+"62",4,"Portland Trail Blazers",283,4,101,-19.3,48,2002,"NBATeamValues02.xls",89.5,NA
+"63",5,"Philadelphia 76ers",279,19,103,11.1,22,2002,"NBATeamValues02.xls",53.6,NA
+"64",6,"Phoenix Suns",266,6,102,25.2,50,2002,"NBATeamValues02.xls",45.5,NA
+"65",7,"Miami Heat",248,10,99,1.3,75,2002,"NBATeamValues02.xls",66.9,NA
+"66",8,"Houston Rockets",234,13,81,3.8,17,2002,"NBATeamValues02.xls",52.3,NA
+"67",9,"Indiana Pacers ",231,0,89,0.7,24,2002,"NBATeamValues02.xls",57.6,NA
+"68",10,"Detroit Pistons",230,-2,92,18,0,2002,"NBATeamValues02.xls",40.5,NA
+"69",11,"Utah Jazz",225,0,88,2.5,17,2002,"NBATeamValues02.xls",56.7,NA
+"70",12,"San Antonio Spurs",221,17,82,-2.4,18,2002,"NBATeamValues02.xls",60.2,NA
+"71",13,"Boston Celtics",218,3,81,9.8,25,2002,"NBATeamValues02.xls",49.5,NA
+"72",14,"Washington Wizards",214,2,81,-5.7,52,2002,"NBATeamValues02.xls",62.1,NA
+"73",15,"Dallas Mavericks",211,26,68,-23.4,50,2002,"NBATeamValues02.xls",59.9,NA
+"74",16,"Sacramento Kings",209,17,87,10,48,2002,"NBATeamValues02.xls",49.1,NA
+"75",17,"Cleveland Cavaliers",202,9,75,7.1,0,2002,"NBATeamValues02.xls",47.8,NA
+"76",18,"Seattle SuperSonics",200,7,80,2.1,50,2002,"NBATeamValues02.xls",53.6,NA
+"77",19,"Atlanta Hawks",199,8,76,5.8,30,2002,"NBATeamValues02.xls",42.2,NA
+"78",20,"Denver Nuggets",188,7,72,-7.6,36,2002,"NBATeamValues02.xls",54.8,NA
+"79",21,"Minnesota Timberwolves",185,9,77,4.2,11,2002,"NBATeamValues02.xls",50.2,NA
+"80",22,"Orlando Magic",176,6,76,13.3,31,2002,"NBATeamValues02.xls",40,NA
+"81",23,"Toronto Raptors",172,17,75,5.1,80,2002,"NBATeamValues02.xls",40.9,NA
+"82",24,"Los Angeles Clippers",170,10,68,11.5,0,2002,"NBATeamValues02.xls",32.6,NA
+"83",25,"New Jersey Nets",169,-6,73,-11.3,93,2002,"NBATeamValues02.xls",59.7,NA
+"84",26,"Golden State Warriors",166,-1,69,2.9,60,2002,"NBATeamValues02.xls",44.9,NA
+"85",27,"Memphis Grizzlies",160,36,53,-13.3,50,2002,"NBATeamValues02.xls",51.2,NA
+"86",28,"Milwaukee Bucks",150,14,65,-16.3,13,2002,"NBATeamValues02.xls",60.4,NA
+"87",29,"Charlotte Hornets",135,-6,65,-0.5,37,2002,"NBATeamValues02.xls",49.4,NA
+"88",1,"Los Angeles Lakers",426,0.14,NA,44.1,NA,2003,"NBATeamValues03.xls",NA,NA
+"89",2,"New York Knicks",398,6,NA,25.1,NA,2003,"NBATeamValues03.xls",NA,NA
+"90",3,"Chicago Bulls",323,23,NA,39.1,NA,2003,"NBATeamValues03.xls",NA,NA
+"91",4,"Dallas Mavericks",304,NA,NA,3.2,NA,2003,"NBATeamValues03.xls",NA,NA
+"92",5,"Philadelphia 76ers",298,16,NA,18.1,NA,2003,"NBATeamValues03.xls",NA,NA
+"93",6,"Washington Wizards",278,15,NA,12.7,NA,2003,"NBATeamValues03.xls",NA,NA
+"94",7,"Boston Celtics",274,NA,NA,17.4,NA,2003,"NBATeamValues03.xls",NA,NA
+"95",8,"Phoenix Suns",272,13,NA,18.5,NA,2003,"NBATeamValues03.xls",NA,NA
+"96",9,"Portland Trail Blazers",270,10,NA,-22.8,NA,2003,"NBATeamValues03.xls",NA,NA
+"97",10,"Sacramento Kings",259,14,NA,13.5,NA,2003,"NBATeamValues03.xls",NA,NA
+"98",11,"Detroit Pistons",258,13,NA,12.9,NA,2003,"NBATeamValues03.xls",NA,NA
+"99",12,"Houston Rockets",255,13,NA,6.7,NA,2003,"NBATeamValues03.xls",NA,NA
+"100",13,"Miami Heat",250,20,NA,8.1,NA,2003,"NBATeamValues03.xls",NA,NA
+"101",14,"Indiana Pacers",246,18,NA,3.1,NA,2003,"NBATeamValues03.xls",NA,NA
+"102",15,"San Antonio Spurs",242,14,NA,8.3,NA,2003,"NBATeamValues03.xls",NA,NA
+"103",16,"Utah Jazz",226,14,NA,1.9,NA,2003,"NBATeamValues03.xls",NA,NA
+"104",17,"Cleveland Cavaliers",222,14,NA,5.9,NA,2003,"NBATeamValues03.xls",NA,NA
+"105",18,"New Jersey Nets",218,10,NA,4.5,NA,2003,"NBATeamValues03.xls",NA,NA
+"106",19,"Toronto Raptors",217,15,NA,4.5,NA,2003,"NBATeamValues03.xls",NA,NA
+"107",20,"Minnesota Timberwolves",213,13,NA,8.8,NA,2003,"NBATeamValues03.xls",NA,NA
+"108",21,"Denver Nuggets",209,NA,NA,-5,NA,2003,"NBATeamValues03.xls",NA,NA
+"109",22,"Seattle Supersonics",207,NA,NA,6.3,NA,2003,"NBATeamValues03.xls",NA,NA
+"110",23,"Atlanta Hawks",206,NA,NA,4.2,NA,2003,"NBATeamValues03.xls",NA,NA
+"111",24,"Los Angeles Clippers",205,14,NA,16.3,NA,2003,"NBATeamValues03.xls",NA,NA
+"112",25,"Memphis Grizzlies",198,NA,NA,0.6,NA,2003,"NBATeamValues03.xls",NA,NA
+"113",26,"Orlando Magic",197,8,NA,8.2,NA,2003,"NBATeamValues03.xls",NA,NA
+"114",27,"Golden State Warriors",176,6,NA,-0.6,NA,2003,"NBATeamValues03.xls",NA,NA
+"115",28,"New Orleans Hornets",172,13,NA,-8.3,NA,2003,"NBATeamValues03.xls",NA,NA
+"116",29,"Milwaukee Bucks",168,14,NA,-8.5,NA,2003,"NBATeamValues03.xls",NA,NA
+"117",1,"Los Angeles Lakers",447,5,149,22.8,30,2004,"NBATeamValues04.xls",NA,NA
+"118",2,"New York Knicks",401,1,160,13.5,62,2004,"NBATeamValues04.xls",NA,NA
+"119",3,"Chicago Bulls",356,10,119,49,7,2004,"NBATeamValues04.xls",NA,NA
+"120",4,"Dallas Mavericks",338,11,117,-17.7,44,2004,"NBATeamValues04.xls",NA,NA
+"121",5,"Philadelphia 76ers",328,10,109,2,20,2004,"NBATeamValues04.xls",NA,NA
+"122",6,"Boston Celtics",290,6,97,25.6,62,2004,"NBATeamValues04.xls",NA,NA
+"123",7,"Detroit Pistons",284,10,102,23.5,0,2004,"NBATeamValues04.xls",NA,NA
+"124",8,"San Antonio Spurs",283,24,105,18.5,46,2004,"NBATeamValues04.xls",NA,NA
+"125",9,"Phoenix Suns",282,4,109,21.5,46,2004,"NBATeamValues04.xls",NA,NA
+"126",10,"Indiana Pacers",280,14,94,10.1,18,2004,"NBATeamValues04.xls",NA,NA
+"127",11,"Houston Rockets",278,9,82,15.2,14,2004,"NBATeamValues04.xls",NA,NA
+"128",12,"Sacramento Kings",275,6,102,-16.8,24,2004,"NBATeamValues04.xls",NA,NA
+"129",13,"Washington Wizards",274,-2,98,28.5,24,2004,"NBATeamValues04.xls",NA,NA
+"130",14,"Portland Trail Blazers",272,1,97,-85.1,50,2004,"NBATeamValues04.xls",NA,NA
+"131",15,"Cleveland Cavaliers",258,16,72,3.8,12,2004,"NBATeamValues04.xls",NA,NA
+"132",16,"Toronto Raptors",249,15,96,10.6,25,2004,"NBATeamValues04.xls",NA,NA
+"133",17,"New Jersey Nets",244,12,94,-1.6,41,2004,"NBATeamValues04.xls",NA,NA
+"134",18,"Utah Jazz",239,6,85,13.8,13,2004,"NBATeamValues04.xls",NA,NA
+"135",19,"Miami Heat",236,-6,91,7.9,78,2004,"NBATeamValues04.xls",NA,NA
+"136",20,"Minnesota Timberwolves",230,8,85,6.9,22,2004,"NBATeamValues04.xls",NA,NA
+"137",21,"Memphis Grizzlies",227,14,63,-19.7,40,2004,"NBATeamValues04.xls",NA,NA
+"138",22,"Denver Nuggets",218,4,75,7.9,26,2004,"NBATeamValues04.xls",NA,NA
+"139",23,"New Orleans Hornets",216,25,80,21.9,35,2004,"NBATeamValues04.xls",NA,NA
+"140",24,"Los Angeles Clippers",208,1,72,15.9,0,2004,"NBATeamValues04.xls",NA,NA
+"141",25,"Atlanta Hawks",202,-2,78,-8.4,35,2004,"NBATeamValues04.xls",NA,NA
+"142",26,"Orlando Magic",199,1,80,13.1,30,2004,"NBATeamValues04.xls",NA,NA
+"143",27,"Seattle Supersonics",196,-6,70,2.4,46,2004,"NBATeamValues04.xls",NA,NA
+"144",28,"Golden State Warriors",188,6,70,7.8,29,2004,"NBATeamValues04.xls",NA,NA
+"145",29,"Milwaukee Bucks",174,4,70,-15.1,17,2004,"NBATeamValues04.xls",NA,NA
+"146",1,"Los Angeles Lakers ",510,14,170,35.8,11,2005,"NBATeamValues05.xls",NA,NA
+"147",2,"New York Knicks ",494,23,170,-14.3,51,2005,"NBATeamValues05.xls",NA,NA
+"148",3,"Dallas Mavericks ",374,11,117,-33.6,39,2005,"NBATeamValues05.xls",NA,NA
+"149",4,"Houston Rockets ",369,33,125,35.5,19,2005,"NBATeamValues05.xls",NA,NA
+"150",5,"Chicago Bulls ",368,3,123,36.8,14,2005,"NBATeamValues05.xls",NA,NA
+"151",6,"Detroit Pistons ",363,28,121,23,0,2005,"NBATeamValues05.xls",NA,NA
+"152",7,"Phoenix Suns ",356,26,111,20.1,56,2005,"NBATeamValues05.xls",NA,NA
+"153",8,"Philadelphia 76ers ",342,4,107,7.2,28,2005,"NBATeamValues05.xls",NA,NA
+"154",9,"Boston Celtics ",334,15,104,25.4,54,2005,"NBATeamValues05.xls",NA,NA
+"155",10,"Sacramento Kings ",330,20,118,0.6,25,2005,"NBATeamValues05.xls",NA,NA
+"156",11,"San Antonio Spurs ",324,15,108,26.7,40,2005,"NBATeamValues05.xls",NA,NA
+"157",12,"Indiana Pacers ",311,11,104,2.6,16,2005,"NBATeamValues05.xls",NA,NA
+"158",13,"Cleveland Cavaliers ",298,15,93,21.9,10,2005,"NBATeamValues05.xls",NA,NA
+"159",14,"Toronto Raptors ",297,19,100,5.4,37,2005,"NBATeamValues05.xls",NA,NA
+"160",15,"New Jersey Nets ",296,22,93,-7.4,51,2005,"NBATeamValues05.xls",NA,NA
+"161",16,"Minnesota Timberwolves ",291,26,97,-20,17,2005,"NBATeamValues05.xls",NA,NA
+"162",17,"Miami Heat ",279,18,93,18.6,66,2005,"NBATeamValues05.xls",NA,NA
+"163",18,"Washington Wizards ",273,0,94,21.5,40,2005,"NBATeamValues05.xls",NA,NA
+"164",19,"Denver Nuggets ",268,23,89,25.2,19,2005,"NBATeamValues05.xls",NA,NA
+"165",20,"Utah Jazz ",257,7,88,27.5,11,2005,"NBATeamValues05.xls",NA,NA
+"166",21,"Portland Trail Blazers ",247,-9,88,-47,53,2005,"NBATeamValues05.xls",NA,NA
+"167",22,"Memphis Grizzlies ",238,5,75,-4.1,38,2005,"NBATeamValues05.xls",NA,NA
+"168",23,"Atlanta Hawks ",232,15,83,4.7,31,2005,"NBATeamValues05.xls",NA,NA
+"169",24,"Golden State Warriors ",228,21,76,8.1,33,2005,"NBATeamValues05.xls",NA,NA
+"170",25,"New Orleans Hornets ",225,4,80,17.1,44,2005,"NBATeamValues05.xls",NA,NA
+"171",26,"Los Angeles Clippers ",224,8,77,22.4,0,2005,"NBATeamValues05.xls",NA,NA
+"172",27,"Orlando Magic ",218,10,78,12.2,28,2005,"NBATeamValues05.xls",NA,NA
+"173",28,"Seattle SuperSonics ",205,4,73,0.5,44,2005,"NBATeamValues05.xls",NA,NA
+"174",29,"Milwaukee Bucks ",199,14,77,4.8,20,2005,"NBATeamValues05.xls",NA,NA
+"175",1,"Los Angeles Lakers",200,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"176",2,"Boston Celtics",180,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"177",3,"Detroit Pistons",150,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"178",4,"Chicago Bulls",100,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"179",5,"New York Knicks",100,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"180",6,"Phoenix Suns",99,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"181",7,"Philadelphia 76ers",75,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"182",8,"Cleveland Cavaliers",61.1,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"183",9,"Orlando Magic",60.8,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"184",10,"Portland Trailblazers",59.9,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"185",11,"Charlotte Hornets",59.6,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"186",12,"Miami Heat",58.6,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"187",13,"Houston Rockets",58,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"188",14,"Dallas Mavericks",54.4,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"189",15,"Atlanta Hawks",53.5,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"190",16,"Milwaukee Bucks",53.5,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"191",17,"Minnesota Timberwolves",51.2,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"192",18,"Golden State Warriors",50.7,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"193",19,"Sacramento Kings",49.1,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"194",20,"San Antonio Spurs",46.5,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"195",21,"Utah Jazz",44.9,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"196",22,"Los Angeles Clippers",42.9,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"197",23,"New Jersey Nets",42.6,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"198",24,"Denver Nuggets",40.6,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"199",25,"Washington Bullets",37.5,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"200",26,"Seattle Supersonics",37.3,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"201",27,"Indiana Pacers",33.3,NA,NA,NA,NA,1991,"NBATeamValues91.xls",NA,NA
+"202",1,"Los Angeles Lakers",150,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"203",2,"Detroit Pistons",120,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"204",3,"Boston Celtics",110,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"205",4,"Chicago Bulls",100,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"206",5,"New York Knicks",83,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"207",6,"Cleveland Cavaliers",81,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"208",7,"Phoenix Suns",80,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"209",8,"Portland Trailblazers",78,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"210",9,"Charlotte Hornets",74,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"211",10,"Golden State Warriors",63,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"212",11,"Philadelphia 76ers",63,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"213",12,"Sacramento Kings",63,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"214",13,"San Antonio Spurs",63,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"215",14,"Minnesota Timberwolves",62,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"216",15,"Orlando Magic",62,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"217",16,"Houston Rockets",61,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"218",17,"Dallas Mavericks",60,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"219",18,"Miami Heat",60,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"220",19,"Atlanta Hawks",57,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"221",20,"Milwaukee Bucks",56,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"222",21,"Los Angeles Clippers",54,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"223",22,"New Jersey Nets",54,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"224",23,"Utah Jazz",52,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"225",24,"Denver Nuggets",46,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"226",25,"Washington Bullets",46,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"227",26,"Seattle Supersonics",45,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"228",27,"Indiana Pacers",43,NA,NA,NA,NA,1992,"NBATeamValues92.xls",NA,NA
+"229",1,"Los Angeles Lakers",168,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"230",2,"Detroit Pistons",154,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"231",3,"Chicago Bulls",149,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"232",4,"New York Knicks",136,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"233",5,"Portland Trailblazers",122,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"234",6,"Cleveland Cavaliers",118,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"235",7,"Boston Celtics",117,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"236",8,"Phoenix Suns",108,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"237",9,"Charlotte Hornets",104,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"238",10,"San Antonio Spurs",100,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"239",11,"Utah Jazz",98,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"240",12,"Seattle Supersonics",96,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"241",13,"Minnesota Timberwolves",92,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"242",14,"Golden State Warriors",85,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"243",15,"Houston Rockets",84,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"244",16,"Orlando Magic",84,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"245",17,"Sacramento Kings",84,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"246",18,"Los Angeles Clippers",83,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"247",19,"Philadelphia 76ers",83,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"248",20,"Dallas Mavericks",79,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"249",21,"New Jersey Nets",79,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"250",22,"Washington Bullets",78,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"251",23,"Milwaukee Bucks",77,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"252",24,"Miami Heat",76,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"253",25,"Atlanta Hawks",72,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"254",26,"Denver Nuggets",69,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"255",27,"Indiana Pacers",67,NA,NA,NA,NA,1994,"NBATeamValues94.xls",NA,NA
+"256",1,"Detroit Pistons",180,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"257",2,"New York Knicks",173,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"258",3,"Los Angeles Lakers",169,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"259",4,"Chicago Bulls",166,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"260",5,"Phoenix Suns",156,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"261",6,"Cleveland Cavaliers",133,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"262",7,"Portland Trailblazers",132,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"263",8,"Boston Celtics",127,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"264",9,"Utah Jazz",127,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"265",10,"Seattle Supersonics",119,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"266",11,"Charlotte Hornets",110,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"267",12,"San Antonio Spurs",110,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"268",13,"Sacramento Kings",108,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"269",14,"Orlando Magic",101,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"270",15,"Minnesota Timberwolves",99,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"271",16,"Washington Bullets",96,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"272",17,"Houston Rockets",95,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"273",18,"Milwaukee Bucks",92,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"274",19,"New Jersey Nets",92,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"275",20,"Denver Nuggets",88,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"276",21,"Miami Heat",88,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"277",22,"Los Angeles Clippers",87,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"278",23,"Atlanta Hawks",84,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"279",24,"Golden State Warriors",83,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"280",25,"Dallas Mavericks",81,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"281",26,"Philadelphia 76ers",81,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"282",27,"Indiana Pacers",77,NA,NA,NA,NA,1995,"NBATeamValues95.xls",NA,NA
+"283",1,"New York Knicks",205,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"284",2,"Phoenix Suns",191,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"285",3,"Detroit Pistons",186,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"286",4,"Chicago Bulls",178,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"287",5,"Los Angeles Lakers",171,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"288",6,"Cleveland Cavaliers",151,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"289",7,"Utah Jazz",142,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"290",8,"Portland Trail Blazers",137,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"291",9,"Boston Celtics",134,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"292",10,"Seattle SuperSonics",129,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"293",11,"San Antonio Spurs",126,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"294",12,"Orlando Magic",121,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"295",13,"Houston Rockets",116,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"296",14,"Sacramento Kings",114,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"297",15,"Golden State Warriors",114,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"298",16,"Washington Bullets",113,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"299",17,"Charlotte Hornets",113,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"300",18,"Minnesota Timberwolves",110,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"301",19,"New Jersey Nets",108,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"302",20,"Milwaukee Bucks",103,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"303",21,"Denver Nuggets",102,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"304",22,"Miami Heat",97,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"305",23,"Atlanta Hawks",96,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"306",24,"Indiana Pacers",94,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"307",25,"Philadelphia 76ers",93,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"308",26,"Dallas Mavericks",89,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"309",27,"Los Angeles Clippers",88,NA,NA,NA,NA,1996,"NBATeamValues96.xls",NA,NA
+"310",1,"New York Knicks",250,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"311",2,"Phoenix Suns",220,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"312",3,"Chicago Bulls",214,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"313",4,"Los Angeles Lakers",211,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"314",5,"Detroit Pistons",202,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"315",6,"Cleveland Cavaliers",180,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"316",7,"Portland Trail Blazers",179,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"317",8,"Utah Jazz",163,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"318",9,"Orlando Magic",156,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"319",10,"San Antonio Spurs",156,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"320",11,"Boston Celtics",155,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"321",12,"Houston Rockets",154,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"322",13,"Toronto Raptors",138,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"323",14,"New Jersey Nets",137,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"324",15,"Seattle SuperSonics",137,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"325",16,"Charlotte Hornets",136,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"326",17,"Sacramento Kings",131,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"327",18,"Golden State Warriors",130,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"328",19,"Washington Bullets",129,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"329",20,"Vancouver Grizzlies",127,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"330",21,"Minnesota Timberwolves",123,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"331",22,"Miami Heat",118,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"332",23,"Denver Nuggets",116,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"333",24,"Indiana Pacers",114,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"334",25,"Philadelphia 76ers",113,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"335",26,"Atlanta Hawks",111,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"336",27,"Dallas Mavericks",104,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"337",28,"Milwaukee Bucks",103,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"338",29,"Los Angeles Clippers",95,NA,NA,NA,NA,1997,"NBATeamValues97.xls",NA,NA
+"339",1,"Chicago Bulls",303.960396039604,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"340",2,"New York Knicks",295.575221238938,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"341",3,"Los Angeles Lakers",268.571428571429,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"342",4,"Portland Trail Blazers",244.761904761905,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"343",5,"Phoenix Suns",234.313725490196,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"344",6,"Washington Wizards",206.930693069307,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"345",7,"Detroit Pistons",205.454545454545,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"346",8,"Utah Jazz",200.934579439252,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"347",9,"Philadelphia 76ers",195.762711864407,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"348",10,"Boston Celtics",176.415094339623,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"349",11,"Seattle Supersonics",169.444444444444,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"350",12,"Houston Rockets",166.336633663366,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"351",13,"Cleveland Cavaliers",160.377358490566,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"352",14,"New Jersey Nets",156.603773584906,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"353",15,"Indiana Pacers",152.136752136752,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"354",16,"Miami Heat",144.642857142857,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"355",17,"Atlanta Hawks",140.18691588785,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"356",18,"Vancouver Grizzlies",133.684210526316,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"357",19,"Orlando Magic",133.613445378151,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"358",20,"Golden State Warriors",129.62962962963,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"359",21,"Charlotte Hornets",123.636363636364,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"360",22,"San Antonio Spurs",121.58273381295,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"361",23,"Toronto Raptors",121.052631578947,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"362",24,"Dallas Mavericks",119.491525423729,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"363",25,"Sacramento Kings",118.897637795276,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"364",26,"Minnesota Timberwolves",118.69918699187,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"365",27,"Denver Nuggets",109.734513274336,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"366",28,"Los Angeles Clippers",101.980198019802,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA
+"367",29,"Milwaukee Bucks",94.0677966101695,NA,NA,NA,NA,1999,"NBATeamValues99.xls",NA,NA

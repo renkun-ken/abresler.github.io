@@ -1,0 +1,282 @@
+<!doctype HTML>
+<title>Exploring WTA and ATP Tennis Earnings by Playing Hand</title>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://marketplace.aragorntech.com/css/app.css"/>
+  <link rel="stylesheet" href="http://marketplace.aragorntech.com/css/elusive-webfont.css" />
+  <script src="http://marketplace.aragorntech.com/js/vendor/packery.pkgd.js"></script>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://nvd3.org/assets/css/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/assets/lib/fisheye.js' type='text/javascript'></script>
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+      <script type="text/ng-template" id="template/modal/backdrop.html">
+    <div class="modal-backdrop fade {{ backdropClass }}"
+         ng-class="{in: animate}"
+         ng-style="{'z-index': 1040 + (index && 1 || 0) + index*10}"
+    ></div>
+  </script>
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 110%;
+      height: 510px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+      <meta name="description" content="Exploring Professional Tennis Earnings by Gender and Playing Hand" />
+<link rel="canonical" href="http://aragorn.org/visualization/tennis/earnings_by_playing_hand" />
+<meta property="og:description" content="Exploring Professional Tennis Earnings by Gender and Playing Hand" />
+<meta property="og:image" content="http://aragorn.org/visualization/tennis/earnings_by_playing_hand/screen.png" />
+<meta property="og:site_name" content="Aragorn" />
+<meta property="og:title" content="http://aragorn.org/visualization/tennis/earnings_by_playing_hand" />
+<meta property="og:type" content="article" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="http://aragorn.org/visualization/tennis/earnings_by_playing_hand" />
+        <meta name="twitter:title" content="Exploring Professional Tennis Earnings by Gender and Playing Hand" />
+        <meta name="twitter:description" content="Exploring Professional Tennis Earnings by Gender and Playing Hand" />
+        <meta name="twitter:image" content="http://aragorn.org/visualization/tennis/earnings_by_playing_hand/screen.png" />
+        <meta name="twitter:site" content="Aragorn" />
+    <center>
+<h3><p class="sansserif">Analyzing <img src="http://www.atpworldtour.com/media/main_logo.png" height="50" width="50"> and <img src="http://whatsupusana.com/wp-content/uploads/2012/07/WTA_gradient1.jpg" height="50" width="50"> Prize Earnings by Playing Hand an <a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b><img src="http://img4.wikia.nocookie.net/__cb20120504075543/nintendo/en/images/3/3e/MTO_Tennis_Ball.png" height="50" width="50"> Analysis</p></h3>
+<h6>Data from 1973 through August 2014</h6>
+</center>
+  </head>
+
+ <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='col-md-3'>
+      <form class='well'>
+        <label><b>Select Y Axis Variable:</b></label>
+        <select class='form-control' ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+        </select><br>
+        <label><b>Select X Axis Variable :</b></label>
+        <select class='form-control' ng-model="opts.x" 
+          ng-options="ctl for ctl in controls.x.values">   
+        </select><br>
+        <label><b>Select Grouping Variable :</b></label>
+        <select class='form-control' ng-model="opts.group" 
+          ng-options="ctl for ctl in controls.group.values">   
+        </select>
+              </form>
+    </div>
+    <div class='col-md-8'>
+      <div class="bs-docs-example">
+        <div id='chart88cc6fea25ea' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart88cc6fea25ea",
+"width":    800,
+"height":    515,
+"x": "hand",
+"y": "Total Prize Money (Millions)",
+"group": "Gender",
+"type": "multiBarHorizontalChart",
+"id": "chart88cc6fea25ea" 
+}
+  $scope.data = [
+ {
+ "hand": "Ambidextrous",
+"Total Prize Money (Millions)":       0.351669,
+"players": 2,
+"Gender": "Mens",
+"Average Prize Money (millions)":      0.1758345 
+},
+{
+ "hand": "Left",
+"Total Prize Money (Millions)":     371.765741,
+"players": 139,
+"Gender": "Mens",
+"Average Prize Money (millions)": 2.674573676259 
+},
+{
+ "hand": "Right",
+"Total Prize Money (Millions)":    1992.994712,
+"players": 865,
+"Gender": "Mens",
+"Average Prize Money (millions)":  2.30404012948 
+},
+{
+ "hand": "Ambidextrous",
+"Total Prize Money (Millions)":      30.997106,
+"players": 2,
+"Gender": "Ladies",
+"Average Prize Money (millions)":      15.498553 
+},
+{
+ "hand": "Left",
+"Total Prize Money (Millions)":      120.84388,
+"players": 45,
+"Gender": "Ladies",
+"Average Prize Money (millions)": 2.685419555556 
+},
+{
+ "hand": "Right",
+"Total Prize Money (Millions)":     1231.40877,
+"players": 497,
+"Gender": "Ladies",
+"Average Prize Money (millions)": 2.477683641851 
+} 
+]
+  $scope.controls = {
+ "y": {
+ "name": "y",
+"value": "Total Earnings",
+"values": [ "Total Prize Money (Millions)", "Average Prize Money (millions)", "players" ],
+"label": "Select  y :" 
+},
+"x": {
+ "name": "x",
+"value": "Gender",
+"values": [ "Gender", "hand" ],
+"label": "Select  x :" 
+},
+"group": {
+ "name": "group",
+"value": "Hand",
+"values": [ "hand", "Gender" ],
+"label": "Select  group :" 
+} 
+} 
+  $scope.filters = []
+  
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  
+  $scope.$watch('selected', function(){
+    var keys = _.pluck($scope.selected, "variable")
+    var values = _.pluck($scope.selected, "value")
+    $scope.opts.selected = _.zipObject(keys, values)
+  }) 
+  
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+  }, true)
+}  
+
+function drawChart(opts, data){ 
+  if (Object.keys(opts.selected).length > 0){
+    data = _.filter(data, opts.selected)
+  }
+  
+  if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+    var data = d3.nest()
+      .key(function(d){
+        //return opts.group === undefined ? 'main' : d[opts.group]
+        //instead of main would think a better default is opts.x
+       return opts.group === undefined ? opts.y : d[opts.group];
+      }).entries(data);
+  }
+      
+  if (opts.disabled != undefined){
+    data.map(function(d, i){
+      d.disabled = opts.disabled[i]
+    })
+  }
+  
+  nv.addGraph(function() {
+    var chart = nv.models[opts.type]()
+      .x(function(d) { return d[opts.x] })
+      .y(function(d) { return d[opts.y] })
+      .width(opts.width)
+      .height(opts.height)
+    
+  chart
+  .showValues(true)
+  .margin({
+ "left":     80 
+})
+  .color([ "#32bff2", "#830f58", "#f20000" ])
+  .tooltipContent( function(key, x, y, e ){
+var d = e.series.values[e.pointIndex];
+return '<b>Gender:</b> ' + d.Gender + '<br><b>Playing Hand: </b> ' + d.hand + '<br><b>Y Axis Value: </b>' + y
+} )
+          
+  chart.xAxis
+  .rotateLabels(  -120)
+  .staggerLabels(true)
+
+  
+  
+  chart.yAxis
+  .tickFormat(function(d) {return  d3.format(',.02f')(d)})
+  .width(    40)
+
+  d3.select("#" + opts.id + ' svg')
+  // .empty()
+    .datum(data)
+    .transition().duration(500)
+    .call(chart);
+  
+   nv.utils.windowResize(chart.update);
+   return chart;
+  });
+};
+</script>
+ <script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+               
+                 </body>
+<center><h6>Data Sources: <a href="http://www.atpworldtour.com/" target="_blank">ATP</a> and <a href="http://www.wtatennis.com/" target="_blank">WTA</a></h6></center>
+</html>  

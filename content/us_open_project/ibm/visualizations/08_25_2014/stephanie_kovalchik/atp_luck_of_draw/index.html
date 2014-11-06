@@ -1,0 +1,356 @@
+<!doctype HTML>
+<title>2014 Men's Luck of the Draw</title>
+<meta charset = 'utf-8'>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style type="text/css">
+ footer {
+            
+            width: 100%;
+            bottom: 2;
+            position: center;
+        }
+body {
+  color: #444444;
+  font-family: Georgia;
+  font-size: 60%;
+  display: block;
+  margin-left: auto; 
+  margin-right: auto;
+  width: 630px;
+  height: 420px;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+p.ex1 {
+    margin-top: 0cm;
+}
+p.ex2 {
+    margin-bottom: 2cm;
+}
+</style>
+</head>
+<center>
+ <div style="display:table;width:500px;height:50px;" class='gray'>
+       <div class='orange' style="padding: 1px; text-align:middle; font-size:25px; width: 520px; display:table-cell;height:40px;vertical-align:middle;font-family: Georgia"><strong>The Luck of the 2014 US Open Draw, <span style ="color:#002e62">Men's Bracket</span></strong></div>
+      </div></center>
+      
+
+
+    </div></center>
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataLineChartID12b7532a998a8 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "First Round",
+99.1,
+"d. Diego Schwartzman, 99.1%",
+96,
+"d. Diego Schwartzman, 96.0%"
+],
+[
+ "Second Round",
+99.2,
+"d. Gilles Muller, 99.2%",
+94.8,
+"d. Gilles Muller, 94.8%"
+],
+[
+ "Third Round",
+98.9,
+"d. Yen-Hsun Lu, 98.9%",
+94.4,
+"d. Yen-Hsun Lu, 94.4%"
+],
+[
+ "R16",
+96.2,
+"d. John Isner, 96.2%",
+85.2,
+"d. John Isner, 85.2%"
+],
+[
+ "Quarterfinals",
+91.8,
+"d. Jo Wilfried Tsonga, 91.8%",
+72.1,
+"d. Jo Wilfried Tsonga, 72.1%"
+] 
+];
+data.addColumn('string','Round');
+data.addColumn('number','Novak Djokovic');
+data.addColumn({type:'string', role:'tooltip'});
+data.addColumn('number','Roger Federer');
+data.addColumn({type:'string', role:'tooltip'});
+data.addRows(datajson);
+return(data);
+}
+// jsData 
+function gvisDataLineChartID12b751c655794 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "First Round",
+99,
+"d. Marinko Matosevic, 99%",
+95.7, 
+"d. Marinko Matosevic, 95.7%"
+],
+[
+ "Second Round",
+99,
+"d. Albert Ramos-Vinolas, 99%",
+96.7,
+"d. Albert Ramos-Vinolas, 96.7%"
+],
+[
+ "Third Round",
+98.2,
+"d. Ivo Karlovic, 98.2%",
+93,
+"d. Ivo Karlovic, 93.0%"
+],
+[
+ "R16",
+96.1,
+"d. Roberto Bautista Agut, 96.1%",
+88.3, 
+"d. Roberto Bautista Agut, 88.3%"
+],
+[
+ "Quarterfinals",
+86.9,
+"d. Grigor Dimitrov, 86.9%",
+70.9,
+"d. Grigor Dimitrov, 70.9%"
+] 
+];
+data.addColumn('string','Round');
+data.addColumn('number','Novak Djokovic');
+data.addColumn({type:'string', role:'tooltip'});
+data.addColumn('number','Roger Federer');
+data.addColumn({type:'string', role:'tooltip'});
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartLineChartID12b7532a998a8() {
+var data = gvisDataLineChartID12b7532a998a8();
+var options = {
+	series: {
+            0: { color: '#e7711b' },
+            1: { color: '#1c91c0' },
+            }
+};
+options["allowHtml"] = true;
+options["width"] =    600;
+options["height"] =    400;
+options["pointSize"] =     10;
+options["vAxis"] = {minValue: 55, maxValue: 100};
+options["title"] = "Win Probabilities for First and Second Seed Against First Seeds' Most Probable Opponents";
+
+
+    var chart = new google.visualization.LineChart(
+    document.getElementById('LineChartID12b7532a998a8')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+
+
+// jsDrawChart
+function drawChartLineChartID12b751c655794() {
+var data = gvisDataLineChartID12b751c655794();
+var options = {
+	series: {
+            0: { color: '#e7711b' },
+            1: { color: '#1c91c0' },
+            }
+};
+options["allowHtml"] = true;
+options["width"] =    620;
+options["height"] =    400;
+options["pointSize"] =     10;
+options["vAxis"] = {minValue: 55, maxValue: 100};
+options["title"] = "Win Probabilities for First and Second Seed Against Second Seeds' Most Probable Opponents";
+
+
+    var chart = new google.visualization.LineChart(
+    document.getElementById('LineChartID12b751c655794')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartLineChartID12b7532a998a8);
+})();
+function displayChartLineChartID12b7532a998a8() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+
+
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartLineChartID12b751c655794);
+})();
+function displayChartLineChartID12b751c655794() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID12b7532a998a8"></script>
+
+
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID12b751c655794"></script>
+ 
+<table border="0">
+<tr>
+<td>
+
+<!-- divChart -->
+  
+<div id="LineChartID12b7532a998a8" 
+  style="width: 500; height: 400;">
+</div>
+
+</td>
+  </tr>
+  <tr>
+<td> 
+<div id="LineChartID12b751c655794" 
+  style="width: 500; height: 400;">
+</div>
+</td>
+</tr>
+</table>
+ 
+</body></center>
+<center>
+       <div style="display:table;width:265px;height:25px;font-family: Georgia" class='gray'>
+        <div class='orange' style="font-size:14px; display:table-cell;height:25px;vertical-align:middle"><strong>Distributed by</strong></div>
+        <a href = "http://www.aragorn.org" target = "_blank"><img style="display:table-cell;width:137px;height:26px;padding:10px" src='http://www.aragorn.org/aragorn_logo.png' /></a>
+    </div></center>
+    <center>
+       <div style="display:table;width:500px;height:25px;font-family: Georgia" class='gray'>
+       <div class='orange' style="font-size:14px; display:table-cell;height:25px;vertical-align:middle"><strong>Visualized and Analyzed by <a href="https://github.com/skoval"  target = "_blank">Stephanie Kovalchik</a></strong></div>
+        
+    </div></center>
+     <script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+</html>

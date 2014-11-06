@@ -1,0 +1,5 @@
+name: nba_player_analysis_season
+account: abresler
+bundleId: 67305
+url:
+     http://abresler.shinyapps.io/nba_player_analysis_season

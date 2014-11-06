@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html>
+<title>Serve Speed</title>
+<head>
+<center>
+  <h3><p class="sansserif">Comparing <img src="http://www.atpworldtour.com/media/main_logo.png" height="50" width="50"> Serve Speeds by Grand Slam Event</p></h3>
+<h6>Visualized by <a href="http://www.rand.org/about/people/k/kovalchik_stephanie_ann.html" target="_blank">Stephanie Kovalchik</a> an <a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a> Visualization Distribution</h6>
+</center>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 100%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+ <!-- LineChart generated in R 3.1.1 by googleVis 0.5.4 package -->
+<!-- Tue Aug 19 22:21:48 2014 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataLineChartID404bf4af2f () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ 2003,
+109.6,
+108.7,
+110.5,
+110.8,
+110.2,
+111.4,
+null,
+null,
+null,
+111.9,
+111.1,
+112.7 
+],
+[
+ 2004,
+111.7,
+111.1,
+112.2,
+112.5,
+111.9,
+113.1,
+106.3,
+105.4,
+107.2,
+114.7,
+114.1,
+115.2 
+],
+[
+ 2005,
+113.1,
+112.6,
+113.7,
+113.4,
+112.7,
+114,
+109.5,
+108.8,
+110.3,
+116.4,
+115.9,
+117 
+],
+[
+ 2006,
+114,
+113.4,
+114.5,
+113.3,
+112.6,
+114,
+112.1,
+111.3,
+112.8,
+117.2,
+116.7,
+117.8 
+],
+[
+ 2007,
+114.3,
+113.7,
+114.9,
+113.2,
+112.6,
+113.9,
+113.9,
+113.2,
+114.7,
+117,
+116.4,
+117.6 
+],
+[
+ 2008,
+114.1,
+113.6,
+114.7,
+113.1,
+112.5,
+113.7,
+115.1,
+114.4,
+115.7,
+116.8,
+116.2,
+117.3 
+],
+[
+ 2009,
+113.7,
+113.1,
+114.2,
+112.9,
+112.3,
+113.5,
+115.3,
+114.8,
+115.9,
+116.5,
+115.9,
+117 
+],
+[
+ 2010,
+113.6,
+113,
+114.1,
+112.9,
+112.4,
+113.5,
+114.8,
+114.2,
+115.4,
+115.9,
+115.4,
+116.4 
+],
+[
+ 2011,
+113.4,
+112.9,
+114,
+113.1,
+112.6,
+113.6,
+114,
+113.3,
+114.6,
+115.4,
+114.9,
+115.9 
+],
+[
+ 2012,
+113,
+112.5,
+113.5,
+113.4,
+112.7,
+114.1,
+113.2,
+112.7,
+113.8,
+114.8,
+114.3,
+115.4 
+],
+[
+ 2013,
+112.3,
+111.5,
+113.2,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null 
+] 
+];
+data.addColumn('number','Year');
+data.addColumn('number','US Open');
+data.addColumn({type: 'number', role: 'interval'});
+data.addColumn({type: 'number', role: 'interval'});
+data.addColumn('number','Australian Open');
+data.addColumn({type: 'number', role: 'interval'});
+data.addColumn({type: 'number', role: 'interval'});
+data.addColumn('number','Roland Garros');
+data.addColumn({type: 'number', role: 'interval'});
+data.addColumn({type: 'number', role: 'interval'});
+data.addColumn('number','Wimbledon');
+data.addColumn({type: 'number', role: 'interval'});
+data.addColumn({type: 'number', role: 'interval'});
+data.addRows(datajson);
+return(data);
+}
+
+
+// jsData 
+function gvisDataBubbleChartID40456ea93f0 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Andre Agassi",
+14.8,
+107.5,
+"US Open" 
+],
+[
+ "Andre Agassi",
+11,
+107.1,
+"Australian Open" 
+],
+[
+ "Andy Murray",
+23.7,
+114.6,
+"Roland Garros" 
+],
+[
+ "Andy Murray",
+20.6,
+117.1,
+"Wimbledon" 
+],
+[
+ "Andy Murray",
+21,
+111.6,
+"US Open" 
+],
+[
+ "Andy Murray",
+21.6,
+113.1,
+"Australian Open" 
+],
+[
+ "Andy Roddick",
+26.2,
+121.9,
+"Roland Garros" 
+],
+[
+ "Andy Roddick",
+27.2,
+124.4,
+"Wimbledon" 
+],
+[
+ "Andy Roddick",
+31.2,
+124.1,
+"US Open" 
+],
+[
+ "Andy Roddick",
+28.3,
+123.7,
+"Australian Open" 
+],
+[
+ "Arnaud Clement",
+16.7,
+112.5,
+"Wimbledon" 
+],
+[
+ "Arnaud Clement",
+18.3,
+107.6,
+"US Open" 
+],
+[
+ "Bernard Tomic",
+19,
+111.6,
+"Wimbledon" 
+],
+[
+ "Bernard Tomic",
+18.1,
+111.2,
+"Australian Open" 
+],
+[
+ "Carlos Moya",
+22.9,
+115.7,
+"US Open" 
+],
+[
+ "David Ferrer",
+20.7,
+110.4,
+"Roland Garros" 
+],
+[
+ "David Ferrer",
+14.8,
+110.2,
+"Wimbledon" 
+],
+[
+ "David Ferrer",
+20,
+109,
+"US Open" 
+],
+[
+ "David Ferrer",
+19.1,
+107.8,
+"Australian Open" 
+],
+[
+ "David Nalbandian",
+15.6,
+110.7,
+"Wimbledon" 
+],
+[
+ "David Nalbandian",
+17.1,
+109.4,
+"US Open" 
+],
+[
+ "David Nalbandian",
+17.5,
+106.8,
+"Australian Open" 
+],
+[
+ "Dmitry Tursunov",
+22.5,
+122.1,
+"Wimbledon" 
+],
+[
+ "Donald Young",
+17.6,
+105.8,
+"US Open" 
+],
+[
+ "Fabio Fognini",
+17.4,
+106.8,
+"Roland Garros" 
+],
+[
+ "Fabrice Santoro",
+20.5,
+105.8,
+"Australian Open" 
+],
+[
+ "Feliciano Lopez",
+19,
+121,
+"Wimbledon" 
+],
+[
+ "Feliciano Lopez",
+23.6,
+120.9,
+"US Open" 
+],
+[
+ "Feliciano Lopez",
+24,
+120,
+"Australian Open" 
+],
+[
+ "Fernando Gonzalez",
+19.1,
+111.4,
+"Roland Garros" 
+],
+[
+ "Fernando Gonzalez",
+15.8,
+113.6,
+"Wimbledon" 
+],
+[
+ "Fernando Gonzalez",
+18.6,
+110.3,
+"US Open" 
+],
+[
+ "Fernando Gonzalez",
+17,
+108.6,
+"Australian Open" 
+],
+[
+ "Fernando Verdasco",
+14.1,
+107.6,
+"Roland Garros" 
+],
+[
+ "Fernando Verdasco",
+16.3,
+114.9,
+"Wimbledon" 
+],
+[
+ "Fernando Verdasco",
+17.6,
+110.7,
+"US Open" 
+],
+[
+ "Fernando Verdasco",
+18.3,
+110.5,
+"Australian Open" 
+],
+[
+ "Florian Mayer",
+18.9,
+112.4,
+"Wimbledon" 
+],
+[
+ "Florian Mayer",
+22.8,
+109.4,
+"Australian Open" 
+],
+[
+ "Gael Monfils",
+22.8,
+116.5,
+"Roland Garros" 
+],
+[
+ "Gael Monfils",
+18.9,
+112.3,
+"US Open" 
+],
+[
+ "Gael Monfils",
+20.2,
+110.9,
+"Australian Open" 
+],
+[
+ "Gaston Gaudio",
+18.5,
+102.9,
+"Roland Garros" 
+],
+[
+ "Gilles Simon",
+21.9,
+111.6,
+"Roland Garros" 
+],
+[
+ "Gilles Simon",
+20.6,
+111.8,
+"Wimbledon" 
+],
+[
+ "Gilles Simon",
+21,
+107.1,
+"US Open" 
+],
+[
+ "Gilles Simon",
+17.5,
+106.7,
+"Australian Open" 
+],
+[
+ "Guillermo Coria",
+15.4,
+104.5,
+"US Open" 
+],
+[
+ "Ivan Ljubicic",
+30,
+120.5,
+"Roland Garros" 
+],
+[
+ "Ivan Ljubicic",
+22.2,
+118.8,
+"Wimbledon" 
+],
+[
+ "Ivan Ljubicic",
+25.1,
+117.6,
+"Australian Open" 
+],
+[
+ "Ivo Karlovic",
+23.6,
+125.5,
+"Wimbledon" 
+],
+[
+ "James Blake",
+21.3,
+114.3,
+"Wimbledon" 
+],
+[
+ "James Blake",
+23.2,
+114.4,
+"US Open" 
+],
+[
+ "James Blake",
+24.5,
+114.5,
+"Australian Open" 
+],
+[
+ "Janko Tipsarevic",
+23.3,
+115.7,
+"Roland Garros" 
+],
+[
+ "Janko Tipsarevic",
+23.1,
+117,
+"Wimbledon" 
+],
+[
+ "Janko Tipsarevic",
+22.6,
+114.3,
+"US Open" 
+],
+[
+ "Janko Tipsarevic",
+28.7,
+116.6,
+"Australian Open" 
+],
+[
+ "Jarkko Nieminen",
+22.9,
+107.6,
+"US Open" 
+],
+[
+ "Jarkko Nieminen",
+21.2,
+106.1,
+"Australian Open" 
+],
+[
+ "Jeremy Chardy",
+23.7,
+121.5,
+"Roland Garros" 
+],
+[
+ "Jo-Wilfried Tsonga",
+26.8,
+117,
+"Roland Garros" 
+],
+[
+ "Jo-Wilfried Tsonga",
+23.9,
+118.8,
+"Wimbledon" 
+],
+[
+ "Jo-Wilfried Tsonga",
+26.8,
+116.8,
+"US Open" 
+],
+[
+ "Jo-Wilfried Tsonga",
+26.3,
+117.6,
+"Australian Open" 
+],
+[
+ "John Isner",
+29,
+124.2,
+"US Open" 
+],
+[
+ "John Isner",
+23.6,
+121.7,
+"Australian Open" 
+],
+[
+ "Jonas Bjorkman",
+18.4,
+116.3,
+"Wimbledon" 
+],
+[
+ "Juan Carlos Ferrero",
+16.3,
+110.5,
+"Wimbledon" 
+],
+[
+ "Juan Carlos Ferrero",
+18.9,
+106.9,
+"US Open" 
+],
+[
+ "Juan Carlos Ferrero",
+18.6,
+110.4,
+"Australian Open" 
+],
+[
+ "Juan Ignacio Chela",
+17.3,
+106.4,
+"Australian Open" 
+],
+[
+ "Juan Martin Del Potro",
+28.9,
+121.8,
+"Roland Garros" 
+],
+[
+ "Juan Martin Del Potro",
+25,
+118.5,
+"Wimbledon" 
+],
+[
+ "Juan Martin Del Potro",
+28.1,
+117.6,
+"US Open" 
+],
+[
+ "Juan Martin Del Potro",
+25.8,
+117.3,
+"Australian Open" 
+],
+[
+ "Juan Monaco",
+14.2,
+107.4,
+"Roland Garros" 
+],
+[
+ "Juan Monaco",
+15.3,
+108.2,
+"US Open" 
+],
+[
+ "Juan Monaco",
+15,
+107.5,
+"Australian Open" 
+],
+[
+ "Julien Benneteau",
+20,
+109.1,
+"Roland Garros" 
+],
+[
+ "Julien Benneteau",
+21.2,
+112.7,
+"US Open" 
+],
+[
+ "Jurgen Melzer",
+20.6,
+113.3,
+"Roland Garros" 
+],
+[
+ "Jurgen Melzer",
+16,
+111.4,
+"Wimbledon" 
+],
+[
+ "Jurgen Melzer",
+18.7,
+110,
+"Australian Open" 
+],
+[
+ "Kei Nishikori",
+19.3,
+106.3,
+"US Open" 
+],
+[
+ "Kei Nishikori",
+18.9,
+106.4,
+"Australian Open" 
+],
+[
+ "Lleyton Hewitt",
+16.6,
+108.1,
+"Roland Garros" 
+],
+[
+ "Lleyton Hewitt",
+15.9,
+111.8,
+"Wimbledon" 
+],
+[
+ "Lleyton Hewitt",
+17.7,
+107.9,
+"US Open" 
+],
+[
+ "Lleyton Hewitt",
+19.2,
+110.3,
+"Australian Open" 
+],
+[
+ "Marat Safin",
+22.6,
+123.2,
+"Wimbledon" 
+],
+[
+ "Marat Safin",
+29.6,
+122.8,
+"Australian Open" 
+],
+[
+ "Marcos Baghdatis",
+28.8,
+117.9,
+"Roland Garros" 
+],
+[
+ "Marcos Baghdatis",
+22,
+116.9,
+"Wimbledon" 
+],
+[
+ "Marcos Baghdatis",
+26.1,
+117.6,
+"Australian Open" 
+],
+[
+ "Mardy Fish",
+23.7,
+117.7,
+"Wimbledon" 
+],
+[
+ "Mardy Fish",
+25.4,
+116.3,
+"US Open" 
+],
+[
+ "Mardy Fish",
+22.3,
+115.8,
+"Australian Open" 
+],
+[
+ "Marin Cilic",
+26.2,
+117.1,
+"Roland Garros" 
+],
+[
+ "Marin Cilic",
+28.1,
+117.5,
+"US Open" 
+],
+[
+ "Marin Cilic",
+26.7,
+117.4,
+"Australian Open" 
+],
+[
+ "Mario Ancic",
+23,
+123.6,
+"Wimbledon" 
+],
+[
+ "Mark Philippoussis",
+25,
+123.7,
+"Wimbledon" 
+],
+[
+ "Max Mirnyi",
+21,
+122.2,
+"Wimbledon" 
+],
+[
+ "Michael Llodra",
+19.4,
+115.3,
+"Roland Garros" 
+],
+[
+ "Mikhail Youzhny",
+21.9,
+111.8,
+"Roland Garros" 
+],
+[
+ "Mikhail Youzhny",
+19.4,
+112.9,
+"Wimbledon" 
+],
+[
+ "Mikhail Youzhny",
+18.9,
+110.9,
+"US Open" 
+],
+[
+ "Mikhail Youzhny",
+20.7,
+111.3,
+"Australian Open" 
+],
+[
+ "Milos Raonic",
+30.9,
+125.8,
+"Australian Open" 
+],
+[
+ "Nicolas Almagro",
+27,
+120.5,
+"Roland Garros" 
+],
+[
+ "Nicolas Almagro",
+24,
+115.1,
+"US Open" 
+],
+[
+ "Nicolas Almagro",
+25.4,
+116.9,
+"Australian Open" 
+],
+[
+ "Nicolas Kiefer",
+26.2,
+117.6,
+"US Open" 
+],
+[
+ "Nikolay Davydenko",
+18.7,
+109.3,
+"Roland Garros" 
+],
+[
+ "Nikolay Davydenko",
+15.6,
+112.6,
+"Wimbledon" 
+],
+[
+ "Nikolay Davydenko",
+17.3,
+108,
+"US Open" 
+],
+[
+ "Nikolay Davydenko",
+15,
+107.3,
+"Australian Open" 
+],
+[
+ "Novak Djokovic",
+22.5,
+115.1,
+"Roland Garros" 
+],
+[
+ "Novak Djokovic",
+19.8,
+117.2,
+"Wimbledon" 
+],
+[
+ "Novak Djokovic",
+22.6,
+114.4,
+"US Open" 
+],
+[
+ "Novak Djokovic",
+22.7,
+116.5,
+"Australian Open" 
+],
+[
+ "Paul-Henri Mathieu",
+19.7,
+113.4,
+"Roland Garros" 
+],
+[
+ "Paul-Henri Mathieu",
+18,
+115.9,
+"Wimbledon" 
+],
+[
+ "Philipp Kohlschreiber",
+19.7,
+113.5,
+"Roland Garros" 
+],
+[
+ "Philipp Kohlschreiber",
+17.6,
+111.1,
+"US Open" 
+],
+[
+ "Philipp Kohlschreiber",
+20.6,
+111.5,
+"Australian Open" 
+],
+[
+ "Radek Stepanek",
+17.3,
+114.3,
+"Wimbledon" 
+],
+[
+ "Radek Stepanek",
+18.1,
+114.1,
+"US Open" 
+],
+[
+ "Rafael Nadal",
+17.6,
+110.8,
+"Roland Garros" 
+],
+[
+ "Rafael Nadal",
+17.8,
+113.6,
+"Wimbledon" 
+],
+[
+ "Rafael Nadal",
+17.9,
+109.8,
+"US Open" 
+],
+[
+ "Rafael Nadal",
+18.7,
+110.2,
+"Australian Open" 
+],
+[
+ "Rainer Schuettler",
+15.6,
+107.4,
+"Wimbledon" 
+],
+[
+ "Richard Gasquet",
+19.6,
+112.2,
+"Roland Garros" 
+],
+[
+ "Richard Gasquet",
+19.2,
+114.7,
+"Wimbledon" 
+],
+[
+ "Richard Gasquet",
+20.4,
+110.5,
+"US Open" 
+],
+[
+ "Richard Gasquet",
+23.1,
+112.3,
+"Australian Open" 
+],
+[
+ "Robby Ginepri",
+18.5,
+108,
+"US Open" 
+],
+[
+ "Robin Soderling",
+30.9,
+124.6,
+"Roland Garros" 
+],
+[
+ "Robin Soderling",
+24.5,
+122.5,
+"Wimbledon" 
+],
+[
+ "Robin Soderling",
+29.3,
+121.8,
+"US Open" 
+],
+[
+ "Roger Federer",
+23.2,
+116.4,
+"Roland Garros" 
+],
+[
+ "Roger Federer",
+19.8,
+116.6,
+"Wimbledon" 
+],
+[
+ "Roger Federer",
+22.8,
+114.5,
+"US Open" 
+],
+[
+ "Roger Federer",
+21.5,
+113.8,
+"Australian Open" 
+],
+[
+ "Sam Querrey",
+28.2,
+120.1,
+"US Open" 
+],
+[
+ "Sam Querrey",
+26.2,
+118.8,
+"Australian Open" 
+],
+[
+ "Sebastien Grosjean",
+20.1,
+116.6,
+"Wimbledon" 
+],
+[
+ "Sebastien Grosjean",
+25.5,
+114.4,
+"Australian Open" 
+],
+[
+ "Stanislas Wawrinka",
+22.5,
+114.1,
+"Roland Garros" 
+],
+[
+ "Stanislas Wawrinka",
+19.8,
+117.3,
+"Wimbledon" 
+],
+[
+ "Stanislas Wawrinka",
+26.8,
+116.8,
+"US Open" 
+],
+[
+ "Stanislas Wawrinka",
+24.8,
+117,
+"Australian Open" 
+],
+[
+ "Taylor Dent",
+22.9,
+119.7,
+"US Open" 
+],
+[
+ "Tim Henman",
+18.1,
+113.6,
+"Wimbledon" 
+],
+[
+ "Tomas Berdych",
+26.8,
+123.6,
+"Roland Garros" 
+],
+[
+ "Tomas Berdych",
+24.1,
+122.7,
+"Wimbledon" 
+],
+[
+ "Tomas Berdych",
+28.8,
+120.3,
+"US Open" 
+],
+[
+ "Tomas Berdych",
+26.3,
+120.5,
+"Australian Open" 
+],
+[
+ "Tommy Haas",
+22,
+114.5,
+"Roland Garros" 
+],
+[
+ "Tommy Haas",
+17.3,
+115.6,
+"Wimbledon" 
+],
+[
+ "Tommy Haas",
+21.5,
+114.4,
+"US Open" 
+],
+[
+ "Tommy Haas",
+21.9,
+114.5,
+"Australian Open" 
+],
+[
+ "Tommy Robredo",
+18.8,
+108.6,
+"Roland Garros" 
+],
+[
+ "Tommy Robredo",
+18,
+112.6,
+"Wimbledon" 
+],
+[
+ "Tommy Robredo",
+18.7,
+108.6,
+"US Open" 
+],
+[
+ "Tommy Robredo",
+18.2,
+108.3,
+"Australian Open" 
+],
+[
+ "Viktor Troicki",
+29.5,
+118.5,
+"Roland Garros" 
+],
+[
+ "Xavier Malisse",
+19.5,
+113.4,
+"Wimbledon" 
+],
+[
+ "Xavier Malisse",
+24.7,
+112.1,
+"US Open" 
+] 
+];
+data.addColumn('string','Player');
+data.addColumn('number','Difference');
+data.addColumn('number','First');
+data.addColumn('string','Title');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartLineChartID404bf4af2f() {
+var data = gvisDataLineChartID404bf4af2f();
+var options = {intervals: { 'style': 'area' }}
+options["allowHtml"] = true;
+options["height"] =    750;
+options["width"] =    1200;
+options["hAxis"] = {format: "####", minValue: 2002, maxValue: 2013};
+options["vAxis"] = {minValue: 100, maxValue: 125, title: "Average First Serve (mph)"};
+options["title"] = "Trends in First Serve Speeds at Grand Slams (2003 - 2013) - Are Speeds Converging?";
+options["curveType"] = "function";
+
+
+    var chart = new google.visualization.LineChart(
+    document.getElementById('LineChartID404bf4af2f')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+
+
+// jsDrawChart
+function drawChartBubbleChartID40456ea93f0() {
+var data = gvisDataBubbleChartID40456ea93f0();
+var options = {};
+options["height"] =    750;
+options["width"] =    1200;
+options["bubble"] = {textStyle:{color: 'none'}};
+options["sizeAxis"] = {minValue: 5,  maxSize: 5};
+options["title"] = "First Serve Speed Versus Difference Between First and Second Serve Speed (2003 - 2013)";
+options["hAxis"] = {minValue: 0, maxValue: 35, title: "Difference, First - Second (mph)"};
+options["vAxis"] = {minValue: 100, maxValue: 135, title: "Average First Serve (mph)"};
+
+
+    var chart = new google.visualization.BubbleChart(
+    document.getElementById('BubbleChartID40456ea93f0')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartLineChartID404bf4af2f);
+})();
+function displayChartLineChartID404bf4af2f() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+
+
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartBubbleChartID40456ea93f0);
+})();
+function displayChartBubbleChartID40456ea93f0() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID404bf4af2f"></script>
+
+
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBubbleChartID40456ea93f0"></script>
+ 
+<table border="0">
+<tr>
+<td>
+
+<!-- divChart -->
+  
+<div id="LineChartID404bf4af2f" 
+  style="width: 900; height: 800;">
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+
+<!-- divChart -->
+  
+<div id="BubbleChartID40456ea93f0" 
+  style="width: 900; height: 800;">
+</div>
+
+</td>
+</tr>
+</table>
+<script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+"","season","race","sport","major","count"
+"1","2013","African-American","Football","undisclosed",19
+"2","2013","Caucasian","Football","undisclosed",19
+"3","2013","African-American","Football","communication",13
+"4","2011","African-American","Football","undisclosed",11
+"5","2011","Caucasian","Football","undisclosed",10
+"6","2007","African-American","Football","undisclosed",9
+"7","2008","Caucasian","Football","undisclosed",9
+"8","2009","Caucasian","Football","undisclosed",9
+"9","2011","African-American","Football","communication",8
+"10","2007","Caucasian","Football","undisclosed",7
+"11","2007","No Photo","Football","undisclosed",7
+"12","2008","African-American","Football","sociology",7
+"13","2010","Caucasian","Football","undisclosed",7
+"14","2007","African-American","Football","sociology",6
+"15","2008","African-American","Football","undisclosed",6
+"16","2009","African-American","Football","multidisciplinary studies",6
+"17","2009","African-American","Football","sociology",6
+"18","2011","African-American","Football","multidisciplinary studies",6
+"19","2013","No Photo","Football","undisclosed",6
+"20","2013","African-American","Football","multidisciplinary studies",5
+"21","2009","African-American","Football","undisclosed",4
+"22","2010","African-American","Football","multidisciplinary studies",4
+"23","2010","African-American","Football","undisclosed",4
+"24","2010","No Photo","Football","undisclosed",4
+"25","2011","Caucasian","Football","multidisciplinary studies",4
+"26","2012","Caucasian","Football","undisclosed",4
+"27","2013","African-American","Football","business management",4
+"28","2013","African-American","Football","criminology",4
+"29","2013","Caucasian","Football","communication",4
+"30","2010","African-American","Football","undecided",3
+"31","2010","African-American","Mens Basketball","undecided",3
+"32","2011","African-American","Football","human relations",3
+"33","2011","African-American","Football","undecided",3
+"34","2011","Caucasian","Football","human relations",3
+"35","2011","Caucasian","Football","sociology",3
+"36","2012","African-American","Football","undecided",3
+"37","2012","No Photo","Football","undisclosed",3
+"38","2013","African-American","Football","human relations",3
+"39","2013","Caucasian","Football","business management",3
+"40","2008","African-American","Football","criminology",2
+"41","2008","African-American","Football","undecided",2
+"42","2008","Caucasian","Football","human relations",2
+"43","2008","Caucasian","Football","sociology",2
+"44","2008","Caucasian","Football","undecided",2
+"45","2008","No Photo","Football","undisclosed",2
+"46","2009","African-American","Football","undecided",2
+"47","2009","Caucasian","Football","planned program",2
+"48","2009","Caucasian","Football","sociology",2
+"49","2009","Mixed-Race","Mens Basketball","exercise science",2
+"50","2010","African-American","Football","business management",2
+"51","2010","African-American","Football","sociology",2
+"52","2011","African-American","Football","sociology",2
+"53","2011","African-American","Mens Basketball","undecided",2
+"54","2011","Caucasian","Football","energy management",2
+"55","2012","African-American","Football","undisclosed",2
+"56","2012","African-American","Mens Basketball","multidisciplinary studies",2
+"57","2013","African-American","Football","african-american studies",2
+"58","2013","African-American","Football","psychology",2
+"59","2013","African-American","Mens Basketball","multidisciplinary studies",2
+"60","2013","Caucasian","Football","criminology",2
+"61","2013","Caucasian","Football","human relations",2
+"62","2014","African-American","Mens Basketball","undecided",2
+"63","2014","Caucasian","Mens Basketball","communication",2
+"64","2007","African-American","Football","business management",1
+"65","2007","African-American","Football","communication",1
+"66","2007","Caucasian","Football","business management",1
+"67","2007","Caucasian","Football","film and video studies",1
+"68","2007","Caucasian","Football","marketing",1
+"69","2007","Caucasian","Football","sociology",1
+"70","2007","Caucasian","Football","undecided",1
+"71","2007","Hispanic","Football","sociology",1
+"72","2008","African-American","Football","african-american studies",1
+"73","2008","African-American","Football","human relations",1
+"74","2008","African-American","Football","planned program",1
+"75","2008","African-American","Mens Basketball","business management",1
+"76","2008","African-American","Mens Basketball","human relations",1
+"77","2008","African-American","Mens Basketball","journalism",1
+"78","2008","African-American","Mens Basketball","undecided",1
+"79","2008","African-American","Mens Basketball","undisclosed",1
+"80","2009","African-American","Football","human relations",1
+"81","2009","African-American","Mens Basketball","communication",1
+"82","2009","African-American","Mens Basketball","human relations",1
+"83","2009","African-American","Mens Basketball","sociology",1
+"84","2009","African-American","Mens Basketball","undecided",1
+"85","2009","Native American","Football","finance",1
+"86","2009","Native American","Football","undisclosed",1
+"87","2010","African-American","Football","accounting",1
+"88","2010","African-American","Football","communication",1
+"89","2010","African-American","Football","economics",1
+"90","2010","African-American","Football","human relations",1
+"91","2010","African-American","Mens Basketball","communication",1
+"92","2010","African-American","Mens Basketball","human relations",1
+"93","2010","African-American","Mens Basketball","international studies",1
+"94","2010","African-American","Mens Basketball","multidisciplinary studies",1
+"95","2010","Caucasian","Football","finance",1
+"96","2010","Caucasian","Football","multidisciplinary studies",1
+"97","2010","Caucasian","Football","social studies",1
+"98","2010","Caucasian","Mens Basketball","finance",1
+"99","2010","Caucasian","Mens Basketball","mechanical engineering",1
+"100","2010","Mixed-Race","Football","sociology",1
+"101","2011","African-American","Football","business management",1
+"102","2011","African-American","Football","exercise science",1
+"103","2011","African-American","Football","pre-broadcasting",1
+"104","2011","Caucasian","Football","communication",1
+"105","2011","Caucasian","Football","planned program",1
+"106","2011","Caucasian","Football","undecided",1
+"107","2011","Caucasian","Mens Basketball","human relations",1
+"108","2011","Caucasian","Mens Basketball","undecided",1
+"109","2011","Native American","Football","undisclosed",1
+"110","2011","No Photo","Football","undisclosed",1
+"111","2012","African-American","Mens Basketball","communication",1
+"112","2012","African-American","Mens Basketball","information studies",1
+"113","2012","Caucasian","Mens Basketball","business management",1
+"114","2012","Mixed-Race","Football","undecided",1
+"115","2013","African-American","Football","computer engineering ",1
+"116","2013","African-American","Football","exercise science",1
+"117","2013","African-American","Football","finance",1
+"118","2013","African-American","Football","planned program",1
+"119","2013","African-American","Football","political science",1
+"120","2013","African-American","Football","pre-pharmacy",1
+"121","2013","African-American","Football","undecided",1
+"122","2013","African-American","Mens Basketball","administrative leadership",1
+"123","2013","African-American","Mens Basketball","communication",1
+"124","2013","African-American","Mens Basketball","international studies",1
+"125","2013","Caucasian","Football","energy management",1
+"126","2013","Caucasian","Football","exercise science",1
+"127","2013","Caucasian","Football","finance",1
+"128","2013","Caucasian","Football","multidisciplinary studies",1
+"129","2013","Caucasian","Football","petroleum engineering",1
+"130","2013","Caucasian","Football","sociology",1
+"131","2013","Caucasian","Mens Basketball","multidisciplinary studies",1
+"132","2013","Caucasian","Mens Basketball","undecided",1
+"133","2013","Mixed-Race","Football","undisclosed",1
+"134","2013","Pacific Islander","Football","human relations",1
+"135","2013","Pacific Islander","Football","undisclosed",1
+"136","2014","African-American","Mens Basketball","art",1
+"137","2014","African-American","Mens Basketball","business management",1
+"138","2014","African-American","Mens Basketball","human relations",1
+"139","2014","African-American","Mens Basketball","undisclosed",1
+"140","2014","Caucasian","Mens Basketball","biochemistry",1
+"141","2014","Caucasian","Mens Basketball","business management",1
+"142","2014","Caucasian","Mens Basketball","exercise science",1
+"143","2014","Caucasian","Mens Basketball","journalism",1
+"144","2014","Caucasian","Mens Basketball","sport psychology",1
+"145","2014","Mixed-Race","Mens Basketball","undisclosed",1

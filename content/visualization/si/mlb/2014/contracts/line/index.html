@@ -1,0 +1,930 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://nvd3.org/src/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v2.min.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/lib/fisheye.js' type='text/javascript'></script>
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 120%;
+      height: 600px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+    
+  </head>
+   <!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+   <head>
+       <center>
+       <h3><p class="sansserif">MLB Salary Analysis Line Chart <b>EMPOWERED by <a href="http://aragorn.org/" target="_blank"><img src="http://aragorn.org/img/aragorn.png" height="26" width="137" alt="aragorn"></a></b></p></h3>
+    </center>
+  </head>
+  <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='col-md-3'>
+      <form class='well'>
+        <label><b>Select  y :</b></label>
+        <select class='form-control' ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+        </select><br>
+        <label><b>Select  group :</b></label>
+        <select class='form-control' ng-model="opts.group" 
+          ng-options="ctl for ctl in controls.group.values">   
+        </select><br>
+        
+        <select
+          ng-model="selected" 
+          ng-options="c as c.value group by c.variable for c in filters" 
+          class="form-control" multiple size="10">
+        </select>
+      </form>
+    </div>
+    <div class='col-md-8'>
+      <div class="bs-docs-example">
+        <div id='chart20f44887b573' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart20f44887b573",
+"width":    800,
+"height":    500,
+"x": "contract_date",
+"y": "average_salary_millions",
+"group": "group",
+"type": "lineWithFocusChart",
+"id": "chart20f44887b573" 
+}
+  $scope.data = [
+ {
+ "team": "Yankees",
+"player": "Catfish Hunter",
+"position": "P",
+"contract_date":           1825,
+"contract_value_millions":           3.75,
+"contract_term": 5,
+"average_salary_millions":           0.75,
+"notes": "",
+"color": "#1C2841",
+"year": "1974",
+"period":        1974.12,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Catfish Hunter</b></th></tr><tr><td><img src='http://i.cdn.turner.com/si/multimedia/photo_gallery/1102/mlb-milestone-contracts/images/catfish-hunter.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Yankees<br><b>Position:</b> P<br><b>Date:</b> 1974-12-31<br><b>Contract Value:</b> $3.75M<br><b>Contract Term:</b> 5 year(s)<br><b>Average Salary:</b> $0.75M</td></tr></table>",
+"log10_salary":           5.88,
+"log10_contract_value":           6.57,
+"group": "all" 
+},
+{
+ "team": "Phillies",
+"player": "Pete Rose",
+"position": "1B",
+"contract_date":           3260,
+"contract_value_millions":            3.2,
+"contract_term": 4,
+"average_salary_millions":            0.8,
+"notes": "",
+"color": "#BA0C2F",
+"year": "1978",
+"period":        1978.12,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Pete Rose</b></th></tr><tr><td><img src='http://www.followthephils.com/wp-content/uploads/2013/04/pete.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Phillies<br><b>Position:</b> 1B<br><b>Date:</b> 1978-12-05<br><b>Contract Value:</b> $3.2M<br><b>Contract Term:</b> 4 year(s)<br><b>Average Salary:</b> $0.8M</td></tr></table>",
+"log10_salary":            5.9,
+"log10_contract_value":           6.51,
+"group": "all" 
+},
+{
+ "team": "Astros",
+"player": "Nolan Ryan",
+"position": "P",
+"contract_date":           3609,
+"contract_value_millions":            4.5,
+"contract_term": 4,
+"average_salary_millions":           1.13,
+"notes": "",
+"color": "#FF7F00",
+"year": "1979",
+"period":        1979.11,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Nolan Ryan</b></th></tr><tr><td><img src='http://i.cdn.turner.com/si/multimedia/photo_gallery/1102/mlb-milestone-contracts/images/nolan-ryan.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Astros<br><b>Position:</b> P<br><b>Date:</b> 1979-11-19<br><b>Contract Value:</b> $4.5M<br><b>Contract Term:</b> 4 year(s)<br><b>Average Salary:</b> $1.13M</td></tr></table>",
+"log10_salary":           6.05,
+"log10_contract_value":           6.65,
+"group": "all" 
+},
+{
+ "team": "Yankees",
+"player": "Dave Winfield",
+"position": "RF",
+"contract_date":           4001,
+"contract_value_millions":             23,
+"contract_term": 10,
+"average_salary_millions":            2.3,
+"notes": "(actual value $22-25 million, $2.2M-2.5M/yr, with cost-of-living increase)",
+"color": "#1C2841",
+"year": "1980",
+"period":        1980.12,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Dave Winfield</b></th></tr><tr><td><img src='http://31.media.tumblr.com/a745e5b7692163ed6d060b07bb5253c2/tumblr_mf1ty5HZqH1qzbwkjo1_1280.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Yankees<br><b>Position:</b> RF<br><b>Date:</b> 1980-12-15<br><b>Contract Value:</b> $23M<br><b>Contract Term:</b> 10 year(s)<br><b>Average Salary:</b> $2.3M</td></tr></table>",
+"log10_salary":           6.36,
+"log10_contract_value":           7.36,
+"group": "all" 
+},
+{
+ "team": "Orioles",
+"player": "Eddie Murray",
+"position": "1B",
+"contract_date":           5726,
+"contract_value_millions":             13,
+"contract_term": 5,
+"average_salary_millions":            2.6,
+"notes": "(covered 1987-1991 seasons)",
+"color": "#FB4F14",
+"year": "1985",
+"period":         1985.9,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Eddie Murray</b></th></tr><tr><td><img src='http://sports.mearsonlineauctions.com/ItemImages/000041/6f9f911a-a39c-4907-98b3-faf73601a16c_lg.jpeg' height='125' width='100'></td><td align='left'><b>Team:</b> Orioles<br><b>Position:</b> 1B<br><b>Date:</b> 1985-09-05<br><b>Contract Value:</b> $13M<br><b>Contract Term:</b> 5 year(s)<br><b>Average Salary:</b> $2.6M</td></tr></table>",
+"log10_salary":           6.41,
+"log10_contract_value":           7.11,
+"group": "all" 
+},
+{
+ "team": "Dodgers",
+"player": "Orel Hershiser",
+"position": "P",
+"contract_date":           6987,
+"contract_value_millions":            7.9,
+"contract_term": 3,
+"average_salary_millions":           2.63,
+"notes": "",
+"color": "#083C6B",
+"year": "1989",
+"period":         1989.2,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Orel Hershiser</b></th></tr><tr><td><img src='http://lifetimetopps.files.wordpress.com/2011/03/orel-si.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Dodgers<br><b>Position:</b> P<br><b>Date:</b> 1989-02-17<br><b>Contract Value:</b> $7.9M<br><b>Contract Term:</b> 3 year(s)<br><b>Average Salary:</b> $2.63M</td></tr></table>",
+"log10_salary":           6.42,
+"log10_contract_value":            6.9,
+"group": "all" 
+},
+{
+ "team": "Twins",
+"player": "Frank Viola",
+"position": "P",
+"contract_date":           7048,
+"contract_value_millions":            7.9,
+"contract_term": 3,
+"average_salary_millions":           2.63,
+"notes": "",
+"color": "#072754",
+"year": "1989",
+"period":         1989.4,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Frank Viola</b></th></tr><tr><td><img src='http://assets.sbnation.com/assets/652366/Frank-Viola-1987-WS-02.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Twins<br><b>Position:</b> P<br><b>Date:</b> 1989-04-19<br><b>Contract Value:</b> $7.9M<br><b>Contract Term:</b> 3 year(s)<br><b>Average Salary:</b> $2.63M</td></tr></table>",
+"log10_salary":           6.42,
+"log10_contract_value":            6.9,
+"group": "all" 
+},
+{
+ "team": "Royals",
+"player": "Bret Saberhagen",
+"position": "P",
+"contract_date":           7260,
+"contract_value_millions":            8.9,
+"contract_term": 3,
+"average_salary_millions":           2.97,
+"notes": "",
+"color": "#15317E",
+"year": "1989",
+"period":        1989.11,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Bret Saberhagen</b></th></tr><tr><td><img src='http://www.netbrawl.com/uploads/4b1dfb9256d5eef3fee57b57300ce77b.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Royals<br><b>Position:</b> P<br><b>Date:</b> 1989-11-17<br><b>Contract Value:</b> $8.9M<br><b>Contract Term:</b> 3 year(s)<br><b>Average Salary:</b> $2.97M</td></tr></table>",
+"log10_salary":           6.47,
+"log10_contract_value":           6.95,
+"group": "all" 
+},
+{
+ "team": "Twins",
+"player": "Kirby Puckett",
+"position": "CF",
+"contract_date":           7265,
+"contract_value_millions":              9,
+"contract_term": 3,
+"average_salary_millions":              3,
+"notes": "",
+"color": "#072754",
+"year": "1989",
+"period":        1989.11,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Kirby Puckett</b></th></tr><tr><td><img src='https://classes.lt.unt.edu/Summer_10W_2013/CECS_5420_026/mcm0302/assign3/kpuckett.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Twins<br><b>Position:</b> CF<br><b>Date:</b> 1989-11-22<br><b>Contract Value:</b> $9M<br><b>Contract Term:</b> 3 year(s)<br><b>Average Salary:</b> $3M</td></tr></table>",
+"log10_salary":           6.48,
+"log10_contract_value":           6.95,
+"group": "all" 
+},
+{
+ "team": "Athletics",
+"player": "Rickey Henderson",
+"position": "LF",
+"contract_date":           7271,
+"contract_value_millions":             12,
+"contract_term": 4,
+"average_salary_millions":              3,
+"notes": "",
+"color": "#003831",
+"year": "1989",
+"period":        1989.11,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Rickey Henderson</b></th></tr><tr><td><img src='http://ww2.hdnux.com/photos/12/36/27/2745841/9/628x471.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Athletics<br><b>Position:</b> LF<br><b>Date:</b> 1989-11-28<br><b>Contract Value:</b> $12M<br><b>Contract Term:</b> 4 year(s)<br><b>Average Salary:</b> $3M</td></tr></table>",
+"log10_salary":           6.48,
+"log10_contract_value":           7.08,
+"group": "all" 
+},
+{
+ "team": "Angels",
+"player": "Mark Langston",
+"position": "P",
+"contract_date":           7274,
+"contract_value_millions":             16,
+"contract_term": 5,
+"average_salary_millions":            3.2,
+"notes": "",
+"color": "#B71234",
+"year": "1989",
+"period":        1989.12,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Mark Langston</b></th></tr><tr><td><img src='http://www.allaccess.com/assets/img/editorial/raw/14/1475361displayimage.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Angels<br><b>Position:</b> P<br><b>Date:</b> 1989-12-01<br><b>Contract Value:</b> $16M<br><b>Contract Term:</b> 5 year(s)<br><b>Average Salary:</b> $3.2M</td></tr></table>",
+"log10_salary":           6.51,
+"log10_contract_value":            7.2,
+"group": "all" 
+},
+{
+ "team": "Royals",
+"player": "Mark Davis",
+"position": "P",
+"contract_date":           7284,
+"contract_value_millions":             13,
+"contract_term": 4,
+"average_salary_millions":           3.25,
+"notes": "",
+"color": "#15317E",
+"year": "1989",
+"period":        1989.12,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Mark Davis</b></th></tr><tr><td><img src='http://ecx.images-amazon.com/images/I/51jzjC0iYJL._SY300_.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Royals<br><b>Position:</b> P<br><b>Date:</b> 1989-12-11<br><b>Contract Value:</b> $13M<br><b>Contract Term:</b> 4 year(s)<br><b>Average Salary:</b> $3.25M</td></tr></table>",
+"log10_salary":           6.51,
+"log10_contract_value":           7.11,
+"group": "all" 
+},
+{
+ "team": "Athletics",
+"player": "Dave Stewart",
+"position": "P",
+"contract_date":           7321,
+"contract_value_millions":              7,
+"contract_term": 2,
+"average_salary_millions":            3.5,
+"notes": "",
+"color": "#003831",
+"year": "1990",
+"period":         1990.1,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Dave Stewart</b></th></tr><tr><td><img src='http://i.cdn.turner.com/si/multimedia/photo_gallery/0805/mlb.no.hitters.by.team/images/athletics-dave-stewart.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Athletics<br><b>Position:</b> P<br><b>Date:</b> 1990-01-17<br><b>Contract Value:</b> $7M<br><b>Contract Term:</b> 2 year(s)<br><b>Average Salary:</b> $3.5M</td></tr></table>",
+"log10_salary":           6.54,
+"log10_contract_value":           6.85,
+"group": "all" 
+},
+{
+ "team": "Giants",
+"player": "Will Clark",
+"position": "1B",
+"contract_date":           7327,
+"contract_value_millions":             15,
+"contract_term": 4,
+"average_salary_millions":           3.75,
+"notes": "",
+"color": "#F2552C",
+"year": "1990",
+"period":         1990.1,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Will Clark</b></th></tr><tr><td><img src='http://manginphotography.net/wp-content/uploads/2009/09/BMANGIN1077-487x575.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Giants<br><b>Position:</b> 1B<br><b>Date:</b> 1990-01-23<br><b>Contract Value:</b> $15M<br><b>Contract Term:</b> 4 year(s)<br><b>Average Salary:</b> $3.75M</td></tr></table>",
+"log10_salary":           6.57,
+"log10_contract_value":           7.18,
+"group": "all" 
+},
+{
+ "team": "Yankees",
+"player": "Don Mattingly",
+"position": "1B",
+"contract_date":           7403,
+"contract_value_millions":           19.3,
+"contract_term": 5,
+"average_salary_millions":           3.86,
+"notes": "",
+"color": "#1C2841",
+"year": "1990",
+"period":         1990.4,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Don Mattingly</b></th></tr><tr><td><img src='http://a2.espncdn.com/photo/2013/0318/ny_50yankess_11.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Yankees<br><b>Position:</b> 1B<br><b>Date:</b> 1990-04-09<br><b>Contract Value:</b> $19.3M<br><b>Contract Term:</b> 5 year(s)<br><b>Average Salary:</b> $3.86M</td></tr></table>",
+"log10_salary":           6.59,
+"log10_contract_value":           7.29,
+"group": "all" 
+},
+{
+ "team": "Athletics",
+"player": "Jose Canseco",
+"position": "RF",
+"contract_date":           7483,
+"contract_value_millions":           23.5,
+"contract_term": 5,
+"average_salary_millions":            4.7,
+"notes": "",
+"color": "#003831",
+"year": "1990",
+"period":         1990.6,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Jose Canseco</b></th></tr><tr><td><img src='http://www.faniq.com/images/blog/6a81d83ac3143c4fbe9e748cc2656628.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Athletics<br><b>Position:</b> RF<br><b>Date:</b> 1990-06-28<br><b>Contract Value:</b> $23.5M<br><b>Contract Term:</b> 5 year(s)<br><b>Average Salary:</b> $4.7M</td></tr></table>",
+"log10_salary":           6.67,
+"log10_contract_value":           7.37,
+"group": "all" 
+},
+{
+ "team": "Red Sox",
+"player": "Roger Clemens",
+"position": "P",
+"contract_date":           7708,
+"contract_value_millions":          21.52,
+"contract_term": 4,
+"average_salary_millions":           5.38,
+"notes": "",
+"color": "#C60C30",
+"year": "1991",
+"period":         1991.2,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Roger Clemens</b></th></tr><tr><td><img src='http://fenwayparkdiaries.com/best%20players/roger%20clemens8.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Red Sox<br><b>Position:</b> P<br><b>Date:</b> 1991-02-08<br><b>Contract Value:</b> $21.52M<br><b>Contract Term:</b> 4 year(s)<br><b>Average Salary:</b> $5.38M</td></tr></table>",
+"log10_salary":           6.73,
+"log10_contract_value":           7.33,
+"group": "all" 
+},
+{
+ "team": "Mets",
+"player": "Bobby Bonilla",
+"position": "RF",
+"contract_date":           8005,
+"contract_value_millions":             29,
+"contract_term": 5,
+"average_salary_millions":            5.8,
+"notes": "",
+"color": "#002C77",
+"year": "1991",
+"period":        1991.12,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Bobby Bonilla</b></th></tr><tr><td><img src='http://shlabotnikreport.files.wordpress.com/2012/11/1992-ultra-bobby-bonilla.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Mets<br><b>Position:</b> RF<br><b>Date:</b> 1991-12-02<br><b>Contract Value:</b> $29M<br><b>Contract Term:</b> 5 year(s)<br><b>Average Salary:</b> $5.8M</td></tr></table>",
+"log10_salary":           6.76,
+"log10_contract_value":           7.46,
+"group": "all" 
+},
+{
+ "team": "Cubs",
+"player": "Ryne Sandberg",
+"position": "2B",
+"contract_date":           8096,
+"contract_value_millions":           28.4,
+"contract_term": 4,
+"average_salary_millions":            7.1,
+"notes": "",
+"color": "#003279",
+"year": "1992",
+"period":         1992.3,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Ryne Sandberg</b></th></tr><tr><td><img src='http://www.obstructedview.net/wp-content/uploads/2012/01/RyneSandberg_display_image.gif' height='125' width='100'></td><td align='left'><b>Team:</b> Cubs<br><b>Position:</b> 2B<br><b>Date:</b> 1992-03-02<br><b>Contract Value:</b> $28.4M<br><b>Contract Term:</b> 4 year(s)<br><b>Average Salary:</b> $7.1M</td></tr></table>",
+"log10_salary":           6.85,
+"log10_contract_value":           7.45,
+"group": "all" 
+},
+{
+ "team": "Giants",
+"player": "Barry Bonds",
+"position": "LF",
+"contract_date":           8375,
+"contract_value_millions":          43.75,
+"contract_term": 6,
+"average_salary_millions":           7.29,
+"notes": "",
+"color": "#F2552C",
+"year": "1992",
+"period":        1992.12,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Barry Bonds</b></th></tr><tr><td><img src='http://i.cdn.turner.com/sivault/si_online/covers/images/1993/0524_large.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Giants<br><b>Position:</b> LF<br><b>Date:</b> 1992-12-06<br><b>Contract Value:</b> $43.75M<br><b>Contract Term:</b> 6 year(s)<br><b>Average Salary:</b> $7.29M</td></tr></table>",
+"log10_salary":           6.86,
+"log10_contract_value":           7.64,
+"group": "all" 
+},
+{
+ "team": "Mariners",
+"player": "Ken Griffey Jr.",
+"position": "CF",
+"contract_date":           9526,
+"contract_value_millions":             34,
+"contract_term": 4,
+"average_salary_millions":            8.5,
+"notes": "",
+"color": "#005C5C",
+"year": "1996",
+"period":         1996.1,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Ken Griffey Jr.</b></th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/1/19/Ken_Griffey,_Jr._June_2009.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Mariners<br><b>Position:</b> CF<br><b>Date:</b> 1996-01-31<br><b>Contract Value:</b> $34M<br><b>Contract Term:</b> 4 year(s)<br><b>Average Salary:</b> $8.5M</td></tr></table>",
+"log10_salary":           6.93,
+"log10_contract_value":           7.53,
+"group": "all" 
+},
+{
+ "team": "White Sox",
+"player": "Albert Belle",
+"position": "LF",
+"contract_date":           9819,
+"contract_value_millions":             55,
+"contract_term": 5,
+"average_salary_millions":             11,
+"notes": "",
+"color": "#000000",
+"year": "1996",
+"period":        1996.11,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Albert Belle</b></th></tr><tr><td><img src='http://www.brewerfan.net/images/articlepix/belle.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> White Sox<br><b>Position:</b> LF<br><b>Date:</b> 1996-11-19<br><b>Contract Value:</b> $55M<br><b>Contract Term:</b> 5 year(s)<br><b>Average Salary:</b> $11M</td></tr></table>",
+"log10_salary":           7.04,
+"log10_contract_value":           7.74,
+"group": "all" 
+},
+{
+ "team": "Giants",
+"player": "Barry Bonds",
+"position": "LF",
+"contract_date":           9971,
+"contract_value_millions":           22.9,
+"contract_term": 2,
+"average_salary_millions":          11.45,
+"notes": "",
+"color": "#F2552C",
+"year": "1997",
+"period":         1997.4,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Barry Bonds</b></th></tr><tr><td><img src='http://i.cdn.turner.com/si/multimedia/photo_gallery/0807/mlb.home.run.derby.moments/images/1996-barry-bonds.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Giants<br><b>Position:</b> LF<br><b>Date:</b> 1997-04-20<br><b>Contract Value:</b> $22.9M<br><b>Contract Term:</b> 2 year(s)<br><b>Average Salary:</b> $11.45M</td></tr></table>",
+"log10_salary":           7.06,
+"log10_contract_value":           7.36,
+"group": "all" 
+},
+{
+ "team": "Braves",
+"player": "Greg Maddux",
+"position": "P",
+"contract_date":          10083,
+"contract_value_millions":           57.5,
+"contract_term": 5,
+"average_salary_millions":           11.5,
+"notes": "",
+"color": "#002F5F",
+"year": "1997",
+"period":         1997.8,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Greg Maddux</b></th></tr><tr><td><img src='http://blogs.eagletribune.com/smittyonbaseball/wp-content/uploads/2012/01/Maddux-2.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Braves<br><b>Position:</b> P<br><b>Date:</b> 1997-08-10<br><b>Contract Value:</b> $57.5M<br><b>Contract Term:</b> 5 year(s)<br><b>Average Salary:</b> $11.5M</td></tr></table>",
+"log10_salary":           7.06,
+"log10_contract_value":           7.76,
+"group": "all" 
+},
+{
+ "team": "Red Sox",
+"player": "Pedro Martinez",
+"position": "P",
+"contract_date":          10205,
+"contract_value_millions":             75,
+"contract_term": 6,
+"average_salary_millions":           12.5,
+"notes": "",
+"color": "#C60C30",
+"year": "1997",
+"period":        1997.12,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Pedro Martinez</b></th></tr><tr><td><img src='http://i.huffpost.com/gen/1165883/thumbs/o-PEDRO-MARTINEZ-BOSTON-facebook.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Red Sox<br><b>Position:</b> P<br><b>Date:</b> 1997-12-10<br><b>Contract Value:</b> $75M<br><b>Contract Term:</b> 6 year(s)<br><b>Average Salary:</b> $12.5M</td></tr></table>",
+"log10_salary":            7.1,
+"log10_contract_value":           7.88,
+"group": "all" 
+},
+{
+ "team": "Mets",
+"player": "Mike Piazza",
+"position": "C",
+"contract_date":          10525,
+"contract_value_millions":             91,
+"contract_term": 7,
+"average_salary_millions":             13,
+"notes": "",
+"color": "#002C77",
+"year": "1998",
+"period":         1998.1,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Mike Piazza</b></th></tr><tr><td><img src='http://i.huffpost.com/gen/1068388/thumbs/o-MIKE-PIAZZA-BALLET-facebook.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Mets<br><b>Position:</b> C<br><b>Date:</b> 1998-10-26<br><b>Contract Value:</b> $91M<br><b>Contract Term:</b> 7 year(s)<br><b>Average Salary:</b> $13M</td></tr></table>",
+"log10_salary":           7.11,
+"log10_contract_value":           7.96,
+"group": "all" 
+},
+{
+ "team": "Angels",
+"player": "Mo Vaughn",
+"position": "1B",
+"contract_date":          10555,
+"contract_value_millions":             80,
+"contract_term": 6,
+"average_salary_millions":          13.33,
+"notes": "",
+"color": "#B71234",
+"year": "1998",
+"period":        1998.11,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Mo Vaughn</b></th></tr><tr><td><img src='http://www.thefumble.com/sites/captainwag.com/files/p18bcji7719541agv116r1o43sqm9.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Angels<br><b>Position:</b> 1B<br><b>Date:</b> 1998-11-25<br><b>Contract Value:</b> $80M<br><b>Contract Term:</b> 6 year(s)<br><b>Average Salary:</b> $13.33M</td></tr></table>",
+"log10_salary":           7.12,
+"log10_contract_value":            7.9,
+"group": "all" 
+},
+{
+ "team": "Dodgers",
+"player": "Kevin Brown",
+"position": "P",
+"contract_date":          10572,
+"contract_value_millions":            105,
+"contract_term": 7,
+"average_salary_millions":             15,
+"notes": "",
+"color": "#083C6B",
+"year": "1998",
+"period":        1998.12,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Kevin Brown</b></th></tr><tr><td><img src='http://graphics8.nytimes.com/images/2011/01/03/sports/YSCORE/YSCORE-articleInline.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Dodgers<br><b>Position:</b> P<br><b>Date:</b> 1998-12-12<br><b>Contract Value:</b> $105M<br><b>Contract Term:</b> 7 year(s)<br><b>Average Salary:</b> $15M</td></tr></table>",
+"log10_salary":           7.18,
+"log10_contract_value":           8.02,
+"group": "all" 
+},
+{
+ "team": "Yankees",
+"player": "Roger Clemens",
+"position": "P",
+"contract_date":          11181,
+"contract_value_millions":           30.9,
+"contract_term": 2,
+"average_salary_millions":          15.45,
+"notes": "",
+"color": "#1C2841",
+"year": "2000",
+"period":         2000.8,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Roger Clemens</b></th></tr><tr><td><img src='http://theaustintimes.com/wp-content/uploads/2011/09/rocket.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Yankees<br><b>Position:</b> P<br><b>Date:</b> 2000-08-12<br><b>Contract Value:</b> $30.9M<br><b>Contract Term:</b> 2 year(s)<br><b>Average Salary:</b> $15.45M</td></tr></table>",
+"log10_salary":           7.19,
+"log10_contract_value":           7.49,
+"group": "all" 
+},
+{
+ "team": "Blue Jays",
+"player": "Carlos Delgado",
+"position": "1B",
+"contract_date":          11250,
+"contract_value_millions":             68,
+"contract_term": 4,
+"average_salary_millions":             17,
+"notes": "",
+"color": "#003DA5",
+"year": "2000",
+"period":         2000.1,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Carlos Delgado</b></th></tr><tr><td><img src='http://1.bp.blogspot.com/_5t0_4JAubww/S1lF6UOwFEI/AAAAAAAAANs/8OfnDrZJVyQ/s320/King%2BCarlos.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Blue Jays<br><b>Position:</b> 1B<br><b>Date:</b> 2000-10-20<br><b>Contract Value:</b> $68M<br><b>Contract Term:</b> 4 year(s)<br><b>Average Salary:</b> $17M</td></tr></table>",
+"log10_salary":           7.23,
+"log10_contract_value":           7.83,
+"group": "all" 
+},
+{
+ "team": "Red Sox",
+"player": "Manny Ramirez",
+"position": "RF",
+"contract_date":          11310,
+"contract_value_millions":            160,
+"contract_term": 8,
+"average_salary_millions":             20,
+"notes": "",
+"color": "#C60C30",
+"year": "2000",
+"period":        2000.12,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Manny Ramirez</b></th></tr><tr><td><img src='http://athleticsfarm.files.wordpress.com/2012/06/mrmanny02121.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Red Sox<br><b>Position:</b> RF<br><b>Date:</b> 2000-12-19<br><b>Contract Value:</b> $160M<br><b>Contract Term:</b> 8 year(s)<br><b>Average Salary:</b> $20M</td></tr></table>",
+"log10_salary":            7.3,
+"log10_contract_value":            8.2,
+"group": "all" 
+},
+{
+ "team": "Rangers",
+"player": "Alex Rodriguez",
+"position": "SS",
+"contract_date":          11348,
+"contract_value_millions":            252,
+"contract_term": 10,
+"average_salary_millions":           25.2,
+"notes": "",
+"color": "#BD1021",
+"year": "2001",
+"period":         2001.1,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Alex Rodriguez</b></th></tr><tr><td><img src='http://blogs.eagletribune.com/smittyonbaseball/wp-content/uploads/2012/10/A-Rod.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Rangers<br><b>Position:</b> SS<br><b>Date:</b> 2001-01-26<br><b>Contract Value:</b> $252M<br><b>Contract Term:</b> 10 year(s)<br><b>Average Salary:</b> $25.2M</td></tr></table>",
+"log10_salary":            7.4,
+"log10_contract_value":            8.4,
+"group": "all" 
+},
+{
+ "team": "Yankees",
+"player": "Roger Clemens",
+"position": "P",
+"contract_date":          13639,
+"contract_value_millions":             28,
+"contract_term": 1,
+"average_salary_millions":             28,
+"notes": "(paid only $17.4 million b/c salary pro-rated)",
+"color": "#1C2841",
+"year": "2007",
+"period":         2007.5,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Roger Clemens</b></th></tr><tr><td><img src='http://theaustintimes.com/wp-content/uploads/2011/09/rocket.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Yankees<br><b>Position:</b> P<br><b>Date:</b> 2007-05-06<br><b>Contract Value:</b> $28M<br><b>Contract Term:</b> 1 year(s)<br><b>Average Salary:</b> $28M</td></tr></table>",
+"log10_salary":           7.45,
+"log10_contract_value":           7.45,
+"group": "all" 
+},
+{
+ "team": "Yankees",
+"player": "Alex Rodriguez",
+"position": "3B",
+"contract_date":          13860,
+"contract_value_millions":            275,
+"contract_term": 10,
+"average_salary_millions":           27.5,
+"notes": "",
+"color": "#1C2841",
+"year": "2007",
+"period":        2007.12,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Alex Rodriguez</b></th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/d/d8/Alex_Rodriguez_2008-04-19.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Yankees<br><b>Position:</b> 3B<br><b>Date:</b> 2007-12-13<br><b>Contract Value:</b> $275M<br><b>Contract Term:</b> 10 year(s)<br><b>Average Salary:</b> $27.5M</td></tr></table>",
+"log10_salary":           7.44,
+"log10_contract_value":           8.44,
+"group": "all" 
+},
+{
+ "team": "Dodgers",
+"player": "Clayton Kershaw",
+"position": "P",
+"contract_date":          16085,
+"contract_value_millions":            215,
+"contract_term": 7,
+"average_salary_millions":          30.71,
+"notes": "",
+"color": "#083C6B",
+"year": "2014",
+"period":         2014.1,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><b><th colspan='5'>Clayton Kershaw</b></th></tr><tr><td><img src='http://katchop.com/blog/wp-content/uploads/2009/10/silver-platter-copy.jpg' height='125' width='100'></td><td align='left'><b>Team:</b> Dodgers<br><b>Position:</b> P<br><b>Date:</b> 2014-01-15<br><b>Contract Value:</b> $215M<br><b>Contract Term:</b> 7 year(s)<br><b>Average Salary:</b> $30.71M</td></tr></table>",
+"log10_salary":           7.49,
+"log10_contract_value":           8.33,
+"group": "all" 
+} 
+]
+  $scope.controls = {
+ "y": {
+ "name": "y",
+"value": "contract_value_millions",
+"values": [ "average_salary_millions", "log10_salary", "contract_value_millions", "log10_contract_value" ],
+"label": "Select  y :" 
+},
+"group": {
+ "name": "group",
+"value": "team",
+"values": [ "group", "team", "position", "contract_term", "year" ],
+"label": "Select  group :" 
+} 
+} 
+  $scope.filters = [
+ {
+ "variable": "position",
+"value": "P" 
+},
+{
+ "variable": "position",
+"value": "1B" 
+},
+{
+ "variable": "position",
+"value": "RF" 
+},
+{
+ "variable": "position",
+"value": "CF" 
+},
+{
+ "variable": "position",
+"value": "LF" 
+},
+{
+ "variable": "position",
+"value": "2B" 
+},
+{
+ "variable": "position",
+"value": "C" 
+},
+{
+ "variable": "position",
+"value": "SS" 
+},
+{
+ "variable": "position",
+"value": "3B" 
+},
+{
+ "variable": "team",
+"value": "Yankees" 
+},
+{
+ "variable": "team",
+"value": "Phillies" 
+},
+{
+ "variable": "team",
+"value": "Astros" 
+},
+{
+ "variable": "team",
+"value": "Orioles" 
+},
+{
+ "variable": "team",
+"value": "Dodgers" 
+},
+{
+ "variable": "team",
+"value": "Twins" 
+},
+{
+ "variable": "team",
+"value": "Royals" 
+},
+{
+ "variable": "team",
+"value": "Athletics" 
+},
+{
+ "variable": "team",
+"value": "Angels" 
+},
+{
+ "variable": "team",
+"value": "Giants" 
+},
+{
+ "variable": "team",
+"value": "Red Sox" 
+},
+{
+ "variable": "team",
+"value": "Mets" 
+},
+{
+ "variable": "team",
+"value": "Cubs" 
+},
+{
+ "variable": "team",
+"value": "Mariners" 
+},
+{
+ "variable": "team",
+"value": "White Sox" 
+},
+{
+ "variable": "team",
+"value": "Braves" 
+},
+{
+ "variable": "team",
+"value": "Blue Jays" 
+},
+{
+ "variable": "team",
+"value": "Rangers" 
+} 
+]
+  
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  
+  $scope.$watch('selected', function(){
+    if (!(typeof($scope.selected) === "undefined")) {
+      $scope.opts.selected = $scope.selected.map(function(d){
+        selectKey={};
+        selectKey[d.variable]=d.value;
+        return selectKey;
+      })
+    }
+  }) 
+  
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+  }, true)
+}  
+ 
+function drawChart(opts, data){ 
+  if (_.keys(opts.selected).length > 0){
+  // for multiselect union
+    data = _.at(data,_.chain(opts.selected)
+      .map(function(d){
+        return _.compact(
+          data.map(function(val,ind){
+           if(val[_.keys(d)[0]]===d[_.keys(d)[0]]) {
+              return ind
+            } else {return false}
+          })
+        )
+      })
+      .flatten()
+      .uniq()
+      .value()
+    )
+  /* for multiselect intersection
+    data = _.chain(opts.selected)
+      .map(function(d){
+        return _.compact(
+          data.map(function(val,ind){
+           if(val[_.keys(d)[0]]===d[_.keys(d)[0]]) {
+              return ind
+            } else {return false}
+          })
+        )
+      })
+      .value();
+  
+     var intersected = _.countBy(_.flatten(testdata,function(d){return d}));
+ 
+     var varKeys = _.uniq(_.flatten(opts.selected.map(function(d){return _.keys(d)})));
+ 
+     data = _.at(data,_.chain(intersected)
+        .map(function(d,i){
+          if (d===varKeys.length) {return i} else {return false}
+        })
+        .compact()
+        .value()
+      );
+    */
+  }
+  
+  
+  var data = d3.nest()
+    .key(function(d){
+      return opts.group === undefined ? 'main' : d[opts.group]
+    })
+    .entries(data)
+  
+  nv.addGraph(function() {
+    var chart = nv.models[opts.type]()
+      .x(function(d) { return d[opts.x] })
+      .y(function(d) { return d[opts.y] })
+      .width(opts.width)
+      .height(opts.height)
+    
+  chart
+  .color([ "#1C2841", "#BA0C2F", "#FF7F00", "#FB4F14", "#083C6B", "#072754", "#15317E", "#003831", "#B71234", "#F2552C", "#C60C30", "#002C77", "#003279", "#005C5C", "#000000", "#002F5F", "#003DA5", "#BD1021" ])
+  .tooltipContent( function(key, x, y, e){
+return '<p>' + e.point.detail + '</p>'
+'<p><b>'+ 'yAxis: '+ '</b>' + y +'</p>'
+} )
+          
+  chart.xAxis
+  .tickFormat(function(d) {return d3.time.format('%b %Y')(new Date( d * 86400000 ));})
+ 
+  chart.x2Axis
+  .tickFormat(function(d) {return d3.time.format('%b %Y')(new Date( d * 86400000 ));})
+  
+  chart.yAxis
+  .tickFormat(function(d) {return d3.format('.02f')(d)})
+ 
+  d3.select("#" + opts.id + ' svg')
+  // .empty()
+    .datum(data)
+    .transition().duration(500)
+    .call(chart);
+  
+   nv.utils.windowResize(chart.update);
+   return chart;
+  });
+};
+</script>
+    <script>
+  var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  </body>
+</html>

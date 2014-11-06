@@ -1,0 +1,324 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<title>NBA Franchise Values 1992 to 2014</title>
+<html>
+  <head>
+<style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>    
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://dimplejs.org/dist/dimple.v1.1.5.min.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 1100px;
+      height: 550px;
+    }  
+    </style>
+     <meta name="description" content="NBA Franchise Values 1992 to 2014" />
+<link rel="canonical" href="http://www.aragorn.org/visualization/nba/franchise_valuation_1992_2014" />
+<meta property="og:description" content="NBA Franchise Values 1992 to 2014" />
+<meta property="og:image" content="http://aragorn.org/visualization/business_of_sports/north_american_stadiums/2014_landscape/screen.png" />
+<meta property="og:site_name" content="Aragorn" />
+<meta property="og:title" content="http://www.aragorn.org/visualization/nba/franchise_valuation_1992_2014" />
+<meta property="og:type" content="article" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="http://www.aragorn.org/visualization/nba/franchise_valuation_1992_2014" />
+        <meta name="twitter:title" content="NBA Franchise Values 1992 to 2014" />
+        <meta name="twitter:description" content="NBA Franchise Values 1992 to 2014" />
+        <meta name="twitter:image" content="http://aragorn.org/visualization/business_of_sports/north_american_stadiums/2014_landscape/screen.png" />
+        <meta name="twitter:site" content="Aragorn" />
+     <!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  <center>
+    <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 850px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: 0.25px"><strong><img src="http://upload.wikimedia.org/wikipedia/fr/8/87/NBA_Logo.svg" height="50" width="60" alt="nba">Franchise Values 1991 to 2014</strong><br></div></center>
+  
+  </head>
+  <body >
+    
+    <div id = 'chart634248081c4' class = 'rChart dimple'></div>    
+    <script type="text/javascript">
+  var opts = {
+ "dom": "chart634248081c4",
+"width":   1000,
+"height":    550,
+"xAxis": {
+ "type": "addCategoryAxis",
+"showPercent": false 
+},
+"yAxis": {
+ "type": "addMeasureAxis",
+"showPercent": false,
+"outputFormat": ".2f" 
+},
+"zAxis": [],
+"colorAxis": [],
+"defaultColors": [],
+"layers": [],
+"legend": {
+ "x":    900,
+"y":     -20,
+"width":     90,
+"height":    700,
+"horizontalAlign": "right" 
+},
+"x": "season",
+"y": "value",
+"groups": "name",
+"type": "line",
+"bounds": {
+ "x":     60,
+"y":     20,
+"width":    700,
+"height":    500 
+},
+"id": "chart634248081c4" 
+},
+    data = [{"name":"76ers","season":1992,"variable":"value","value":75},{"name":"Bucks","season":1992,"variable":"value","value":53.5},{"name":"Bulls","season":1992,"variable":"value","value":100},{"name":"Cavaliers","season":1992,"variable":"value","value":61.1},{"name":"Celtics","season":1992,"variable":"value","value":180},{"name":"Clippers","season":1992,"variable":"value","value":42.9},{"name":"Hawks","season":1992,"variable":"value","value":53.5},{"name":"Heat","season":1992,"variable":"value","value":58.6},{"name":"Jazz","season":1992,"variable":"value","value":44.9},{"name":"Kings","season":1992,"variable":"value","value":49.1},{"name":"Knicks","season":1992,"variable":"value","value":100},{"name":"Lakers","season":1992,"variable":"value","value":200},{"name":"Magic","season":1992,"variable":"value","value":60.8},{"name":"Mavericks","season":1992,"variable":"value","value":54.4},{"name":"Nets","season":1992,"variable":"value","value":42.6},{"name":"Nuggets","season":1992,"variable":"value","value":40.6},{"name":"Pacers","season":1992,"variable":"value","value":33.3},{"name":"Pelicans (Hornets)","season":1992,"variable":"value","value":59.6},{"name":"Pistons","season":1992,"variable":"value","value":150},{"name":"Rockets","season":1992,"variable":"value","value":58},{"name":"Spurs","season":1992,"variable":"value","value":46.5},{"name":"Suns","season":1992,"variable":"value","value":99},{"name":"Thunder (Sonics)","season":1992,"variable":"value","value":37.3},{"name":"Timberwolves","season":1992,"variable":"value","value":51.2},{"name":"Trail Blazers","season":1992,"variable":"value","value":59.9},{"name":"Warriors","season":1992,"variable":"value","value":50.7},{"name":"Wizards","season":1992,"variable":"value","value":37.5},{"name":"76ers","season":1996,"variable":"value","value":81},{"name":"Bucks","season":1996,"variable":"value","value":92},{"name":"Bulls","season":1996,"variable":"value","value":166},{"name":"Cavaliers","season":1996,"variable":"value","value":133},{"name":"Celtics","season":1996,"variable":"value","value":127},{"name":"Clippers","season":1996,"variable":"value","value":87},{"name":"Hawks","season":1996,"variable":"value","value":84},{"name":"Heat","season":1996,"variable":"value","value":88},{"name":"Jazz","season":1996,"variable":"value","value":127},{"name":"Kings","season":1996,"variable":"value","value":108},{"name":"Knicks","season":1996,"variable":"value","value":173},{"name":"Lakers","season":1996,"variable":"value","value":169},{"name":"Magic","season":1996,"variable":"value","value":101},{"name":"Mavericks","season":1996,"variable":"value","value":81},{"name":"Nets","season":1996,"variable":"value","value":92},{"name":"Nuggets","season":1996,"variable":"value","value":88},{"name":"Pacers","season":1996,"variable":"value","value":77},{"name":"Pelicans (Hornets)","season":1996,"variable":"value","value":110},{"name":"Pistons","season":1996,"variable":"value","value":180},{"name":"Rockets","season":1996,"variable":"value","value":95},{"name":"Spurs","season":1996,"variable":"value","value":110},{"name":"Suns","season":1996,"variable":"value","value":156},{"name":"Thunder (Sonics)","season":1996,"variable":"value","value":119},{"name":"Timberwolves","season":1996,"variable":"value","value":99},{"name":"Trail Blazers","season":1996,"variable":"value","value":132},{"name":"Warriors","season":1996,"variable":"value","value":83},{"name":"Wizards","season":1996,"variable":"value","value":96},{"name":"76ers","season":2000,"variable":"value","value":195.76},{"name":"Bucks","season":2000,"variable":"value","value":94.07},{"name":"Bulls","season":2000,"variable":"value","value":303.96},{"name":"Cavaliers","season":2000,"variable":"value","value":160.38},{"name":"Celtics","season":2000,"variable":"value","value":176.42},{"name":"Clippers","season":2000,"variable":"value","value":101.98},{"name":"Grizzlies","season":2000,"variable":"value","value":133.68},{"name":"Hawks","season":2000,"variable":"value","value":140.19},{"name":"Heat","season":2000,"variable":"value","value":144.64},{"name":"Jazz","season":2000,"variable":"value","value":200.94},{"name":"Kings","season":2000,"variable":"value","value":118.9},{"name":"Knicks","season":2000,"variable":"value","value":295.58},{"name":"Lakers","season":2000,"variable":"value","value":268.57},{"name":"Magic","season":2000,"variable":"value","value":133.61},{"name":"Mavericks","season":2000,"variable":"value","value":119.49},{"name":"Nets","season":2000,"variable":"value","value":156.6},{"name":"Nuggets","season":2000,"variable":"value","value":109.74},{"name":"Pacers","season":2000,"variable":"value","value":152.14},{"name":"Pelicans (Hornets)","season":2000,"variable":"value","value":123.64},{"name":"Pistons","season":2000,"variable":"value","value":205.46},{"name":"Raptors","season":2000,"variable":"value","value":121.05},{"name":"Rockets","season":2000,"variable":"value","value":166.34},{"name":"Spurs","season":2000,"variable":"value","value":121.58},{"name":"Suns","season":2000,"variable":"value","value":234.31},{"name":"Thunder (Sonics)","season":2000,"variable":"value","value":169.44},{"name":"Timberwolves","season":2000,"variable":"value","value":118.7},{"name":"Trail Blazers","season":2000,"variable":"value","value":244.76},{"name":"Warriors","season":2000,"variable":"value","value":129.63},{"name":"Wizards","season":2000,"variable":"value","value":206.93},{"name":"76ers","season":2004,"variable":"value","value":298},{"name":"Bucks","season":2004,"variable":"value","value":168},{"name":"Bulls","season":2004,"variable":"value","value":323},{"name":"Cavaliers","season":2004,"variable":"value","value":222},{"name":"Celtics","season":2004,"variable":"value","value":274},{"name":"Clippers","season":2004,"variable":"value","value":205},{"name":"Grizzlies","season":2004,"variable":"value","value":198},{"name":"Hawks","season":2004,"variable":"value","value":206},{"name":"Heat","season":2004,"variable":"value","value":250},{"name":"Jazz","season":2004,"variable":"value","value":226},{"name":"Kings","season":2004,"variable":"value","value":259},{"name":"Knicks","season":2004,"variable":"value","value":398},{"name":"Lakers","season":2004,"variable":"value","value":426},{"name":"Magic","season":2004,"variable":"value","value":197},{"name":"Mavericks","season":2004,"variable":"value","value":304},{"name":"Nets","season":2004,"variable":"value","value":218},{"name":"Nuggets","season":2004,"variable":"value","value":209},{"name":"Pacers","season":2004,"variable":"value","value":246},{"name":"Pelicans (Hornets)","season":2004,"variable":"value","value":172},{"name":"Pistons","season":2004,"variable":"value","value":258},{"name":"Raptors","season":2004,"variable":"value","value":217},{"name":"Rockets","season":2004,"variable":"value","value":255},{"name":"Spurs","season":2004,"variable":"value","value":242},{"name":"Suns","season":2004,"variable":"value","value":272},{"name":"Thunder (Sonics)","season":2004,"variable":"value","value":207},{"name":"Timberwolves","season":2004,"variable":"value","value":213},{"name":"Trail Blazers","season":2004,"variable":"value","value":270},{"name":"Warriors","season":2004,"variable":"value","value":176},{"name":"Wizards","season":2004,"variable":"value","value":278},{"name":"76ers","season":2008,"variable":"value","value":380},{"name":"Bucks","season":2008,"variable":"value","value":264},{"name":"Bulls","season":2008,"variable":"value","value":500},{"name":"Cavaliers","season":2008,"variable":"value","value":455},{"name":"Celtics","season":2008,"variable":"value","value":391},{"name":"Clippers","season":2008,"variable":"value","value":294},{"name":"Grizzlies","season":2008,"variable":"value","value":304},{"name":"Hawks","season":2008,"variable":"value","value":286},{"name":"Heat","season":2008,"variable":"value","value":418},{"name":"Hornets (Bobcats)","season":2008,"variable":"value","value":287},{"name":"Jazz","season":2008,"variable":"value","value":342},{"name":"Kings","season":2008,"variable":"value","value":385},{"name":"Knicks","season":2008,"variable":"value","value":608},{"name":"Lakers","season":2008,"variable":"value","value":560},{"name":"Magic","season":2008,"variable":"value","value":322},{"name":"Mavericks","season":2008,"variable":"value","value":461},{"name":"Nets","season":2008,"variable":"value","value":338},{"name":"Nuggets","season":2008,"variable":"value","value":321},{"name":"Pacers","season":2008,"variable":"value","value":333},{"name":"Pelicans (Hornets)","season":2008,"variable":"value","value":272},{"name":"Pistons","season":2008,"variable":"value","value":477},{"name":"Raptors","season":2008,"variable":"value","value":373},{"name":"Rockets","season":2008,"variable":"value","value":462},{"name":"Spurs","season":2008,"variable":"value","value":405},{"name":"Suns","season":2008,"variable":"value","value":449},{"name":"Thunder (Sonics)","season":2008,"variable":"value","value":269},{"name":"Timberwolves","season":2008,"variable":"value","value":308},{"name":"Trail Blazers","season":2008,"variable":"value","value":253},{"name":"Warriors","season":2008,"variable":"value","value":309},{"name":"Wizards","season":2008,"variable":"value","value":348},{"name":"76ers","season":2012,"variable":"value","value":314},{"name":"Bucks","season":2012,"variable":"value","value":268},{"name":"Bulls","season":2012,"variable":"value","value":600},{"name":"Cavaliers","season":2012,"variable":"value","value":329},{"name":"Celtics","season":2012,"variable":"value","value":482},{"name":"Clippers","season":2012,"variable":"value","value":324},{"name":"Grizzlies","season":2012,"variable":"value","value":269},{"name":"Hawks","season":2012,"variable":"value","value":270},{"name":"Heat","season":2012,"variable":"value","value":457},{"name":"Hornets (Bobcats)","season":2012,"variable":"value","value":277},{"name":"Jazz","season":2012,"variable":"value","value":335},{"name":"Kings","season":2012,"variable":"value","value":300},{"name":"Knicks","season":2012,"variable":"value","value":780},{"name":"Lakers","season":2012,"variable":"value","value":900},{"name":"Magic","season":2012,"variable":"value","value":385},{"name":"Mavericks","season":2012,"variable":"value","value":497},{"name":"Nets","season":2012,"variable":"value","value":357},{"name":"Nuggets","season":2012,"variable":"value","value":316},{"name":"Pacers","season":2012,"variable":"value","value":283},{"name":"Pelicans (Hornets)","season":2012,"variable":"value","value":285},{"name":"Pistons","season":2012,"variable":"value","value":332},{"name":"Raptors","season":2012,"variable":"value","value":382},{"name":"Rockets","season":2012,"variable":"value","value":453},{"name":"Spurs","season":2012,"variable":"value","value":418},{"name":"Suns","season":2012,"variable":"value","value":395},{"name":"Thunder (Sonics)","season":2012,"variable":"value","value":348},{"name":"Timberwolves","season":2012,"variable":"value","value":272},{"name":"Trail Blazers","season":2012,"variable":"value","value":370},{"name":"Warriors","season":2012,"variable":"value","value":450},{"name":"Wizards","season":2012,"variable":"value","value":328},{"name":"76ers","season":2014,"variable":"value","value":469},{"name":"Bucks","season":2014,"variable":"value","value":405},{"name":"Bulls","season":2014,"variable":"value","value":1000},{"name":"Cavaliers","season":2014,"variable":"value","value":515},{"name":"Celtics","season":2014,"variable":"value","value":875},{"name":"Clippers","season":2014,"variable":"value","value":575},{"name":"Grizzlies","season":2014,"variable":"value","value":453},{"name":"Hawks","season":2014,"variable":"value","value":425},{"name":"Heat","season":2014,"variable":"value","value":770},{"name":"Hornets (Bobcats)","season":2014,"variable":"value","value":410},{"name":"Jazz","season":2014,"variable":"value","value":525},{"name":"Kings","season":2014,"variable":"value","value":550},{"name":"Knicks","season":2014,"variable":"value","value":1400},{"name":"Lakers","season":2014,"variable":"value","value":1350},{"name":"Magic","season":2014,"variable":"value","value":560},{"name":"Mavericks","season":2014,"variable":"value","value":765},{"name":"Nets","season":2014,"variable":"value","value":780},{"name":"Nuggets","season":2014,"variable":"value","value":495},{"name":"Pacers","season":2014,"variable":"value","value":475},{"name":"Pelicans (Hornets)","season":2014,"variable":"value","value":420},{"name":"Pistons","season":2014,"variable":"value","value":450},{"name":"Raptors","season":2014,"variable":"value","value":520},{"name":"Rockets","season":2014,"variable":"value","value":775},{"name":"Spurs","season":2014,"variable":"value","value":660},{"name":"Suns","season":2014,"variable":"value","value":565},{"name":"Thunder (Sonics)","season":2014,"variable":"value","value":590},{"name":"Timberwolves","season":2014,"variable":"value","value":430},{"name":"Trail Blazers","season":2014,"variable":"value","value":587},{"name":"Warriors","season":2014,"variable":"value","value":750},{"name":"Wizards","season":2014,"variable":"value","value":485}];
+  var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
+
+  //data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
+  var myChart = new dimple.chart(svg, data);
+  if (opts.bounds) {
+    myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+  }
+  //dimple allows use of custom CSS with noFormats
+  if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
+  //for markimekko and addAxis also have third parameter measure
+  //so need to evaluate if measure provided
+  
+  //function to build axes
+  function buildAxis(position,layer){
+    var axis;
+    var axisopts = opts[position+"Axis"];
+    
+    if(axisopts.measure) {
+      axis = myChart[axisopts.type](position,layer[position],axisopts.measure);
+    } else {
+      axis = myChart[axisopts.type](position, layer[position]);
+    };
+    if(!(axisopts.type === "addPctAxis")) axis.showPercent = axisopts.showPercent;
+    if (axisopts.orderRule) axis.addOrderRule(axisopts.orderRule);
+    if (axisopts.grouporderRule) axis.addGroupOrderRule(axisopts.grouporderRule);  
+    if (axisopts.overrideMin) axis.overrideMin = axisopts.overrideMin;
+    if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+    if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+    if (axisopts.inputFormat) axis.dateParseFormat = axisopts.inputFormat;
+    if (axisopts.outputFormat) axis.tickFormat = axisopts.outputFormat;    
+    return axis;
+  };
+  
+  var c = null;
+  if(d3.keys(opts.colorAxis).length > 0) {
+    c = myChart[opts.colorAxis.type](opts.colorAxis.colorSeries,opts.colorAxis.palette) ;
+  }
+  
+  //allow manipulation of default colors to use with dimple
+  if(opts.defaultColors.length) {
+    //opts.defaultColors = opts.defaultColors[0];
+    if (typeof(opts.defaultColors) == "function") {
+      //assume this is a d3 scale
+      //for now loop through first 20 but need a better way to handle
+      defaultColorsArray = [];
+      for (var n=0;n<20;n++) {
+        defaultColorsArray.push(opts.defaultColors(n));
+      };
+      opts.defaultColors = defaultColorsArray;
+    }
+    opts.defaultColors.forEach(function(d,i) {
+      opts.defaultColors[i] = new dimple.color(d);
+    })
+    myChart.defaultColors = opts.defaultColors;
+  }  
+  
+  //do series
+  //set up a function since same for each
+  //as of now we have x,y,groups,data,type in opts for primary layer
+  //and other layers reside in opts.layers
+  function buildSeries(layer, hidden){
+    //inherit from primary layer if not intentionally changed or xAxis, yAxis, zAxis null
+    if (!layer.xAxis) layer.xAxis = opts.xAxis;    
+    if (!layer.yAxis) layer.yAxis = opts.yAxis;
+    if (!layer.zAxis) layer.zAxis = opts.zAxis;
+    
+    var x = buildAxis("x", layer);
+    x.hidden = hidden;
+    
+    var y = buildAxis("y", layer);
+    y.hidden = hidden;
+    
+    //z for bubbles
+    var z = null;
+    if (!(typeof(layer.zAxis) === 'undefined') && layer.zAxis.type){
+      z = buildAxis("z", layer);
+    };
+    
+    //here think I need to evaluate group and if missing do null
+    //as the group argument
+    //if provided need to use groups from layer
+    var s = new dimple.series(myChart, null, x, y, z, c, dimple.plot[layer.type], dimple.aggregateMethod.avg, dimple.plot[layer.type].stacked);
+    
+    //as of v1.1.4 dimple can use different dataset for each series
+    if(layer.data){
+      //convert to an array of objects
+      var tempdata;
+      //avoid lodash for now
+      datakeys = d3.keys(layer.data)
+      tempdata = layer.data[datakeys[1]].map(function(d,i){
+        var tempobj = {}
+        datakeys.forEach(function(key){
+          tempobj[key] = layer.data[key][i]
+        })
+        return tempobj
+      })
+      s.data = tempdata;
+    }
+    
+    if(layer.hasOwnProperty("groups")) {
+      s.categoryFields = (typeof layer.groups === "object") ? layer.groups : [layer.groups];
+      //series offers an aggregate method that we will also need to check if available
+      //options available are avg, count, max, min, sum
+    }
+    if (!(typeof(layer.aggregate) === 'undefined')) {
+      s.aggregate = eval(layer.aggregate);
+    }
+    if (!(typeof(layer.lineWeight) === 'undefined')) {
+      s.lineWeight = eval(layer.lineWeight);
+    }
+    if (!(typeof(layer.barGap) === 'undefined')) {
+      s.barGap = eval(layer.barGap);
+    }    
+  
+   /* if (!(typeof(layer.eventHandler) === 'undefined')) {
+      layer.eventHandler = (layer.eventHandler.length === "undefined") ? layer.eventHandler : [layer.eventHandler];
+      layer.eventHandler.forEach(function(evt){
+        s.addEventHandler(evt.event, eval(evt.handler))
+      })
+    }*/
+      
+    myChart.series.push(s);
+    
+    /*placeholder fix domain of primary scale for new series data
+    //not working right now but something like this
+    //for now just use overrideMin and overrideMax from rCharts
+    for( var i = 0; i<2; i++) {
+      if (!myChart.axes[i].overrideMin) {
+        myChart.series[0]._axisBounds(i==0?"x":"y").min = myChart.series[0]._axisBounds(i==0?"x":"y").min < s._axisBounds(i==0?"x":"y").min ? myChart.series[0]._axisBounds(i==0?"x":"y").min : s._axisBounds(i==0?"x":"y").min;
+      }
+      if (!myChart.axes[i].overrideMax) {  
+        myChart.series[0]._axisBounds(i==0?"x":"y")._max = myChart.series[0]._axisBounds(i==0?"x":"y").max > s._axisBounds(i==0?"x":"y").max ? myChart.series[0]._axisBounds(i==0?"x":"y").max : s._axisBounds(i==0?"x":"y").max;
+      }
+      myChart.axes[i]._update();
+    }
+    */
+    
+    return s;
+  };
+  
+  buildSeries(opts, false);
+  if (opts.layers.length > 0) {
+    opts.layers.forEach(function(layer){
+      buildSeries(layer, true);
+    })
+  }
+  //unsure if this is best but if legend is provided (not empty) then evaluate
+  if(d3.keys(opts.legend).length > 0) {
+    var l =myChart.addLegend();
+    d3.keys(opts.legend).forEach(function(d){
+      l[d] = opts.legend[d];
+    });
+  }
+  //quick way to get this going but need to make this cleaner
+  if(opts.storyboard) {
+    myChart.setStoryboard(opts.storyboard);
+  };
+  myChart.draw();
+
+</script>
+    
+    
+    <script>
+            // This is a critical step.  By doing this we orphan the legend. This
+            // means it will not respond to graph updates.  Without this the legend
+    // will redraw when the chart refreshes removing the unchecked item and
+    // also dropping the events we define below.
+    myChart.legends = [];
+    // This block simply adds the legend title. I put it into a d3 data
+    // object to split it onto 2 lines.  This technique works with any
+    // number of lines, it isn't dimple specific.
+    svg.selectAll('title_text')
+    .data([''])
+    .enter()
+    .append('text')
+    .attr('x', 740)
+    .attr('y', function (d, i) { return 90 + i * 14; })
+    .style('font-family', 'sans-serif')
+    .style('font-size', '10')
+    .style('color', 'Black')
+    .text(function (d) { return d; });
+    // Get a unique list of Owner values to use when filtering
+    var filterValues = dimple.getUniqueValues(data, 'name');
+    // Get all the rectangles from our now orphaned legend
+    l.shapes.selectAll('rect')
+    // Add a click event to each rectangle
+    .on('click', function (e) {
+    // This indicates whether the item is already visible or not
+    var hide = false;
+    var newFilters = [];
+    // If the filters contain the clicked shape hide it
+    filterValues.forEach(function (f) {
+    if (f === e.aggField.slice(-1)[0]) {
+    hide = true;
+    } else {
+    newFilters.push(f);
+    }
+    });
+    // Hide the shape or show it
+    if (hide) {
+    d3.select(this).style('opacity', 0.2);
+    } else {
+    newFilters.push(e.aggField.slice(-1)[0]);
+    d3.select(this).style('opacity', 1);
+    }
+    // Update the filters
+    filterValues = newFilters;
+    // Filter the data
+    myChart.data = dimple.filterData(data, 'name', filterValues);
+    // Passing a duration parameter makes the chart animate. Without
+    // it there is no transition
+    myChart.draw(800);
+    });
+    d3.selectAll('text').style('font-size','10')
+    							 </script>    
+<script type="text/javascript">
+                     d3.selectAll('text').style('font-size','10')
+                     </script>
+<center><div style="display:table;width:320px;height:10px;font-size:12px" class='gray'>
+  <a href="http://twitter.com/abresler" target="_blank"><strong>Visualized and Analyzed by Alex Bresler</strong></a><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</html>

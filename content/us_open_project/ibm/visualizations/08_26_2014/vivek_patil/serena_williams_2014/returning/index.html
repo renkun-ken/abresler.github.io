@@ -1,0 +1,203 @@
+  <!doctype HTML>
+<title>Serena Williams 2014 Return Serve Performance; WTA vs Grand Slam</title>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='http://nvd3.org/assets/css/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 630px;
+      height: 420px;
+    }  
+    </style>
+        <style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>
+      <script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>  
+<style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>
+  </head>
+  <body >
+    <center>
+       <div style="display:table;width:450px;height:50px;" class='gray'>
+       <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 450px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: -0.5px"><strong>Serena Williams' Returning Statistics in Grand Slam Events vs. Other WTA Events in 2014</strong></div>
+    </div></center>
+    <center>
+    <a href = "http://www.ibm.com/us/en/" target = "_blank"><img src="http://www.aragorn.org/logos/ibm_630_100v3.jpg" alt="" width = "450" height="71" style="padding: 2.5px"></a></center>
+    <div id = 'chartecc25325d4c' class = 'rChart nvd3'></div>    
+    <script type='text/javascript'>
+ $(document).ready(function(){
+      drawchartecc25325d4c()
+    });
+    function drawchartecc25325d4c(){  
+      var opts = {
+ "dom": "chartecc25325d4c",
+"width":    630,
+"height":    420,
+"x": "result",
+"y": "percentage",
+"group": "tour",
+"type": "multiBarChart",
+"stacked": false,
+"id": "chartecc25325d4c" 
+},
+        data = [
+ {
+ "player": "Serena Williams",
+"type": "Returning Serve",
+"result": "1st Serve Return Points Won",
+"tour": "All WTA Events",
+"year": 2014,
+"percentage": 43 
+},
+{
+ "player": "Serena Williams",
+"type": "Returning Serve",
+"result": "2nd Serve Return Points Won",
+"tour": "All WTA Events",
+"year": 2014,
+"percentage": 57 
+},
+{
+ "player": "Serena Williams",
+"type": "Returning Serve",
+"result": "Return Games Won",
+"tour": "All WTA Events",
+"year": 2014,
+"percentage": 47 
+},
+{
+ "player": "Serena Williams",
+"type": "Returning Serve",
+"result": "1st Serve Return Points Won",
+"tour": "Grand Slam Defeats",
+"year": 2014,
+"percentage": 28 
+},
+{
+ "player": "Serena Williams",
+"type": "Returning Serve",
+"result": "2nd Serve Return Points Won",
+"tour": "Grand Slam Defeats",
+"year": 2014,
+"percentage": 48 
+},
+{
+ "player": "Serena Williams",
+"type": "Returning Serve",
+"result": "Return Games Won",
+"tour": "Grand Slam Defeats",
+"year": 2014,
+"percentage": 23 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != "bulletChart"){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        chart
+  .color([ "#AA66cc", "#FF4444" ])
+  .showControls(false)
+  .tooltipContent( function(key, x, y, e, graph){ 
+  return e.point.tour + '<br>'+ x + ': <br>' + y +'%' 
+} )
+          
+        
+
+        
+        
+        
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+<!-- note: img (height + 2x padding) must be equal to root div height -->
+<style>
+  svg text { font-size: 10px }
+</style>
+<center>
+<div style="display:table;width:220px;height:10px;font-size:12px" class='gray'>
+<center><strong>Distributed by</strong><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</center></body>
+
+</html>

@@ -1,0 +1,596 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+<title>2013 US Open In-Game Performance by Game Position</title>    
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://dimplejs.org/dist/dimple.v2.0.0.min.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_dimple/js/d3-grid.js' type='text/javascript'></script>
+        <style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>
+    
+  </head>
+    <center>
+   <strong><div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 500px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: -0.5px">Statistics for Players' Results at the U.S. Open Based On In-Game Score</div></strong>
+    </div></center>
+    <center><a href = "http://www.ibm.com/us/en/" target = "_blank"><img src="http://www.aragorn.org/logos/ibm_630_100v3.jpg" alt="" width = "450" height="71" style="padding: 2.5px"></a></center>
+      <script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>  
+<style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>
+
+  <body >
+    
+    <div id = 'chart1b3c520123f' class = 'rChart dimple' style ="width:620px;height:400px;margin-left: auto;margin-right: auto;"></div>    
+    <script>
+var chart1b3c520123f = (function() {
+  var opts = {
+ "dom": "chart1b3c520123f",
+"width":    620,
+"height":    400,
+"xAxis": {
+ "type": "addCategoryAxis",
+"showPercent": false ,
+"orderRule": ["Down 0-40","Down 0-30","Down 0-15","Lost 30-30","Lost Deuce","Won Deuce","Won 30-30","Up 15-0","Up 30-0"]
+},
+"yAxis": {
+ "type": "addCategoryAxis",
+"showPercent": false 
+},
+"zAxis": {
+ "type": "addMeasureAxis",
+"overrideMin":      0,
+"overrideMax":      1 
+},
+"colorAxis": {
+ "type": "addColorAxis",
+"colorSeries": "game_win_pct",
+"palette": [ "#F4A582", "#D9D9D9" ,"#92C5DE" ],
+"outputFormat": "0.2%" 
+},
+"defaultColors": [],
+"layers": [],
+"legend": [],
+"x": "position",
+"y": "player",
+"z": "game_win_pct",
+"type": "bar",
+"bounds": {
+ "x":    250,
+"y":     50,
+"width":    430,
+"height":    300 
+},
+"id": "chart1b3c520123f",
+"facet": {
+ "x": null,
+ "y": "draw",
+"removeAxes": true 
+} 
+},
+    data = [{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Novak Djokovic","position":"Up 15-0","game_position":"Up","point":"15_0","prior_point":"W","games_total":72,"game_win_pct":0.930555555555556,"result":"67 to 72","games_won":67,"games_lost":5},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Novak Djokovic","position":"Up 30-0","game_position":"Up","point":"30_0","prior_point":"W","games_total":47,"game_win_pct":0.936170212765957,"result":"44 to 47","games_won":44,"games_lost":3},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Novak Djokovic","position":"Down 0-15","game_position":"Down","point":"0_15","prior_point":"L","games_total":33,"game_win_pct":0.636363636363636,"result":"21 to 33","games_won":21,"games_lost":12},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Novak Djokovic","position":"Down 0-30","game_position":"Down","point":"0_30","prior_point":"L","games_total":6,"game_win_pct":0,"result":"0 to 6","games_won":0,"games_lost":6},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Novak Djokovic","position":"Down 0-40","game_position":"Down","point":"0_40","prior_point":"L","games_total":6,"game_win_pct":0,"result":"0 to 6","games_won":0,"games_lost":6},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Novak Djokovic","position":"Won 30-30","game_position":"tied","point":"30_30","prior_point":"W","games_total":19,"game_win_pct":0.894736842105263,"result":"17 to 19","games_won":17,"games_lost":2},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Novak Djokovic","position":"Lost 30-30","game_position":"tied","point":"30_30","prior_point":"L","games_total":11,"game_win_pct":0.363636363636364,"result":"4 to 11","games_won":4,"games_lost":7},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Novak Djokovic","position":"Won Deuce","game_position":"Up","point":"Deuce","prior_point":"W","games_total":12,"game_win_pct":0.916666666666667,"result":"11 to 12","games_won":11,"games_lost":1},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Novak Djokovic","position":"Lost Deuce","game_position":"Down","point":"Deuce","prior_point":"L","games_total":9,"game_win_pct":0.444444444444444,"result":"4 to 9","games_won":4,"games_lost":5},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Rafael Nadal","position":"Up 15-0","game_position":"Up","point":"15_0","prior_point":"W","games_total":60,"game_win_pct":0.95,"result":"57 to 60","games_won":57,"games_lost":3},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Rafael Nadal","position":"Up 30-0","game_position":"Up","point":"30_0","prior_point":"W","games_total":45,"game_win_pct":1,"result":"45 to 45","games_won":45,"games_lost":0},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Rafael Nadal","position":"Down 0-15","game_position":"Down","point":"0_15","prior_point":"L","games_total":39,"game_win_pct":0.897435897435897,"result":"35 to 39","games_won":35,"games_lost":4},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Rafael Nadal","position":"Down 0-30","game_position":"Down","point":"0_30","prior_point":"L","games_total":8,"game_win_pct":0.875,"result":"7 to 8","games_won":7,"games_lost":1},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Rafael Nadal","position":"Down 0-40","game_position":"Down","point":"0_40","prior_point":"L","games_total":2,"game_win_pct":0.5,"result":"1 to 2","games_won":1,"games_lost":1},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Rafael Nadal","position":"Won 30-30","game_position":"tied","point":"30_30","prior_point":"W","games_total":23,"game_win_pct":1,"result":"23 to 23","games_won":23,"games_lost":0},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Rafael Nadal","position":"Lost 30-30","game_position":"tied","point":"30_30","prior_point":"L","games_total":8,"game_win_pct":0.75,"result":"6 to 8","games_won":6,"games_lost":2},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Rafael Nadal","position":"Won Deuce","game_position":"Up","point":"Deuce","prior_point":"W","games_total":26,"game_win_pct":0.846153846153846,"result":"22 to 26","games_won":22,"games_lost":4},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Rafael Nadal","position":"Lost Deuce","game_position":"Down","point":"Deuce","prior_point":"L","games_total":5,"game_win_pct":0.6,"result":"3 to 5","games_won":3,"games_lost":2},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Roger Federer","position":"Up 15-0","game_position":"Up","point":"15_0","prior_point":"W","games_total":39,"game_win_pct":0.948717948717949,"result":"37 to 39","games_won":37,"games_lost":2},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Roger Federer","position":"Up 30-0","game_position":"Up","point":"30_0","prior_point":"W","games_total":29,"game_win_pct":1,"result":"29 to 29","games_won":29,"games_lost":0},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Roger Federer","position":"Down 0-15","game_position":"Down","point":"0_15","prior_point":"L","games_total":15,"game_win_pct":0.733333333333333,"result":"11 to 15","games_won":11,"games_lost":4},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Roger Federer","position":"Down 0-30","game_position":"Down","point":"0_30","prior_point":"L","games_total":4,"game_win_pct":0,"result":"0 to 4","games_won":0,"games_lost":4},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Roger Federer","position":"Down 0-40","game_position":"Down","point":"0_40","prior_point":"L","games_total":3,"game_win_pct":0,"result":"0 to 3","games_won":0,"games_lost":3},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Roger Federer","position":"Won 30-30","game_position":"tied","point":"30_30","prior_point":"W","games_total":11,"game_win_pct":1,"result":"11 to 11","games_won":11,"games_lost":0},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Roger Federer","position":"Lost 30-30","game_position":"tied","point":"30_30","prior_point":"L","games_total":4,"game_win_pct":0.75,"result":"3 to 4","games_won":3,"games_lost":1},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Roger Federer","position":"Won Deuce","game_position":"Up","point":"Deuce","prior_point":"W","games_total":10,"game_win_pct":0.9,"result":"9 to 10","games_won":9,"games_lost":1},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Roger Federer","position":"Lost Deuce","game_position":"Down","point":"Deuce","prior_point":"L","games_total":4,"game_win_pct":0,"result":"0 to 4","games_won":0,"games_lost":4},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Men's Tournament Average","position":"Up 15-0","game_position":"Up","point":"15_0","prior_point":"W","games_total":2792,"game_win_pct":0.866045845272206,"result":"2418 to 2792","games_won":2418,"games_lost":374},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Men's Tournament Average","position":"Up 30-0","game_position":"Up","point":"30_0","prior_point":"W","games_total":1709,"game_win_pct":0.943826799297835,"result":"1613 to 1709","games_won":1613,"games_lost":96},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Men's Tournament Average","position":"Down 0-15","game_position":"Down","point":"0_15","prior_point":"L","games_total":1671,"game_win_pct":0.58886894075404,"result":"984 to 1671","games_won":984,"games_lost":687},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Men's Tournament Average","position":"Down 0-30","game_position":"Down","point":"0_30","prior_point":"L","games_total":661,"game_win_pct":0.384266263237519,"result":"254 to 661","games_won":254,"games_lost":407},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Men's Tournament Average","position":"Down 0-40","game_position":"Down","point":"0_40","prior_point":"L","games_total":260,"game_win_pct":0.15,"result":"39 to 260","games_won":39,"games_lost":221},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Men's Tournament Average","position":"Won 30-30","game_position":"tied","point":"30_30","prior_point":"W","games_total":860,"game_win_pct":0.881395348837209,"result":"758 to 860","games_won":758,"games_lost":102},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Men's Tournament Average","position":"Lost 30-30","game_position":"tied","point":"30_30","prior_point":"L","games_total":546,"game_win_pct":0.419413919413919,"result":"229 to 546","games_won":229,"games_lost":317},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Men's Tournament Average","position":"Won Deuce","game_position":"Up","point":"Deuce","prior_point":"W","games_total":1222,"game_win_pct":0.877250409165303,"result":"1072 to 1222","games_won":1072,"games_lost":150},{"event":"2013 US Open","item":"Service Games Won","draw":"men's","player":"Men's Tournament Average","position":"Lost Deuce","game_position":"Down","point":"Deuce","prior_point":"L","games_total":815,"game_win_pct":0.413496932515337,"result":"337 to 815","games_won":337,"games_lost":478},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Serena Williams","position":"Up 15-0","game_position":"Up","point":"15_0","prior_point":"W","games_total":44,"game_win_pct":0.909090909090909,"result":"40 to 44","games_won":40,"games_lost":4},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Serena Williams","position":"Up 30-0","game_position":"Up","point":"30_0","prior_point":"W","games_total":27,"game_win_pct":0.962962962962963,"result":"26 to 27","games_won":26,"games_lost":1},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Serena Williams","position":"Down 0-15","game_position":"Down","point":"0_15","prior_point":"L","games_total":16,"game_win_pct":0.875,"result":"14 to 16","games_won":14,"games_lost":2},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Serena Williams","position":"Down 0-30","game_position":"Down","point":"0_30","prior_point":"L","games_total":4,"game_win_pct":0.75,"result":"3 to 4","games_won":3,"games_lost":1},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Serena Williams","position":"Down 0-40","game_position":"Down","point":"0_40","prior_point":"L","games_total":0,"game_win_pct":0,"result":"0 to 0","games_won":0,"games_lost":0},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Serena Williams","position":"Won 30-30","game_position":"tied","point":"30_30","prior_point":"W","games_total":13,"game_win_pct":1,"result":"13 to 13","games_won":13,"games_lost":0},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Serena Williams","position":"Lost 30-30","game_position":"tied","point":"30_30","prior_point":"L","games_total":6,"game_win_pct":0.5,"result":"3 to 6","games_won":3,"games_lost":3},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Serena Williams","position":"Won Deuce","game_position":"Up","point":"Deuce","prior_point":"W","games_total":19,"game_win_pct":0.947368421052632,"result":"18 to 19","games_won":18,"games_lost":1},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Serena Williams","position":"Lost Deuce","game_position":"Down","point":"Deuce","prior_point":"L","games_total":4,"game_win_pct":0.75,"result":"3 to 4","games_won":3,"games_lost":1},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Victoria Azarenka","position":"Up 15-0","game_position":"Up","point":"15_0","prior_point":"W","games_total":50,"game_win_pct":0.74,"result":"37 to 50","games_won":37,"games_lost":13},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Victoria Azarenka","position":"Up 30-0","game_position":"Up","point":"30_0","prior_point":"W","games_total":26,"game_win_pct":0.846153846153846,"result":"22 to 26","games_won":22,"games_lost":4},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Victoria Azarenka","position":"Down 0-15","game_position":"Down","point":"0_15","prior_point":"L","games_total":26,"game_win_pct":0.5,"result":"13 to 26","games_won":13,"games_lost":13},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Victoria Azarenka","position":"Down 0-30","game_position":"Down","point":"0_30","prior_point":"L","games_total":12,"game_win_pct":0.25,"result":"3 to 12","games_won":3,"games_lost":9},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Victoria Azarenka","position":"Down 0-40","game_position":"Down","point":"0_40","prior_point":"L","games_total":5,"game_win_pct":0,"result":"0 to 5","games_won":0,"games_lost":5},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Victoria Azarenka","position":"Won 30-30","game_position":"tied","point":"30_30","prior_point":"W","games_total":15,"game_win_pct":0.8,"result":"12 to 15","games_won":12,"games_lost":3},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Victoria Azarenka","position":"Lost 30-30","game_position":"tied","point":"30_30","prior_point":"L","games_total":11,"game_win_pct":0.272727272727273,"result":"3 to 11","games_won":3,"games_lost":8},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Victoria Azarenka","position":"Won Deuce","game_position":"Up","point":"Deuce","prior_point":"W","games_total":25,"game_win_pct":0.64,"result":"16 to 25","games_won":16,"games_lost":9},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Victoria Azarenka","position":"Lost Deuce","game_position":"Down","point":"Deuce","prior_point":"L","games_total":18,"game_win_pct":0.166666666666667,"result":"3 to 18","games_won":3,"games_lost":15},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Women's Tournament Average","position":"Up 15-0","game_position":"Up","point":"15_0","prior_point":"W","games_total":1419,"game_win_pct":0.7815362931642,"result":"1109 to 1419","games_won":1109,"games_lost":310},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Women's Tournament Average","position":"Up 30-0","game_position":"Up","point":"30_0","prior_point":"W","games_total":784,"game_win_pct":0.895408163265306,"result":"702 to 784","games_won":702,"games_lost":82},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Women's Tournament Average","position":"Down 0-15","game_position":"Down","point":"0_15","prior_point":"L","games_total":1127,"game_win_pct":0.449866903283052,"result":"507 to 1127","games_won":507,"games_lost":620},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Women's Tournament Average","position":"Down 0-30","game_position":"Down","point":"0_30","prior_point":"L","games_total":504,"game_win_pct":0.26984126984127,"result":"136 to 504","games_won":136,"games_lost":368},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Women's Tournament Average","position":"Down 0-40","game_position":"Down","point":"0_40","prior_point":"L","games_total":240,"game_win_pct":0.0791666666666667,"result":"19 to 240","games_won":19,"games_lost":221},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Women's Tournament Average","position":"Won 30-30","game_position":"tied","point":"30_30","prior_point":"W","games_total":499,"game_win_pct":0.811623246492986,"result":"405 to 499","games_won":405,"games_lost":94},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Women's Tournament Average","position":"Lost 30-30","game_position":"tied","point":"30_30","prior_point":"L","games_total":393,"game_win_pct":0.343511450381679,"result":"135 to 393","games_won":135,"games_lost":258},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Women's Tournament Average","position":"Won Deuce","game_position":"Up","point":"Deuce","prior_point":"W","games_total":786,"game_win_pct":0.834605597964377,"result":"656 to 786","games_won":656,"games_lost":130},{"event":"2013 US Open","item":"Service Games Won","draw":"women's","player":"Women's Tournament Average","position":"Lost Deuce","game_position":"Down","point":"Deuce","prior_point":"L","games_total":646,"game_win_pct":0.337461300309598,"result":"218 to 646","games_won":218,"games_lost":428}];
+  
+  return drawChart(opts,data);
+  
+})()  
+  
+  
+  
+  function drawChart(opts, data){ 
+    var subCharts = [];
+    
+    var c = null;
+    var assignedColors = {};
+    
+      //move this to top or make function since duplicated
+    //allow manipulation of default colors to use with dimple
+    if(opts.defaultColors.length) {
+      defaultColorsArray = [];
+      if (typeof(opts.defaultColors) == "function") {
+        //assume this is a d3 scale
+        //if there is a domain for the color scale given
+        //then we will need to assign colors with dimples assignColor
+        if( opts.defaultColors.domain().length > 0 ){
+          defaultColorsArray = opts.defaultColors.range();
+          opts.defaultColors.domain().forEach( function( d, i ) {
+            assignedColors[d] = new dimple.color(opts.defaultColors.range()[i])
+          })
+        } else {
+          for (var n=0;n<opts.defaultColors.range().length;n++) {
+            defaultColorsArray.push(opts.defaultColors(n));
+          };
+        }
+      } else {
+        defaultColorsArray = opts.defaultColors;
+      }
+  
+      
+      //if colors not assigned with no keys and opts.groups
+      if (!(Object.keys(assignedColors).length) & Boolean(opts.groups)) {
+        //let's just assign colors in order with each unique
+        //this is important if facetting where need colors assigned
+        //if not in all pairs
+        opts.groups = (typeof opts.groups == "string") ? [opts.groups] : opts.groups;
+        d3.set(
+          data.map(function(d){
+            //dimple colors by last item in groups
+            return d[opts.groups[opts.groups.length-1]]
+          })
+        ).values().forEach(function(u,i){
+          //u will be our uniqe and will pick color from defaultColorsArray
+          //console.log([u,defaultColorsArray[i]].concat());
+          assignedColors[u] = new dimple.color(defaultColorsArray[i % defaultColorsArray.length])
+        })
+      }
+    }
+  
+    
+    //do series
+    //set up a function since same for each
+    //as of now we have x,y,groups,data,type in opts for primary layer
+    //and other layers reside in opts.layers
+    function buildSeries(layer, hidden, myChart){
+      //inherit from primary layer if not intentionally changed or xAxis, yAxis, zAxis null
+      if (!layer.xAxis) layer.xAxis = opts.xAxis;    
+      if (!layer.yAxis) layer.yAxis = opts.yAxis;
+      if (!layer.zAxis) layer.zAxis = opts.zAxis;
+      
+      var x = buildAxis("x", layer, myChart);
+ 
+      x.hidden = hidden;
+      
+      var y = buildAxis("y", layer, myChart);
+      y.hidden = hidden;
+      
+      //z for bubbles
+      var z = null;
+      if (!(typeof(layer.zAxis) === 'undefined') && layer.zAxis.type){
+        z = buildAxis("z", layer, myChart);
+      };
+      
+      //here think I need to evaluate group and if missing do null
+      //as the group argument
+      //if provided need to use groups from layer
+      var s = new dimple.series(myChart, null, x, y, z, c, dimple.plot[layer.type], dimple.aggregateMethod.avg, dimple.plot[layer.type].stacked);
+      
+      //as of v1.1.4 dimple can use different dataset for each series
+      if(layer.data){
+        //convert to an array of objects
+        var tempdata;
+        //avoid lodash for now
+        datakeys = d3.keys(layer.data)
+        tempdata = layer.data[datakeys[1]].map(function(d,i){
+          var tempobj = {}
+          datakeys.forEach(function(key){
+            tempobj[key] = layer.data[key][i]
+          })
+          return tempobj
+        })
+        s.data = tempdata;
+      }
+      
+      //for measure axis dimple sorts at the series level not at axis level
+      ['x','y'].map(function(ax){
+        if( layer[ax + 'Axis'].type=="addMeasureAxis" && layer[ax + 'Axis'].orderRule ){
+          if( typeof layer[ax + 'Axis'].orderRule == "string" ){
+            s.addOrderRule( layer[ax + 'Axis'].orderRule );
+          } else if ( typeof layer[ax + 'Axis'].orderRule == "object" ) {
+            s._orderRule = layer[ax + 'Axis'].orderRule;
+          }
+        }
+      })
+      
+      if(layer.hasOwnProperty("groups")) {
+        s.categoryFields = (typeof layer.groups === "object") ? layer.groups : [layer.groups];
+        //series offers an aggregate method that we will also need to check if available
+        //options available are avg, count, max, min, sum
+      }
+      if (!(typeof(layer.aggregate) === 'undefined')) {
+        s.aggregate = eval(layer.aggregate);
+      }
+      if (!(typeof(layer.lineWeight) === 'undefined')) {
+        s.lineWeight = layer.lineWeight;
+      }
+      if (!(typeof(layer.lineMarkers) === 'undefined')) {
+        s.lineMarkers = layer.lineMarkers;
+      }
+      if (!(typeof(layer.barGap) === 'undefined')) {
+        s.barGap = layer.barGap;
+      }    
+      if (!(typeof(layer.interpolation) === 'undefined')) {
+        s.interpolation = layer.interpolation;
+      }     
+     /* if (!(typeof(layer.eventHandler) === 'undefined')) {
+        layer.eventHandler = (layer.eventHandler.length === "undefined") ? layer.eventHandler : [layer.eventHandler];
+        layer.eventHandler.forEach(function(evt){
+          s.addEventHandler(evt.event, eval(evt.handler))
+        })
+      }*/
+        
+      myChart.series.push(s);
+      
+      /*placeholder fix domain of primary scale for new series data
+      //not working right now but something like this
+      //for now just use overrideMin and overrideMax from rCharts
+      for( var i = 0; i<2; i++) {
+        if (!myChart.axes[i].overrideMin) {
+          myChart.series[0]._axisBounds(i==0?"x":"y").min = myChart.series[0]._axisBounds(i==0?"x":"y").min < s._axisBounds(i==0?"x":"y").min ? myChart.series[0]._axisBounds(i==0?"x":"y").min : s._axisBounds(i==0?"x":"y").min;
+        }
+        if (!myChart.axes[i].overrideMax) {  
+          myChart.series[0]._axisBounds(i==0?"x":"y")._max = myChart.series[0]._axisBounds(i==0?"x":"y").max > s._axisBounds(i==0?"x":"y").max ? myChart.series[0]._axisBounds(i==0?"x":"y").max : s._axisBounds(i==0?"x":"y").max;
+        }
+        myChart.axes[i]._update();
+      }
+      */
+      
+      return myChart;
+    };
+  
+      
+    //function to build axes
+    function buildAxis(position, layer, myChart){
+      var axis;
+      var axisopts = opts[position+"Axis"];
+      
+      if(axisopts.measure) {
+        axis = myChart[axisopts.type](position,layer[position],axisopts.measure);
+      } else {
+        axis = myChart[axisopts.type](position, layer[position]);
+      };
+      if(!(axisopts.type === "addPctAxis")) axis.showPercent = axisopts.showPercent;
+      if (axisopts.orderRule) axis.addOrderRule(axisopts.orderRule);
+      if (axisopts.grouporderRule) axis.addGroupOrderRule(axisopts.grouporderRule);  
+      if (axisopts.overrideMin) axis.overrideMin = axisopts.overrideMin;
+      if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+      if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+      if (axisopts.inputFormat) axis.dateParseFormat = axisopts.inputFormat;
+      if (axisopts.outputFormat) axis.tickFormat = axisopts.outputFormat;    
+      return axis;
+    };
+        
+        
+  
+    //if facet not provided for x or y make Dummy variable
+    //handle NULL facet
+    if (typeof opts.facet == "undefined") opts.facet = {}
+    opts.facet.x = opts.facet.x ? opts.facet.x : "Dummy"
+    opts.facet.y = opts.facet.y ? opts.facet.y : "Dummy"    
+    if(opts.facet.x === "Dummy" || opts.facet.y === "Dummy") {
+      data.forEach(function(d){
+        d.Dummy = 1;
+      })
+    }
+  
+    var rows = d3.set(data.map(function(d){return d[opts.facet.y]})).values();
+    var nrow = opts.facet.nrow ? opts.facet.nrow : rows.length;
+    var cols = d3.set(data.map(function(d){return d[opts.facet.x]})).values()
+    var ncol = opts.facet.ncol ? opts.facet.ncol : cols.length;
+    
+    var tuples = d3.merge(rows.map(function(row,irow){return cols.map(function(col,icol){return {key:row + "~" + col, values: {"row":irow, "col":icol} }})}))
+      
+    var grid = d3.layout.grid()
+      .rows( nrow )
+      .cols( ncol )
+      .size([ opts.width - 150, opts.height-200])
+      .bands();
+    
+    var svgGrid = d3.select("#" + opts.id).append("svg")
+      .attr("width", opts.width)
+      .attr("height", opts.height);
+ 
+  
+    grid(tuples);
+  
+      tuples.forEach(function(cell,cellnum) {
+          //cell = d3.select(cell);
+      
+          // Filter the data set for the quarter and the price tier
+          // of the current shape
+          var filteredData = dimple.filterData(data, opts.facet.x, cell.key.split('~')[1]);
+          filteredData = dimple.filterData(filteredData, opts.facet.y, cell.key.split('~')[0]);    
+          
+          // Draw a new chart which will go in the current shape
+          var subChart = new dimple.chart(svgGrid, filteredData);
+  
+          if (tuples.length > 1){
+            // Position the chart inside the shape
+            subChart.height = (cellnum == 0) ? grid.nodeSize()[1] : 111.5
+            subChart.width = grid.nodeSize()[0]      
+            
+            if (opts.margins) {
+              subChart.setBounds(
+                parseFloat(cell.x + opts.margins.left),
+                parseFloat(cell.y + opts.margins.top),
+                subChart.width - opts.margins.right- opts.margins.left,
+                subChart.height - opts.margins.top - opts.margins.bottom
+              )
+            } else {
+              subChart.setBounds(
+                parseFloat(cell.x + 160), 
+                parseFloat(cell.y + 10),
+                parseFloat(grid.nodeSize()[0] - 50),
+                subChart.height - 10
+              );
+            }  
+          } else { //only one chart
+            if (opts.bounds) {
+              subChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+            }
+          }
+          
+            //dimple allows use of custom CSS with noFormats
+            if(opts.noFormats) { subChart.noFormats = opts.noFormats; };
+            
+            //need to fix later for better colorAxis support
+            if(d3.keys(opts.colorAxis).length > 0) {
+              c = subChart[opts.colorAxis.type](opts.colorAxis.colorSeries,opts.colorAxis.palette) ;
+              if(opts.colorAxis.outputFormat){
+                c.tickFormat = opts.colorAxis.outputFormat;
+              }
+            }
+          
+            //add the colors from the array into the chart's defaultColors
+            if (typeof defaultColorsArray != "undefined"){
+              subChart.defaultColors = defaultColorsArray.map(function(d) {
+                return new dimple.color(d);
+              });          
+            }
+            subChart._assignedColors = assignedColors;
+            
+            subChart = buildSeries(opts, false, subChart);
+            if (opts.layers.length > 0) {
+              opts.layers.forEach(function(layer){
+                subChart = buildSeries(layer, true, subChart);
+              })
+            }
+ 
+            subChart.series[0].getTooltipText = function (e) {
+                     var rows = [];
+                     // Add the series categories
+                     if (this.categoryFields !== null && this.categoryFields !== undefined && this.categoryFields.length !==  0) {
+                     this.categoryFields.forEach(function (c, i) {
+                     if (c !== null && c !== undefined && e.aggField[i] !== null && e.aggField[i] !== undefined) {
+                     // If the category name and value match don't display the category name
+                                    rows.push(c + (e.aggField[i] !== c ? ': ' + e.aggField[i] : ''));
+                                }
+                            }, this);
+                        }
+            
+                        if (this.x) {
+                            this.x._getTooltipText(rows, e);
+                        }
+                        if (this.y) {
+                            this.y._getTooltipText(rows, e);
+                        }
+                        if (this.z) {
+                        //    this.z._getTooltipText(rows, e);
+                        }
+                        if (this.c) {
+                            this.c._getTooltipText(rows, e);
+                        }
+            
+                        //as an example of something custom
+                        //rows.push('something custom here');
+            
+                        // Get distinct text rows to deal with cases where 2 axes have the same dimensionality
+                        return rows; //rows.filter(function (elem, pos) { return rows.indexOf(elem) === pos; });
+                    }
+          
+          
+            //unsure if this is best but if legend is provided (not empty) then evaluate
+            if(d3.keys(opts.legend).length > 0) {
+              var l =subChart.addLegend();
+              d3.keys(opts.legend).forEach(function(d){
+                l[d] = opts.legend[d];
+              });
+            }
+            //quick way to get this going but need to make this cleaner
+            if(opts.storyboard) {
+              subChart.setStoryboard(opts.storyboard);
+            };
+            
+            //catch all for other options
+            //these can be provided by dMyChart$chart( ... )
+              
+            
+            //add facet row and column in case we need later
+            subChart.facetposition = cell.values;
+            
+            subCharts.push(subChart);
+          })
+  
+      subCharts.forEach(function(subChart) {
+        subChart.draw();
+      })
+    
+    //get rid of all y for those not in column 1
+    //can easily customize this to only remove bits and pieces
+    if(opts.facet.removeAxes) {
+      ["x","y","z"].forEach(function(position){
+        //work on axis scaling
+        //assume if remove then same scales for all charts
+        axisdomain = [];      
+        subCharts.forEach(function(subChart){
+          subChart.axes.forEach(function(axis){
+            if (axis.position === position && !axis._hasCategories()){
+              axisdomain.push(axis._scale.domain())
+            }
+          })
+        });
+        axisdomain = d3.extent([].concat.apply([], axisdomain));
+        subCharts.forEach(function(subChart){
+          subChart.axes.forEach(function(axis){
+            if (axis.position === position && !axis._hasCategories()){
+              axis.overrideMin = axisdomain[0];
+              axis.overrideMax = axisdomain[1];
+            }
+          })
+          subChart.draw(null,true)
+        });
+      })
+      
+      //evaluate which do not fall in column 1 or row 1 to remove
+      var xpos = d3.extent(subCharts,function(d){return d.x});
+      var ypos = d3.extent(subCharts,function(d){return d.y});    
+      subCharts.filter(function(d){
+        return d.x!=xpos[0];
+      }).forEach(function(d){
+        d.series[0]._dropLineOrigin = function(){
+          return {"x" : xpos[0],"y" : ypos[1] + d._heightPixels()}
+        }
+        d.axes.forEach(function(axis){
+          if (axis.position === "y"){
+            //leave there for reference but set opacity 0
+            if (axis.shapes) axis.shapes.style("opacity",0);
+            if (axis.titleShape) axis.titleShape.style("opacity",0);
+          }
+        })
+      });
+      //now x for those not in row 1
+      subCharts.filter(function(d){
+        return d.y!=ypos[1];
+      }).forEach(function(d){
+        d.series[0]._dropLineOrigin = function(){
+          return {"x" : xpos[0],"y" : ypos[1] + d._heightPixels()}
+        }        
+        d.axes.forEach(function(axis){
+          if (axis.position === "x"){
+            //leave there for reference but set opacity 0
+            if (axis.shapes) axis.shapes.style("opacity",0);
+            if (axis.titleShape) axis.titleShape.style("opacity",0);
+          }
+        })
+      });
+    }
+  return subCharts;
+}
+ 
+ 
+ 
+   
+   //remove axis titles
+   d3.selectAll(".dimple-title").remove()
+   d3.selectAll(".dimple-axis:nth-of-type(2) .tick text")
+    .attr("transform","rotate(0)")
+    .style("text-anchor","middle")
+    .text(function(d){
+      var x = d3.select(this).attr("x")
+      d3.select( d3.select(this)[0][0].parentNode ).append("text")
+        .text( function(dd) { return d.split(" ")[1] } )
+        .attr("y", 28)
+        .attr("x",x)
+        .attr("transform","rotate(0)")
+        .style("text-anchor","middle")
+      return d.split(" ")[0]
+    })
+   
+   
+   var lineDrawer = d3.svg.line()
+                        .x(function(d) { return d.x; })
+                        .y(function(d) { return d.y; })
+                        .interpolate("linear");
+  
+  
+  //draw some graphical elements to help us with our story
+  var decorations = d3.select("svg").append("g");
+  
+  // add horizontal line between men and women
+  decorations.append("path")
+    .attr( "d", lineDrawer( [{x: 0, y: 105 },{x: 590, y: 105}]) )
+    .style( "stroke", "rgb(137, 138, 139)" )
+    .style( "stroke-width", 1 )
+    
+  // add rect for hover on Nadal
+  decorations.append("rect")
+    .attr("id","nadal_behind_box")
+    .attr("class","highlights")
+    .attr("x",chart1b3c520123f[1].axes[1].shapes[0][0].getBBox().x)
+    .attr("y",chart1b3c520123f[0].axes[2]._scale("Rafael Nadal") - chart1b3c520123f[1].svg.select("rect.dimple-series-0").attr("height") -10 )
+    .attr("width",chart1b3c520123f[1].axes[1]._scale("Won Deuce")-chart1b3c520123f[1].axes[1].shapes[0][0].getBBox().x)
+    .attr("height",+chart1b3c520123f[1].svg.select("rect.dimple-series-0").attr("height")+ 12)
+    .style("fill","none")
+    .style("stroke","black")
+    .style("stroke-opacity",0.01)
+    .style("display","none")
+    
+  d3.select("#nadal_behind")
+    .on("mouseover", highlightNadalBehind )
+    .on("mouseout", removeHighlights )
+    
+  d3.select("#suffer_behind")
+    .on("mouseover", highlightSuffer )
+    .on("mouseout", removeHighlights )    
+    
+  function highlightNadalBehind() {
+    d3.select("#nadal_behind_box")
+      .style("display","")
+      .transition().style("stroke-opacity",1)
+  }
+  
+  function highlightSuffer(){
+    chart1b3c520123f[0].series[0].shapes.each(function(d){
+      var that = this;
+      if(d.cValue < 0.5 && d.y.search("Men's") < 0 ){
+        d3.select(that).transition().style("stroke-width",4)
+      }
+    })
+  }
+  
+  function removeHighlights(){
+    d3.selectAll(".highlights")
+      .transition().style("stroke-opacity",0.00001)
+      .style("display","none")
+    chart1b3c520123f[0].series[0].shapes
+      .transition().style("stroke-width",1)
+  }
+  
+  
+  
+    
+</script>
+    
+   <center>
+<div style="display:table;width:220px;height:10px;font-size:12px" class='gray'>
+<center><strong>Distributed by</strong><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</center></body>
+
+</html>

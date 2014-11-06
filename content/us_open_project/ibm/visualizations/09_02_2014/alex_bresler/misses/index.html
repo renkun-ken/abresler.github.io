@@ -1,0 +1,504 @@
+<!doctype HTML>
+<title>Comparing Missed Shots 2014 U.S. Open Quarterfinalists</title>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://aragorn.org/scripts/nv.d3.css'>
+    <link rel='stylesheet' href='http://aragorn.org/scripts/rNVD3.css'>
+    
+    <script src='http://aragorn.org/scripts/jquery-1.8.2.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/nv.d3.min-new.js' type='text/javascript'></script>
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 600px;
+      height: 400px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+        </style>
+        <script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+<style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style> 
+    
+  </head>
+  <body >
+  <center>
+       <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 500px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: -0.25px"><strong>Comparing Missed Shot Data of the 2014 U.S. Open Women's Quarterfinalists</strong></div>
+    </div></center>
+    <center><a href = "http://www.ibm.com/us/en/" target = "_blank"><img src="http://www.aragorn.org/logos/ibm_630_100v3.jpg" alt="" width = "450" height="71" style="padding: 2.5px"></a></center>
+  <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='col-md-3'>
+      <form class='well'>
+        <label><b>Select Variable:</b></label>
+    		<select class='form-control' ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+    		</select>
+              </form>
+    </div>
+    <div class='col-md-7'>
+      <div class="bs-docs-example">
+        <div id='chart1dcf67605ecf' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart1dcf67605ecf",
+"width":    600,
+"height":    400,
+"x": "round",
+"y": "Missed Shots",
+"facet": {
+ "round": [ "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total" ],
+"player": [ "Sara Errani", "Sara Errani", "Sara Errani", "Sara Errani", "Sara Errani", "Caroline Wozniaki", "Caroline Wozniaki", "Caroline Wozniaki", "Caroline Wozniaki", "Caroline Wozniaki", "Belinda Bencic", "Belinda Bencic", "Belinda Bencic", "Belinda Bencic", "Belinda Bencic", "Peng Shuai", "Peng Shuai", "Peng Shuai", "Peng Shuai", "Peng Shuai", "Flavia Pennetta", "Flavia Pennetta", "Flavia Pennetta", "Flavia Pennetta", "Flavia Pennetta", "Serena Williams", "Serena Williams", "Serena Williams", "Serena Williams", "Serena Williams", "Ekaterina Makarova", "Ekaterina Makarova", "Ekaterina Makarova", "Ekaterina Makarova", "Ekaterina Makarova", "Victoria Azarenka", "Victoria Azarenka", "Victoria Azarenka", "Victoria Azarenka", "Victoria Azarenka" ],
+"Missed Shots": [ 30, 48, 54, 30, 162, 45, 40, 36, 82, 203, 0, 109, 64, 89, 262, 66, 68, 45, 50, 229, 73, 54, 64, 75, 266, 36, 43, 53, 54, 186, 50, 46, 65, 72, 233, 113, 66, 32, 96, 307 ],
+"Missed Shots Per Point": [   0.25,   0.32,   0.32,    0.2,   0.27,   0.37,   0.37,   0.33,   0.45,   0.39,      0,   0.57,    0.5,   0.51,   0.53,   0.55,   0.56,   0.41,    0.5,   0.51,   0.46,   0.49,   0.55,   0.56,   0.51,    0.4,   0.49,    0.4,   0.52,   0.45,   0.49,   0.49,    0.6,   0.47,   0.51,   0.51,   0.46,   0.38,   0.52,   0.49 ],
+"Percentage of Shots In Play": [  92.63,  88.97,  89.83,   92.5,  90.86,  86.36,  89.39,  90.03,  86.67,  87.94,      0,  81.24,  84.31,  84.41,  83.21,  81.77,  86.26,  87.57,  80.16,  84.43,  80.27,  83.23,   80.9,  77.54,  80.46,  78.44,  80.89,  84.32,  75.89,   80.5,  80.47,  81.45,  80.77,  79.72,  80.53,  81.66,  86.48,   82.8,  82.89,  83.41 ] 
+},
+"group": "player",
+"type": "multiBarChart",
+"id": "chart1dcf67605ecf" 
+}
+  $scope.data = [
+ {
+ "round": "Round 1",
+"player": "Sara Errani",
+"Missed Shots": 30,
+"Missed Shots Per Point":           0.25,
+"Percentage of Shots In Play":          92.63 
+},
+{
+ "round": "Round 2",
+"player": "Sara Errani",
+"Missed Shots": 48,
+"Missed Shots Per Point":           0.32,
+"Percentage of Shots In Play":          88.97 
+},
+{
+ "round": "Round 3",
+"player": "Sara Errani",
+"Missed Shots": 54,
+"Missed Shots Per Point":           0.32,
+"Percentage of Shots In Play":          89.83 
+},
+{
+ "round": "Round 4",
+"player": "Sara Errani",
+"Missed Shots": 30,
+"Missed Shots Per Point":            0.2,
+"Percentage of Shots In Play":           92.5 
+},
+{
+ "round": "Tournament Total",
+"player": "Sara Errani",
+"Missed Shots": 162,
+"Missed Shots Per Point":           0.27,
+"Percentage of Shots In Play":          90.86 
+},
+{
+ "round": "Round 1",
+"player": "Caroline Wozniaki",
+"Missed Shots": 45,
+"Missed Shots Per Point":           0.37,
+"Percentage of Shots In Play":          86.36 
+},
+{
+ "round": "Round 2",
+"player": "Caroline Wozniaki",
+"Missed Shots": 40,
+"Missed Shots Per Point":           0.37,
+"Percentage of Shots In Play":          89.39 
+},
+{
+ "round": "Round 3",
+"player": "Caroline Wozniaki",
+"Missed Shots": 36,
+"Missed Shots Per Point":           0.33,
+"Percentage of Shots In Play":          90.03 
+},
+{
+ "round": "Round 4",
+"player": "Caroline Wozniaki",
+"Missed Shots": 82,
+"Missed Shots Per Point":           0.45,
+"Percentage of Shots In Play":          86.67 
+},
+{
+ "round": "Tournament Total",
+"player": "Caroline Wozniaki",
+"Missed Shots": 203,
+"Missed Shots Per Point":           0.39,
+"Percentage of Shots In Play":          87.94 
+},
+{
+ "round": "Round 1",
+"player": "Belinda Bencic",
+"Missed Shots": 0,
+"Missed Shots Per Point":              0,
+"Percentage of Shots In Play":              0 
+},
+{
+ "round": "Round 2",
+"player": "Belinda Bencic",
+"Missed Shots": 109,
+"Missed Shots Per Point":           0.57,
+"Percentage of Shots In Play":          81.24 
+},
+{
+ "round": "Round 3",
+"player": "Belinda Bencic",
+"Missed Shots": 64,
+"Missed Shots Per Point":            0.5,
+"Percentage of Shots In Play":          84.31 
+},
+{
+ "round": "Round 4",
+"player": "Belinda Bencic",
+"Missed Shots": 89,
+"Missed Shots Per Point":           0.51,
+"Percentage of Shots In Play":          84.41 
+},
+{
+ "round": "Tournament Total",
+"player": "Belinda Bencic",
+"Missed Shots": 262,
+"Missed Shots Per Point":           0.53,
+"Percentage of Shots In Play":          83.21 
+},
+{
+ "round": "Round 1",
+"player": "Peng Shuai",
+"Missed Shots": 66,
+"Missed Shots Per Point":           0.55,
+"Percentage of Shots In Play":          81.77 
+},
+{
+ "round": "Round 2",
+"player": "Peng Shuai",
+"Missed Shots": 68,
+"Missed Shots Per Point":           0.56,
+"Percentage of Shots In Play":          86.26 
+},
+{
+ "round": "Round 3",
+"player": "Peng Shuai",
+"Missed Shots": 45,
+"Missed Shots Per Point":           0.41,
+"Percentage of Shots In Play":          87.57 
+},
+{
+ "round": "Round 4",
+"player": "Peng Shuai",
+"Missed Shots": 50,
+"Missed Shots Per Point":            0.5,
+"Percentage of Shots In Play":          80.16 
+},
+{
+ "round": "Tournament Total",
+"player": "Peng Shuai",
+"Missed Shots": 229,
+"Missed Shots Per Point":           0.51,
+"Percentage of Shots In Play":          84.43 
+},
+{
+ "round": "Round 1",
+"player": "Flavia Pennetta",
+"Missed Shots": 73,
+"Missed Shots Per Point":           0.46,
+"Percentage of Shots In Play":          80.27 
+},
+{
+ "round": "Round 2",
+"player": "Flavia Pennetta",
+"Missed Shots": 54,
+"Missed Shots Per Point":           0.49,
+"Percentage of Shots In Play":          83.23 
+},
+{
+ "round": "Round 3",
+"player": "Flavia Pennetta",
+"Missed Shots": 64,
+"Missed Shots Per Point":           0.55,
+"Percentage of Shots In Play":           80.9 
+},
+{
+ "round": "Round 4",
+"player": "Flavia Pennetta",
+"Missed Shots": 75,
+"Missed Shots Per Point":           0.56,
+"Percentage of Shots In Play":          77.54 
+},
+{
+ "round": "Tournament Total",
+"player": "Flavia Pennetta",
+"Missed Shots": 266,
+"Missed Shots Per Point":           0.51,
+"Percentage of Shots In Play":          80.46 
+},
+{
+ "round": "Round 1",
+"player": "Serena Williams",
+"Missed Shots": 36,
+"Missed Shots Per Point":            0.4,
+"Percentage of Shots In Play":          78.44 
+},
+{
+ "round": "Round 2",
+"player": "Serena Williams",
+"Missed Shots": 43,
+"Missed Shots Per Point":           0.49,
+"Percentage of Shots In Play":          80.89 
+},
+{
+ "round": "Round 3",
+"player": "Serena Williams",
+"Missed Shots": 53,
+"Missed Shots Per Point":            0.4,
+"Percentage of Shots In Play":          84.32 
+},
+{
+ "round": "Round 4",
+"player": "Serena Williams",
+"Missed Shots": 54,
+"Missed Shots Per Point":           0.52,
+"Percentage of Shots In Play":          75.89 
+},
+{
+ "round": "Tournament Total",
+"player": "Serena Williams",
+"Missed Shots": 186,
+"Missed Shots Per Point":           0.45,
+"Percentage of Shots In Play":           80.5 
+},
+{
+ "round": "Round 1",
+"player": "Ekaterina Makarova",
+"Missed Shots": 50,
+"Missed Shots Per Point":           0.49,
+"Percentage of Shots In Play":          80.47 
+},
+{
+ "round": "Round 2",
+"player": "Ekaterina Makarova",
+"Missed Shots": 46,
+"Missed Shots Per Point":           0.49,
+"Percentage of Shots In Play":          81.45 
+},
+{
+ "round": "Round 3",
+"player": "Ekaterina Makarova",
+"Missed Shots": 65,
+"Missed Shots Per Point":            0.6,
+"Percentage of Shots In Play":          80.77 
+},
+{
+ "round": "Round 4",
+"player": "Ekaterina Makarova",
+"Missed Shots": 72,
+"Missed Shots Per Point":           0.47,
+"Percentage of Shots In Play":          79.72 
+},
+{
+ "round": "Tournament Total",
+"player": "Ekaterina Makarova",
+"Missed Shots": 233,
+"Missed Shots Per Point":           0.51,
+"Percentage of Shots In Play":          80.53 
+},
+{
+ "round": "Round 1",
+"player": "Victoria Azarenka",
+"Missed Shots": 113,
+"Missed Shots Per Point":           0.51,
+"Percentage of Shots In Play":          81.66 
+},
+{
+ "round": "Round 2",
+"player": "Victoria Azarenka",
+"Missed Shots": 66,
+"Missed Shots Per Point":           0.46,
+"Percentage of Shots In Play":          86.48 
+},
+{
+ "round": "Round 3",
+"player": "Victoria Azarenka",
+"Missed Shots": 32,
+"Missed Shots Per Point":           0.38,
+"Percentage of Shots In Play":           82.8 
+},
+{
+ "round": "Round 4",
+"player": "Victoria Azarenka",
+"Missed Shots": 96,
+"Missed Shots Per Point":           0.52,
+"Percentage of Shots In Play":          82.89 
+},
+{
+ "round": "Tournament Total",
+"player": "Victoria Azarenka",
+"Missed Shots": 307,
+"Missed Shots Per Point":           0.49,
+"Percentage of Shots In Play":          83.41 
+} 
+]
+  $scope.controls = {
+ "y": {
+ "name": "y",
+"value": "Missed Shots",
+"values": [ "Missed Shots", "Missed Shots Per Point", "Percentage of Shots In Play" ],
+"label": "Select  y :" 
+} 
+} 
+  $scope.filters = []
+  
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  
+  $scope.$watch('selected', function(){
+    var keys = _.pluck($scope.selected, "variable")
+    var values = _.pluck($scope.selected, "value")
+    $scope.opts.selected = _.zipObject(keys, values)
+  }) 
+  
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+	}, true)
+}  
+
+function drawChart(opts, data){ 
+  if (Object.keys(opts.selected).length > 0){
+    data = _.filter(data, opts.selected)
+  }
+  
+  if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+    var data = d3.nest()
+      .key(function(d){
+        //return opts.group === undefined ? 'main' : d[opts.group]
+        //instead of main would think a better default is opts.x
+       return opts.group === undefined ? opts.y : d[opts.group];
+      }).entries(data);
+  }
+      
+  if (opts.disabled != undefined){
+    data.map(function(d, i){
+      d.disabled = opts.disabled[i]
+    })
+  }
+	
+	nv.addGraph(function() {
+		var chart = nv.models[opts.type]()
+			.x(function(d) { return d[opts.x] })
+			.y(function(d) { return d[opts.y] })
+			.width(opts.width)
+			.height(opts.height)
+		
+	chart
+  .showControls(false)
+  .transitionDuration(   300)
+  .delay(   200)
+  .staggerLabels(false)
+  .clipEdge(true)
+  .groupSpacing(   0.1)
+  .color([ "#2b7479", "#000000", "#d2ba2f", "#749797", "#8ed5e5", "#AA66cc", "#FF4444", "#1d2098" ])
+  .margin({
+ "left":     50,
+"top":     50,
+"right":     10,
+"bottom":     20 
+})
+  .tooltipContent( function(key, x, y, e ){ 
+  var d = e.series.values[e.pointIndex];
+  return '<b>Player:</b> ' + d.player + '<br><b>U.S. Open Round: </b> ' + d.round +
+  '<br><b>' + opts.y + ': </b>' + y
+} )
+          
+	
+
+	
+	
+	chart.yAxis
+ .tickFormat(function(d) {return  d3.format('2f')(d)})
+ .width(    40)
+ .axisLabel( opts.y )
+ 
+	d3.select("#" + opts.id + ' svg')
+  // .empty()
+		.datum(data)
+		.transition().duration(500)
+		.call(chart);
+	
+	 nv.utils.windowResize(chart.update);
+	 return chart;
+  });
+};
+</script>
+<style>
+  svg text { font-size: 75%; ; }
+</style>    
+  </body>
+<center>
+<div style="display:table;width:220px;height:10px;font-size:12px" class='gray'>
+<center><strong>Distributed by</strong><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</center>
+</body>
+</html>

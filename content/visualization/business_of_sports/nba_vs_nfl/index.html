@@ -1,0 +1,1540 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<title>NBA vs NFL Transaction Analysis</title>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://aragorn.org/scripts/nv.d3.css'>
+    <link rel='stylesheet' href='http://aragorn.org/scripts/rNVD3.css'>
+    
+    <script src='http://aragorn.org/scripts/jquery-1.8.2.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/nv.d3.min-new.js' type='text/javascript'></script>
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 700px;
+      height: 500px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+    <script>
+  var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+          <!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+<style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>  
+    <meta name="description" content="Analyzing the NFL and NBA Franchise Sales" />
+<link rel="canonical" href="http://aragorn.org/visualization/business_of_sports/nba_vs_nfl" />
+<meta property="og:description" content="Analyzing the NFL and NBA Franchise Sales" />
+<meta property="og:image" content="http://aragorn.org/visualization/business_of_sports/nba_vs_nfl/screen.png" />
+<meta property="og:site_name" content="Aragorn" />
+<meta property="og:title" content="http://aragorn.org/visualization/business_of_sports/nba_vs_nfl" />
+<meta property="og:type" content="article" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="http://aragorn.org/visualization/business_of_sports/nba_vs_nfl" />
+        <meta name="twitter:title" content="Analyzing the NFL and NBA Franchise Sales" />
+        <meta name="twitter:description" content="Analyzing the NFL and NBA Franchise Sales" />
+        <meta name="twitter:image" content="http://aragorn.org/visualization/business_of_sports/nba_vs_nfl/screen.png" />
+        <meta name="twitter:site" content="Aragorn" />
+    <center>
+    <center>
+    <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 850px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: 0.25px"><strong>Analyzing <img src="http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png" height="50" width="50"> and <img src="http://www.gamechange.ca/wordpress/wp-content/uploads/NBA-logo-e1373473058634.png" height="50" width="50"> Franchise Sales</strong><br></div></center>
+  </center> 
+    </head>
+  <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='col-md-3'>
+      <form class='well'>
+        <label><b>Select y-Variable :</b></label>
+    		<select class='form-control' ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+    		</select><br>
+              </form>
+    </div>
+    <div class='col-md-8'>
+      <div class="bs-docs-example">
+        <div id='charta8a5afba98d' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "charta8a5afba98d",
+"width":    700,
+"height":    500,
+"x": "year",
+"y": "Transaction Volume (m)",
+"group": "league",
+"type": "lineWithFocusChart",
+"id": "charta8a5afba98d" 
+}
+  $scope.data = [
+ {
+ "year": 1920,
+"Transaction Volume (m)":              0,
+"Transactions":              1,
+"Minimum Valuation (m)":              0,
+"Mean Valuation (m)":              0,
+"Max Valuation (m)":              0,
+"Cumulative Transaction Volume (m)":              0,
+"Transaction Volume as Share of Historic Volume":            100,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1920 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.0001<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.0001<br /><strong>Minimum Valuation (m):</strong> $0.0001<br /><strong>Maximum Valuation (m):</strong> $0.0001<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.0001</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1922,
+"Transaction Volume (m)":              0,
+"Transactions":              1,
+"Minimum Valuation (m)":              0,
+"Mean Valuation (m)":              0,
+"Max Valuation (m)":              0,
+"Cumulative Transaction Volume (m)":              0,
+"Transaction Volume as Share of Historic Volume":         71.429,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1922 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.00025<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.00025<br /><strong>Minimum Valuation (m):</strong> $0.00025<br /><strong>Maximum Valuation (m):</strong> $0.00025<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.00035</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1923,
+"Transaction Volume (m)":          0.004,
+"Transactions":              2,
+"Minimum Valuation (m)":          0.001,
+"Mean Valuation (m)":          0.002,
+"Max Valuation (m)":          0.002,
+"Cumulative Transaction Volume (m)":          0.004,
+"Transaction Volume as Share of Historic Volume":         90.909,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1923 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.0035<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $0.00175<br /><strong>Minimum Valuation (m):</strong> $0.0025<br /><strong>Maximum Valuation (m):</strong> $0.001<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.00385</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1925,
+"Transaction Volume (m)":          0.002,
+"Transactions":              1,
+"Minimum Valuation (m)":          0.002,
+"Mean Valuation (m)":          0.002,
+"Max Valuation (m)":          0.002,
+"Cumulative Transaction Volume (m)":          0.006,
+"Transaction Volume as Share of Historic Volume":          39.37,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1925 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.0025<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.0025<br /><strong>Minimum Valuation (m):</strong> $0.0025<br /><strong>Maximum Valuation (m):</strong> $0.0025<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.00635</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1926,
+"Transaction Volume (m)":              0,
+"Transactions":              1,
+"Minimum Valuation (m)":              0,
+"Mean Valuation (m)":              0,
+"Max Valuation (m)":              0,
+"Cumulative Transaction Volume (m)":          0.006,
+"Transaction Volume as Share of Historic Volume":          0.016,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1926 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.000001<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.000001<br /><strong>Minimum Valuation (m):</strong> $0.000001<br /><strong>Maximum Valuation (m):</strong> $0.000001<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.00635</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1928,
+"Transaction Volume (m)":           0.01,
+"Transactions":              1,
+"Minimum Valuation (m)":           0.01,
+"Mean Valuation (m)":           0.01,
+"Max Valuation (m)":           0.01,
+"Cumulative Transaction Volume (m)":          0.016,
+"Transaction Volume as Share of Historic Volume":         61.158,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1928 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.01<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.01<br /><strong>Minimum Valuation (m):</strong> $0.01<br /><strong>Maximum Valuation (m):</strong> $0.01<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.0164</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1929,
+"Transaction Volume (m)":          0.017,
+"Transactions":              3,
+"Minimum Valuation (m)":          0.002,
+"Mean Valuation (m)":          0.006,
+"Max Valuation (m)":          0.012,
+"Cumulative Transaction Volume (m)":          0.033,
+"Transaction Volume as Share of Historic Volume":         50.973,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1929 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.017<br /><strong>Transactions:</strong> 3<br /><strong>Mean Valuation (m):</strong> $0.00567<br /><strong>Minimum Valuation (m):</strong> $0.0125<br /><strong>Maximum Valuation (m):</strong> $0.002<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.0334</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1931,
+"Transaction Volume (m)":           0.08,
+"Transactions":              1,
+"Minimum Valuation (m)":           0.08,
+"Mean Valuation (m)":           0.08,
+"Max Valuation (m)":           0.08,
+"Cumulative Transaction Volume (m)":          0.113,
+"Transaction Volume as Share of Historic Volume":         70.577,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1931 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.08<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.08<br /><strong>Minimum Valuation (m):</strong> $0.08<br /><strong>Maximum Valuation (m):</strong> $0.08<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.113</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1932,
+"Transaction Volume (m)":          0.058,
+"Transactions":              2,
+"Minimum Valuation (m)":          0.008,
+"Mean Valuation (m)":          0.029,
+"Max Valuation (m)":           0.05,
+"Cumulative Transaction Volume (m)":          0.171,
+"Transaction Volume as Share of Historic Volume":         33.655,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1932 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.0575<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $0.0288<br /><strong>Minimum Valuation (m):</strong> $0.05<br /><strong>Maximum Valuation (m):</strong> $0.0075<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.171</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1933,
+"Transaction Volume (m)":          0.003,
+"Transactions":              1,
+"Minimum Valuation (m)":          0.003,
+"Mean Valuation (m)":          0.003,
+"Max Valuation (m)":          0.003,
+"Cumulative Transaction Volume (m)":          0.174,
+"Transaction Volume as Share of Historic Volume":          1.612,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1933 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.0028<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.0028<br /><strong>Minimum Valuation (m):</strong> $0.0028<br /><strong>Maximum Valuation (m):</strong> $0.0028<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.174</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1934,
+"Transaction Volume (m)":          0.052,
+"Transactions":              2,
+"Minimum Valuation (m)":          0.022,
+"Mean Valuation (m)":          0.026,
+"Max Valuation (m)":           0.03,
+"Cumulative Transaction Volume (m)":          0.226,
+"Transaction Volume as Share of Historic Volume":         23.044,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1934 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.052<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $0.026<br /><strong>Minimum Valuation (m):</strong> $0.03<br /><strong>Maximum Valuation (m):</strong> $0.022<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.226</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1935,
+"Transaction Volume (m)":          0.002,
+"Transactions":              1,
+"Minimum Valuation (m)":          0.002,
+"Mean Valuation (m)":          0.002,
+"Max Valuation (m)":          0.002,
+"Cumulative Transaction Volume (m)":          0.228,
+"Transaction Volume as Share of Historic Volume":          1.096,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1935 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.0025<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.0025<br /><strong>Minimum Valuation (m):</strong> $0.0025<br /><strong>Maximum Valuation (m):</strong> $0.0025<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.228</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1936,
+"Transaction Volume (m)":          0.004,
+"Transactions":              1,
+"Minimum Valuation (m)":          0.004,
+"Mean Valuation (m)":          0.004,
+"Max Valuation (m)":          0.004,
+"Cumulative Transaction Volume (m)":          0.232,
+"Transaction Volume as Share of Historic Volume":          1.723,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1936 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.004<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.004<br /><strong>Minimum Valuation (m):</strong> $0.004<br /><strong>Maximum Valuation (m):</strong> $0.004<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.232</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1937,
+"Transaction Volume (m)":           0.01,
+"Transactions":              1,
+"Minimum Valuation (m)":           0.01,
+"Mean Valuation (m)":           0.01,
+"Max Valuation (m)":           0.01,
+"Cumulative Transaction Volume (m)":          0.242,
+"Transaction Volume as Share of Historic Volume":           4.13,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1937 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.01<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.01<br /><strong>Minimum Valuation (m):</strong> $0.01<br /><strong>Maximum Valuation (m):</strong> $0.01<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.242</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1940,
+"Transaction Volume (m)":           0.39,
+"Transactions":              2,
+"Minimum Valuation (m)":          0.165,
+"Mean Valuation (m)":          0.195,
+"Max Valuation (m)":          0.225,
+"Cumulative Transaction Volume (m)":          0.632,
+"Transaction Volume as Share of Historic Volume":         61.694,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1940 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.39<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $0.195<br /><strong>Minimum Valuation (m):</strong> $0.225<br /><strong>Maximum Valuation (m):</strong> $0.165<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.632</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1941,
+"Transaction Volume (m)":           0.29,
+"Transactions":              2,
+"Minimum Valuation (m)":          0.125,
+"Mean Valuation (m)":          0.145,
+"Max Valuation (m)":          0.165,
+"Cumulative Transaction Volume (m)":          0.922,
+"Transaction Volume as Share of Historic Volume":         31.448,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1941 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.29<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $0.145<br /><strong>Minimum Valuation (m):</strong> $0.165<br /><strong>Maximum Valuation (m):</strong> $0.125<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.922</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1946,
+"Transaction Volume (m)":          0.003,
+"Transactions":              1,
+"Minimum Valuation (m)":          0.003,
+"Mean Valuation (m)":          0.003,
+"Max Valuation (m)":          0.003,
+"Cumulative Transaction Volume (m)":          0.003,
+"Transaction Volume as Share of Historic Volume":            100,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1946 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.003<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.003<br /><strong>Minimum Valuation (m):</strong> $0.003<br /><strong>Maximum Valuation (m):</strong> $0.003<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.003</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1947,
+"Transaction Volume (m)":              0,
+"Transactions":              1,
+"Minimum Valuation (m)":              0,
+"Mean Valuation (m)":              0,
+"Max Valuation (m)":              0,
+"Cumulative Transaction Volume (m)":          0.922,
+"Transaction Volume as Share of Historic Volume":              0,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1947 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.000004<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.000004<br /><strong>Minimum Valuation (m):</strong> $0.000004<br /><strong>Maximum Valuation (m):</strong> $0.000004<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.922</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1947,
+"Transaction Volume (m)":          0.015,
+"Transactions":              1,
+"Minimum Valuation (m)":          0.015,
+"Mean Valuation (m)":          0.015,
+"Max Valuation (m)":          0.015,
+"Cumulative Transaction Volume (m)":          0.018,
+"Transaction Volume as Share of Historic Volume":         83.333,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1947 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.015<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.015<br /><strong>Minimum Valuation (m):</strong> $0.015<br /><strong>Maximum Valuation (m):</strong> $0.015<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.018</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1948,
+"Transaction Volume (m)":          0.185,
+"Transactions":              1,
+"Minimum Valuation (m)":          0.185,
+"Mean Valuation (m)":          0.185,
+"Max Valuation (m)":          0.185,
+"Cumulative Transaction Volume (m)":          1.107,
+"Transaction Volume as Share of Historic Volume":         16.709,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1948 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.185<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.185<br /><strong>Minimum Valuation (m):</strong> $0.185<br /><strong>Maximum Valuation (m):</strong> $0.185<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $1.11</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1949,
+"Transaction Volume (m)":           0.25,
+"Transactions":              1,
+"Minimum Valuation (m)":           0.25,
+"Mean Valuation (m)":           0.25,
+"Max Valuation (m)":           0.25,
+"Cumulative Transaction Volume (m)":          1.357,
+"Transaction Volume as Share of Historic Volume":         18.421,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1949 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.25<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.25<br /><strong>Minimum Valuation (m):</strong> $0.25<br /><strong>Maximum Valuation (m):</strong> $0.25<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $1.36</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1950,
+"Transaction Volume (m)":           0.15,
+"Transactions":              1,
+"Minimum Valuation (m)":           0.15,
+"Mean Valuation (m)":           0.15,
+"Max Valuation (m)":           0.15,
+"Cumulative Transaction Volume (m)":          1.507,
+"Transaction Volume as Share of Historic Volume":          9.953,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1950 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.15<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.15<br /><strong>Minimum Valuation (m):</strong> $0.15<br /><strong>Maximum Valuation (m):</strong> $0.15<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $1.51</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1951,
+"Transaction Volume (m)":           0.05,
+"Transactions":              1,
+"Minimum Valuation (m)":           0.05,
+"Mean Valuation (m)":           0.05,
+"Max Valuation (m)":           0.05,
+"Cumulative Transaction Volume (m)":          1.557,
+"Transaction Volume as Share of Historic Volume":          3.211,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1951 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.05<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.05<br /><strong>Minimum Valuation (m):</strong> $0.05<br /><strong>Maximum Valuation (m):</strong> $0.05<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $1.56</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1951,
+"Transaction Volume (m)":          0.025,
+"Transactions":              1,
+"Minimum Valuation (m)":          0.025,
+"Mean Valuation (m)":          0.025,
+"Max Valuation (m)":          0.025,
+"Cumulative Transaction Volume (m)":          0.043,
+"Transaction Volume as Share of Historic Volume":          58.14,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1951 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.025<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.025<br /><strong>Minimum Valuation (m):</strong> $0.025<br /><strong>Maximum Valuation (m):</strong> $0.025<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.043</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1952,
+"Transaction Volume (m)":            0.4,
+"Transactions":              2,
+"Minimum Valuation (m)":            0.1,
+"Mean Valuation (m)":            0.2,
+"Max Valuation (m)":            0.3,
+"Cumulative Transaction Volume (m)":          1.957,
+"Transaction Volume as Share of Historic Volume":         20.438,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1952 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.4<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $0.2<br /><strong>Minimum Valuation (m):</strong> $0.3<br /><strong>Maximum Valuation (m):</strong> $0.1<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $1.96</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1953,
+"Transaction Volume (m)":            0.6,
+"Transactions":              1,
+"Minimum Valuation (m)":            0.6,
+"Mean Valuation (m)":            0.6,
+"Max Valuation (m)":            0.6,
+"Cumulative Transaction Volume (m)":          2.557,
+"Transaction Volume as Share of Historic Volume":         23.464,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1953 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.6<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.6<br /><strong>Minimum Valuation (m):</strong> $0.6<br /><strong>Maximum Valuation (m):</strong> $0.6<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $2.56</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1954,
+"Transaction Volume (m)":           0.04,
+"Transactions":              1,
+"Minimum Valuation (m)":           0.04,
+"Mean Valuation (m)":           0.04,
+"Max Valuation (m)":           0.04,
+"Cumulative Transaction Volume (m)":          2.597,
+"Transaction Volume as Share of Historic Volume":           1.54,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1954 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.04<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.04<br /><strong>Minimum Valuation (m):</strong> $0.04<br /><strong>Maximum Valuation (m):</strong> $0.04<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $2.6</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1957,
+"Transaction Volume (m)":           0.15,
+"Transactions":              1,
+"Minimum Valuation (m)":           0.15,
+"Mean Valuation (m)":           0.15,
+"Max Valuation (m)":           0.15,
+"Cumulative Transaction Volume (m)":          0.193,
+"Transaction Volume as Share of Historic Volume":          77.72,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1957 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.15<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.15<br /><strong>Minimum Valuation (m):</strong> $0.15<br /><strong>Maximum Valuation (m):</strong> $0.15<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $0.193</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1959,
+"Transaction Volume (m)":            0.2,
+"Transactions":              8,
+"Minimum Valuation (m)":          0.025,
+"Mean Valuation (m)":          0.025,
+"Max Valuation (m)":          0.025,
+"Cumulative Transaction Volume (m)":          2.797,
+"Transaction Volume as Share of Historic Volume":           7.15,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1959 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.2<br /><strong>Transactions:</strong> 8<br /><strong>Mean Valuation (m):</strong> $0.025<br /><strong>Minimum Valuation (m):</strong> $0.025<br /><strong>Maximum Valuation (m):</strong> $0.025<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $2.8</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1960,
+"Transaction Volume (m)":            2.6,
+"Transactions":              3,
+"Minimum Valuation (m)":            0.6,
+"Mean Valuation (m)":          0.867,
+"Max Valuation (m)":            1.4,
+"Cumulative Transaction Volume (m)":          5.397,
+"Transaction Volume as Share of Historic Volume":         48.174,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1960 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $2.6<br /><strong>Transactions:</strong> 3<br /><strong>Mean Valuation (m):</strong> $0.867<br /><strong>Minimum Valuation (m):</strong> $1.4<br /><strong>Maximum Valuation (m):</strong> $0.6<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $5.4</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1961,
+"Transaction Volume (m)":           7.85,
+"Transactions":              1,
+"Minimum Valuation (m)":           7.85,
+"Mean Valuation (m)":           7.85,
+"Max Valuation (m)":           7.85,
+"Cumulative Transaction Volume (m)":         13.247,
+"Transaction Volume as Share of Historic Volume":         59.258,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1961 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $7.85<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $7.85<br /><strong>Minimum Valuation (m):</strong> $7.85<br /><strong>Maximum Valuation (m):</strong> $7.85<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $13.2</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1962,
+"Transaction Volume (m)":         13.922,
+"Transactions":              1,
+"Minimum Valuation (m)":         13.922,
+"Mean Valuation (m)":         13.922,
+"Max Valuation (m)":         13.922,
+"Cumulative Transaction Volume (m)":         27.169,
+"Transaction Volume as Share of Historic Volume":         51.241,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1962 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $13.9<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $13.9<br /><strong>Minimum Valuation (m):</strong> $13.9<br /><strong>Maximum Valuation (m):</strong> $13.9<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $27.2</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1962,
+"Transaction Volume (m)":           0.85,
+"Transactions":              1,
+"Minimum Valuation (m)":           0.85,
+"Mean Valuation (m)":           0.85,
+"Max Valuation (m)":           0.85,
+"Cumulative Transaction Volume (m)":          1.043,
+"Transaction Volume as Share of Historic Volume":         81.496,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1962 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $0.85<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $0.85<br /><strong>Minimum Valuation (m):</strong> $0.85<br /><strong>Maximum Valuation (m):</strong> $0.85<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $1.04</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1963,
+"Transaction Volume (m)":         17.304,
+"Transactions":              2,
+"Minimum Valuation (m)":            6.5,
+"Mean Valuation (m)":          8.652,
+"Max Valuation (m)":         10.804,
+"Cumulative Transaction Volume (m)":         44.473,
+"Transaction Volume as Share of Historic Volume":         38.909,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1963 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $17.3<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $8.65<br /><strong>Minimum Valuation (m):</strong> $10.8<br /><strong>Maximum Valuation (m):</strong> $6.5<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $44.5</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1964,
+"Transaction Volume (m)":          8.226,
+"Transactions":              2,
+"Minimum Valuation (m)":          3.226,
+"Mean Valuation (m)":          4.113,
+"Max Valuation (m)":              5,
+"Cumulative Transaction Volume (m)":         52.698,
+"Transaction Volume as Share of Historic Volume":         15.609,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1964 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $8.23<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $4.11<br /><strong>Minimum Valuation (m):</strong> $5<br /><strong>Maximum Valuation (m):</strong> $3.23<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $52.7</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1964,
+"Transaction Volume (m)":            2.2,
+"Transactions":              2,
+"Minimum Valuation (m)":            1.1,
+"Mean Valuation (m)":            1.1,
+"Max Valuation (m)":            1.1,
+"Cumulative Transaction Volume (m)":          3.243,
+"Transaction Volume as Share of Historic Volume":         67.838,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1964 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $2.2<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $1.1<br /><strong>Minimum Valuation (m):</strong> $1.1<br /><strong>Maximum Valuation (m):</strong> $1.1<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $3.24</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1965,
+"Transaction Volume (m)":           14.5,
+"Transactions":              2,
+"Minimum Valuation (m)":              6,
+"Mean Valuation (m)":           7.25,
+"Max Valuation (m)":            8.5,
+"Cumulative Transaction Volume (m)":         67.198,
+"Transaction Volume as Share of Historic Volume":         21.578,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1965 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $14.5<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $7.25<br /><strong>Minimum Valuation (m):</strong> $8.5<br /><strong>Maximum Valuation (m):</strong> $6<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $67.2</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1965,
+"Transaction Volume (m)":          8.175,
+"Transactions":              2,
+"Minimum Valuation (m)":              3,
+"Mean Valuation (m)":          4.088,
+"Max Valuation (m)":          5.175,
+"Cumulative Transaction Volume (m)":         11.418,
+"Transaction Volume as Share of Historic Volume":         71.597,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1965 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $8.18<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $4.09<br /><strong>Minimum Valuation (m):</strong> $5.17<br /><strong>Maximum Valuation (m):</strong> $3<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $11.4</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1966,
+"Transaction Volume (m)":             23,
+"Transactions":              3,
+"Minimum Valuation (m)":            7.5,
+"Mean Valuation (m)":          7.667,
+"Max Valuation (m)":              8,
+"Cumulative Transaction Volume (m)":         90.198,
+"Transaction Volume as Share of Historic Volume":         25.499,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1966 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $23<br /><strong>Transactions:</strong> 3<br /><strong>Mean Valuation (m):</strong> $7.67<br /><strong>Minimum Valuation (m):</strong> $8<br /><strong>Maximum Valuation (m):</strong> $7.5<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $90.2</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1966,
+"Transaction Volume (m)":            1.6,
+"Transactions":              1,
+"Minimum Valuation (m)":            1.6,
+"Mean Valuation (m)":            1.6,
+"Max Valuation (m)":            1.6,
+"Cumulative Transaction Volume (m)":         13.018,
+"Transaction Volume as Share of Historic Volume":         12.291,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1966 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $1.6<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $1.6<br /><strong>Minimum Valuation (m):</strong> $1.6<br /><strong>Maximum Valuation (m):</strong> $1.6<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $13</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1967,
+"Transaction Volume (m)":          3.705,
+"Transactions":              4,
+"Minimum Valuation (m)":          0.035,
+"Mean Valuation (m)":          0.926,
+"Max Valuation (m)":           1.75,
+"Cumulative Transaction Volume (m)":         16.723,
+"Transaction Volume as Share of Historic Volume":         22.155,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1967 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $3.71<br /><strong>Transactions:</strong> 4<br /><strong>Mean Valuation (m):</strong> $0.926<br /><strong>Minimum Valuation (m):</strong> $1.75<br /><strong>Maximum Valuation (m):</strong> $0.035<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $16.7</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1968,
+"Transaction Volume (m)":             10,
+"Transactions":              3,
+"Minimum Valuation (m)":              2,
+"Mean Valuation (m)":          3.333,
+"Max Valuation (m)":              6,
+"Cumulative Transaction Volume (m)":         26.723,
+"Transaction Volume as Share of Historic Volume":         37.421,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1968 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $10<br /><strong>Transactions:</strong> 3<br /><strong>Mean Valuation (m):</strong> $3.33<br /><strong>Minimum Valuation (m):</strong> $6<br /><strong>Maximum Valuation (m):</strong> $2<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $26.7</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1969,
+"Transaction Volume (m)":          32.31,
+"Transactions":              1,
+"Minimum Valuation (m)":          32.31,
+"Mean Valuation (m)":          32.31,
+"Max Valuation (m)":          32.31,
+"Cumulative Transaction Volume (m)":        122.508,
+"Transaction Volume as Share of Historic Volume":         26.374,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1969 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $32.3<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $32.3<br /><strong>Minimum Valuation (m):</strong> $32.3<br /><strong>Maximum Valuation (m):</strong> $32.3<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $123</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1969,
+"Transaction Volume (m)":              2,
+"Transactions":              1,
+"Minimum Valuation (m)":              2,
+"Mean Valuation (m)":              2,
+"Max Valuation (m)":              2,
+"Cumulative Transaction Volume (m)":         28.723,
+"Transaction Volume as Share of Historic Volume":          6.963,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1969 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $2<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $2<br /><strong>Minimum Valuation (m):</strong> $2<br /><strong>Maximum Valuation (m):</strong> $2<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $28.7</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1970,
+"Transaction Volume (m)":            1.1,
+"Transactions":              1,
+"Minimum Valuation (m)":            1.1,
+"Mean Valuation (m)":            1.1,
+"Max Valuation (m)":            1.1,
+"Cumulative Transaction Volume (m)":         29.823,
+"Transaction Volume as Share of Historic Volume":          3.688,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1970 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $1.1<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $1.1<br /><strong>Minimum Valuation (m):</strong> $1.1<br /><strong>Maximum Valuation (m):</strong> $1.1<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $29.8</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1971,
+"Transaction Volume (m)":           16.7,
+"Transactions":              4,
+"Minimum Valuation (m)":            3.7,
+"Mean Valuation (m)":          4.175,
+"Max Valuation (m)":            5.6,
+"Cumulative Transaction Volume (m)":         46.523,
+"Transaction Volume as Share of Historic Volume":         35.896,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1971 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $16.7<br /><strong>Transactions:</strong> 4<br /><strong>Mean Valuation (m):</strong> $4.17<br /><strong>Minimum Valuation (m):</strong> $5.6<br /><strong>Maximum Valuation (m):</strong> $3.7<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $46.5</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1972,
+"Transaction Volume (m)":         68.944,
+"Transactions":              4,
+"Minimum Valuation (m)":           12.5,
+"Mean Valuation (m)":         17.236,
+"Max Valuation (m)":             23,
+"Cumulative Transaction Volume (m)":        191.453,
+"Transaction Volume as Share of Historic Volume":         36.011,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1972 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $68.9<br /><strong>Transactions:</strong> 4<br /><strong>Mean Valuation (m):</strong> $17.2<br /><strong>Minimum Valuation (m):</strong> $23<br /><strong>Maximum Valuation (m):</strong> $12.5<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $191</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1972,
+"Transaction Volume (m)":            9.1,
+"Transactions":              2,
+"Minimum Valuation (m)":              4,
+"Mean Valuation (m)":           4.55,
+"Max Valuation (m)":            5.1,
+"Cumulative Transaction Volume (m)":         55.623,
+"Transaction Volume as Share of Historic Volume":          16.36,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1972 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $9.1<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $4.55<br /><strong>Minimum Valuation (m):</strong> $5.1<br /><strong>Maximum Valuation (m):</strong> $4<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $55.6</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1974,
+"Transaction Volume (m)":             58,
+"Transactions":              3,
+"Minimum Valuation (m)":             16,
+"Mean Valuation (m)":         19.333,
+"Max Valuation (m)":             26,
+"Cumulative Transaction Volume (m)":        249.453,
+"Transaction Volume as Share of Historic Volume":         23.251,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1974 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $58<br /><strong>Transactions:</strong> 3<br /><strong>Mean Valuation (m):</strong> $19.3<br /><strong>Minimum Valuation (m):</strong> $26<br /><strong>Maximum Valuation (m):</strong> $16<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $249</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1974,
+"Transaction Volume (m)":          14.15,
+"Transactions":              2,
+"Minimum Valuation (m)":           6.15,
+"Mean Valuation (m)":          7.075,
+"Max Valuation (m)":              8,
+"Cumulative Transaction Volume (m)":         69.773,
+"Transaction Volume as Share of Historic Volume":          20.28,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1974 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $14.2<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $7.08<br /><strong>Minimum Valuation (m):</strong> $8<br /><strong>Maximum Valuation (m):</strong> $6.15<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $69.8</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1975,
+"Transaction Volume (m)":         30.435,
+"Transactions":              1,
+"Minimum Valuation (m)":         30.435,
+"Mean Valuation (m)":         30.435,
+"Max Valuation (m)":         30.435,
+"Cumulative Transaction Volume (m)":        279.888,
+"Transaction Volume as Share of Historic Volume":         10.874,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1975 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $30.4<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $30.4<br /><strong>Minimum Valuation (m):</strong> $30.4<br /><strong>Maximum Valuation (m):</strong> $30.4<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $280</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1976,
+"Transaction Volume (m)":           15.4,
+"Transactions":              4,
+"Minimum Valuation (m)":              1,
+"Mean Valuation (m)":           3.85,
+"Max Valuation (m)":              8,
+"Cumulative Transaction Volume (m)":         85.173,
+"Transaction Volume as Share of Historic Volume":         18.081,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1976 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $15.4<br /><strong>Transactions:</strong> 4<br /><strong>Mean Valuation (m):</strong> $3.85<br /><strong>Minimum Valuation (m):</strong> $8<br /><strong>Maximum Valuation (m):</strong> $1<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $85.2</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1977,
+"Transaction Volume (m)":          32.75,
+"Transactions":              2,
+"Minimum Valuation (m)":             10,
+"Mean Valuation (m)":         16.375,
+"Max Valuation (m)":          22.75,
+"Cumulative Transaction Volume (m)":        312.638,
+"Transaction Volume as Share of Historic Volume":         10.475,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1977 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $32.8<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $16.4<br /><strong>Minimum Valuation (m):</strong> $22.8<br /><strong>Maximum Valuation (m):</strong> $10<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $313</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1978,
+"Transaction Volume (m)":         10.345,
+"Transactions":              1,
+"Minimum Valuation (m)":         10.345,
+"Mean Valuation (m)":         10.345,
+"Max Valuation (m)":         10.345,
+"Cumulative Transaction Volume (m)":        322.983,
+"Transaction Volume as Share of Historic Volume":          3.203,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1978 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $10.3<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $10.3<br /><strong>Minimum Valuation (m):</strong> $10.3<br /><strong>Maximum Valuation (m):</strong> $10.3<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $323</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1978,
+"Transaction Volume (m)":              2,
+"Transactions":              1,
+"Minimum Valuation (m)":              2,
+"Mean Valuation (m)":              2,
+"Max Valuation (m)":              2,
+"Cumulative Transaction Volume (m)":         87.173,
+"Transaction Volume as Share of Historic Volume":          2.294,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1978 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $2<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $2<br /><strong>Minimum Valuation (m):</strong> $2<br /><strong>Maximum Valuation (m):</strong> $2<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $87.2</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1979,
+"Transaction Volume (m)":         16.667,
+"Transactions":              1,
+"Minimum Valuation (m)":         16.667,
+"Mean Valuation (m)":         16.667,
+"Max Valuation (m)":         16.667,
+"Cumulative Transaction Volume (m)":        339.649,
+"Transaction Volume as Share of Historic Volume":          4.907,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1979 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $16.7<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $16.7<br /><strong>Minimum Valuation (m):</strong> $16.7<br /><strong>Maximum Valuation (m):</strong> $16.7<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $340</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1979,
+"Transaction Volume (m)":             20,
+"Transactions":              1,
+"Minimum Valuation (m)":             20,
+"Mean Valuation (m)":             20,
+"Max Valuation (m)":             20,
+"Cumulative Transaction Volume (m)":        107.173,
+"Transaction Volume as Share of Historic Volume":         18.661,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1979 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $20<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $20<br /><strong>Minimum Valuation (m):</strong> $20<br /><strong>Maximum Valuation (m):</strong> $20<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $107</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1980,
+"Transaction Volume (m)":             14,
+"Transactions":              2,
+"Minimum Valuation (m)":              2,
+"Mean Valuation (m)":              7,
+"Max Valuation (m)":             12,
+"Cumulative Transaction Volume (m)":        121.173,
+"Transaction Volume as Share of Historic Volume":         11.554,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1980 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $14<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $7<br /><strong>Minimum Valuation (m):</strong> $12<br /><strong>Maximum Valuation (m):</strong> $2<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $121</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1981,
+"Transaction Volume (m)":             30,
+"Transactions":              1,
+"Minimum Valuation (m)":             30,
+"Mean Valuation (m)":             30,
+"Max Valuation (m)":             30,
+"Cumulative Transaction Volume (m)":        369.649,
+"Transaction Volume as Share of Historic Volume":          8.116,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1981 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $30<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $30<br /><strong>Minimum Valuation (m):</strong> $30<br /><strong>Maximum Valuation (m):</strong> $30<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $370</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1981,
+"Transaction Volume (m)":             25,
+"Transactions":              2,
+"Minimum Valuation (m)":             12,
+"Mean Valuation (m)":           12.5,
+"Max Valuation (m)":             13,
+"Cumulative Transaction Volume (m)":        146.173,
+"Transaction Volume as Share of Historic Volume":         17.103,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1981 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $25<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $12.5<br /><strong>Minimum Valuation (m):</strong> $13<br /><strong>Maximum Valuation (m):</strong> $12<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $146</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1982,
+"Transaction Volume (m)":             40,
+"Transactions":              1,
+"Minimum Valuation (m)":             40,
+"Mean Valuation (m)":             40,
+"Max Valuation (m)":             40,
+"Cumulative Transaction Volume (m)":        409.649,
+"Transaction Volume as Share of Historic Volume":          9.764,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1982 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $40<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $40<br /><strong>Minimum Valuation (m):</strong> $40<br /><strong>Maximum Valuation (m):</strong> $40<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $410</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1982,
+"Transaction Volume (m)":            9.8,
+"Transactions":              1,
+"Minimum Valuation (m)":            9.8,
+"Mean Valuation (m)":            9.8,
+"Max Valuation (m)":            9.8,
+"Cumulative Transaction Volume (m)":        155.973,
+"Transaction Volume as Share of Historic Volume":          6.283,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1982 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $9.8<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $9.8<br /><strong>Minimum Valuation (m):</strong> $9.8<br /><strong>Maximum Valuation (m):</strong> $9.8<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $156</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1983,
+"Transaction Volume (m)":           79.5,
+"Transactions":              5,
+"Minimum Valuation (m)":           10.5,
+"Mean Valuation (m)":           15.9,
+"Max Valuation (m)":             21,
+"Cumulative Transaction Volume (m)":        235.473,
+"Transaction Volume as Share of Historic Volume":         33.762,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1983 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $79.5<br /><strong>Transactions:</strong> 5<br /><strong>Mean Valuation (m):</strong> $15.9<br /><strong>Minimum Valuation (m):</strong> $21<br /><strong>Maximum Valuation (m):</strong> $10.5<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $235</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1984,
+"Transaction Volume (m)":        235.865,
+"Transactions":              3,
+"Minimum Valuation (m)":           70.5,
+"Mean Valuation (m)":         78.622,
+"Max Valuation (m)":             86,
+"Cumulative Transaction Volume (m)":        645.514,
+"Transaction Volume as Share of Historic Volume":         36.539,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1984 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $236<br /><strong>Transactions:</strong> 3<br /><strong>Mean Valuation (m):</strong> $78.6<br /><strong>Minimum Valuation (m):</strong> $86<br /><strong>Maximum Valuation (m):</strong> $70.5<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $646</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1985,
+"Transaction Volume (m)":        194.548,
+"Transactions":              3,
+"Minimum Valuation (m)":         54.348,
+"Mean Valuation (m)":         64.849,
+"Max Valuation (m)":           70.2,
+"Cumulative Transaction Volume (m)":        840.062,
+"Transaction Volume as Share of Historic Volume":         23.159,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1985 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $195<br /><strong>Transactions:</strong> 3<br /><strong>Mean Valuation (m):</strong> $64.8<br /><strong>Minimum Valuation (m):</strong> $70.2<br /><strong>Maximum Valuation (m):</strong> $54.3<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $840</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1985,
+"Transaction Volume (m)":           56.2,
+"Transactions":              4,
+"Minimum Valuation (m)":              8,
+"Mean Valuation (m)":          14.05,
+"Max Valuation (m)":             20,
+"Cumulative Transaction Volume (m)":        291.673,
+"Transaction Volume as Share of Historic Volume":         19.268,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1985 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $56.2<br /><strong>Transactions:</strong> 4<br /><strong>Mean Valuation (m):</strong> $14.1<br /><strong>Minimum Valuation (m):</strong> $20<br /><strong>Maximum Valuation (m):</strong> $8<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $292</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1986,
+"Transaction Volume (m)":            134,
+"Transactions":              2,
+"Minimum Valuation (m)":             14,
+"Mean Valuation (m)":             67,
+"Max Valuation (m)":            120,
+"Cumulative Transaction Volume (m)":        425.673,
+"Transaction Volume as Share of Historic Volume":          31.48,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1986 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $134<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $67<br /><strong>Minimum Valuation (m):</strong> $120<br /><strong>Maximum Valuation (m):</strong> $14<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $426</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1987,
+"Transaction Volume (m)":           44.5,
+"Transactions":              1,
+"Minimum Valuation (m)":           44.5,
+"Mean Valuation (m)":           44.5,
+"Max Valuation (m)":           44.5,
+"Cumulative Transaction Volume (m)":        470.173,
+"Transaction Volume as Share of Historic Volume":          9.465,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1987 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $44.5<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $44.5<br /><strong>Minimum Valuation (m):</strong> $44.5<br /><strong>Maximum Valuation (m):</strong> $44.5<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $470</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1988,
+"Transaction Volume (m)":        614.007,
+"Transactions":              4,
+"Minimum Valuation (m)":         71.429,
+"Mean Valuation (m)":        153.502,
+"Max Valuation (m)":        269.245,
+"Cumulative Transaction Volume (m)":       1454.069,
+"Transaction Volume as Share of Historic Volume":         42.227,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1988 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $614<br /><strong>Transactions:</strong> 4<br /><strong>Mean Valuation (m):</strong> $154<br /><strong>Minimum Valuation (m):</strong> $269<br /><strong>Maximum Valuation (m):</strong> $71.4<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $1,454</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1988,
+"Transaction Volume (m)":          102.5,
+"Transactions":              2,
+"Minimum Valuation (m)":           32.5,
+"Mean Valuation (m)":          51.25,
+"Max Valuation (m)":             70,
+"Cumulative Transaction Volume (m)":        572.673,
+"Transaction Volume as Share of Historic Volume":         17.899,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1988 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $102<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $51.2<br /><strong>Minimum Valuation (m):</strong> $70<br /><strong>Maximum Valuation (m):</strong> $32.5<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $573</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1989,
+"Transaction Volume (m)":            175,
+"Transactions":              5,
+"Minimum Valuation (m)":           32.5,
+"Mean Valuation (m)":             35,
+"Max Valuation (m)":             45,
+"Cumulative Transaction Volume (m)":        747.673,
+"Transaction Volume as Share of Historic Volume":         23.406,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1989 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $175<br /><strong>Transactions:</strong> 5<br /><strong>Mean Valuation (m):</strong> $35<br /><strong>Minimum Valuation (m):</strong> $45<br /><strong>Maximum Valuation (m):</strong> $32.5<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $748</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1991,
+"Transaction Volume (m)":        251.961,
+"Transactions":              2,
+"Minimum Valuation (m)":        101.961,
+"Mean Valuation (m)":         125.98,
+"Max Valuation (m)":            150,
+"Cumulative Transaction Volume (m)":        1706.03,
+"Transaction Volume as Share of Historic Volume":         14.769,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1991 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $252<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $126<br /><strong>Minimum Valuation (m):</strong> $150<br /><strong>Maximum Valuation (m):</strong> $102<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $1,706</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1991,
+"Transaction Volume (m)":             85,
+"Transactions":              1,
+"Minimum Valuation (m)":             85,
+"Mean Valuation (m)":             85,
+"Max Valuation (m)":             85,
+"Cumulative Transaction Volume (m)":        832.673,
+"Transaction Volume as Share of Historic Volume":         10.208,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1991 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $85<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $85<br /><strong>Minimum Valuation (m):</strong> $85<br /><strong>Maximum Valuation (m):</strong> $85<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $833</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1992,
+"Transaction Volume (m)":             91,
+"Transactions":              2,
+"Minimum Valuation (m)":             21,
+"Mean Valuation (m)":           45.5,
+"Max Valuation (m)":             70,
+"Cumulative Transaction Volume (m)":        923.673,
+"Transaction Volume as Share of Historic Volume":          9.852,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1992 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $91<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $45.5<br /><strong>Minimum Valuation (m):</strong> $70<br /><strong>Maximum Valuation (m):</strong> $21<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $924</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1993,
+"Transaction Volume (m)":            280,
+"Transactions":              2,
+"Minimum Valuation (m)":            140,
+"Mean Valuation (m)":            140,
+"Max Valuation (m)":            140,
+"Cumulative Transaction Volume (m)":        1986.03,
+"Transaction Volume as Share of Historic Volume":         14.098,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1993 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $280<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $140<br /><strong>Minimum Valuation (m):</strong> $140<br /><strong>Maximum Valuation (m):</strong> $140<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $1,986</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1993,
+"Transaction Volume (m)":            160,
+"Transactions":              2,
+"Minimum Valuation (m)":             75,
+"Mean Valuation (m)":             80,
+"Max Valuation (m)":             85,
+"Cumulative Transaction Volume (m)":       1083.673,
+"Transaction Volume as Share of Historic Volume":         14.765,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1993 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $160<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $80<br /><strong>Minimum Valuation (m):</strong> $85<br /><strong>Maximum Valuation (m):</strong> $75<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $1,084</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1994,
+"Transaction Volume (m)":        486.235,
+"Transactions":              3,
+"Minimum Valuation (m)":        143.235,
+"Mean Valuation (m)":        162.078,
+"Max Valuation (m)":            185,
+"Cumulative Transaction Volume (m)":       2472.266,
+"Transaction Volume as Share of Historic Volume":         19.668,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1994 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $486<br /><strong>Transactions:</strong> 3<br /><strong>Mean Valuation (m):</strong> $162<br /><strong>Minimum Valuation (m):</strong> $185<br /><strong>Maximum Valuation (m):</strong> $143<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $2,472</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1994,
+"Transaction Volume (m)":           1195,
+"Transactions":              2,
+"Minimum Valuation (m)":             95,
+"Mean Valuation (m)":          597.5,
+"Max Valuation (m)":           1100,
+"Cumulative Transaction Volume (m)":       2278.673,
+"Transaction Volume as Share of Historic Volume":         52.443,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1994 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $1,195<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $598<br /><strong>Minimum Valuation (m):</strong> $1,100<br /><strong>Maximum Valuation (m):</strong> $95<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $2,279</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1995,
+"Transaction Volume (m)":            392,
+"Transactions":              2,
+"Minimum Valuation (m)":            192,
+"Mean Valuation (m)":            196,
+"Max Valuation (m)":            200,
+"Cumulative Transaction Volume (m)":       2864.266,
+"Transaction Volume as Share of Historic Volume":         13.686,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1995 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $392<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $196<br /><strong>Minimum Valuation (m):</strong> $200<br /><strong>Maximum Valuation (m):</strong> $192<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $2,864</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1995,
+"Transaction Volume (m)":            157,
+"Transactions":              2,
+"Minimum Valuation (m)":             68,
+"Mean Valuation (m)":           78.5,
+"Max Valuation (m)":             89,
+"Cumulative Transaction Volume (m)":       2435.673,
+"Transaction Volume as Share of Historic Volume":          6.446,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1995 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $157<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $78.5<br /><strong>Minimum Valuation (m):</strong> $89<br /><strong>Maximum Valuation (m):</strong> $68<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $2,436</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1996,
+"Transaction Volume (m)":        839.177,
+"Transactions":              6,
+"Minimum Valuation (m)":            125,
+"Mean Valuation (m)":        139.863,
+"Max Valuation (m)":        167.089,
+"Cumulative Transaction Volume (m)":        3274.85,
+"Transaction Volume as Share of Historic Volume":         25.625,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1996 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $839<br /><strong>Transactions:</strong> 6<br /><strong>Mean Valuation (m):</strong> $140<br /><strong>Minimum Valuation (m):</strong> $167<br /><strong>Maximum Valuation (m):</strong> $125<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $3,275</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1997,
+"Transaction Volume (m)":        555.556,
+"Transactions":              2,
+"Minimum Valuation (m)":            200,
+"Mean Valuation (m)":        277.778,
+"Max Valuation (m)":        355.556,
+"Cumulative Transaction Volume (m)":       3419.821,
+"Transaction Volume as Share of Historic Volume":         16.245,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1997 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $556<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $278<br /><strong>Minimum Valuation (m):</strong> $356<br /><strong>Maximum Valuation (m):</strong> $200<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $3,420</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1997,
+"Transaction Volume (m)":            300,
+"Transactions":              1,
+"Minimum Valuation (m)":            300,
+"Mean Valuation (m)":            300,
+"Max Valuation (m)":            300,
+"Cumulative Transaction Volume (m)":        3574.85,
+"Transaction Volume as Share of Historic Volume":          8.392,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1997 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $300<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $300<br /><strong>Minimum Valuation (m):</strong> $300<br /><strong>Maximum Valuation (m):</strong> $300<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $3,575</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1998,
+"Transaction Volume (m)":        890.583,
+"Transactions":              3,
+"Minimum Valuation (m)":            200,
+"Mean Valuation (m)":        296.861,
+"Max Valuation (m)":            476,
+"Cumulative Transaction Volume (m)":       4310.404,
+"Transaction Volume as Share of Historic Volume":         20.661,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1998 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $891<br /><strong>Transactions:</strong> 3<br /><strong>Mean Valuation (m):</strong> $297<br /><strong>Minimum Valuation (m):</strong> $476<br /><strong>Maximum Valuation (m):</strong> $200<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $4,310</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1998,
+"Transaction Volume (m)":            706,
+"Transactions":              3,
+"Minimum Valuation (m)":            150,
+"Mean Valuation (m)":        235.333,
+"Max Valuation (m)":            400,
+"Cumulative Transaction Volume (m)":        4280.85,
+"Transaction Volume as Share of Historic Volume":         16.492,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1998 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $706<br /><strong>Transactions:</strong> 3<br /><strong>Mean Valuation (m):</strong> $235<br /><strong>Minimum Valuation (m):</strong> $400<br /><strong>Maximum Valuation (m):</strong> $150<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $4,281</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 1999,
+"Transaction Volume (m)":       2061.224,
+"Transactions":              3,
+"Minimum Valuation (m)":        561.225,
+"Mean Valuation (m)":        687.075,
+"Max Valuation (m)":            800,
+"Cumulative Transaction Volume (m)":       6371.629,
+"Transaction Volume as Share of Historic Volume":          32.35,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1999 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $2,061<br /><strong>Transactions:</strong> 3<br /><strong>Mean Valuation (m):</strong> $687<br /><strong>Minimum Valuation (m):</strong> $800<br /><strong>Maximum Valuation (m):</strong> $561<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $6,372</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 1999,
+"Transaction Volume (m)":            200,
+"Transactions":              1,
+"Minimum Valuation (m)":            200,
+"Mean Valuation (m)":            200,
+"Max Valuation (m)":            200,
+"Cumulative Transaction Volume (m)":        4480.85,
+"Transaction Volume as Share of Historic Volume":          4.463,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>1999 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $200<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $200<br /><strong>Minimum Valuation (m):</strong> $200<br /><strong>Maximum Valuation (m):</strong> $200<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $4,481</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 2000,
+"Transaction Volume (m)":            635,
+"Transactions":              1,
+"Minimum Valuation (m)":            635,
+"Mean Valuation (m)":            635,
+"Max Valuation (m)":            635,
+"Cumulative Transaction Volume (m)":       7006.629,
+"Transaction Volume as Share of Historic Volume":          9.063,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2000 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $635<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $635<br /><strong>Minimum Valuation (m):</strong> $635<br /><strong>Maximum Valuation (m):</strong> $635<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $7,007</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 2000,
+"Transaction Volume (m)":            647,
+"Transactions":              3,
+"Minimum Valuation (m)":            160,
+"Mean Valuation (m)":        215.667,
+"Max Valuation (m)":            285,
+"Cumulative Transaction Volume (m)":        5127.85,
+"Transaction Volume as Share of Historic Volume":         12.617,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2000 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $647<br /><strong>Transactions:</strong> 3<br /><strong>Mean Valuation (m):</strong> $216<br /><strong>Minimum Valuation (m):</strong> $285<br /><strong>Maximum Valuation (m):</strong> $160<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $5,128</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 2001,
+"Transaction Volume (m)":            545,
+"Transactions":              1,
+"Minimum Valuation (m)":            545,
+"Mean Valuation (m)":            545,
+"Max Valuation (m)":            545,
+"Cumulative Transaction Volume (m)":       7551.629,
+"Transaction Volume as Share of Historic Volume":          7.217,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2001 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $545<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $545<br /><strong>Minimum Valuation (m):</strong> $545<br /><strong>Maximum Valuation (m):</strong> $545<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $7,552</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 2001,
+"Transaction Volume (m)":            200,
+"Transactions":              1,
+"Minimum Valuation (m)":            200,
+"Mean Valuation (m)":            200,
+"Max Valuation (m)":            200,
+"Cumulative Transaction Volume (m)":        5327.85,
+"Transaction Volume as Share of Historic Volume":          3.754,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2001 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $200<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $200<br /><strong>Minimum Valuation (m):</strong> $200<br /><strong>Maximum Valuation (m):</strong> $200<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $5,328</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 2002,
+"Transaction Volume (m)":            540,
+"Transactions":              1,
+"Minimum Valuation (m)":            540,
+"Mean Valuation (m)":            540,
+"Max Valuation (m)":            540,
+"Cumulative Transaction Volume (m)":       8091.629,
+"Transaction Volume as Share of Historic Volume":          6.674,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2002 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $540<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $540<br /><strong>Minimum Valuation (m):</strong> $540<br /><strong>Maximum Valuation (m):</strong> $540<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $8,092</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 2002,
+"Transaction Volume (m)":            360,
+"Transactions":              1,
+"Minimum Valuation (m)":            360,
+"Mean Valuation (m)":            360,
+"Max Valuation (m)":            360,
+"Cumulative Transaction Volume (m)":        5687.85,
+"Transaction Volume as Share of Historic Volume":          6.329,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2002 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $360<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $360<br /><strong>Minimum Valuation (m):</strong> $360<br /><strong>Maximum Valuation (m):</strong> $360<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $5,688</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 2003,
+"Transaction Volume (m)":           1000,
+"Transactions":              1,
+"Minimum Valuation (m)":           1000,
+"Mean Valuation (m)":           1000,
+"Max Valuation (m)":           1000,
+"Cumulative Transaction Volume (m)":       9091.629,
+"Transaction Volume as Share of Historic Volume":         10.999,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2003 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $1,000<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $1,000<br /><strong>Minimum Valuation (m):</strong> $1,000<br /><strong>Maximum Valuation (m):</strong> $1,000<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $9,092</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 2003,
+"Transaction Volume (m)":            300,
+"Transactions":              1,
+"Minimum Valuation (m)":            300,
+"Mean Valuation (m)":            300,
+"Max Valuation (m)":            300,
+"Cumulative Transaction Volume (m)":        5987.85,
+"Transaction Volume as Share of Historic Volume":           5.01,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2003 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $300<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $300<br /><strong>Minimum Valuation (m):</strong> $300<br /><strong>Maximum Valuation (m):</strong> $300<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $5,988</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 2004,
+"Transaction Volume (m)":        637.255,
+"Transactions":              1,
+"Minimum Valuation (m)":        637.255,
+"Mean Valuation (m)":        637.255,
+"Max Valuation (m)":        637.255,
+"Cumulative Transaction Volume (m)":       9728.884,
+"Transaction Volume as Share of Historic Volume":           6.55,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2004 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $637<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $637<br /><strong>Minimum Valuation (m):</strong> $637<br /><strong>Maximum Valuation (m):</strong> $637<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $9,729</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 2004,
+"Transaction Volume (m)":            909,
+"Transactions":              3,
+"Minimum Valuation (m)":            208,
+"Mean Valuation (m)":            303,
+"Max Valuation (m)":            401,
+"Cumulative Transaction Volume (m)":        6896.85,
+"Transaction Volume as Share of Historic Volume":          13.18,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2004 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $909<br /><strong>Transactions:</strong> 3<br /><strong>Mean Valuation (m):</strong> $303<br /><strong>Minimum Valuation (m):</strong> $401<br /><strong>Maximum Valuation (m):</strong> $208<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $6,897</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 2005,
+"Transaction Volume (m)":            600,
+"Transactions":              1,
+"Minimum Valuation (m)":            600,
+"Mean Valuation (m)":            600,
+"Max Valuation (m)":            600,
+"Cumulative Transaction Volume (m)":      10328.884,
+"Transaction Volume as Share of Historic Volume":          5.809,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2005 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $600<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $600<br /><strong>Minimum Valuation (m):</strong> $600<br /><strong>Maximum Valuation (m):</strong> $600<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $10,329</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 2005,
+"Transaction Volume (m)":            375,
+"Transactions":              1,
+"Minimum Valuation (m)":            375,
+"Mean Valuation (m)":            375,
+"Max Valuation (m)":            375,
+"Cumulative Transaction Volume (m)":        7271.85,
+"Transaction Volume as Share of Historic Volume":          5.157,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2005 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $375<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $375<br /><strong>Minimum Valuation (m):</strong> $375<br /><strong>Maximum Valuation (m):</strong> $375<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $7,272</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 2006,
+"Transaction Volume (m)":            350,
+"Transactions":              1,
+"Minimum Valuation (m)":            350,
+"Mean Valuation (m)":            350,
+"Max Valuation (m)":            350,
+"Cumulative Transaction Volume (m)":        7621.85,
+"Transaction Volume as Share of Historic Volume":          4.592,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2006 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $350<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $350<br /><strong>Minimum Valuation (m):</strong> $350<br /><strong>Maximum Valuation (m):</strong> $350<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $7,622</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 2007,
+"Transaction Volume (m)":            248,
+"Transactions":              1,
+"Minimum Valuation (m)":            248,
+"Mean Valuation (m)":            248,
+"Max Valuation (m)":            248,
+"Cumulative Transaction Volume (m)":        7869.85,
+"Transaction Volume as Share of Historic Volume":          3.151,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2007 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $248<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $248<br /><strong>Minimum Valuation (m):</strong> $248<br /><strong>Maximum Valuation (m):</strong> $248<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $7,870</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 2008,
+"Transaction Volume (m)":            550,
+"Transactions":              1,
+"Minimum Valuation (m)":            550,
+"Mean Valuation (m)":            550,
+"Max Valuation (m)":            550,
+"Cumulative Transaction Volume (m)":      10878.884,
+"Transaction Volume as Share of Historic Volume":          5.056,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2008 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $550<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $550<br /><strong>Minimum Valuation (m):</strong> $550<br /><strong>Maximum Valuation (m):</strong> $550<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $10,879</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 2009,
+"Transaction Volume (m)":           1940,
+"Transactions":              2,
+"Minimum Valuation (m)":            840,
+"Mean Valuation (m)":            970,
+"Max Valuation (m)":           1100,
+"Cumulative Transaction Volume (m)":      12818.884,
+"Transaction Volume as Share of Historic Volume":         15.134,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2009 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $1,940<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $970<br /><strong>Minimum Valuation (m):</strong> $1,100<br /><strong>Maximum Valuation (m):</strong> $840<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $12,819</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 2010,
+"Transaction Volume (m)":            753,
+"Transactions":              1,
+"Minimum Valuation (m)":            753,
+"Mean Valuation (m)":            753,
+"Max Valuation (m)":            753,
+"Cumulative Transaction Volume (m)":      13571.884,
+"Transaction Volume as Share of Historic Volume":          5.548,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2010 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $753<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $753<br /><strong>Minimum Valuation (m):</strong> $753<br /><strong>Maximum Valuation (m):</strong> $753<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $13,572</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 2010,
+"Transaction Volume (m)":           1836,
+"Transactions":              5,
+"Minimum Valuation (m)":            261,
+"Mean Valuation (m)":          367.2,
+"Max Valuation (m)":            550,
+"Cumulative Transaction Volume (m)":        9705.85,
+"Transaction Volume as Share of Historic Volume":         18.916,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2010 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $1,836<br /><strong>Transactions:</strong> 5<br /><strong>Mean Valuation (m):</strong> $367<br /><strong>Minimum Valuation (m):</strong> $550<br /><strong>Maximum Valuation (m):</strong> $261<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $9,706</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 2011,
+"Transaction Volume (m)":            710,
+"Transactions":              1,
+"Minimum Valuation (m)":            710,
+"Mean Valuation (m)":            710,
+"Max Valuation (m)":            710,
+"Cumulative Transaction Volume (m)":      14281.884,
+"Transaction Volume as Share of Historic Volume":          4.971,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2011 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $710<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $710<br /><strong>Minimum Valuation (m):</strong> $710<br /><strong>Maximum Valuation (m):</strong> $710<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $14,282</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 2011,
+"Transaction Volume (m)":            680,
+"Transactions":              2,
+"Minimum Valuation (m)":            280,
+"Mean Valuation (m)":            340,
+"Max Valuation (m)":            400,
+"Cumulative Transaction Volume (m)":       10385.85,
+"Transaction Volume as Share of Historic Volume":          6.547,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2011 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $680<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $340<br /><strong>Minimum Valuation (m):</strong> $400<br /><strong>Maximum Valuation (m):</strong> $280<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $10,386</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 2012,
+"Transaction Volume (m)":           1000,
+"Transactions":              1,
+"Minimum Valuation (m)":           1000,
+"Mean Valuation (m)":           1000,
+"Max Valuation (m)":           1000,
+"Cumulative Transaction Volume (m)":      15281.884,
+"Transaction Volume as Share of Historic Volume":          6.544,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2012 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $1,000<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $1,000<br /><strong>Minimum Valuation (m):</strong> $1,000<br /><strong>Maximum Valuation (m):</strong> $1,000<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $15,282</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 2012,
+"Transaction Volume (m)":       2374.751,
+"Transactions":              3,
+"Minimum Valuation (m)":            338,
+"Mean Valuation (m)":        791.584,
+"Max Valuation (m)":       1659.751,
+"Cumulative Transaction Volume (m)":      12760.601,
+"Transaction Volume as Share of Historic Volume":          18.61,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2012 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $2,375<br /><strong>Transactions:</strong> 3<br /><strong>Mean Valuation (m):</strong> $792<br /><strong>Minimum Valuation (m):</strong> $1,660<br /><strong>Maximum Valuation (m):</strong> $338<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $12,761</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 2013,
+"Transaction Volume (m)":           1100,
+"Transactions":              1,
+"Minimum Valuation (m)":           1100,
+"Mean Valuation (m)":           1100,
+"Max Valuation (m)":           1100,
+"Cumulative Transaction Volume (m)":      16381.884,
+"Transaction Volume as Share of Historic Volume":          6.715,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2013 NFL Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $1,100<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $1,100<br /><strong>Minimum Valuation (m):</strong> $1,100<br /><strong>Maximum Valuation (m):</strong> $1,100<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $16,382</span></span></td></tr></tbody></table></html>",
+"league": "NFL" 
+},
+{
+ "year": 2013,
+"Transaction Volume (m)":            534,
+"Transactions":              1,
+"Minimum Valuation (m)":            534,
+"Mean Valuation (m)":            534,
+"Max Valuation (m)":            534,
+"Cumulative Transaction Volume (m)":      13294.601,
+"Transaction Volume as Share of Historic Volume":          4.017,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2013 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $534<br /><strong>Transactions:</strong> 1<br /><strong>Mean Valuation (m):</strong> $534<br /><strong>Minimum Valuation (m):</strong> $534<br /><strong>Maximum Valuation (m):</strong> $534<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $13,295</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+},
+{
+ "year": 2014,
+"Transaction Volume (m)":           2550,
+"Transactions":              2,
+"Minimum Valuation (m)":            550,
+"Mean Valuation (m)":           1275,
+"Max Valuation (m)":           2000,
+"Cumulative Transaction Volume (m)":      15844.601,
+"Transaction Volume as Share of Historic Volume":         16.094,
+"detail": "<html><table border='2' cellpadding='1' style='line-height:1.1'><tbody><tr><th colspan='15'><span style='font-family:times new roman,times,serif;'><span style='font-size:14px;'>2014 NBA Franchise Sale Analysis</span></span></th></tr><tr><td style='text-align: center;'><img src='http://www.scuygo.com/images/nba.png' height='180' width='135'><td style='text-align: center;'><span style='font-family:times new roman,times,serif;'><span style='font-size:10px;'><strong>Transaction Transaction Volume (m) (m):</strong> $2,550<br /><strong>Transactions:</strong> 2<br /><strong>Mean Valuation (m):</strong> $1,275<br /><strong>Minimum Valuation (m):</strong> $2,000<br /><strong>Maximum Valuation (m):</strong> $550<br /><strong>Cumulative Sales Transaction Volume (m) (m):</strong> $15,845</span></span></td></tr></tbody></table></html>",
+"league": "NBA" 
+} 
+]
+  $scope.controls = {
+ "y": {
+ "name": "y",
+"value": "home_occupancy_percentage",
+"values": [ "Transaction Volume (m)", "Transactions", "Minimum Valuation (m)", "Mean Valuation (m)", "Max Valuation (m)", "Cumulative Transaction Volume (m)", "Transaction Volume as Share of Historic Volume"],
+"label": "Select  y :" 
+} 
+} 
+  $scope.filters = []
+  
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  
+  $scope.$watch('selected', function(){
+    var keys = _.pluck($scope.selected, "variable")
+    var values = _.pluck($scope.selected, "value")
+    $scope.opts.selected = _.zipObject(keys, values)
+  }) 
+  
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+	}, true)
+}  
+
+function drawChart(opts, data){ 
+  if (Object.keys(opts.selected).length > 0){
+    data = _.filter(data, opts.selected)
+  }
+  
+  if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+    var data = d3.nest()
+      .key(function(d){
+        //return opts.group === undefined ? 'main' : d[opts.group]
+        //instead of main would think a better default is opts.x
+       return opts.group === undefined ? opts.y : d[opts.group];
+      }).entries(data);
+  }
+      
+  if (opts.disabled != undefined){
+    data.map(function(d, i){
+      d.disabled = opts.disabled[i]
+    })
+  }
+	
+	nv.addGraph(function() {
+		var chart = nv.models[opts.type]()
+			.x(function(d) { return d[opts.x] })
+			.y(function(d) { return d[opts.y] })
+			.width(opts.width)
+			.height(opts.height)
+		
+	chart
+  .color([ "#000000", "#ce0018" ])
+  .tooltipContent( function(key, x, y, e){
+	return '<p>' + e.point.detail + '</p>' 
+	'<p><b>'+ 'yAxis: '+ '</b>' + y +'</p>'
+				 } )
+          
+	
+
+	
+	
+	 .margin({
+ "left":     100,
+"top":     50,
+"right":     20,
+"bottom":     40 
+})      
+     chart.yAxis
+  .tickFormat(function(d) {return d3.format(',2f')(d)})
+  .width(    60)
+ .axisLabel( opts.y )
+
+	d3.select("#" + opts.id + ' svg')
+  // .empty()
+		.datum(data)
+		.transition().duration(300)
+		.call(chart);
+	
+	 nv.utils.windowResize(chart.update);
+	 return chart;
+  });
+};
+</script>
+<center><div style="display:table;width:320px;height:10px;font-size:12px" class='gray'>
+  <a href="http://twitter.com/abresler" target="_blank"><strong>Visualized and Analyzed by Alex Bresler</strong></a><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</html>

@@ -1,0 +1,788 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<title>Clippers vs Nets Valuation Comps</title>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://aragorn.org/scripts/nv.d3.css'>
+    <link rel='stylesheet' href='http://aragorn.org/scripts/rNVD3.css'>
+    
+    <script src='http://aragorn.org/scripts/jquery-1.8.2.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/nv.d3.min-new.js' type='text/javascript'></script>
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 700px;
+      height: 475px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+    <script>
+  var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+          <!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+<style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>  
+    <meta name="description" content="Historical Financial Comparison of the Nets vs Clippers Since 1992" />
+<link rel="canonical" href="http://aragorn.org/visualization/business_of_sports/nba/nets_clippers_comp" />
+<meta property="og:description" content="Historical Financial Comparison of the Nets vs Clippers Since 1992" />
+<meta property="og:image" content="http://aragorn.org/visualization/business_of_sports/north_american_stadiums/2014_landscape/screen.png" />
+<meta property="og:site_name" content="Aragorn" />
+<meta property="og:title" content="http://aragorn.org/visualization/business_of_sports/nba/nets_clippers_comp" />
+<meta property="og:type" content="article" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="http://aragorn.org/visualization/business_of_sports/nba/nets_clippers_comp" />
+        <meta name="twitter:title" content="Historical Financial Comparison of the Nets vs Clippers Since 1992" />
+        <meta name="twitter:description" content="Historical Financial Comparison of the Nets vs Clippers Since 1992" />
+        <meta name="twitter:image" content="http://aragorn.org/visualization/business_of_sports/north_american_stadiums/2014_landscape/screen.png" />
+        <meta name="twitter:site" content="Aragorn" />
+  <center>
+    <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 850px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: 0.25px"><strong><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png" height="90" width="97" alt="nets"> vs <img src="http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png" height="90" width="97" alt="nets"> Valuation Comparables, 1992 to 2014<br><small><font color = 'black'>Data Collected from <a href="http://http://en.wikipedia.org/wiki/Financial_World/" target="_blank">Financial World Magazine</a> [1992-1998] and <a href="http://www.forbes.com/nba-valuations/" target="_blank">Forbes</a> [1998-2014]</font></small></div></center>
+  <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='col-md-3'>
+      <form class='well'>
+        <label><b>Select  yVariable:</b></label>
+    		<select class='form-control' ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+    		</select><br>
+              </form>
+    </div>
+    <div class='col-md-8'>
+      <div class="bs-docs-example">
+        <div id='chart3e354802ea5' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart3e354802ea5",
+"width":    700,
+"height":    475,
+"x": "date",
+"y": "Valuation (Estimated in Millions)",
+"group": "name",
+"type": "lineWithFocusChart",
+"id": "chart3e354802ea5" 
+}
+  $scope.data = [
+ {
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 1991,
+"Team Valuation Rank": 22,
+"Valuation (Estimated in Millions)":           42.9,
+"Change in Values (pct)": null,
+"Revenue (estimated millions)": null,
+"EBITDA": null,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)": null,
+"date":           8034,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 1991-12-31<br>Valuation (estimate millions): 42.9<br>Valuation Rank: 22<br>Valuation Change (percent): NA<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): NA<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): NA<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 1991,
+"Team Valuation Rank": 23,
+"Valuation (Estimated in Millions)":           42.6,
+"Change in Values (pct)": null,
+"Revenue (estimated millions)": null,
+"EBITDA": null,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)": null,
+"date":           8034,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 1991-12-31<br>Valuation (estimate millions): 42.6<br>Valuation Rank: 23<br>Valuation Change (percent): NA<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): NA<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): NA<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 1992,
+"Team Valuation Rank": 21,
+"Valuation (Estimated in Millions)":             54,
+"Change in Values (pct)": null,
+"Revenue (estimated millions)": null,
+"EBITDA": null,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)": null,
+"date":           8400,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 1992-12-31<br>Valuation (estimate millions): 54<br>Valuation Rank: 21<br>Valuation Change (percent): NA<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): NA<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): NA<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 1992,
+"Team Valuation Rank": 22,
+"Valuation (Estimated in Millions)":             54,
+"Change in Values (pct)": null,
+"Revenue (estimated millions)": null,
+"EBITDA": null,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)": null,
+"date":           8400,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 1992-12-31<br>Valuation (estimate millions): 54<br>Valuation Rank: 22<br>Valuation Change (percent): NA<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): NA<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): NA<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 1994,
+"Team Valuation Rank": 18,
+"Valuation (Estimated in Millions)":             83,
+"Change in Values (pct)": null,
+"Revenue (estimated millions)": null,
+"EBITDA": null,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)": null,
+"date":           9130,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 1994-12-31<br>Valuation (estimate millions): 83<br>Valuation Rank: 18<br>Valuation Change (percent): NA<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): NA<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): NA<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 1994,
+"Team Valuation Rank": 21,
+"Valuation (Estimated in Millions)":             79,
+"Change in Values (pct)": null,
+"Revenue (estimated millions)": null,
+"EBITDA": null,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)": null,
+"date":           9130,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 1994-12-31<br>Valuation (estimate millions): 79<br>Valuation Rank: 21<br>Valuation Change (percent): NA<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): NA<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): NA<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 1995,
+"Team Valuation Rank": 22,
+"Valuation (Estimated in Millions)":             87,
+"Change in Values (pct)": null,
+"Revenue (estimated millions)": null,
+"EBITDA": null,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)": null,
+"date":           9495,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 1995-12-31<br>Valuation (estimate millions): 87<br>Valuation Rank: 22<br>Valuation Change (percent): NA<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): NA<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): NA<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 1995,
+"Team Valuation Rank": 19,
+"Valuation (Estimated in Millions)":             92,
+"Change in Values (pct)": null,
+"Revenue (estimated millions)": null,
+"EBITDA": null,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)": null,
+"date":           9495,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 1995-12-31<br>Valuation (estimate millions): 92<br>Valuation Rank: 19<br>Valuation Change (percent): NA<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): NA<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): NA<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 1996,
+"Team Valuation Rank": 27,
+"Valuation (Estimated in Millions)":             88,
+"Change in Values (pct)": null,
+"Revenue (estimated millions)": null,
+"EBITDA": null,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)": null,
+"date":           9861,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 1996-12-31<br>Valuation (estimate millions): 88<br>Valuation Rank: 27<br>Valuation Change (percent): NA<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): NA<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): NA<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 1996,
+"Team Valuation Rank": 19,
+"Valuation (Estimated in Millions)":            108,
+"Change in Values (pct)": null,
+"Revenue (estimated millions)": null,
+"EBITDA": null,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)": null,
+"date":           9861,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 1996-12-31<br>Valuation (estimate millions): 108<br>Valuation Rank: 19<br>Valuation Change (percent): NA<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): NA<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): NA<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 1997,
+"Team Valuation Rank": 29,
+"Valuation (Estimated in Millions)":             95,
+"Change in Values (pct)": null,
+"Revenue (estimated millions)": null,
+"EBITDA": null,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)": null,
+"date":          10226,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 1997-12-31<br>Valuation (estimate millions): 95<br>Valuation Rank: 29<br>Valuation Change (percent): NA<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): NA<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): NA<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 1997,
+"Team Valuation Rank": 14,
+"Valuation (Estimated in Millions)":            137,
+"Change in Values (pct)": null,
+"Revenue (estimated millions)": null,
+"EBITDA": null,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)": null,
+"date":          10226,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 1997-12-31<br>Valuation (estimate millions): 137<br>Valuation Rank: 14<br>Valuation Change (percent): NA<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): NA<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): NA<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 1999,
+"Team Valuation Rank": 28,
+"Valuation (Estimated in Millions)":         101.98,
+"Change in Values (pct)": null,
+"Revenue (estimated millions)": null,
+"EBITDA": null,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)": null,
+"date":          10956,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 1999-12-31<br>Valuation (estimate millions): 101.98<br>Valuation Rank: 28<br>Valuation Change (percent): NA<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): NA<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): NA<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 1999,
+"Team Valuation Rank": 14,
+"Valuation (Estimated in Millions)":          156.6,
+"Change in Values (pct)": null,
+"Revenue (estimated millions)": null,
+"EBITDA": null,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)": null,
+"date":          10956,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 1999-12-31<br>Valuation (estimate millions): 156.6<br>Valuation Rank: 14<br>Valuation Change (percent): NA<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): NA<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): NA<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 2000,
+"Team Valuation Rank": 29,
+"Valuation (Estimated in Millions)":            103,
+"Change in Values (pct)":           0.01,
+"Revenue (estimated millions)":             23,
+"EBITDA":          -13.2,
+"Revenue Multiple (estimate)":           4.48,
+"EBITDA Multiple (estimate)":              0,
+"date":          11322,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 2000-12-31<br>Valuation (estimate millions): 103<br>Valuation Rank: 29<br>Valuation Change (percent): 1<br>Revenue (estimated millions) (estimated millions): 23<br>EBITDA (estimated millions): -13.2<br>Revenue (estimated millions) Multiple (estimate): 4.48<br>EBITDA Multiple (estimated): 0<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 2000,
+"Team Valuation Rank": 16,
+"Valuation (Estimated in Millions)":            166,
+"Change in Values (pct)":           0.06,
+"Revenue (estimated millions)":           38.6,
+"EBITDA":           -8.6,
+"Revenue Multiple (estimate)":            4.3,
+"EBITDA Multiple (estimate)":              0,
+"date":          11322,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 2000-12-31<br>Valuation (estimate millions): 166<br>Valuation Rank: 16<br>Valuation Change (percent): 6<br>Revenue (estimated millions) (estimated millions): 38.6<br>EBITDA (estimated millions): -8.6<br>Revenue (estimated millions) Multiple (estimate): 4.3<br>EBITDA Multiple (estimated): 0<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 2001,
+"Team Valuation Rank": 25,
+"Valuation (Estimated in Millions)":            154,
+"Change in Values (pct)":            0.5,
+"Revenue (estimated millions)":           61.8,
+"EBITDA":           11.5,
+"Revenue Multiple (estimate)":           2.49,
+"EBITDA Multiple (estimate)":          13.39,
+"date":          11687,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 2001-12-31<br>Valuation (estimate millions): 154<br>Valuation Rank: 25<br>Valuation Change (percent): 50<br>Revenue (estimated millions) (estimated millions): 61.8<br>EBITDA (estimated millions): 11.5<br>Revenue (estimated millions) Multiple (estimate): 2.49<br>EBITDA Multiple (estimated): 13.39<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 2001,
+"Team Valuation Rank": 18,
+"Valuation (Estimated in Millions)":            179,
+"Change in Values (pct)":           0.08,
+"Revenue (estimated millions)":             78,
+"EBITDA":            8.7,
+"Revenue Multiple (estimate)":           2.29,
+"EBITDA Multiple (estimate)":          20.57,
+"date":          11687,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 2001-12-31<br>Valuation (estimate millions): 179<br>Valuation Rank: 18<br>Valuation Change (percent): 8<br>Revenue (estimated millions) (estimated millions): 78<br>EBITDA (estimated millions): 8.7<br>Revenue (estimated millions) Multiple (estimate): 2.29<br>EBITDA Multiple (estimated): 20.57<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 2002,
+"Team Valuation Rank": 24,
+"Valuation (Estimated in Millions)":            170,
+"Change in Values (pct)":            0.1,
+"Revenue (estimated millions)":             68,
+"EBITDA":           11.5,
+"Revenue Multiple (estimate)":            2.5,
+"EBITDA Multiple (estimate)":          14.78,
+"date":          12052,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 2002-12-31<br>Valuation (estimate millions): 170<br>Valuation Rank: 24<br>Valuation Change (percent): 10<br>Revenue (estimated millions) (estimated millions): 68<br>EBITDA (estimated millions): 11.5<br>Revenue (estimated millions) Multiple (estimate): 2.5<br>EBITDA Multiple (estimated): 14.78<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 2002,
+"Team Valuation Rank": 25,
+"Valuation (Estimated in Millions)":            169,
+"Change in Values (pct)":          -0.06,
+"Revenue (estimated millions)":             73,
+"EBITDA":          -11.3,
+"Revenue Multiple (estimate)":           2.32,
+"EBITDA Multiple (estimate)":              0,
+"date":          12052,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 2002-12-31<br>Valuation (estimate millions): 169<br>Valuation Rank: 25<br>Valuation Change (percent): -6<br>Revenue (estimated millions) (estimated millions): 73<br>EBITDA (estimated millions): -11.3<br>Revenue (estimated millions) Multiple (estimate): 2.32<br>EBITDA Multiple (estimated): 0<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 2003,
+"Team Valuation Rank": 24,
+"Valuation (Estimated in Millions)":            205,
+"Change in Values (pct)":           0.14,
+"Revenue (estimated millions)": null,
+"EBITDA":           16.3,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)":          12.58,
+"date":          12417,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 2003-12-31<br>Valuation (estimate millions): 205<br>Valuation Rank: 24<br>Valuation Change (percent): 14<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): 16.3<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): 12.58<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 2003,
+"Team Valuation Rank": 18,
+"Valuation (Estimated in Millions)":            218,
+"Change in Values (pct)":            0.1,
+"Revenue (estimated millions)": null,
+"EBITDA":            4.5,
+"Revenue Multiple (estimate)": null,
+"EBITDA Multiple (estimate)":          48.44,
+"date":          12417,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 2003-12-31<br>Valuation (estimate millions): 218<br>Valuation Rank: 18<br>Valuation Change (percent): 10<br>Revenue (estimated millions) (estimated millions): NA<br>EBITDA (estimated millions): 4.5<br>Revenue (estimated millions) Multiple (estimate): NA<br>EBITDA Multiple (estimated): 48.44<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 2004,
+"Team Valuation Rank": 24,
+"Valuation (Estimated in Millions)":            208,
+"Change in Values (pct)":           0.01,
+"Revenue (estimated millions)":             72,
+"EBITDA":           15.9,
+"Revenue Multiple (estimate)":           2.89,
+"EBITDA Multiple (estimate)":          13.08,
+"date":          12783,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 2004-12-31<br>Valuation (estimate millions): 208<br>Valuation Rank: 24<br>Valuation Change (percent): 1<br>Revenue (estimated millions) (estimated millions): 72<br>EBITDA (estimated millions): 15.9<br>Revenue (estimated millions) Multiple (estimate): 2.89<br>EBITDA Multiple (estimated): 13.08<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 2004,
+"Team Valuation Rank": 17,
+"Valuation (Estimated in Millions)":            244,
+"Change in Values (pct)":           0.12,
+"Revenue (estimated millions)":             94,
+"EBITDA":           -1.6,
+"Revenue Multiple (estimate)":            2.6,
+"EBITDA Multiple (estimate)":              0,
+"date":          12783,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 2004-12-31<br>Valuation (estimate millions): 244<br>Valuation Rank: 17<br>Valuation Change (percent): 12<br>Revenue (estimated millions) (estimated millions): 94<br>EBITDA (estimated millions): -1.6<br>Revenue (estimated millions) Multiple (estimate): 2.6<br>EBITDA Multiple (estimated): 0<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 2005,
+"Team Valuation Rank": 26,
+"Valuation (Estimated in Millions)":            224,
+"Change in Values (pct)":           0.08,
+"Revenue (estimated millions)":             77,
+"EBITDA":           22.4,
+"Revenue Multiple (estimate)":           2.91,
+"EBITDA Multiple (estimate)":             10,
+"date":          13148,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 2005-12-31<br>Valuation (estimate millions): 224<br>Valuation Rank: 26<br>Valuation Change (percent): 8<br>Revenue (estimated millions) (estimated millions): 77<br>EBITDA (estimated millions): 22.4<br>Revenue (estimated millions) Multiple (estimate): 2.91<br>EBITDA Multiple (estimated): 10<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 2005,
+"Team Valuation Rank": 15,
+"Valuation (Estimated in Millions)":            296,
+"Change in Values (pct)":           0.22,
+"Revenue (estimated millions)":             93,
+"EBITDA":           -7.4,
+"Revenue Multiple (estimate)":           3.18,
+"EBITDA Multiple (estimate)":              0,
+"date":          13148,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 2005-12-31<br>Valuation (estimate millions): 296<br>Valuation Rank: 15<br>Valuation Change (percent): 22<br>Revenue (estimated millions) (estimated millions): 93<br>EBITDA (estimated millions): -7.4<br>Revenue (estimated millions) Multiple (estimate): 3.18<br>EBITDA Multiple (estimated): 0<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 2006,
+"Team Valuation Rank": 22,
+"Valuation (Estimated in Millions)":            285,
+"Change in Values (pct)":           0.15,
+"Revenue (estimated millions)":             95,
+"EBITDA":           15.7,
+"Revenue Multiple (estimate)":              3,
+"EBITDA Multiple (estimate)":          18.15,
+"date":          13513,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 2006-12-31<br>Valuation (estimate millions): 285<br>Valuation Rank: 22<br>Valuation Change (percent): 15<br>Revenue (estimated millions) (estimated millions): 95<br>EBITDA (estimated millions): 15.7<br>Revenue (estimated millions) Multiple (estimate): 3<br>EBITDA Multiple (estimated): 18.15<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 2006,
+"Team Valuation Rank": 16,
+"Valuation (Estimated in Millions)":            325,
+"Change in Values (pct)":            0.2,
+"Revenue (estimated millions)":             93,
+"EBITDA":             -8,
+"Revenue Multiple (estimate)":           3.49,
+"EBITDA Multiple (estimate)":              0,
+"date":          13513,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 2006-12-31<br>Valuation (estimate millions): 325<br>Valuation Rank: 16<br>Valuation Change (percent): 20<br>Revenue (estimated millions) (estimated millions): 93<br>EBITDA (estimated millions): -8<br>Revenue (estimated millions) Multiple (estimate): 3.49<br>EBITDA Multiple (estimated): 0<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 2007,
+"Team Valuation Rank": 24,
+"Valuation (Estimated in Millions)":            294,
+"Change in Values (pct)":           0.03,
+"Revenue (estimated millions)":             98,
+"EBITDA":            9.8,
+"Revenue Multiple (estimate)":              3,
+"EBITDA Multiple (estimate)":             30,
+"date":          13878,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 2007-12-31<br>Valuation (estimate millions): 294<br>Valuation Rank: 24<br>Valuation Change (percent): 3<br>Revenue (estimated millions) (estimated millions): 98<br>EBITDA (estimated millions): 9.8<br>Revenue (estimated millions) Multiple (estimate): 3<br>EBITDA Multiple (estimated): 30<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 2007,
+"Team Valuation Rank": 17,
+"Valuation (Estimated in Millions)":            338,
+"Change in Values (pct)":           0.04,
+"Revenue (estimated millions)":            102,
+"EBITDA":           -1.3,
+"Revenue Multiple (estimate)":           3.31,
+"EBITDA Multiple (estimate)":              0,
+"date":          13878,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 2007-12-31<br>Valuation (estimate millions): 338<br>Valuation Rank: 17<br>Valuation Change (percent): 4<br>Revenue (estimated millions) (estimated millions): 102<br>EBITDA (estimated millions): -1.3<br>Revenue (estimated millions) Multiple (estimate): 3.31<br>EBITDA Multiple (estimated): 0<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 2008,
+"Team Valuation Rank": 25,
+"Valuation (Estimated in Millions)":            297,
+"Change in Values (pct)":           0.01,
+"Revenue (estimated millions)":             99,
+"EBITDA":           10.7,
+"Revenue Multiple (estimate)":              3,
+"EBITDA Multiple (estimate)":          27.76,
+"date":          14244,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 2008-12-31<br>Valuation (estimate millions): 297<br>Valuation Rank: 25<br>Valuation Change (percent): 1<br>Revenue (estimated millions) (estimated millions): 99<br>EBITDA (estimated millions): 10.7<br>Revenue (estimated millions) Multiple (estimate): 3<br>EBITDA Multiple (estimated): 27.76<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 2008,
+"Team Valuation Rank": 26,
+"Valuation (Estimated in Millions)":            295,
+"Change in Values (pct)":          -0.13,
+"Revenue (estimated millions)":             98,
+"EBITDA":           -0.9,
+"Revenue Multiple (estimate)":           3.01,
+"EBITDA Multiple (estimate)":              0,
+"date":          14244,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 2008-12-31<br>Valuation (estimate millions): 295<br>Valuation Rank: 26<br>Valuation Change (percent): -13<br>Revenue (estimated millions) (estimated millions): 98<br>EBITDA (estimated millions): -0.9<br>Revenue (estimated millions) Multiple (estimate): 3.01<br>EBITDA Multiple (estimated): 0<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 2009,
+"Team Valuation Rank": 23,
+"Valuation (Estimated in Millions)":            295,
+"Change in Values (pct)":          -0.01,
+"Revenue (estimated millions)":            102,
+"EBITDA":             10,
+"Revenue Multiple (estimate)":           2.89,
+"EBITDA Multiple (estimate)":           29.5,
+"date":          14609,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 2009-12-31<br>Valuation (estimate millions): 295<br>Valuation Rank: 23<br>Valuation Change (percent): -1<br>Revenue (estimated millions) (estimated millions): 102<br>EBITDA (estimated millions): 10<br>Revenue (estimated millions) Multiple (estimate): 2.89<br>EBITDA Multiple (estimated): 29.5<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 2009,
+"Team Valuation Rank": 26,
+"Valuation (Estimated in Millions)":            269,
+"Change in Values (pct)":          -0.09,
+"Revenue (estimated millions)":             92,
+"EBITDA":          -13.9,
+"Revenue Multiple (estimate)":           2.92,
+"EBITDA Multiple (estimate)":              0,
+"date":          14609,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 2009-12-31<br>Valuation (estimate millions): 269<br>Valuation Rank: 26<br>Valuation Change (percent): -9<br>Revenue (estimated millions) (estimated millions): 92<br>EBITDA (estimated millions): -13.9<br>Revenue (estimated millions) Multiple (estimate): 2.92<br>EBITDA Multiple (estimated): 0<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 2010,
+"Team Valuation Rank": 22,
+"Valuation (Estimated in Millions)":            305,
+"Change in Values (pct)":           0.03,
+"Revenue (estimated millions)":            102,
+"EBITDA":             11,
+"Revenue Multiple (estimate)":           2.99,
+"EBITDA Multiple (estimate)":          27.73,
+"date":          14974,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 2010-12-31<br>Valuation (estimate millions): 305<br>Valuation Rank: 22<br>Valuation Change (percent): 3<br>Revenue (estimated millions) (estimated millions): 102<br>EBITDA (estimated millions): 11<br>Revenue (estimated millions) Multiple (estimate): 2.99<br>EBITDA Multiple (estimated): 27.73<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 2010,
+"Team Valuation Rank": 21,
+"Valuation (Estimated in Millions)":            312,
+"Change in Values (pct)":           0.16,
+"Revenue (estimated millions)":             89,
+"EBITDA":          -10.2,
+"Revenue Multiple (estimate)":           3.51,
+"EBITDA Multiple (estimate)":              0,
+"date":          14974,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 2010-12-31<br>Valuation (estimate millions): 312<br>Valuation Rank: 21<br>Valuation Change (percent): 16<br>Revenue (estimated millions) (estimated millions): 89<br>EBITDA (estimated millions): -10.2<br>Revenue (estimated millions) Multiple (estimate): 3.51<br>EBITDA Multiple (estimated): 0<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 2011,
+"Team Valuation Rank": 20,
+"Valuation (Estimated in Millions)":            324,
+"Change in Values (pct)":           0.06,
+"Revenue (estimated millions)":            108,
+"EBITDA":            9.4,
+"Revenue Multiple (estimate)":              3,
+"EBITDA Multiple (estimate)":          34.47,
+"date":          15339,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 2011-12-31<br>Valuation (estimate millions): 324<br>Valuation Rank: 20<br>Valuation Change (percent): 6<br>Revenue (estimated millions) (estimated millions): 108<br>EBITDA (estimated millions): 9.4<br>Revenue (estimated millions) Multiple (estimate): 3<br>EBITDA Multiple (estimated): 34.47<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 2011,
+"Team Valuation Rank": 14,
+"Valuation (Estimated in Millions)":            357,
+"Change in Values (pct)":           0.14,
+"Revenue (estimated millions)":             89,
+"EBITDA":          -23.6,
+"Revenue Multiple (estimate)":           4.01,
+"EBITDA Multiple (estimate)":              0,
+"date":          15339,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 2011-12-31<br>Valuation (estimate millions): 357<br>Valuation Rank: 14<br>Valuation Change (percent): 14<br>Revenue (estimated millions) (estimated millions): 89<br>EBITDA (estimated millions): -23.6<br>Revenue (estimated millions) Multiple (estimate): 4.01<br>EBITDA Multiple (estimated): 0<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 2012,
+"Team Valuation Rank": 18,
+"Valuation (Estimated in Millions)":            430,
+"Change in Values (pct)":           0.33,
+"Revenue (estimated millions)":            108,
+"EBITDA":            9.1,
+"Revenue Multiple (estimate)":           3.98,
+"EBITDA Multiple (estimate)":          47.25,
+"date":          15705,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 2012-12-31<br>Valuation (estimate millions): 430<br>Valuation Rank: 18<br>Valuation Change (percent): 33<br>Revenue (estimated millions) (estimated millions): 108<br>EBITDA (estimated millions): 9.1<br>Revenue (estimated millions) Multiple (estimate): 3.98<br>EBITDA Multiple (estimated): 47.25<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 2012,
+"Team Valuation Rank": 9,
+"Valuation (Estimated in Millions)":            530,
+"Change in Values (pct)":           0.48,
+"Revenue (estimated millions)":             84,
+"EBITDA":          -16.6,
+"Revenue Multiple (estimate)":           6.31,
+"EBITDA Multiple (estimate)":              0,
+"date":          15705,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 2012-12-31<br>Valuation (estimate millions): 530<br>Valuation Rank: 9<br>Valuation Change (percent): 48<br>Revenue (estimated millions) (estimated millions): 84<br>EBITDA (estimated millions): -16.6<br>Revenue (estimated millions) Multiple (estimate): 6.31<br>EBITDA Multiple (estimated): 0<br></td></tr></span></table>" 
+},
+{
+ "name": "Clippers",
+"logo_url": "http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png",
+"year": 2013,
+"Team Valuation Rank": 13,
+"Valuation (Estimated in Millions)":            575,
+"Change in Values (pct)":           0.34,
+"Revenue (estimated millions)":            128,
+"EBITDA":             15,
+"Revenue Multiple (estimate)":      4.4921875,
+"EBITDA Multiple (estimate)": 38.33333333333,
+"date":          16070,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Clippers</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Clippers</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/6/66/Los_Angeles_Clippers_logo.svg/400px-Los_Angeles_Clippers_logo.svg.png' height='125' width='100'></td><td align='left'>Date: 2013-12-31<br>Valuation (estimate millions): 575<br>Valuation Rank: 13<br>Valuation Change (percent): 34<br>Revenue (estimated millions) (estimated millions): 128<br>EBITDA (estimated millions): 15<br>Revenue (estimated millions) Multiple (estimate): 4.4921875<br>EBITDA Multiple (estimated): 38.3333333333333<br></td></tr></span></table>" 
+},
+{
+ "name": "Nets",
+"logo_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png",
+"year": 2013,
+"Team Valuation Rank": 5,
+"Valuation (Estimated in Millions)":            780,
+"Change in Values (pct)":           0.47,
+"Revenue (estimated millions)":            190,
+"EBITDA":            -19,
+"Revenue Multiple (estimate)": 4.105263157895,
+"EBITDA Multiple (estimate)": -41.05263157895,
+"date":          16070,
+"detail": "<table border='2' cellpadding='4' style='line-height:1.55'><tbody><tr><th colspan='5.5'><span style='font-size:18px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'>Nets</span></span></th></tr><span style='font-size:12px;'><span style='font-family:lucida sans unicode,lucida grande,sans-serif;'><tr><td><th colspan='2.5'>Nets</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/400px-Brooklyn_Nets_newlogo.svg.png' height='125' width='100'></td><td align='left'>Date: 2013-12-31<br>Valuation (estimate millions): 780<br>Valuation Rank: 5<br>Valuation Change (percent): 47<br>Revenue (estimated millions) (estimated millions): 190<br>EBITDA (estimated millions): -19<br>Revenue (estimated millions) Multiple (estimate): 4.10526315789474<br>EBITDA Multiple (estimated): -41.0526315789474<br></td></tr></span></table>" 
+} 
+]
+  $scope.controls = {
+ "y": {
+ "name": "y",
+"value": "Valuation (Estimated in Millions)",
+"values": [ "Valuation (Estimated in Millions)", "Revenue (estimated millions)", "Team Valuation Rank", "Change in Values (pct)", "EBITDA", "Revenue Multiple (estimate)", "EBITDA Multiple (estimate)" ],
+"label": "Select  y :" 
+} 
+} 
+  $scope.filters = []
+  
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  
+  $scope.$watch('selected', function(){
+    var keys = _.pluck($scope.selected, "variable")
+    var values = _.pluck($scope.selected, "value")
+    $scope.opts.selected = _.zipObject(keys, values)
+  }) 
+  
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+	}, true)
+}  
+
+function drawChart(opts, data){ 
+  if (Object.keys(opts.selected).length > 0){
+    data = _.filter(data, opts.selected)
+  }
+  
+  if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+    var data = d3.nest()
+      .key(function(d){
+        //return opts.group === undefined ? 'main' : d[opts.group]
+        //instead of main would think a better default is opts.x
+       return opts.group === undefined ? opts.y : d[opts.group];
+      }).entries(data);
+  }
+      
+  if (opts.disabled != undefined){
+    data.map(function(d, i){
+      d.disabled = opts.disabled[i]
+    })
+  }
+	
+	nv.addGraph(function() {
+		var chart = nv.models[opts.type]()
+			.x(function(d) { return d[opts.x] })
+			.y(function(d) { return d[opts.y] })
+			.width(opts.width)
+			.height(opts.height)
+		
+	chart
+  .color([ "#EE2944", "#000000" ])
+  .tooltipContent( function(key, x, y, e){
+return '<p>' + e.point.detail + '</p>'
+'<p><b>'+ 'yAxis: '+ '</b>' + y +'</p>'
+	} )
+          
+	chart.xAxis
+  .tickFormat(function(d) {return d3.time.format('%m-%Y')(new Date( d * 86400000 ));})
+  .rotateLabels(   -20)
+  .tickValues([   8034,   8400,   9130,   9495,   9861,  10226,  10956,  11322,  11687,  12052,  12417,  12783,  13148,  13513,  13878,  14244,  14609,  14974,  15339,  15705,  16070 ])
+
+	chart.x2Axis
+  .tickFormat(function(d) {return d3.time.format('%m-%Y')(new Date( d * 86400000 ));})
+.margin({
+ "left":     100,
+"top":     50,
+"right":     20,
+"bottom":     40 
+})      
+     chart.yAxis
+  .tickFormat(function(d) {return d3.format('.02f')(d)})
+  .width(    60)
+ .axisLabel( opts.y )
+
+	d3.select("#" + opts.id + ' svg')
+  // .empty()
+		.datum(data)
+		.transition().duration(500)
+		.call(chart);
+	
+	 nv.utils.windowResize(chart.update);
+	 return chart;
+  });
+};
+</script>
+    <style>
+svg text {font-size: 9px;}
+</style>
+  </body>
+<center><div style="display:table;width:320px;height:10px;font-size:12px" class='gray'>
+  <a href="http://twitter.com/abresler" target="_blank"><strong>Visualized and Analyzed by Alex Bresler</strong></a><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</html>

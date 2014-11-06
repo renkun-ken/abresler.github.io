@@ -1,0 +1,1486 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<title>UNC Graduates by Race and Gender Since 1985</title>
+<html>
+  <head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://nvd3.org/src/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/lib/fisheye.js' type='text/javascript'></script>
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 120%;
+      height: 600px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+    <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+<center>
+<h3><p class="sansserif">UNC Graduates by Race and Gender Since 1985 <b>EMPOWERED by <a href="http://aragorn.org/" target="_blank"><img src="http://aragorn.org/img/aragorn.png" height="26" width="137" alt="aragorn"></a></b></p></h3>
+    </center>
+  </head>
+  
+    <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='col-md-3'>
+      <form class='well'>
+        <label><b>Select  group :</b></label>
+        <select class='form-control' ng-model="opts.group" 
+          ng-options="ctl for ctl in controls.group.values">   
+        </select><br>
+        
+        <select
+          ng-model="selected" 
+          ng-options="c as c.value group by c.variable for c in filters" 
+          class="form-control" multiple size="10">
+        </select>
+      </form>
+    </div>
+    <div class='col-md-8'>
+      <div class="bs-docs-example">
+        <div id='chart32aa7e9dd59f' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart32aa7e9dd59f",
+"width":    800,
+"height":    515,
+"x": "year",
+"y": "total",
+"group": "label",
+"type": "multiBarChart",
+"id": "chart32aa7e9dd59f" 
+}
+  $scope.data = [
+ {
+ "label": "women_white",
+"year": 1985,
+"total": 1723,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 1987,
+"total": 1711,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 1989,
+"total": 1911,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 1990,
+"total": 1917,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 1991,
+"total": 1846,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 1992,
+"total": 1919,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 1993,
+"total": 1810,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 1994,
+"total": 1818,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 1995,
+"total": 1838,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 1996,
+"total": 1817,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 1997,
+"total": 1802,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 1998,
+"total": 1773,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 1999,
+"total": 1683,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 2000,
+"total": 1758,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 2001,
+"total": 1697,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 2002,
+"total": 1793,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 2003,
+"total": 1856,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 2004,
+"total": 1794,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 2005,
+"total": 1786,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 2006,
+"total": 1682,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 2007,
+"total": 1637,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 2008,
+"total": 1833,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 2009,
+"total": 1835,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 2010,
+"total": 1796,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 2011,
+"total": 2032,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "women_white",
+"year": 2012,
+"total": 1783,
+"gender": "women",
+"race": "white",
+"abs_total": 46850 
+},
+{
+ "label": "men_white",
+"year": 1985,
+"total": 1190,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 1987,
+"total": 1137,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 1989,
+"total": 1288,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 1990,
+"total": 1340,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 1991,
+"total": 1298,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 1992,
+"total": 1303,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 1993,
+"total": 1264,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 1994,
+"total": 1264,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 1995,
+"total": 1143,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 1996,
+"total": 1228,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 1997,
+"total": 1196,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 1998,
+"total": 1280,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 1999,
+"total": 1114,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 2000,
+"total": 1067,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 2001,
+"total": 1131,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 2002,
+"total": 1155,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 2003,
+"total": 1159,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 2004,
+"total": 1159,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 2005,
+"total": 1242,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 2006,
+"total": 1152,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 2007,
+"total": 1201,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 2008,
+"total": 1278,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 2009,
+"total": 1302,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 2010,
+"total": 1272,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 2011,
+"total": 1310,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "men_white",
+"year": 2012,
+"total": 1255,
+"gender": "men",
+"race": "white",
+"abs_total": 31728 
+},
+{
+ "label": "women_black",
+"year": 1985,
+"total": 140,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 1987,
+"total": 156,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 1989,
+"total": 166,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 1990,
+"total": 157,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 1991,
+"total": 165,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 1992,
+"total": 188,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 1993,
+"total": 181,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 1994,
+"total": 228,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 1995,
+"total": 200,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 1996,
+"total": 219,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 1997,
+"total": 196,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 1998,
+"total": 255,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 1999,
+"total": 238,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 2000,
+"total": 250,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 2001,
+"total": 244,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 2002,
+"total": 251,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 2003,
+"total": 279,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 2004,
+"total": 293,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 2005,
+"total": 282,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 2006,
+"total": 278,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 2007,
+"total": 283,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 2008,
+"total": 262,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 2009,
+"total": 299,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 2010,
+"total": 288,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 2011,
+"total": 315,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_black",
+"year": 2012,
+"total": 275,
+"gender": "women",
+"race": "black",
+"abs_total": 6088 
+},
+{
+ "label": "women_other",
+"year": 1985,
+"total": 32,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 1987,
+"total": 49,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 1989,
+"total": 57,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 1990,
+"total": 69,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 1991,
+"total": 82,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 1992,
+"total": 70,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 1993,
+"total": 86,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 1994,
+"total": 122,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 1995,
+"total": 142,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 1996,
+"total": 150,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 1997,
+"total": 159,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 1998,
+"total": 167,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 1999,
+"total": 156,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 2000,
+"total": 145,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 2001,
+"total": 147,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 2002,
+"total": 148,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 2003,
+"total": 197,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 2004,
+"total": 214,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 2005,
+"total": 261,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 2006,
+"total": 328,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 2007,
+"total": 340,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 2008,
+"total": 377,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 2009,
+"total": 390,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 2010,
+"total": 545,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 2011,
+"total": 509,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "women_other",
+"year": 2012,
+"total": 581,
+"gender": "women",
+"race": "other",
+"abs_total": 5523 
+},
+{
+ "label": "men_other",
+"year": 1985,
+"total": 30,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 1987,
+"total": 26,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 1989,
+"total": 43,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 1990,
+"total": 46,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 1991,
+"total": 60,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 1992,
+"total": 76,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 1993,
+"total": 73,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 1994,
+"total": 79,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 1995,
+"total": 96,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 1996,
+"total": 103,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 1997,
+"total": 103,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 1998,
+"total": 102,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 1999,
+"total": 115,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 2000,
+"total": 89,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 2001,
+"total": 104,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 2002,
+"total": 109,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 2003,
+"total": 149,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 2004,
+"total": 149,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 2005,
+"total": 211,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 2006,
+"total": 226,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 2007,
+"total": 234,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 2008,
+"total": 267,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 2009,
+"total": 290,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 2010,
+"total": 342,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 2011,
+"total": 364,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_other",
+"year": 2012,
+"total": 421,
+"gender": "men",
+"race": "other",
+"abs_total": 3907 
+},
+{
+ "label": "men_black",
+"year": 1985,
+"total": 74,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 1987,
+"total": 75,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 1989,
+"total": 62,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 1990,
+"total": 62,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 1991,
+"total": 87,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 1992,
+"total": 99,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 1993,
+"total": 88,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 1994,
+"total": 99,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 1995,
+"total": 87,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 1996,
+"total": 103,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 1997,
+"total": 81,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 1998,
+"total": 92,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 1999,
+"total": 101,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 2000,
+"total": 78,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 2001,
+"total": 84,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 2002,
+"total": 104,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 2003,
+"total": 101,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 2004,
+"total": 106,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 2005,
+"total": 106,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 2006,
+"total": 107,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 2007,
+"total": 92,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 2008,
+"total": 114,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 2009,
+"total": 120,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 2010,
+"total": 153,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 2011,
+"total": 124,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+},
+{
+ "label": "men_black",
+"year": 2012,
+"total": 130,
+"gender": "men",
+"race": "black",
+"abs_total": 2529 
+} 
+]
+  $scope.controls = {
+ "group": {
+ "name": "group",
+"value": "label",
+"values": [ "year", "gender", "race", "label" ],
+"label": "Select  group :" 
+} 
+} 
+  $scope.filters = [
+ {
+ "variable": "race",
+"value": "white" 
+},
+{
+ "variable": "race",
+"value": "black" 
+},
+{
+ "variable": "race",
+"value": "other" 
+},
+{
+ "variable": "gender",
+"value": "women" 
+},
+{
+ "variable": "gender",
+"value": "men" 
+} 
+]
+  
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  
+  $scope.$watch('selected', function(){
+    if (!(typeof($scope.selected) === "undefined")) {
+      $scope.opts.selected = $scope.selected.map(function(d){
+        selectKey={};
+        selectKey[d.variable]=d.value;
+        return selectKey;
+      })
+    }
+  }) 
+  
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+  }, true)
+}  
+ 
+function drawChart(opts, data){ 
+  if (_.keys(opts.selected).length > 0){
+  // for multiselect union
+    data = _.at(data,_.chain(opts.selected)
+      .map(function(d){
+        return _.compact(
+          data.map(function(val,ind){
+           if(val[_.keys(d)[0]]===d[_.keys(d)[0]]) {
+              return ind
+            } else {return false}
+          })
+        )
+      })
+      .flatten()
+      .uniq()
+      .value()
+    )
+  /* for multiselect intersection
+    data = _.chain(opts.selected)
+      .map(function(d){
+        return _.compact(
+          data.map(function(val,ind){
+           if(val[_.keys(d)[0]]===d[_.keys(d)[0]]) {
+              return ind
+            } else {return false}
+          })
+        )
+      })
+      .value();
+  
+     var intersected = _.countBy(_.flatten(testdata,function(d){return d}));
+ 
+     var varKeys = _.uniq(_.flatten(opts.selected.map(function(d){return _.keys(d)})));
+ 
+     data = _.at(data,_.chain(intersected)
+        .map(function(d,i){
+          if (d===varKeys.length) {return i} else {return false}
+        })
+        .compact()
+        .value()
+      );
+    */
+  }
+  
+  
+  var data = d3.nest()
+    .key(function(d){
+      return opts.group === undefined ? 'main' : d[opts.group]
+    })
+    .entries(data)
+  
+  nv.addGraph(function() {
+    var chart = nv.models[opts.type]()
+      .x(function(d) { return d[opts.x] })
+      .y(function(d) { return d[opts.y] })
+      .width(opts.width)
+      .height(opts.height)
+    
+  chart
+  .showControls(true)
+  .showLegend(true)
+  .showXAxis(true)
+  .showYAxis(true)
+  .stacked(true)
+  .reduceXTicks(true)
+  .color([ "#000000", "#009E60", "#773141", "#000080", "#CA001A", "#FFCC00", "#192F6B", "#FB4F14", "#0088CE", "#708090", "#D0B240", "#9ECEEE", "#000080", "#D4001F" ])
+          
+  chart.xAxis
+  .rotateLabels(   -20)
+  .tickValues([ 1985, 1987, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012 ])
+ 
+  
+  
+  chart.yAxis
+  .tickFormat(function(d) {return d3.format('.0f')(d)})
+ 
+  d3.select("#" + opts.id + ' svg')
+  // .empty()
+    .datum(data)
+    .transition().duration(500)
+    .call(chart);
+  
+   nv.utils.windowResize(chart.update);
+   return chart;
+  });
+};
+</script>
+    <script>
+  var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>         
+
+  </body>
+</html>

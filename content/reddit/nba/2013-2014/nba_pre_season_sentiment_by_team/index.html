@@ -1,0 +1,1225 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+<title>r/NBA 2013-2014 Sentiment by Team</title>
+
+<link rel='stylesheet' href='http://aragorn.org/scripts/nv.d3.css'>
+    <link rel='stylesheet' href='http://aragorn.org/scripts/rNVD3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/nv.d3.min-new.js' type='text/javascript'></script>
+    
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 700px;
+      height: 475px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+    <script>
+  var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+          <!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+<style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>     
+  </head>
+
+
+<meta name="description" content="r/NBA 2013-2014 Sentiment by Team. The r/NBA Redditors have spoken. Click here to see the sentiment on your favorite team." />
+<link rel="canonical" href="http://aragorn.org/reddit/nba/2013-2014/nba_pre_season_sentiment_by_team/" />
+<meta property="og:description" content="r/NBA 2013-2014 Sentiment by Team. The r/NBA Redditors have spoken. Click here to see the sentiment on your favorite team." />
+<meta property="og:image" content="http://aragorn.org/reddit/nba/2013-2014/nba_pre_season_sentiment_by_team/screen.png" />
+<meta property="og:site_name" content="Aragorn" />
+<meta property="og:title" content="r/NBA 2013-2014 Sentiment by Team" />
+<meta property="og:type" content="article" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="r/NBA 2013-2014 Sentiment by Team" />
+        <meta name="twitter:title" content="r/NBA 2013-2014 Sentiment by Team" />
+        <meta name="twitter:description" content="r/NBA 2013-2014 Sentiment by Team. The r/NBA Redditors have spoken. Click here to see the sentiment on your favorite team." />
+        <meta name="twitter:image" content="http://aragorn.org/reddit/nba/2013-2014/nba_pre_season_sentiment_by_team/screen.png" />
+        <meta name="twitter:site" content="Aragorn" />
+
+  </head>
+<center>
+       <center>
+       <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 850px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: 0.25px"><strong><img src="http://f.thumbs.redditmedia.com/ddHdMrluCS3dDbCS.png"></img> 2013-2014 Sentiment by Team</strong><br></div>
+     </div></center></center>
+  <center>
+<body>
+    <div id='chart200c12bab2f5' class='rChart nvd3'></div>  
+
+  <script type='text/javascript'>
+ $(document).ready(function(){
+      drawchart200c12bab2f5()
+    });
+    function drawchart200c12bab2f5(){  
+      var opts = {
+ "dom": "chart200c12bab2f5",
+"width":    700,
+"height":    475,
+"x": "team_name",
+"y": "percentage_votes",
+"group": "projected_outcome",
+"type": "multiBarHorizontalChart",
+"id": "chart200c12bab2f5" 
+},
+        data = [
+ {
+ "X": 67,
+"team_name": "76ers",
+"team": "Philadelphia 76ers",
+"projected_outcome": "Worse",
+"votes": 1219,
+"percentage_votes":   0.84,
+"record": "34-48",
+"wins_12_13": 34,
+"losses_12_13": 48,
+"win_percentage_12_13":  0.415 
+},
+{
+ "X": 68,
+"team_name": "76ers",
+"team": "Philadelphia 76ers",
+"projected_outcome": "Same",
+"votes": 95,
+"percentage_votes":   0.07,
+"record": "34-48",
+"wins_12_13": 34,
+"losses_12_13": 48,
+"win_percentage_12_13":  0.415 
+},
+{
+ "X": 69,
+"team_name": "76ers",
+"team": "Philadelphia 76ers",
+"projected_outcome": "Better",
+"votes": 133,
+"percentage_votes":   0.09,
+"record": "34-48",
+"wins_12_13": 34,
+"losses_12_13": 48,
+"win_percentage_12_13":  0.415 
+},
+{
+ "X": 73,
+"team_name": "Blazers",
+"team": "Portland Trail Blazers",
+"projected_outcome": "Better",
+"votes": 917,
+"percentage_votes":   0.64,
+"record": "33-49",
+"wins_12_13": 33,
+"losses_12_13": 49,
+"win_percentage_12_13":  0.402 
+},
+{
+ "X": 74,
+"team_name": "Blazers",
+"team": "Portland Trail Blazers",
+"projected_outcome": "Same",
+"votes": 371,
+"percentage_votes":   0.26,
+"record": "33-49",
+"wins_12_13": 33,
+"losses_12_13": 49,
+"win_percentage_12_13":  0.402 
+},
+{
+ "X": 75,
+"team_name": "Blazers",
+"team": "Portland Trail Blazers",
+"projected_outcome": "Worse",
+"votes": 145,
+"percentage_votes":    0.1,
+"record": "33-49",
+"wins_12_13": 33,
+"losses_12_13": 49,
+"win_percentage_12_13":  0.402 
+},
+{
+ "X": 49,
+"team_name": "Bucks",
+"team": "Milwaukee Bucks",
+"projected_outcome": "Worse",
+"votes": 1158,
+"percentage_votes":    0.8,
+"record": "38-44",
+"wins_12_13": 38,
+"losses_12_13": 44,
+"win_percentage_12_13":  0.463 
+},
+{
+ "X": 50,
+"team_name": "Bucks",
+"team": "Milwaukee Bucks",
+"projected_outcome": "Same",
+"votes": 223,
+"percentage_votes":   0.15,
+"record": "38-44",
+"wins_12_13": 38,
+"losses_12_13": 44,
+"win_percentage_12_13":  0.463 
+},
+{
+ "X": 51,
+"team_name": "Bucks",
+"team": "Milwaukee Bucks",
+"projected_outcome": "Better",
+"votes": 69,
+"percentage_votes":   0.05,
+"record": "38-44",
+"wins_12_13": 38,
+"losses_12_13": 44,
+"win_percentage_12_13":  0.463 
+},
+{
+ "X": 13,
+"team_name": "Bulls",
+"team": "Chicago Bulls",
+"projected_outcome": "Better",
+"votes": 1253,
+"percentage_votes":   0.84,
+"record": "45-37",
+"wins_12_13": 45,
+"losses_12_13": 37,
+"win_percentage_12_13":  0.549 
+},
+{
+ "X": 14,
+"team_name": "Bulls",
+"team": "Chicago Bulls",
+"projected_outcome": "Same",
+"votes": 89,
+"percentage_votes":   0.06,
+"record": "45-37",
+"wins_12_13": 45,
+"losses_12_13": 37,
+"win_percentage_12_13":  0.549 
+},
+{
+ "X": 15,
+"team_name": "Bulls",
+"team": "Chicago Bulls",
+"projected_outcome": "Worse",
+"votes": 151,
+"percentage_votes":    0.1,
+"record": "45-37",
+"wins_12_13": 45,
+"losses_12_13": 37,
+"win_percentage_12_13":  0.549 
+},
+{
+ "X": 16,
+"team_name": "Cavs",
+"team": "Cleveland Cavaliers",
+"projected_outcome": "Better",
+"votes": 1256,
+"percentage_votes":   0.86,
+"record": "24-58",
+"wins_12_13": 24,
+"losses_12_13": 58,
+"win_percentage_12_13":  0.293 
+},
+{
+ "X": 17,
+"team_name": "Cavs",
+"team": "Cleveland Cavaliers",
+"projected_outcome": "Same",
+"votes": 136,
+"percentage_votes":    0.1,
+"record": "24-58",
+"wins_12_13": 24,
+"losses_12_13": 58,
+"win_percentage_12_13":  0.293 
+},
+{
+ "X": 18,
+"team_name": "Cavs",
+"team": "Cleveland Cavaliers",
+"projected_outcome": "Worse",
+"votes": 64,
+"percentage_votes":   0.04,
+"record": "24-58",
+"wins_12_13": 24,
+"losses_12_13": 58,
+"win_percentage_12_13":  0.293 
+},
+{
+ "X": 4,
+"team_name": "Celtics",
+"team": "Boston Celtics",
+"projected_outcome": "Worse",
+"votes": 1385,
+"percentage_votes":   0.94,
+"record": "41-40",
+"wins_12_13": 41,
+"losses_12_13": 40,
+"win_percentage_12_13":  0.506 
+},
+{
+ "X": 5,
+"team_name": "Celtics",
+"team": "Boston Celtics",
+"projected_outcome": "Same",
+"votes": 35,
+"percentage_votes":   0.02,
+"record": "41-40",
+"wins_12_13": 41,
+"losses_12_13": 40,
+"win_percentage_12_13":  0.506 
+},
+{
+ "X": 6,
+"team_name": "Celtics",
+"team": "Boston Celtics",
+"projected_outcome": "Better",
+"votes": 59,
+"percentage_votes":   0.04,
+"record": "41-40",
+"wins_12_13": 41,
+"losses_12_13": 40,
+"win_percentage_12_13":  0.506 
+},
+{
+ "X": 37,
+"team_name": "Clippers",
+"team": "Los Angeles Clippers",
+"projected_outcome": "Same",
+"votes": 683,
+"percentage_votes":   0.47,
+"record": "56-26",
+"wins_12_13": 56,
+"losses_12_13": 26,
+"win_percentage_12_13":  0.683 
+},
+{
+ "X": 38,
+"team_name": "Clippers",
+"team": "Los Angeles Clippers",
+"projected_outcome": "Better",
+"votes": 523,
+"percentage_votes":   0.36,
+"record": "56-26",
+"wins_12_13": 56,
+"losses_12_13": 26,
+"win_percentage_12_13":  0.683 
+},
+{
+ "X": 39,
+"team_name": "Clippers",
+"team": "Los Angeles Clippers",
+"projected_outcome": "Worse",
+"votes": 254,
+"percentage_votes":   0.17,
+"record": "56-26",
+"wins_12_13": 56,
+"losses_12_13": 26,
+"win_percentage_12_13":  0.683 
+},
+{
+ "X": 43,
+"team_name": "Grizzlies",
+"team": "Memphis Grizzlies",
+"projected_outcome": "Same",
+"votes": 765,
+"percentage_votes":   0.53,
+"record": "56-26",
+"wins_12_13": 56,
+"losses_12_13": 26,
+"win_percentage_12_13":  0.683 
+},
+{
+ "X": 44,
+"team_name": "Grizzlies",
+"team": "Memphis Grizzlies",
+"projected_outcome": "Worse",
+"votes": 534,
+"percentage_votes":   0.37,
+"record": "56-26",
+"wins_12_13": 56,
+"losses_12_13": 26,
+"win_percentage_12_13":  0.683 
+},
+{
+ "X": 45,
+"team_name": "Grizzlies",
+"team": "Memphis Grizzlies",
+"projected_outcome": "Better",
+"votes": 144,
+"percentage_votes":    0.1,
+"record": "56-26",
+"wins_12_13": 56,
+"losses_12_13": 26,
+"win_percentage_12_13":  0.683 
+},
+{
+ "X": 1,
+"team_name": "Hawks",
+"team": "Atlanta Hawks",
+"projected_outcome": "Worse",
+"votes": 936,
+"percentage_votes":   0.64,
+"record": "44-38",
+"wins_12_13": 44,
+"losses_12_13": 38,
+"win_percentage_12_13":  0.537 
+},
+{
+ "X": 2,
+"team_name": "Hawks",
+"team": "Atlanta Hawks",
+"projected_outcome": "Same",
+"votes": 383,
+"percentage_votes":   0.26,
+"record": "44-38",
+"wins_12_13": 44,
+"losses_12_13": 38,
+"win_percentage_12_13":  0.537 
+},
+{
+ "X": 3,
+"team_name": "Hawks",
+"team": "Atlanta Hawks",
+"projected_outcome": "Better",
+"votes": 140,
+"percentage_votes":    0.1,
+"record": "44-38",
+"wins_12_13": 44,
+"losses_12_13": 38,
+"win_percentage_12_13":  0.537 
+},
+{
+ "X": 46,
+"team_name": "Heat",
+"team": "Miami Heat",
+"projected_outcome": "Same",
+"votes": 681,
+"percentage_votes":   0.43,
+"record": "66-16",
+"wins_12_13": 66,
+"losses_12_13": 16,
+"win_percentage_12_13":  0.805 
+},
+{
+ "X": 47,
+"team_name": "Heat",
+"team": "Miami Heat",
+"projected_outcome": "Worse",
+"votes": 583,
+"percentage_votes":   0.37,
+"record": "66-16",
+"wins_12_13": 66,
+"losses_12_13": 16,
+"win_percentage_12_13":  0.805 
+},
+{
+ "X": 48,
+"team_name": "Heat",
+"team": "Miami Heat",
+"projected_outcome": "Better",
+"votes": 305,
+"percentage_votes":    0.2,
+"record": "66-16",
+"wins_12_13": 66,
+"losses_12_13": 16,
+"win_percentage_12_13":  0.805 
+},
+{
+ "X": 10,
+"team_name": "Hornets",
+"team": "Charlotte Hornets",
+"projected_outcome": "Better",
+"votes": 881,
+"percentage_votes":    0.6,
+"record": "21-61",
+"wins_12_13": 21,
+"losses_12_13": 61,
+"win_percentage_12_13":  0.256 
+},
+{
+ "X": 11,
+"team_name": "Hornets",
+"team": "Charlotte Hornets",
+"projected_outcome": "Same",
+"votes": 458,
+"percentage_votes":   0.31,
+"record": "21-61",
+"wins_12_13": 21,
+"losses_12_13": 61,
+"win_percentage_12_13":  0.256 
+},
+{
+ "X": 12,
+"team_name": "Hornets",
+"team": "Charlotte Hornets",
+"projected_outcome": "Worse",
+"votes": 135,
+"percentage_votes":   0.09,
+"record": "21-61",
+"wins_12_13": 21,
+"losses_12_13": 61,
+"win_percentage_12_13":  0.256 
+},
+{
+ "X": 85,
+"team_name": "Jazz",
+"team": "Utah Jazz",
+"projected_outcome": "Worse",
+"votes": 869,
+"percentage_votes":   0.61,
+"record": "43-39",
+"wins_12_13": 43,
+"losses_12_13": 39,
+"win_percentage_12_13":  0.524 
+},
+{
+ "X": 86,
+"team_name": "Jazz",
+"team": "Utah Jazz",
+"projected_outcome": "Same",
+"votes": 416,
+"percentage_votes":   0.29,
+"record": "43-39",
+"wins_12_13": 43,
+"losses_12_13": 39,
+"win_percentage_12_13":  0.524 
+},
+{
+ "X": 87,
+"team_name": "Jazz",
+"team": "Utah Jazz",
+"projected_outcome": "Better",
+"votes": 138,
+"percentage_votes":    0.1,
+"record": "43-39",
+"wins_12_13": 43,
+"losses_12_13": 39,
+"win_percentage_12_13":  0.524 
+},
+{
+ "X": 76,
+"team_name": "Kings",
+"team": "Sacramento Kings",
+"projected_outcome": "Better",
+"votes": 449,
+"percentage_votes":   0.32,
+"record": "28-54",
+"wins_12_13": 28,
+"losses_12_13": 54,
+"win_percentage_12_13":  0.341 
+},
+{
+ "X": 77,
+"team_name": "Kings",
+"team": "Sacramento Kings",
+"projected_outcome": "Worse",
+"votes": 356,
+"percentage_votes":   0.25,
+"record": "28-54",
+"wins_12_13": 28,
+"losses_12_13": 54,
+"win_percentage_12_13":  0.341 
+},
+{
+ "X": 78,
+"team_name": "Kings",
+"team": "Sacramento Kings",
+"projected_outcome": "Same",
+"votes": 619,
+"percentage_votes":   0.43,
+"record": "28-54",
+"wins_12_13": 28,
+"losses_12_13": 54,
+"win_percentage_12_13":  0.341 
+},
+{
+ "X": 58,
+"team_name": "Knicks",
+"team": "New York Knicks",
+"projected_outcome": "Same",
+"votes": 519,
+"percentage_votes":   0.35,
+"record": "54-28",
+"wins_12_13": 54,
+"losses_12_13": 28,
+"win_percentage_12_13":  0.659 
+},
+{
+ "X": 59,
+"team_name": "Knicks",
+"team": "New York Knicks",
+"projected_outcome": "Better",
+"votes": 143,
+"percentage_votes":    0.1,
+"record": "54-28",
+"wins_12_13": 54,
+"losses_12_13": 28,
+"win_percentage_12_13":  0.659 
+},
+{
+ "X": 60,
+"team_name": "Knicks",
+"team": "New York Knicks",
+"projected_outcome": "Worse",
+"votes": 813,
+"percentage_votes":   0.55,
+"record": "54-28",
+"wins_12_13": 54,
+"losses_12_13": 28,
+"win_percentage_12_13":  0.659 
+},
+{
+ "X": 40,
+"team_name": "Lakers",
+"team": "Los Angeles Lakers",
+"projected_outcome": "Worse",
+"votes": 1181,
+"percentage_votes":   0.81,
+"record": "45-37",
+"wins_12_13": 45,
+"losses_12_13": 37,
+"win_percentage_12_13":  0.549 
+},
+{
+ "X": 41,
+"team_name": "Lakers",
+"team": "Los Angeles Lakers",
+"projected_outcome": "Same",
+"votes": 153,
+"percentage_votes":    0.1,
+"record": "45-37",
+"wins_12_13": 45,
+"losses_12_13": 37,
+"win_percentage_12_13":  0.549 
+},
+{
+ "X": 42,
+"team_name": "Lakers",
+"team": "Los Angeles Lakers",
+"projected_outcome": "Better",
+"votes": 126,
+"percentage_votes":   0.09,
+"record": "45-37",
+"wins_12_13": 45,
+"losses_12_13": 37,
+"win_percentage_12_13":  0.549 
+},
+{
+ "X": 64,
+"team_name": "Magic",
+"team": "Orlando Magic",
+"projected_outcome": "Better",
+"votes": 846,
+"percentage_votes":   0.58,
+"record": "20-62",
+"wins_12_13": 20,
+"losses_12_13": 62,
+"win_percentage_12_13":  0.244 
+},
+{
+ "X": 65,
+"team_name": "Magic",
+"team": "Orlando Magic",
+"projected_outcome": "Same",
+"votes": 424,
+"percentage_votes":   0.29,
+"record": "20-62",
+"wins_12_13": 20,
+"losses_12_13": 62,
+"win_percentage_12_13":  0.244 
+},
+{
+ "X": 66,
+"team_name": "Magic",
+"team": "Orlando Magic",
+"projected_outcome": "Worse",
+"votes": 188,
+"percentage_votes":   0.13,
+"record": "20-62",
+"wins_12_13": 20,
+"losses_12_13": 62,
+"win_percentage_12_13":  0.244 
+},
+{
+ "X": 19,
+"team_name": "Mavs",
+"team": "Dallas Mavericks",
+"projected_outcome": "Worse",
+"votes": 631,
+"percentage_votes":   0.44,
+"record": "41-41",
+"wins_12_13": 41,
+"losses_12_13": 41,
+"win_percentage_12_13":    0.5 
+},
+{
+ "X": 20,
+"team_name": "Mavs",
+"team": "Dallas Mavericks",
+"projected_outcome": "Better",
+"votes": 421,
+"percentage_votes":   0.29,
+"record": "41-41",
+"wins_12_13": 41,
+"losses_12_13": 41,
+"win_percentage_12_13":    0.5 
+},
+{
+ "X": 21,
+"team_name": "Mavs",
+"team": "Dallas Mavericks",
+"projected_outcome": "Same",
+"votes": 392,
+"percentage_votes":   0.27,
+"record": "41-41",
+"wins_12_13": 41,
+"losses_12_13": 41,
+"win_percentage_12_13":    0.5 
+},
+{
+ "X": 7,
+"team_name": "Nets",
+"team": "Brooklyn Nets",
+"projected_outcome": "Better",
+"votes": 913,
+"percentage_votes":   0.62,
+"record": "49-33",
+"wins_12_13": 49,
+"losses_12_13": 33,
+"win_percentage_12_13":  0.598 
+},
+{
+ "X": 8,
+"team_name": "Nets",
+"team": "Brooklyn Nets",
+"projected_outcome": "Same",
+"votes": 343,
+"percentage_votes":   0.24,
+"record": "49-33",
+"wins_12_13": 49,
+"losses_12_13": 33,
+"win_percentage_12_13":  0.598 
+},
+{
+ "X": 9,
+"team_name": "Nets",
+"team": "Brooklyn Nets",
+"projected_outcome": "Worse",
+"votes": 210,
+"percentage_votes":   0.14,
+"record": "49-33",
+"wins_12_13": 49,
+"losses_12_13": 33,
+"win_percentage_12_13":  0.598 
+},
+{
+ "X": 22,
+"team_name": "Nuggets",
+"team": "Denver Nuggets",
+"projected_outcome": "Worse",
+"votes": 1234,
+"percentage_votes":   0.86,
+"record": "57-25",
+"wins_12_13": 57,
+"losses_12_13": 25,
+"win_percentage_12_13":  0.695 
+},
+{
+ "X": 23,
+"team_name": "Nuggets",
+"team": "Denver Nuggets",
+"projected_outcome": "Better",
+"votes": 46,
+"percentage_votes":   0.03,
+"record": "57-25",
+"wins_12_13": 57,
+"losses_12_13": 25,
+"win_percentage_12_13":  0.695 
+},
+{
+ "X": 24,
+"team_name": "Nuggets",
+"team": "Denver Nuggets",
+"projected_outcome": "Same",
+"votes": 156,
+"percentage_votes":   0.11,
+"record": "57-25",
+"wins_12_13": 57,
+"losses_12_13": 25,
+"win_percentage_12_13":  0.695 
+},
+{
+ "X": 34,
+"team_name": "Pacers",
+"team": "Indiana Pacers",
+"projected_outcome": "Same",
+"votes": 216,
+"percentage_votes":   0.15,
+"record": "49-32",
+"wins_12_13": 49,
+"losses_12_13": 32,
+"win_percentage_12_13":  0.605 
+},
+{
+ "X": 35,
+"team_name": "Pacers",
+"team": "Indiana Pacers",
+"projected_outcome": "Better",
+"votes": 1112,
+"percentage_votes":   0.74,
+"record": "49-32",
+"wins_12_13": 49,
+"losses_12_13": 32,
+"win_percentage_12_13":  0.605 
+},
+{
+ "X": 36,
+"team_name": "Pacers",
+"team": "Indiana Pacers",
+"projected_outcome": "Worse",
+"votes": 165,
+"percentage_votes":   0.11,
+"record": "49-32",
+"wins_12_13": 49,
+"losses_12_13": 32,
+"win_percentage_12_13":  0.605 
+},
+{
+ "X": 55,
+"team_name": "Pelicans",
+"team": "New Orleans Pelicans",
+"projected_outcome": "Better",
+"votes": 1131,
+"percentage_votes":   0.79,
+"record": "27-55",
+"wins_12_13": 27,
+"losses_12_13": 55,
+"win_percentage_12_13":  0.329 
+},
+{
+ "X": 56,
+"team_name": "Pelicans",
+"team": "New Orleans Pelicans",
+"projected_outcome": "Same",
+"votes": 132,
+"percentage_votes":   0.09,
+"record": "27-55",
+"wins_12_13": 27,
+"losses_12_13": 55,
+"win_percentage_12_13":  0.329 
+},
+{
+ "X": 57,
+"team_name": "Pelicans",
+"team": "New Orleans Pelicans",
+"projected_outcome": "Worse",
+"votes": 174,
+"percentage_votes":   0.12,
+"record": "27-55",
+"wins_12_13": 27,
+"losses_12_13": 55,
+"win_percentage_12_13":  0.329 
+},
+{
+ "X": 25,
+"team_name": "Pistons",
+"team": "Detroit Pistons",
+"projected_outcome": "Better",
+"votes": 1200,
+"percentage_votes":   0.82,
+"record": "29-53",
+"wins_12_13": 29,
+"losses_12_13": 53,
+"win_percentage_12_13":  0.354 
+},
+{
+ "X": 26,
+"team_name": "Pistons",
+"team": "Detroit Pistons",
+"projected_outcome": "Worse",
+"votes": 141,
+"percentage_votes":    0.1,
+"record": "29-53",
+"wins_12_13": 29,
+"losses_12_13": 53,
+"win_percentage_12_13":  0.354 
+},
+{
+ "X": 27,
+"team_name": "Pistons",
+"team": "Detroit Pistons",
+"projected_outcome": "Same",
+"votes": 121,
+"percentage_votes":   0.08,
+"record": "29-53",
+"wins_12_13": 29,
+"losses_12_13": 53,
+"win_percentage_12_13":  0.354 
+},
+{
+ "X": 82,
+"team_name": "Raptors",
+"team": "Toronto Raptors",
+"projected_outcome": "Better",
+"votes": 565,
+"percentage_votes":   0.39,
+"record": "34-48",
+"wins_12_13": 34,
+"losses_12_13": 48,
+"win_percentage_12_13":  0.415 
+},
+{
+ "X": 83,
+"team_name": "Raptors",
+"team": "Toronto Raptors",
+"projected_outcome": "Worse",
+"votes": 313,
+"percentage_votes":   0.22,
+"record": "34-48",
+"wins_12_13": 34,
+"losses_12_13": 48,
+"win_percentage_12_13":  0.415 
+},
+{
+ "X": 84,
+"team_name": "Raptors",
+"team": "Toronto Raptors",
+"projected_outcome": "Same",
+"votes": 556,
+"percentage_votes":   0.39,
+"record": "34-48",
+"wins_12_13": 34,
+"losses_12_13": 48,
+"win_percentage_12_13":  0.415 
+},
+{
+ "X": 31,
+"team_name": "Rockets",
+"team": "Houston Rockets",
+"projected_outcome": "Better",
+"votes": 1247,
+"percentage_votes":   0.85,
+"record": "45-37",
+"wins_12_13": 45,
+"losses_12_13": 37,
+"win_percentage_12_13":  0.549 
+},
+{
+ "X": 32,
+"team_name": "Rockets",
+"team": "Houston Rockets",
+"projected_outcome": "Same",
+"votes": 69,
+"percentage_votes":   0.05,
+"record": "45-37",
+"wins_12_13": 45,
+"losses_12_13": 37,
+"win_percentage_12_13":  0.549 
+},
+{
+ "X": 33,
+"team_name": "Rockets",
+"team": "Houston Rockets",
+"projected_outcome": "Worse",
+"votes": 142,
+"percentage_votes":    0.1,
+"record": "45-37",
+"wins_12_13": 45,
+"losses_12_13": 37,
+"win_percentage_12_13":  0.549 
+},
+{
+ "X": 79,
+"team_name": "Spurs",
+"team": "San Antonio Spurs",
+"projected_outcome": "Same",
+"votes": 768,
+"percentage_votes":   0.52,
+"record": "58-24",
+"wins_12_13": 58,
+"losses_12_13": 24,
+"win_percentage_12_13":  0.707 
+},
+{
+ "X": 80,
+"team_name": "Spurs",
+"team": "San Antonio Spurs",
+"projected_outcome": "Worse",
+"votes": 618,
+"percentage_votes":   0.42,
+"record": "58-24",
+"wins_12_13": 58,
+"losses_12_13": 24,
+"win_percentage_12_13":  0.707 
+},
+{
+ "X": 81,
+"team_name": "Spurs",
+"team": "San Antonio Spurs",
+"projected_outcome": "Better",
+"votes": 81,
+"percentage_votes":   0.06,
+"record": "58-24",
+"wins_12_13": 58,
+"losses_12_13": 24,
+"win_percentage_12_13":  0.707 
+},
+{
+ "X": 70,
+"team_name": "Suns",
+"team": "Phoenix Suns",
+"projected_outcome": "Better",
+"votes": 198,
+"percentage_votes":   0.14,
+"record": "25-57",
+"wins_12_13": 25,
+"losses_12_13": 57,
+"win_percentage_12_13":  0.305 
+},
+{
+ "X": 71,
+"team_name": "Suns",
+"team": "Phoenix Suns",
+"projected_outcome": "Worse",
+"votes": 789,
+"percentage_votes":   0.55,
+"record": "25-57",
+"wins_12_13": 25,
+"losses_12_13": 57,
+"win_percentage_12_13":  0.305 
+},
+{
+ "X": 72,
+"team_name": "Suns",
+"team": "Phoenix Suns",
+"projected_outcome": "Same",
+"votes": 439,
+"percentage_votes":   0.31,
+"record": "25-57",
+"wins_12_13": 25,
+"losses_12_13": 57,
+"win_percentage_12_13":  0.305 
+},
+{
+ "X": 52,
+"team_name": "T-Wolves",
+"team": "Minnesota Timberwolves",
+"projected_outcome": "Better",
+"votes": 994,
+"percentage_votes":   0.69,
+"record": "31-51",
+"wins_12_13": 31,
+"losses_12_13": 51,
+"win_percentage_12_13":  0.378 
+},
+{
+ "X": 53,
+"team_name": "T-Wolves",
+"team": "Minnesota Timberwolves",
+"projected_outcome": "Worse",
+"votes": 207,
+"percentage_votes":   0.14,
+"record": "31-51",
+"wins_12_13": 31,
+"losses_12_13": 51,
+"win_percentage_12_13":  0.378 
+},
+{
+ "X": 54,
+"team_name": "T-Wolves",
+"team": "Minnesota Timberwolves",
+"projected_outcome": "Same",
+"votes": 239,
+"percentage_votes":   0.17,
+"record": "31-51",
+"wins_12_13": 31,
+"losses_12_13": 51,
+"win_percentage_12_13":  0.378 
+},
+{
+ "X": 61,
+"team_name": "Thunder",
+"team": "Oklahoma City Thunder",
+"projected_outcome": "Same",
+"votes": 642,
+"percentage_votes":   0.44,
+"record": "60-22",
+"wins_12_13": 60,
+"losses_12_13": 22,
+"win_percentage_12_13":  0.732 
+},
+{
+ "X": 62,
+"team_name": "Thunder",
+"team": "Oklahoma City Thunder",
+"projected_outcome": "Worse",
+"votes": 682,
+"percentage_votes":   0.47,
+"record": "60-22",
+"wins_12_13": 60,
+"losses_12_13": 22,
+"win_percentage_12_13":  0.732 
+},
+{
+ "X": 63,
+"team_name": "Thunder",
+"team": "Oklahoma City Thunder",
+"projected_outcome": "Better",
+"votes": 135,
+"percentage_votes":   0.09,
+"record": "60-22",
+"wins_12_13": 60,
+"losses_12_13": 22,
+"win_percentage_12_13":  0.732 
+},
+{
+ "X": 28,
+"team_name": "Warriors",
+"team": "Golden State Warriors",
+"projected_outcome": "Better",
+"votes": 1114,
+"percentage_votes":   0.77,
+"record": "47-35",
+"wins_12_13": 47,
+"losses_12_13": 35,
+"win_percentage_12_13":  0.573 
+},
+{
+ "X": 29,
+"team_name": "Warriors",
+"team": "Golden State Warriors",
+"projected_outcome": "Same",
+"votes": 250,
+"percentage_votes":   0.17,
+"record": "47-35",
+"wins_12_13": 47,
+"losses_12_13": 35,
+"win_percentage_12_13":  0.573 
+},
+{
+ "X": 30,
+"team_name": "Warriors",
+"team": "Golden State Warriors",
+"projected_outcome": "Worse",
+"votes": 92,
+"percentage_votes":   0.06,
+"record": "47-35",
+"wins_12_13": 47,
+"losses_12_13": 35,
+"win_percentage_12_13":  0.573 
+},
+{
+ "X": 88,
+"team_name": "Wizards",
+"team": "Washington Wizards",
+"projected_outcome": "Better",
+"votes": 1251,
+"percentage_votes":   0.85,
+"record": "29-53",
+"wins_12_13": 29,
+"losses_12_13": 53,
+"win_percentage_12_13":  0.354 
+},
+{
+ "X": 89,
+"team_name": "Wizards",
+"team": "Washington Wizards",
+"projected_outcome": "Same",
+"votes": 81,
+"percentage_votes":   0.05,
+"record": "29-53",
+"wins_12_13": 29,
+"losses_12_13": 53,
+"win_percentage_12_13":  0.354 
+},
+{
+ "X": 90,
+"team_name": "Wizards",
+"team": "Washington Wizards",
+"projected_outcome": "Worse",
+"votes": 145,
+"percentage_votes":    0.1,
+"record": "29-53",
+"wins_12_13": 29,
+"losses_12_13": 53,
+"win_percentage_12_13":  0.354 
+} 
+]
+  
+      var data = d3.nest()
+        .key(function(d){
+          return opts.group === undefined ? 'main' : d[opts.group]
+        })
+        .entries(data)
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .x(function(d) { return d[opts.x] })
+          .y(function(d) { return d[opts.y] })
+          .width(opts.width)
+          .height(opts.height)
+         
+        chart
+  .color([ "red", "grey", "green" ])
+          
+        
+  .stacked(true)
+        
+        
+        chart.yAxis
+  .staggerLabels(true)
+  .tickFormat(function(d) {return d3.format('.0%')(d)})
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(300)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+
+  <script>
+  var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  </body>  
+<center><div style="display:table;width:320px;height:10px;font-size:12px" class='gray'>
+  <a href="http://twitter.com/abresler" target="_blank"><strong>Visualized and Analyzed by Alex Bresler</strong></a><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</html>

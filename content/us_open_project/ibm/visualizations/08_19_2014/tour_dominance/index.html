@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<title>Tour Dominance</title>
+<head>
+<center>
+	<h3><p class="sansserif">Tour Dominance in the <img src="http://www.atpworldtour.com/media/main_logo.png" height="50" width="50"></p></h3>
+<h6>Visualized by <a href="http://www.rand.org/about/people/k/kovalchik_stephanie_ann.html" target="_blank">Stephanie Kovalchik</a> an <a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a> Visualization Distribution</h6>
+</center>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 100%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+ <!-- BarChart generated in R 3.1.1 by googleVis 0.5.4 package -->
+<!-- Thu Aug 14 01:56:05 2014 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataBarChartIDecea24cd6ca8 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Del Potro, Juan Martin",
+1 
+],
+[
+ "Djokovic, Novak",
+4 
+],
+[
+ "Federer, Roger",
+8 
+],
+[
+ "Gaudio, Gaston",
+1 
+],
+[
+ "Murray, Andy",
+2 
+],
+[
+ "Nadal, Rafael",
+7 
+],
+[
+ "Safin, Marat",
+1 
+] 
+];
+data.addColumn('string','Player');
+data.addColumn('number','Majors');
+data.addRows(datajson);
+return(data);
+}
+
+
+// jsData 
+function gvisDataTimelineIDecea6fe11f4a () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Roger Federer",
+"Australian Open",
+new Date(2004,0,19,0,0,0),
+new Date(2005,0,16,16,0,0) 
+],
+[
+ "Marat Safin",
+"Australian Open",
+new Date(2005,0,17,0,0,0),
+new Date(2006,0,15,16,0,0) 
+],
+[
+ "Roger Federer",
+"Australian Open",
+new Date(2006,0,16,0,0,0),
+new Date(2008,0,13,16,0,0) 
+],
+[
+ "Novak Djokovic",
+"Australian Open",
+new Date(2008,0,14,0,0,0),
+new Date(2009,0,18,16,0,0) 
+],
+[
+ "Rafael Nadal",
+"Australian Open",
+new Date(2009,0,19,0,0,0),
+new Date(2010,0,17,16,0,0) 
+],
+[
+ "Roger Federer",
+"Australian Open",
+new Date(2010,0,18,0,0,0),
+new Date(2011,0,16,16,0,0) 
+],
+[
+ "Novak Djokovic",
+"Australian Open",
+new Date(2011,0,17,0,0,0),
+new Date(2012,0,16,16,0,0) 
+],
+[
+ "Gaston Gaudio",
+"Roland Garros",
+new Date(2004,4,24,0,0,0),
+new Date(2005,4,22,17,0,0) 
+],
+[
+ "Rafael Nadal",
+"Roland Garros",
+new Date(2005,4,23,0,0,0),
+new Date(2009,4,24,17,0,0) 
+],
+[
+ "Roger Federer",
+"Roland Garros",
+new Date(2009,4,25,0,0,0),
+new Date(2010,4,23,17,0,0) 
+],
+[
+ "Rafael Nadal",
+"Roland Garros",
+new Date(2010,4,24,0,0,0),
+new Date(2011,4,23,17,0,0) 
+],
+[
+ "Roger Federer",
+"US Open",
+new Date(2004,7,30,0,0,0),
+new Date(2009,7,30,17,0,0) 
+],
+[
+ "Juan Martin Del Potro",
+"US Open",
+new Date(2009,7,31,0,0,0),
+new Date(2010,7,29,17,0,0) 
+],
+[
+ "Rafael Nadal",
+"US Open",
+new Date(2010,7,30,0,0,0),
+new Date(2011,7,28,17,0,0) 
+],
+[
+ "Novak Djokovic",
+"US Open",
+new Date(2011,7,29,0,0,0),
+new Date(2012,7,26,17,0,0) 
+],
+[
+ "Andy Murray",
+"US Open",
+new Date(2012,7,27,0,0,0),
+new Date(2013,7,25,17,0,0) 
+],
+[
+ "Rafael Nadal",
+"US Open",
+new Date(2013,7,26,0,0,0),
+new Date(2014,7,25,17,0,0) 
+],
+[
+ "Roger Federer",
+"Wimbledon",
+new Date(2004,5,21,0,0,0),
+new Date(2008,5,22,17,0,0) 
+],
+[
+ "Rafael Nadal",
+"Wimbledon",
+new Date(2008,5,23,0,0,0),
+new Date(2009,5,21,17,0,0) 
+],
+[
+ "Roger Federer",
+"Wimbledon",
+new Date(2009,5,22,0,0,0),
+new Date(2010,5,20,17,0,0) 
+],
+[
+ "Rafael Nadal",
+"Wimbledon",
+new Date(2010,5,21,0,0,0),
+new Date(2011,5,19,17,0,0) 
+],
+[
+ "Novak Djokovic",
+"Wimbledon",
+new Date(2011,5,20,0,0,0),
+new Date(2012,5,24,17,0,0) 
+],
+[
+ "Roger Federer",
+"Wimbledon",
+new Date(2012,5,25,0,0,0),
+new Date(2013,5,23,17,0,0) 
+],
+[
+ "Andy Murray",
+"Wimbledon",
+new Date(2013,5,24,0,0,0),
+new Date(2014,5,23,17,0,0) 
+] 
+];
+data.addColumn('string','Player');
+data.addColumn('string','Title');
+data.addColumn('datetime','Start');
+data.addColumn('datetime','End');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartBarChartIDecea24cd6ca8() {
+var data = gvisDataBarChartIDecea24cd6ca8();
+var options = {};
+options["allowHtml"] = true;
+options["width"] =    1000;
+options["height"] =    400;
+
+
+    var chart = new google.visualization.BarChart(
+    document.getElementById('BarChartIDecea24cd6ca8')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+
+
+// jsDrawChart
+function drawChartTimelineIDecea6fe11f4a() {
+var data = gvisDataTimelineIDecea6fe11f4a();
+var options = {};
+options["width"] =   1200;
+options["height"] =   800;
+options["colors"] = ['#006699', '#009999', '#00CC99','#003399'];
+
+
+    var chart = new google.visualization.Timeline(
+    document.getElementById('TimelineIDecea6fe11f4a')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartBarChartIDecea24cd6ca8);
+})();
+function displayChartBarChartIDecea24cd6ca8() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+
+
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "timeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartTimelineIDecea6fe11f4a);
+})();
+function displayChartTimelineIDecea6fe11f4a() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBarChartIDecea24cd6ca8"></script>
+
+
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTimelineIDecea6fe11f4a"></script>
+ 
+<table border="0">
+<tr>
+<td>
+
+<!-- divChart -->
+  
+<div id="BarChartIDecea24cd6ca8" 
+  style="width: 1000; height: 400;">
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+
+<!-- divChart -->
+  
+<div id="TimelineIDecea6fe11f4a" 
+  style="width: 1200; height: 800;">
+</div>
+
+</td>
+</tr>
+</table>
+</body>
+<script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+</html>

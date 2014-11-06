@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<meta charset="UTF-8">
+<title>Top Returning Men Parallel Coordinates Percentile</title>
+<head>
+<title>US Men in Parallel Coordinates</title>
+<script src = "http://d3js.org/d3.v3.js"></script>
+<script src = "http://bl.ocks.org/timelyportfolio/raw/49e983bb38ebf9bf04c4/d3.parcoords.js"></script>
+<script src = "http://bl.ocks.org/timelyportfolio/raw/49e983bb38ebf9bf04c4/sylvester.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://bl.ocks.org/timelyportfolio/raw/49e983bb38ebf9bf04c4/d3.parcoords.css"></link>
+    <style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>
+<style>
+  svg text { font-size: 65%; }
+</style>
+
+<script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+  </head>
+  <center>
+   <strong><div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 450px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: -0.5px"> Statistics of the Top U.S. Men's Return Serves</div></strong>
+    </div></center>
+    <center><a href = "http://www.ibm.com/us/en/" target = "_blank"><img src="http://www.aragorn.org/logos/ibm_630_100v3.jpg" alt="" width = "450" height="71" style="padding: 2.5px"></a></center>
+<body>
+  <center><div style="display:table;width:450px;height:25px; align: center" class='gray'>
+  <div class='orange' style="font-size:14px; display:table-cell;height:55px;vertical-align:middle"><p style = "font-size:10px;line-height:13px;letter-spacing: -0.5px">With just 6 players currently ranked in the singles top 100 and only 2 in the top 50, it hasn’t been a great year for the US men.  It’s interesting to see that 4 of the top 5 US men are in the top 20 in serving stats, with <span id ="isner">John Isner</span> leading the world holding 93% of his service games.  But only <span id ="young">one US player</span> is in the top 25 returning serve.</p></div></div></center>
+  <center><div>
+    <center><button id="btnReset" style = "font-size:10px">Reset Brushes</button>
+    </div></center>
+    <div id="par_container" class="parcoords" style="width:630px;height:300px;margin-left: auto;margin-right: auto;">
+    </div>
+    <center><em><p style = "font-size:8px">Scroll Over Player Name to Highlight Their Performance</p></em></center>
+
+
+<script>
+      
+  var data = [{"player":"John Isner","singles_rank_percentile":85,"serve_rank_percentile":99,"return_rank_percentile":32,"serve_games_won_pct":93,"return_games_won_pct":9,"career_win_pct":61.5183},{"player":"Donald Young","singles_rank_percentile":53,"serve_rank_percentile":45,"return_rank_percentile":78,"serve_games_won_pct":74,"return_games_won_pct":25,"career_win_pct":34.8101},{"player":"Steve Johnson","singles_rank_percentile":49,"serve_rank_percentile":80,"return_rank_percentile":33,"serve_games_won_pct":84,"return_games_won_pct":14,"career_win_pct":48.9362},{"player":"Jack Sock","singles_rank_percentile":45,"serve_rank_percentile":87,"return_rank_percentile":46,"serve_games_won_pct":86,"return_games_won_pct":19,"career_win_pct":48.6486},{"player":"Sam Querrey","singles_rank_percentile":43,"serve_rank_percentile":90,"return_rank_percentile":36,"serve_games_won_pct":87,"return_games_won_pct":16,"career_win_pct":55.3699},{"player":"Tim Smyczek","singles_rank_percentile":10,"serve_rank_percentile":32,"return_rank_percentile":57,"serve_games_won_pct":71,"return_games_won_pct":21,"career_win_pct":35}]
+    
+  var colorgen = d3.scale.category10();
+  data = data.sort(function(a,b){return d3.ascending(a.singles_rank_percentile,b.singles_rank_percentile)});
+  var colors = {};
+ data.map(function(player,i){
+   colors[player.player] =   colorgen(player.player)
+ });
+  var color = function(d) { return colors[d.player]; };
+    
+  
+  var parcoords = d3.parcoords()("#par_container")
+      .color(color)
+      .alpha(0.55)
+      .data(data)
+      //.bundlingStrength(0.8) // set bundling strength
+      //.smoothness(0.15)
+      //.bundleDimension("rtn_rank")
+      .showControlPoints(false)
+      .margin({ top: 40, left: 46, bottom: 12, right: 10 })
+      .render()
+      .brushable()  // enable brushing
+      //.reorderable()
+      .interactive()  // command line mode
+      
+    
+      Object.keys( parcoords.yscale ).map( function(ys,i) {
+        if (i > 0 && ys !== "age" ){
+          parcoords.yscale[ys].domain([0,100])
+        } else if( ys == "age" ) parcoords.yscale[ys].domain([20,40])
+      })
+    /*}.singles_rank_percentile.domain([0,100]);
+    parcoords.yscale.srv_rank.domain([0,100]);
+    parcoords.yscale.rtn_rank.domain([0,100]);
+    parcoords.yscale.serve_games_won_%.domain([0,1]);
+    parcoords.yscale.return_games_won_%.domain([0,1]);
+    */
+    parcoords.updateAxes().render();
+  
+  //rotate y axis labels
+  d3.selectAll(".dimension .axis > text")
+    .text(function(d){
+      textUpper = d.split("_")
+      textUpper = textUpper.map(function(txt){
+        return txt.charAt(0).toUpperCase() + txt.slice(1)
+      })
+      if(textUpper.join(" ").length > 8){
+        d3.select(d3.select(this)[0][0].parentNode).append("text")
+          .text( textUpper[0] )
+          .attr("y", -23)
+        return textUpper.slice(1).join(" ");
+      } else return textUpper.join(" ")
+    })
+    
+  d3.selectAll(".dimension .axis > text")
+    .attr("text-anchor","middle")
+    .style("font-weight","bold")
+    
+  //remove player label for axis
+  d3.select(".dimension .axis > text").remove();
+  d3.select("#isner")
+    .style("font-weight","bold")
+    .datum(function(d){return this.textContent})
+  d3.select("#young")
+    .style("font-weight","bold")
+    .datum("Donald Young");
+    d3.selectAll("#par_container > svg > g > g:nth-child(1) > g.axis > g > text").style("font-weight","bold")
+  //work on mouseover player highlighting
+  //also do this for span isner as example
+   d3.selectAll("#par_container > svg > g > g:nth-child(1) > g.axis > g > text, #isner,#young")
+    .on("mouseover", highlightPlayer )
+    .on("mouseout", unhighlightPlayer )
+    .style("fill",function(d){
+      return colors[d];
+    })
+  d3.select('#btnReset').on('click', function() {parcoords.brushReset();})
+  
+  var tooltip = parcoords.g().selectAll(".axis").append("g")
+    .attr("class","tooltip")
+    .style("display", "none")
+  
+  
+  tooltip.append("text")
+  
+  /*
+  parcoords.on("brush", function(d) {
+    if( d.length > 0 && d.length < data.length ){
+      d3.select(parcoords.g()[0][0]).selectAll(".tick text").each(function(playertick,i){
+        if(d.map(function(dd){return dd.player}).indexOf(playertick) >= 0) {
+          d3.select(this)
+            .style("font-weight", "bold")
+            .style("font-size", "100%")
+        }
+      })
+    } else {
+      d3.selectAll(".tick text")
+        .style("font-weight","normal")
+        .style("font-size","70%")
+    }
+  });
+  */
+  
+  
+  function highlightPlayer(e){
+    var that = this;
+    //(this.id=="isner") ? d3.select("#par_container > svg > g > g:nth-child(1) > g.axis > g:nth-child(2) > text")[0][0] : this;
+    
+    var playerdata = data.filter(function(player){
+        return player.player == d3.select(that).datum();
+      });
+      
+    parcoords.highlight(
+      playerdata
+    );
+    
+    tooltip.selectAll("text")
+      .text( function(d,i){
+        if(d !== "player"){
+          var tooltext = parseFloat(playerdata[0][d]);
+          if(tooltext < 1) {
+            tooltext = d3.format(".0%")(tooltext);
+          } else tooltext = d3.format("0f")(tooltext)
+          return tooltext
+        }
+      })
+      .attr("y",function(d,i){
+        if(d !== "player"){
+          return parcoords.yscale[d](playerdata[0][d])
+        }
+      })
+      .style( "font-weight","bold" )
+      .style( "font-size", "120%" )
+      
+      
+    tooltip.style("display","")
+  }
+  
+  function unhighlightPlayer(e){
+    var that = this;
+    parcoords.unhighlight(
+      data.filter(function(player){
+        return player.player == d3.select(that).datum();
+      })
+    );
+    tooltip.style("display","none")
+  }
+</script>
+ <center>
+<div style="display:table;width:220px;height:10px;font-size:12px" class='gray'>
+<center><strong>Distributed by</strong><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</center>
+</body>
+</html>

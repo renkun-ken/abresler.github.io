@@ -1,0 +1,1414 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css'>
+    
+    <script src='http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js' type='text/javascript'></script>
+    <script src='https://rawgithub.com/leaflet-extras/leaflet-providers/gh-pages/leaflet-providers.js' type='text/javascript'></script>
+    <script src='http://harrywood.co.uk/maps/examples/leaflet/leaflet-plugins/layer/vector/KML.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 1600px;
+      height: 800px;
+    }  
+    </style>
+                    <!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+  </head>
+  <body>
+    <div id='chart613717ee10be' class='rChart leaflet'></div>  
+    
+    <script>
+  var spec = {
+ "dom": "chart613717ee10be",
+"width":           1600,
+"height":            800,
+"urlTemplate": "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
+"layerOpts": {
+ "attribution": "Map data<a href=\"http://openstreetmap.org\">OpenStreetMap</a>\n         contributors, Imagery<a href=\"http://mapbox.com\">MapBox</a>" 
+},
+"center": [       38.92397,      -77.05016 ],
+"zoom":             11,
+"provider": "Stamen.TonerLite",
+"features": [
+ {
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0408241,     38.9095902 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1750 P Street</th></tr><tr><td align='left'>Date: 8/28/01<br>Property: Ambassador House<br>Quadrant: NW<br>Price in Millions :$24.2<br>Units: 82<br>Price Per Unit: $295.122<br>Cap Rate: NA<br>Buyer: Gables Residential<br>Seller: Unknown</td></tr></table>",
+"fillColor": "#d7191c" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.033231,      38.926752 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2900 14th Street</th></tr><tr><td align='left'>Date: 4/17/02<br>Property: Columbia Heights Village<br>Quadrant: NW<br>Price in Millions :$49<br>Units: 406<br>Price Per Unit: $120.69<br>Cap Rate: NA<br>Buyer: District of Columbia<br>Seller: Unknown</td></tr></table>",
+"fillColor": "#181cd6" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0109232,     38.8224906 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>4660 Martin Luther King Ave</th></tr><tr><td align='left'>Date: 8/25/03<br>Property: Wingates Towers<br>Quadrant: SW<br>Price in Millions :$9.415<br>Units: 392<br>Price Per Unit: $24.017<br>Cap Rate: NA<br>Buyer: Paramount Financial<br>Seller: Unknown</td></tr></table>",
+"fillColor": "#7bd618" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.009556,      38.823592 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>26-116 Galveston St</th></tr><tr><td align='left'>Date: 8/25/03<br>Property: Wingates Gardens<br>Quadrant: SW<br>Price in Millions :$8.766<br>Units: 365<br>Price Per Unit: $24.017<br>Cap Rate: NA<br>Buyer: Paramount Financial<br>Seller: Unknown</td></tr></table>",
+"fillColor": "#7bd618" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0200516,     38.8792019 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>907 6th Street</th></tr><tr><td align='left'>Date: 12/18/03<br>Property: Waterside Towers, Commons At Town Square<br>Quadrant: SW<br>Price in Millions :$62.5<br>Units: 550<br>Price Per Unit: $113.636<br>Cap Rate: 6.5<br>Buyer: UDR, Inc.<br>Seller: Bresler & Reiner</td></tr></table>",
+"fillColor": "#7bd618" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [      -77.05634,       38.92353 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>Calvert & 29th Sts</th></tr><tr><td align='left'>Date: 7/15/03<br>Property: Gables Woodley Park<br>Quadrant: NW<br>Price in Millions :$53<br>Units: 211<br>Price Per Unit: $251.185<br>Cap Rate: NA<br>Buyer: Gables Residential<br>Seller: LCOR JV Northwestern Mutual Life</td></tr></table>",
+"fillColor": "#7bd618" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.028128,      38.932635 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1020 Monroe St</th></tr><tr><td align='left'>Date: 10/29/04<br>Property: 1020 Monroe St<br>Quadrant: NW<br>Price in Millions :$1<br>Units: 28<br>Price Per Unit: $35.714<br>Cap Rate: NA<br>Buyer: Hope 7 Monroe Street LP<br>Seller: Unknown</td></tr></table>",
+"fillColor": "#d6a418" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.019359,      38.877115 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1100 6th St</th></tr><tr><td align='left'>Date: 11/12/04<br>Property: Marina View Towers<br>Quadrant: SW<br>Price in Millions :$28<br>Units: 255<br>Price Per Unit: $109.804<br>Cap Rate: NA<br>Buyer: Fairfield Residential<br>Seller: Intercoastal Properties</td></tr></table>",
+"fillColor": "#d6a418" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0338118,     38.9083335 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1441 Rhode Island Avenue</th></tr><tr><td align='left'>Date: 2/26/04<br>Property: 1441 Rhode Island Avenue,<br>Quadrant: NW<br>Price in Millions :$43.437<br>Units: 157<br>Price Per Unit: $276.668<br>Cap Rate: NA<br>Buyer: B & P Developments (Chicago)<br>Seller: Fairfield Residential JV Greenstreet Partners</td></tr></table>",
+"fillColor": "#d6a418" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.019759,     38.8990957 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>719 6th St</th></tr><tr><td align='left'>Date: 1/5/04<br>Property: 719 6th St<br>Quadrant: NW<br>Price in Millions :$5.1<br>Units: 13<br>Price Per Unit: $392.308<br>Cap Rate: NA<br>Buyer: Trammell Crow Residential<br>Seller: Ruby Restaurant Inc</td></tr></table>",
+"fillColor": "#d6a418" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -76.9922043,     38.8592425 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2627 Bowen Rd</th></tr><tr><td align='left'>Date: 1/23/04<br>Property: Oxford Manor<br>Quadrant: SE<br>Price in Millions :$8<br>Units: 227<br>Price Per Unit: $35.242<br>Cap Rate: NA<br>Buyer: Community Preservation<br>Seller: Unknown</td></tr></table>",
+"fillColor": "#d6a418" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -76.974151,      38.865073 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2300 Good Hope Rd</th></tr><tr><td align='left'>Date: 4/30/04<br>Property: Marbury Plaza<br>Quadrant: NW<br>Price in Millions :$26.8<br>Units: 672<br>Price Per Unit: $39.881<br>Cap Rate: NA<br>Buyer: Collins Group (Brooklyn, NY) JV Arbor Commercial (Uniondale, NY) JV Lightstone Group<br>Seller: Unknown</td></tr></table>",
+"fillColor": "#d6a418" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0532319,     38.9272944 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2807 Connecticut Ave</th></tr><tr><td align='left'>Date: 4/7/04<br>Property: 2807 Connecticut Ave<br>Quadrant: NW<br>Price in Millions :$9.75<br>Units: 37<br>Price Per Unit: $263.514<br>Cap Rate: NA<br>Buyer: Intrepid Real Estate<br>Seller: Equis Corp</td></tr></table>",
+"fillColor": "#d6a418" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0376836,     38.9259607 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1629 Columbia Rd</th></tr><tr><td align='left'>Date: 6/30/04<br>Property: Park Plaza<br>Quadrant: NW<br>Price in Millions :$33.211<br>Units: 276<br>Price Per Unit: $120.33<br>Cap Rate: NA<br>Buyer: FAS Group<br>Seller: Craig Bernstein AKA H&M Enterprises</td></tr></table>",
+"fillColor": "#d6a418" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.015526,      38.898732 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>704 3rd St</th></tr><tr><td align='left'>Date: 1/7/04<br>Property: Harrison<br>Quadrant: NW<br>Price in Millions :$6.665<br>Units: 106<br>Price Per Unit: $62.877<br>Cap Rate: NA<br>Buyer: Consortium II Fund (Bernstein)<br>Seller: Canterbury Apartments LLC</td></tr></table>",
+"fillColor": "#d6a418" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.043924,      38.921484 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1841 Columbia Rd</th></tr><tr><td align='left'>Date: 1/8/04<br>Property: Alcazar<br>Quadrant: NW<br>Price in Millions :$15.2<br>Units: 115<br>Price Per Unit: $132.174<br>Cap Rate: NA<br>Buyer: Fairfield Residential<br>Seller: Archstone Smith</td></tr></table>",
+"fillColor": "#d6a418" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0193655,     38.9015792 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>555 Massachusetts Avenue</th></tr><tr><td align='left'>Date: 5/5/05<br>Property: 555 on Massachusetts Avenue<br>Quadrant: NW<br>Price in Millions :$82.75<br>Units: 246<br>Price Per Unit: $336.382<br>Cap Rate: NA<br>Buyer: Carlyle Group<br>Seller: Prudential JV JBG Companies</td></tr></table>",
+"fillColor": "#7418d6" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.003463,      38.919339 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>200 Rhode Island Ave</th></tr><tr><td align='left'>Date: 11/10/05<br>Property: The Metropolitan<br>Quadrant: NE<br>Price in Millions :$7.425<br>Units: 161<br>Price Per Unit: $46.118<br>Cap Rate: NA<br>Buyer: Unknown<br>Seller: Unknown</td></tr></table>",
+"fillColor": "#7418d6" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0574305,     38.9303186 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3401 28th Street</th></tr><tr><td align='left'>Date: 5/5/05<br>Property: Village at McLean Gardens<br>Quadrant: NW<br>Price in Millions :$180.2<br>Units: 574<br>Price Per Unit: $313.937<br>Cap Rate: NA<br>Buyer: Carlyle Group JV Ross Development & Investment<br>Seller: General Investment & Development</td></tr></table>",
+"fillColor": "#7418d6" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0400813,     38.9330081 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3314 Mt Pleasant</th></tr><tr><td align='left'>Date: 8/23/05<br>Property: 3314 Mt Pleasant<br>Quadrant: NW<br>Price in Millions :$3.09<br>Units: 37<br>Price Per Unit: $83.514<br>Cap Rate: 3.3<br>Buyer: Tenacity Group<br>Seller: 3314 Mt Pleasant LLC</td></tr></table>",
+"fillColor": "#7418d6" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0393139,     38.9341773 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1708 Newton St</th></tr><tr><td align='left'>Date: 1/31/05<br>Property: 1708 Newton St<br>Quadrant: NW<br>Price in Millions :$2.55<br>Units: 34<br>Price Per Unit: $75<br>Cap Rate: NA<br>Buyer: Niagara Dev LLC<br>Seller: 1708 Newton LLC</td></tr></table>",
+"fillColor": "#7418d6" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [      -76.98364,     38.8614249 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1510-1560 Butler St</th></tr><tr><td align='left'>Date: 1/27/05<br>Property: Finsbury Square<br>Quadrant: SE<br>Price in Millions :$6.5<br>Units: 134<br>Price Per Unit: $48.507<br>Cap Rate: NA<br>Buyer: Finsbury Square LP<br>Seller: New Hope Associates</td></tr></table>",
+"fillColor": "#7418d6" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0532319,     38.9272944 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2807 Connecticut Ave</th></tr><tr><td align='left'>Date: 6/29/06<br>Property: Boston Universitys Washington Center<br>Quadrant: NW<br>Price in Millions :$17<br>Units: 37<br>Price Per Unit: $459.459<br>Cap Rate: NA<br>Buyer: Washington Internship Student Housing<br>Seller: Intrepid Real Estate</td></tr></table>",
+"fillColor": "#d6187a" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [      -77.03252,       38.95769 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>5610 Colorado Ave</th></tr><tr><td align='left'>Date: 9/11/06<br>Property: 5610 Colorado Ave<br>Quadrant: NW<br>Price in Millions :$2.8<br>Units: 36<br>Price Per Unit: $77.778<br>Cap Rate: 5.4<br>Buyer: 5610 Colorado Cooperative Inc<br>Seller: Julia G Reneau</td></tr></table>",
+"fillColor": "#d6187a" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.045352,      38.897092 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2000 F St</th></tr><tr><td align='left'>Date: 7/15/06<br>Property: Empire<br>Quadrant: NW<br>Price in Millions :$42<br>Units: 302<br>Price Per Unit: $139.073<br>Cap Rate: NA<br>Buyer: Unknown<br>Seller: Washington Transair LLC</td></tr></table>",
+"fillColor": "#d6187a" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.043239,      38.916377 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1919 19th St</th></tr><tr><td align='left'>Date: 10/27/06<br>Property: 1919 19th St<br>Quadrant: NW<br>Price in Millions :$3<br>Units: 14<br>Price Per Unit: $214.286<br>Cap Rate: 6.4<br>Buyer: 1919 Nineteenth Street LLC<br>Seller: William J & Theresa G Trittipo</td></tr></table>",
+"fillColor": "#d6187a" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -76.980302,      38.889399 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1705 E Capitol St</th></tr><tr><td align='left'>Date: 4/12/06<br>Property: 1705 E Capitol St<br>Quadrant: SE<br>Price in Millions :$9<br>Units: 80<br>Price Per Unit: $112.5<br>Cap Rate: NA<br>Buyer: Comstock Homebuilding<br>Seller: Unknown</td></tr></table>",
+"fillColor": "#d6187a" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -76.992518,      38.841176 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3311-3323 10th Pl</th></tr><tr><td align='left'>Date: 10/24/06<br>Property: Oakhill<br>Quadrant: SE<br>Price in Millions :$6<br>Units: 108<br>Price Per Unit: $55.556<br>Cap Rate: NA<br>Buyer: Unknown<br>Seller: Unknown</td></tr></table>",
+"fillColor": "#d6187a" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -76.9486605,     38.8897184 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>4469-4477 B Stm</th></tr><tr><td align='left'>Date: 6/12/06<br>Property: 4469-4477 B St<br>Quadrant: NW<br>Price in Millions :$2.888<br>Units: 38<br>Price Per Unit: $76<br>Cap Rate: 6<br>Buyer: 4469/4473/4477 B Street LLC<br>Seller: Ararat Corp & Dev Inc</td></tr></table>",
+"fillColor": "#d6187a" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0364757,     38.9274508 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3033 16th St</th></tr><tr><td align='left'>Date: 4/17/07<br>Property: The Claiborne<br>Quadrant: NW<br>Price in Millions :$10.904<br>Units: 92<br>Price Per Unit: $118.523<br>Cap Rate: 2.5<br>Buyer: Claiborne Cooperative Association Inc<br>Seller: 3033 16th St LLC</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0219421,     38.9099891 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1510-1518 7th St</th></tr><tr><td align='left'>Date: 7/17/07<br>Property: Kelsey Gardens<br>Quadrant: NW<br>Price in Millions :$3<br>Units: 54<br>Price Per Unit: $55.556<br>Cap Rate: NA<br>Buyer: Kelsey Gardens Property Co LLC<br>Seller: Deliverance Church Of God In Christ Housing Corp</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -76.9824029,     38.8515755 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1350-1354 Jasper Pl</th></tr><tr><td align='left'>Date: 2/8/07<br>Property: Jasper Gardens<br>Quadrant: SE<br>Price in Millions :$3.2<br>Units: 40<br>Price Per Unit: $80<br>Cap Rate: NA<br>Buyer: East of the River CDC<br>Seller: Jasper Gardens LLC</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0740752,      38.935912 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3401 38th St</th></tr><tr><td align='left'>Date: 4/17/07<br>Property: Village at McLean Gardens (Bulk Condo)<br>Quadrant: NW<br>Price in Millions :$137.428<br>Units: 405<br>Price Per Unit: $339.327<br>Cap Rate: NA<br>Buyer: Capital Properties<br>Seller: Carlyle Group JV Ross Development & Investment</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -76.982191,      38.883412 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>420 16th St</th></tr><tr><td align='left'>Date: 4/23/07<br>Property: 420 16th St<br>Quadrant: SE<br>Price in Millions :$2.9<br>Units: 31<br>Price Per Unit: $93.548<br>Cap Rate: NA<br>Buyer: The 420 16th St SE Cooperative Inc<br>Seller: Arlington LLC</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -76.989643,      38.837221 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1217 Valley Ave</th></tr><tr><td align='left'>Date: 11/23/07<br>Property: Wheeler Terrace<br>Quadrant: SE<br>Price in Millions :$5.25<br>Units: 113<br>Price Per Unit: $46.46<br>Cap Rate: NA<br>Buyer: Wheeler Terrace Tenant Organization JV Community Preservation and Development Corporation<br>Seller: Altman Companies</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0729448,     38.9606287 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>5415 Connecticut Avenue</th></tr><tr><td align='left'>Date: 10/5/07<br>Property: The Kenmore<br>Quadrant: NW<br>Price in Millions :$90.332<br>Units: 376<br>Price Per Unit: $240.244<br>Cap Rate: NA<br>Buyer: Tishman Speyer JV Lehman Brothers Holdings Inc JV Bank of America<br>Seller: Archstone Smith</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.068942,      38.952834 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>4850 Connecticut Ave</th></tr><tr><td align='left'>Date: 10/5/07<br>Property: Connecticut Heights<br>Quadrant: NW<br>Price in Millions :$124.687<br>Units: 519<br>Price Per Unit: $240.244<br>Cap Rate: NA<br>Buyer: Tishman Speyer JV Lehman Brothers Holdings Inc JV Bank of America<br>Seller: Archstone Smith</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0277629,      38.907601 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1307 12th St</th></tr><tr><td align='left'>Date: 12/31/07<br>Property: The Tremont<br>Quadrant: NW<br>Price in Millions :$2.6<br>Units: 47<br>Price Per Unit: $55.319<br>Cap Rate: NA<br>Buyer: New Tremont LLC<br>Seller: Peerless Properties</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0321387,     38.9070922 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1200 14th Street</th></tr><tr><td align='left'>Date: 3/27/07<br>Property: Andover House<br>Quadrant: NW<br>Price in Millions :$65.674<br>Units: 171<br>Price Per Unit: $384.056<br>Cap Rate: 4.4<br>Buyer: UDR, Inc.<br>Seller: LCOR</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0512969,     38.9043869 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1121 24th St</th></tr><tr><td align='left'>Date: 9/27/07<br>Property: Tiverton<br>Quadrant: NW<br>Price in Millions :$3.85<br>Units: 47<br>Price Per Unit: $81.915<br>Cap Rate: NA<br>Buyer: Tiverton Associates Corporation<br>Seller: 1121 24th St LP</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.045447,      38.906849 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2000 N St</th></tr><tr><td align='left'>Date: 10/5/07<br>Property: The Flats at Dupont Circle<br>Quadrant: NW<br>Price in Millions :$123.876<br>Units: 306<br>Price Per Unit: $404.822<br>Cap Rate: NA<br>Buyer: Tishman Speyer JV Lehman Brothers Holdings Inc JV Bank of America<br>Seller: Archstone Smith</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0433532,     38.9169697 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1846 Vernon St</th></tr><tr><td align='left'>Date: 6/15/07<br>Property: 1846 Vernon St<br>Quadrant: NW<br>Price in Millions :$4.636<br>Units: 18<br>Price Per Unit: $257.576<br>Cap Rate: NA<br>Buyer: Novo Properties<br>Seller: 1840 Vernon Street Associates LLC</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.025466,      38.983318 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>7720 Eastern Ave</th></tr><tr><td align='left'>Date: 1/5/07<br>Property: Blair Group<br>Quadrant: NW<br>Price in Millions :$5.093<br>Units: 71<br>Price Per Unit: $71.732<br>Cap Rate: 4.3<br>Buyer: Eastern & Juniper Cooperative<br>Seller: Capital Mgmnt & Development LLC</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0197406,     38.9579999 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>5611 5th St</th></tr><tr><td align='left'>Date: 9/17/07<br>Property: Concord Manor<br>Quadrant: NW<br>Price in Millions :$2.716<br>Units: 22<br>Price Per Unit: $123.455<br>Cap Rate: NA<br>Buyer: NW Concord LLC<br>Seller: Douglas Development</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -76.953519,      38.890496 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3533 Ames St</th></tr><tr><td align='left'>Date: 1/22/07<br>Property: 3533 Ames St<br>Quadrant: NE<br>Price in Millions :$4.125<br>Units: 72<br>Price Per Unit: $57.292<br>Cap Rate: NA<br>Buyer: Novo Properties<br>Seller: Ames Venture</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.033216,      38.934605 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3500 14th St</th></tr><tr><td align='left'>Date: 7/26/07<br>Property: Cavalier<br>Quadrant: NW<br>Price in Millions :$20<br>Units: 230<br>Price Per Unit: $86.957<br>Cap Rate: NA<br>Buyer: Somerset Development LLC<br>Seller: Unknown</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.039429,      38.915326 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1706 T St</th></tr><tr><td align='left'>Date: 9/20/07<br>Property: Biltmore<br>Quadrant: NW<br>Price in Millions :$3.3<br>Units: 23<br>Price Per Unit: $143.478<br>Cap Rate: NA<br>Buyer: Urban Investment Partners<br>Seller: Richard L Sugarman</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0612007,     38.9436358 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3003Van Ness St</th></tr><tr><td align='left'>Date: 10/5/07<br>Property: Van Ness South<br>Quadrant: NW<br>Price in Millions :$150.153<br>Units: 625<br>Price Per Unit: $240.244<br>Cap Rate: NA<br>Buyer: Tishman Speyer JV Lehman Brothers Holdings Inc JV Bank of America<br>Seller: Archstone Smith</td></tr></table>",
+"fillColor": "#e5aa70" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.038484,      38.929517 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1636 Kenyon St</th></tr><tr><td align='left'>Date: 7/31/08<br>Property: Saint Dennis<br>Quadrant: NW<br>Price in Millions :$3.4<br>Units: 38<br>Price Per Unit: $89.474<br>Cap Rate: NA<br>Buyer: Nhte Kenyon Street Preservation<br>Seller: Kenyon Partners LLC</td></tr></table>",
+"fillColor": "#a59312" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.046051,      38.919484 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1921 Kalorama Rd</th></tr><tr><td align='left'>Date: 7/30/08<br>Property: fmr City Place<br>Quadrant: NW<br>Price in Millions :$9.05<br>Units: 57<br>Price Per Unit: $158.772<br>Cap Rate: NA<br>Buyer: Urban Investment Partners<br>Seller: Ross Development & Investment</td></tr></table>",
+"fillColor": "#a59312" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.046677,       38.91876 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2010 Kalorama Rd</th></tr><tr><td align='left'>Date: 7/17/08<br>Property: Stratford<br>Quadrant: NW<br>Price in Millions :$3.3<br>Units: 27<br>Price Per Unit: $122.222<br>Cap Rate: NA<br>Buyer: Union Realty Partners<br>Seller: 2010 Kalorama Road LLC</td></tr></table>",
+"fillColor": "#a59312" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.032084,      38.961251 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1336 Missouri Ave</th></tr><tr><td align='left'>Date: 3/5/08<br>Property: Walden Commons<br>Quadrant: NW<br>Price in Millions :$13.22<br>Units: 132<br>Price Per Unit: $100.152<br>Cap Rate: NA<br>Buyer: McKinney Properties Inc<br>Seller: Lynwood Apartment Associates</td></tr></table>",
+"fillColor": "#a59312" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.001683,      38.915318 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1835 3rd St</th></tr><tr><td align='left'>Date: 2/28/08<br>Property: 1835 3rd St<br>Quadrant: NE<br>Price in Millions :$3.7<br>Units: 51<br>Price Per Unit: $72.549<br>Cap Rate: NA<br>Buyer: Dash Properties LLC<br>Seller: 1835 3rd Street Ltd</td></tr></table>",
+"fillColor": "#a59312" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0729448,     38.9606287 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>5415 Connecticut Ave</th></tr><tr><td align='left'>Date: 8/31/08<br>Property: The Kenmore<br>Quadrant: NW<br>Price in Millions :$58.275<br>Units: 374<br>Price Per Unit: $155.816<br>Cap Rate: 6.2<br>Buyer: Washington RE Investment Trust<br>Seller: Tishman Speyer JV Lehman Brothers Holdings Inc JV Bank of America</td></tr></table>",
+"fillColor": "#a59312" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.034678,      38.930801 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3237 Hiatt Pl</th></tr><tr><td align='left'>Date: 11/24/08<br>Property: The Tivoli<br>Quadrant: NW<br>Price in Millions :$2.715<br>Units: 32<br>Price Per Unit: $84.844<br>Cap Rate: NA<br>Buyer: Daffodil House Inc<br>Seller: John Theoharis</td></tr></table>",
+"fillColor": "#a59312" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.038134,       38.91435 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1631 S St</th></tr><tr><td align='left'>Date: 1/31/08<br>Property: 1631 S St<br>Quadrant: NW<br>Price in Millions :$8.17<br>Units: 64<br>Price Per Unit: $127.661<br>Cap Rate: NA<br>Buyer: WRF 1631 S Street LP<br>Seller: Borger Management Inc</td></tr></table>",
+"fillColor": "#a59312" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.043876,      38.913404 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1722 19th St</th></tr><tr><td align='left'>Date: 3/31/08<br>Property: Sedgewick<br>Quadrant: NW<br>Price in Millions :$13.45<br>Units: 89<br>Price Per Unit: $151.124<br>Cap Rate: 4.5<br>Buyer: ZOM Residential<br>Seller: Borger Management Inc</td></tr></table>",
+"fillColor": "#a59312" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0339259,     38.9212429 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1440 Chapin St</th></tr><tr><td align='left'>Date: 8/7/08<br>Property: 1440 Chapin St<br>Quadrant: NW<br>Price in Millions :$2.632<br>Units: 28<br>Price Per Unit: $94<br>Cap Rate: NA<br>Buyer: Haile Gebreselassie<br>Seller: Alaniz 1440 Living Trust</td></tr></table>",
+"fillColor": "#a59312" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.036001,      38.914372 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1809 16th St</th></tr><tr><td align='left'>Date: 4/16/08<br>Property: Somerset House<br>Quadrant: NW<br>Price in Millions :$8.5<br>Units: 84<br>Price Per Unit: $101.19<br>Cap Rate: NA<br>Buyer: Tenacity 1801 16th Street LLC<br>Seller: Republic Property Trust</td></tr></table>",
+"fillColor": "#a59312" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -76.9959016,     38.8588958 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2617 Martin Luther King Jr Ave</th></tr><tr><td align='left'>Date: 5/31/09<br>Property: 2617 Martin Luther King Jr Ave<br>Quadrant: SE<br>Price in Millions :$2.553<br>Units: 36<br>Price Per Unit: $70.917<br>Cap Rate: NA<br>Buyer: 2613 Mlk Ave LLC<br>Seller: Young & Skidmore LLC</td></tr></table>",
+"fillColor": "#1e4ccc" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -76.9300523,      38.880571 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>4951 G St</th></tr><tr><td align='left'>Date: 10/29/09<br>Property: Benning Gardens<br>Quadrant: SE<br>Price in Millions :$2.3<br>Units: 45<br>Price Per Unit: $51.111<br>Cap Rate: NA<br>Buyer: Unknown<br>Seller: Benning Garden LP</td></tr></table>",
+"fillColor": "#1e4ccc" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0328331,     38.9327824 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3460 14th Street</th></tr><tr><td align='left'>Date: 11/25/09<br>Property: Allegro<br>Quadrant: NW<br>Price in Millions :$77.5<br>Units: 297<br>Price Per Unit: $260.943<br>Cap Rate: NA<br>Buyer: Federal Capital Partners<br>Seller: Metro Properties, Inc</td></tr></table>",
+"fillColor": "#1e4ccc" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.015526,      38.898732 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>704 3rd St</th></tr><tr><td align='left'>Date: 6/29/10<br>Property: Harrison<br>Quadrant: NW<br>Price in Millions :$8.5<br>Units: 106<br>Price Per Unit: $80.189<br>Cap Rate: NA<br>Buyer: Renaissance Centro LLC<br>Seller: Consortium II Fund (Bernstein)</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.016808,      38.900914 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>425 Massachusetts Ave</th></tr><tr><td align='left'>Date: 4/7/10<br>Property: 425 Mass<br>Quadrant: NW<br>Price in Millions :$166.9<br>Units: 559<br>Price Per Unit: $298.569<br>Cap Rate: NA<br>Buyer: Equity Residential<br>Seller: Broadway Management Co</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.037495,      38.923741 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2517 Mozart Pl</th></tr><tr><td align='left'>Date: 5/28/10<br>Property: 2517 Mozart<br>Quadrant: NW<br>Price in Millions :$3.3<br>Units: 37<br>Price Per Unit: $89.189<br>Cap Rate: NA<br>Buyer: Mozart LLC<br>Seller: The Foley Family</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -76.992337,      38.828729 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>860 Chesapeake St</th></tr><tr><td align='left'>Date: 3/29/10<br>Property: 860 Chesapeake S<br>Quadrant: SE<br>Price in Millions :$4.759<br>Units: 28<br>Price Per Unit: $169.974<br>Cap Rate: NA<br>Buyer: Vesta Chesapeake LLC<br>Seller: Churchill Arms LLC</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0512951,     38.9065023 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1221 24th St</th></tr><tr><td align='left'>Date: 4/19/10<br>Property: Residences at Park Hyatt<br>Quadrant: NW<br>Price in Millions :$22.75<br>Units: 284<br>Price Per Unit: $80.106<br>Cap Rate: NA<br>Buyer: Bernstein Management Corporation<br>Seller: Hyatt Hotels</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0181234,     38.9035369 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>460 L St</th></tr><tr><td align='left'>Date: 8/18/10<br>Property: Gables CityVista<br>Quadrant: NW<br>Price in Millions :$61<br>Units: 244<br>Price Per Unit: $250<br>Cap Rate: NA<br>Buyer: Gables Residential<br>Seller: Lowe Enterprises JV CIM Group JV Bundy Development Corp JV Neighborhood Development Corporation</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.015239,     38.8998097 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>300 Massachusetts Ave</th></tr><tr><td align='left'>Date: 2/16/10<br>Property: Mass Court<br>Quadrant: NW<br>Price in Millions :$105.5<br>Units: 371<br>Price Per Unit: $284.367<br>Cap Rate: 6<br>Buyer: CBRE Investors<br>Seller: Prudential</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [      -77.02446,      38.918518 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>919-929 Florida Ave</th></tr><tr><td align='left'>Date: 1/8/10<br>Property: The Floridia<br>Quadrant: NW<br>Price in Millions :$11.5<br>Units: 86<br>Price Per Unit: $133.721<br>Cap Rate: NA<br>Buyer: The Goldstar Group<br>Seller: Kady Group</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.031813,      38.925116 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2701 14th St</th></tr><tr><td align='left'>Date: 2/26/10<br>Property: Columbia Uptown<br>Quadrant: NW<br>Price in Millions :$11.75<br>Units: 90<br>Price Per Unit: $130.556<br>Cap Rate: 5.3<br>Buyer: Van Metre Cos<br>Seller: Pennrose Properties</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [      -77.03505,      38.924946 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2801 15th St</th></tr><tr><td align='left'>Date: 1/20/10<br>Property: 2801 15th St<br>Quadrant: NW<br>Price in Millions :$4.6<br>Units: 62<br>Price Per Unit: $74.194<br>Cap Rate: 6<br>Buyer: 2801 Fifteen Street NW LLC<br>Seller: 2801 15th Street LP</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0028036,     38.9010153 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>201 I St</th></tr><tr><td align='left'>Date: 7/13/10<br>Property: Senate Square<br>Quadrant: NE<br>Price in Millions :$162.3<br>Units: 432<br>Price Per Unit: $375.694<br>Cap Rate: 5.9<br>Buyer: LaSalle Investment Management<br>Seller: Westbrook Partners</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.033444,      38.907476 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1435 N St</th></tr><tr><td align='left'>Date: 3/11/10<br>Property: Truman Building<br>Quadrant: NW<br>Price in Millions :$4.2<br>Units: 28<br>Price Per Unit: $150<br>Cap Rate: NA<br>Buyer: 1435 N LLC<br>Seller: Quality Housing Partners LLC</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.034017,      38.917574 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2001 15th St</th></tr><tr><td align='left'>Date: 7/1/10<br>Property: Campbell Heights Apartments<br>Quadrant: NW<br>Price in Millions :$20.655<br>Units: 177<br>Price Per Unit: $116.695<br>Cap Rate: NA<br>Buyer: Jair Lynch Development Partners JV Campbell Heights Residents Association<br>Seller: Unknown</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0348153,     38.9208478 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2325 15th St</th></tr><tr><td align='left'>Date: 7/30/10<br>Property: Garden Towers<br>Quadrant: NW<br>Price in Millions :$6.2<br>Units: 73<br>Price Per Unit: $84.932<br>Cap Rate: 5.8<br>Buyer: Union Realty Partners<br>Seller: Garden Towers LP</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0156184,     38.8990587 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>750 3rd St</th></tr><tr><td align='left'>Date: 11/8/10<br>Property: Ashton Judiciary Square<br>Quadrant: NW<br>Price in Millions :$7.183<br>Units: 49<br>Price Per Unit: $146.599<br>Cap Rate: NA<br>Buyer: UDR, Inc.<br>Seller: Hanover Company JV MetLife</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0028036,     38.9010153 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>201 I St</th></tr><tr><td align='left'>Date: 2/15/10<br>Property: Senate Square<br>Quadrant: NE<br>Price in Millions :$121.3<br>Units: 432<br>Price Per Unit: $280.787<br>Cap Rate: 7.7<br>Buyer: Westbrook Partners<br>Seller: Broadway Management Co</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.024738,      38.954903 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>812 Jefferson</th></tr><tr><td align='left'>Date: 9/10/10<br>Property: Homestead Apts<br>Quadrant: NW<br>Price in Millions :$3.667<br>Units: 55<br>Price Per Unit: $66.667<br>Cap Rate: 6.8<br>Buyer: Urban Investment Partners JV JCR Companies<br>Seller: Novo Properties</td></tr></table>",
+"fillColor": "#c2bf79" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.031595,      38.929955 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1349 Kenyon St</th></tr><tr><td align='left'>Date: 1/24/11<br>Property: Kenyon House<br>Quadrant: NW<br>Price in Millions :$4.5<br>Units: 40<br>Price Per Unit: $112.5<br>Cap Rate: NA<br>Buyer: Urban Investment Partners JV Infinity Real Estate<br>Seller: Northridge Capital</td></tr></table>",
+"fillColor": "#e9692c" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.026935,      38.931175 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3312 Sherman Ave</th></tr><tr><td align='left'>Date: 6/24/11<br>Property: 3312 Sherman Ave<br>Quadrant: NW<br>Price in Millions :$2.075<br>Units: 34<br>Price Per Unit: $61.029<br>Cap Rate: NA<br>Buyer: Urban Investment Partners<br>Seller: Lincoln Road Associates LLC, Sherman Avenue Associates LLC, Pitch Apartments Inc</td></tr></table>",
+"fillColor": "#e9692c" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.035167,       38.90648 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1500 Massachusetts Ave</th></tr><tr><td align='left'>Date: 5/25/11<br>Property: 1500 Massachusetts Ave<br>Quadrant: NW<br>Price in Millions :$95<br>Units: 556<br>Price Per Unit: $170.863<br>Cap Rate: NA<br>Buyer: Equity Residential<br>Seller: Marion Bell JV Frances Rotwein JV Getz Foundation</td></tr></table>",
+"fillColor": "#e9692c" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.034845,      38.964946 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>6101 16th St</th></tr><tr><td align='left'>Date: 8/11/11<br>Property: The Rittenhouse<br>Quadrant: NW<br>Price in Millions :$30.75<br>Units: 206<br>Price Per Unit: $149.272<br>Cap Rate: NA<br>Buyer: Henderson Global Investors<br>Seller: Peter NG Schwartz Management Co</td></tr></table>",
+"fillColor": "#e9692c" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.029409,       38.91583 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1901 13th St</th></tr><tr><td align='left'>Date: 3/31/11<br>Property: 1901 13th St<br>Quadrant: NW<br>Price in Millions :$2.6<br>Units: 11<br>Price Per Unit: $236.364<br>Cap Rate: NA<br>Buyer: 1901 13th Street LLC<br>Seller: Gloria V & J M Greene</td></tr></table>",
+"fillColor": "#e9692c" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.030548,      38.933123 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3435 Holmead Pl</th></tr><tr><td align='left'>Date: 6/24/11<br>Property: Holmead Place Apartments<br>Quadrant: NW<br>Price in Millions :$7.05<br>Units: 101<br>Price Per Unit: $69.802<br>Cap Rate: NA<br>Buyer: Urban Investment Partners<br>Seller: Lincoln Road Associates LLC, Sherman Avenue Associates LLC, Pitch Apartments Inc</td></tr></table>",
+"fillColor": "#e9692c" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.030218,      38.905931 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1301 M Street</th></tr><tr><td align='left'>Date: 12/22/11<br>Property: Jefferson At Thomas Circle<br>Quadrant: NW<br>Price in Millions :$153.8<br>Units: 292<br>Price Per Unit: $526.712<br>Cap Rate: NA<br>Buyer: Kuwait Finance House, UDR<br>Seller: Prudential Real Estate Investors</td></tr></table>",
+"fillColor": "#e9692c" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.031519,      38.920455 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2303 14th St</th></tr><tr><td align='left'>Date: 6/28/11<br>Property: View 14<br>Quadrant: NW<br>Price in Millions :$105<br>Units: 185<br>Price Per Unit: $567.568<br>Cap Rate: 4.8<br>Buyer: UDR, Inc.<br>Seller: Centrum Properties JV Level 2 Development</td></tr></table>",
+"fillColor": "#e9692c" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0333021,     38.9607678 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>5807-5825 14th St</th></tr><tr><td align='left'>Date: 4/18/11<br>Property: Concord Apts<br>Quadrant: NW<br>Price in Millions :$3.175<br>Units: 81<br>Price Per Unit: $39.198<br>Cap Rate: NA<br>Buyer: Bernstein Management Corporation<br>Seller: Concord Apartments Associates LLC</td></tr></table>",
+"fillColor": "#e9692c" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.033237,      38.918875 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1430 W St</th></tr><tr><td align='left'>Date: 6/24/11<br>Property: Maderia Apartments<br>Quadrant: NW<br>Price in Millions :$3.25<br>Units: 26<br>Price Per Unit: $125<br>Cap Rate: NA<br>Buyer: Urban Investment Partners<br>Seller: Lincoln Road Associates LLC, Sherman Avenue Associates LLC, Pitch Apartments Inc</td></tr></table>",
+"fillColor": "#e9692c" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0020489,     38.8818115 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>5120 Third Street</th></tr><tr><td align='left'>Date: 3/31/11<br>Property: Aventine Fort Totten<br>Quadrant: SE<br>Price in Millions :$55<br>Units: 308<br>Price Per Unit: $178.571<br>Cap Rate: NA<br>Buyer: Greystar<br>Seller: Clark Realty Capital</td></tr></table>",
+"fillColor": "#e9692c" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0005606,     38.9156295 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1301 U Street</th></tr><tr><td align='left'>Date: 9/29/11<br>Property: Ellington<br>Quadrant: NE<br>Price in Millions :$100<br>Units: 190<br>Price Per Unit: $526.316<br>Cap Rate: NA<br>Buyer: TIAA-CREF<br>Seller: Donatelli Development</td></tr></table>",
+"fillColor": "#e9692c" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.015854,      38.898594 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>705 4th St</th></tr><tr><td align='left'>Date: 5/25/11<br>Property: Court Square<br>Quadrant: NW<br>Price in Millions :$4<br>Units: 41<br>Price Per Unit: $97.561<br>Cap Rate: NA<br>Buyer: Community Realty Company Inc (CRC)<br>Seller: 705 4th Street LP</td></tr></table>",
+"fillColor": "#e9692c" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.015239,     38.8998097 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>300 Massachusetts Avenue</th></tr><tr><td align='left'>Date: 9/6/12<br>Property: Mass Court<br>Quadrant: NW<br>Price in Millions :$168.4<br>Units: 371<br>Price Per Unit: $453.908<br>Cap Rate: NA<br>Buyer: J.P. Morgan Asset Management, TIAA-CREF<br>Seller: CBRE Global Investors</td></tr></table>",
+"fillColor": "#18453b" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0328331,     38.9327824 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3460 14th Street</th></tr><tr><td align='left'>Date: 10/23/12<br>Property: Allegro<br>Quadrant: NW<br>Price in Millions :$129<br>Units: 297<br>Price Per Unit: $434.343<br>Cap Rate: NA<br>Buyer: Prudential Real Estate Investors<br>Seller: Federal Capital Partners</td></tr></table>",
+"fillColor": "#18453b" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.043924,      38.921484 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1835-1841 Columbia Road</th></tr><tr><td align='left'>Date: 3/31/12<br>Property: Alcazar<br>Quadrant: NW<br>Price in Millions :$25.7<br>Units: 114<br>Price Per Unit: $225.439<br>Cap Rate: NA<br>Buyer: Urban Investment Partners, Infinity Real Estate<br>Seller: Fairfield Residential</td></tr></table>",
+"fillColor": "#18453b" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0106268,     38.9013549 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>909 New Jersey Avenue,  70 Eye Street</th></tr><tr><td align='left'>Date: 12/5/12<br>Property: 909 At Capitol Yards, Jefferson At Capitol Yards, Axiom At Capitol Yards<br>Quadrant: NW<br>Price in Millions :$354.3<br>Units: 931<br>Price Per Unit: $380.559<br>Cap Rate: NA<br>Buyer: J.P. Morgan Asset Management<br>Seller: GE Real Estate, JPI Multifamily Partners</td></tr></table>",
+"fillColor": "#18453b" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0458153,     38.8972221 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2020 F St</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: The Statesman <br>Quadrant: NW<br>Price in Millions :$28.196<br>Units: 281<br>Price Per Unit: $100.34<br>Cap Rate: 4.7<br>Buyer: AvalonBay<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.057354,      38.923977 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2727 29th St</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: Cleveland House Apartments<br>Quadrant: NW<br>Price in Millions :$114.641<br>Units: 215<br>Price Per Unit: $533.216<br>Cap Rate: 4.5<br>Buyer: Equity Residential<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0536116,     38.9349469 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2501 Porter St</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: Archstone 2501 Porter Apartments<br>Quadrant: NW<br>Price in Millions :$112.433<br>Units: 202<br>Price Per Unit: $556.598<br>Cap Rate: 4.5<br>Buyer: Equity Residential<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0770649,     38.9250038 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3850 Tunlaw Rd</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: Archstone Glover Park <br>Quadrant: NW<br>Price in Millions :$24.75<br>Units: 120<br>Price Per Unit: $206.253<br>Cap Rate: 4.7<br>Buyer: AvalonBay<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0056544,     38.8771707 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1100 First Street</th></tr><tr><td align='left'>Date: 6/15/13<br>Property: Onyx on First<br>Quadrant: SE<br>Price in Millions :$82<br>Units: 266<br>Price Per Unit: $308.271<br>Cap Rate: 5.7<br>Buyer: J.P. Morgan Asset Management<br>Seller: Faison, Canyon-Johnson Urban Fund </td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0319743,     38.9141063 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1401 S Street</th></tr><tr><td align='left'>Date: 3/20/13<br>Property: District<br>Quadrant: NW<br>Price in Millions :$76<br>Units: 125<br>Price Per Unit: $608<br>Cap Rate: NA<br>Buyer: J.P. Morgan Asset Management<br>Seller: JBG Cos., Grosvenor</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.045447,      38.906849 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2000 N St</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: The Flats at Dupont Circle Apartments<br>Quadrant: NW<br>Price in Millions :$113.797<br>Units: 306<br>Price Per Unit: $371.885<br>Cap Rate: 4.5<br>Buyer: Equity Residential<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.012478,      38.905291 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1160 1st St</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: Archstone First and M<br>Quadrant: NW<br>Price in Millions :$47.059<br>Units: 469<br>Price Per Unit: $100.34<br>Cap Rate: 4.7<br>Buyer: AvalonBay<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.035843,      38.924334 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2637 16th St</th></tr><tr><td align='left'>Date: 5/7/13<br>Property: Park Meridian <br>Quadrant: NW<br>Price in Millions :$12.26<br>Units: 77<br>Price Per Unit: $159.221<br>Cap Rate: 5<br>Buyer: Van Metre Companies<br>Seller: Carmel Partners, Inc.</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0778733,     38.9237976 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3903 Davis Pl</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: Tunlaw Gardens<br>Quadrant: NW<br>Price in Millions :$33.826<br>Units: 166<br>Price Per Unit: $203.768<br>Cap Rate: 4.7<br>Buyer: AvalonBay<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0301654,      38.919196 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1315 W Street</th></tr><tr><td align='left'>Date: 4/23/13<br>Property: 14W<br>Quadrant: NW<br>Price in Millions :$111<br>Units: 231<br>Price Per Unit: $480.519<br>Cap Rate: 5<br>Buyer: Simpson Property Group<br>Seller: Perseus Realty, Rockpoint Group</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.061186,      38.942841 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2950 Van Ness St</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: The Consulate <br>Quadrant: NW<br>Price in Millions :$55.276<br>Units: 268<br>Price Per Unit: $206.253<br>Cap Rate: 4.7<br>Buyer: AvalonBay<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [      -77.06537,      38.949254 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>4545 Connecticut Ave</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: The Brandywine <br>Quadrant: NW<br>Price in Millions :$62.907<br>Units: 305<br>Price Per Unit: $206.253<br>Cap Rate: 4.7<br>Buyer: AvalonBay<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.064155,     38.9461749 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>4411 Connecticut Ave</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: Park Connecticut Apartments<br>Quadrant: NW<br>Price in Millions :$65.262<br>Units: 142<br>Price Per Unit: $459.595<br>Cap Rate: 4.5<br>Buyer: Equity Residential<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0612007,     38.9436358 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3003 Van Ness St</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: Archstone Van Ness Apartments<br>Quadrant: NW<br>Price in Millions :$318.237<br>Units: 625<br>Price Per Unit: $509.179<br>Cap Rate: 4.5<br>Buyer: Equity Residential<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.050156,      38.923969 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>2601 Woodley Pl</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: Archstone Calvert Woodley Apartments<br>Quadrant: NW<br>Price in Millions :$75.191<br>Units: 136<br>Price Per Unit: $552.878<br>Cap Rate: 4.5<br>Buyer: Equity Residential<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.068942,      38.952834 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>4850 Connecticut Ave</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: Archstone Connecticut Heights<br>Quadrant: NW<br>Price in Millions :$136.886<br>Units: 519<br>Price Per Unit: $263.749<br>Cap Rate: 4.5<br>Buyer: Equity Residential<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -77.0366383,      38.929688 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3132 16th St</th></tr><tr><td align='left'>Date: 5/22/13<br>Property: Sarbin Towers <br>Quadrant: NW<br>Price in Millions :$5.343<br>Units: 64<br>Price Per Unit: $83.482<br>Cap Rate: 4.8<br>Buyer: Van Metre Companies<br>Seller: Carmel Partners, Inc.</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [    -76.9824963,     38.9298619 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3150 16th St</th></tr><tr><td align='left'>Date: 5/22/13<br>Property: Park Marconi Apartments<br>Quadrant: NE<br>Price in Millions :$3.657<br>Units: 44<br>Price Per Unit: $83.117<br>Cap Rate: 4.8<br>Buyer: Van Metre Companies<br>Seller: Carmel Partners, Inc.</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.042053,      38.912088 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>1616 18th St</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: Archstone Dupont Circle Apartments <br>Quadrant: NW<br>Price in Millions :$37.285<br>Units: 137<br>Price Per Unit: $272.154<br>Cap Rate: 4.5<br>Buyer: Equity Residential<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.065232,      38.948461 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>4501 Connecticut Ave</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: The Albemarle <br>Quadrant: NW<br>Price in Millions :$47.026<br>Units: 228<br>Price Per Unit: $206.253<br>Cap Rate: 4.7<br>Buyer: AvalonBay<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+},
+{
+ "type": "Feature",
+"geometry": {
+ "type": "Point",
+"coordinates": [     -77.073718,     38.9281859 ] 
+},
+"properties": {
+ "popup": "<table cellpadding='.5' style='line-height:1.25'><tr><th colspan='4'>3700 Massachusetts Ave</th></tr><tr><td align='left'>Date: 2/27/13<br>Property: Alban Towers Apartments<br>Quadrant: NW<br>Price in Millions :$121.198<br>Units: 229<br>Price Per Unit: $529.251<br>Cap Rate: 4.5<br>Buyer: Equity Residential<br>Seller: Lehman Brothers, Archstone</td></tr></table>",
+"fillColor": "#ab4b52" 
+} 
+} 
+],
+"id": "chart613717ee10be" 
+}
+  var map = L.map(spec.dom)
+  
+    map.setView(spec.center, spec.zoom);
+    if (spec.provider){
+      L.tileLayer.provider(spec.provider).addTo(map)    
+    } else {
+      L.tileLayer(spec.urlTemplate, spec.layerOpts).addTo(map)
+    }
+     
+    
+    
+    
+    
+    
+    if (spec.circle2){
+      for (var c in spec.circle2){
+        var circle = L.circle(c.center, c.radius, c.opts)
+         .addTo(map);
+      }
+    }
+    
+    
+    
+    
+      L.geoJson(spec.features 
+        , 
+         {
+ "onEachFeature":  function(feature, layer){
+    layer.bindPopup(feature.properties.popup)
+  } ,
+"pointToLayer":  function(feature, latlng){
+   return L.circleMarker(latlng, {
+    radius: 5,
+    fillColor: feature.properties.fillColor || 'red',    
+    color: '#000',
+    weight: 2,
+    fillOpacity: 0.9
+  })
+}  
+}
+      ).addTo(map)
+    
+   
+   
+     L.control.fullscreen({
+       position: 'topleft',
+       title: 'Show me the fullscreen !'
+    }).addTo(map);
+   
+   
+   
+</script>
+    <script>
+  var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+"","player","season","team","games","salary_m","'13_salary_m","war","source","term","start","end","year","complete","real_war_per_m"
+"68","Reggie Jackson",1977,"Yankees",146,0.525,2.022,4.5,"free agency",5,1977,1981,1,0.2,2.226
+"69","Reggie Jackson",1978,"Yankees",139,0.525,1.879,3.5,"free agency",5,1977,1981,2,0.4,1.863
+"70","Reggie Jackson",1979,"Yankees",131,0.525,1.689,3.5,"free agency",5,1977,1981,3,0.6,2.072
+"71","Reggie Jackson",1980,"Yankees",143,0.525,1.487,4.8,"free agency",5,1977,1981,4,0.8,3.228
+"72","Reggie Jackson",1981,"Yankees",94,0.588,1.51,1,"free agency",5,1977,1981,5,1,0.662
+"73","Reggie Jackson",1982,"Angels",153,1.103,2.668,3.1,"free agency",4,1982,1985,1,0.25,1.162
+"74","Reggie Jackson",1983,"Angels",116,0.975,2.285,-1.8,"free agency",4,1982,1985,2,0.5,-0.788
+"75","Reggie Jackson",1984,"Angels",143,0.975,2.191,-0.2,"free agency",4,1982,1985,3,0.75,-0.091
+"76","Reggie Jackson",1985,"Angels",143,1.059,2.298,1,"free agency",4,1982,1985,4,1,0.435
+"11","Albert Belle",1999,"Orioles",161,11.95,16.745,3.4,"free agency",5,1999,2003,1,0.2,0.203
+"12","Albert Belle",2000,"Orioles",141,12.869,17.444,0.6,"free agency",5,1999,2003,2,0.4,0.034
+"41","Carlos Beltran",2005,"Mets",151,11.571,13.831,2.9,"free agency",7,2005,2011,1,0.14,0.21
+"42","Carlos Beltran",2006,"Mets",140,13.571,15.715,8.2,"free agency",7,2005,2011,2,0.29,0.522
+"52","Grady Sizemore",2006,"Indians",162,0.5,0.579,6.6,"re-signinging",6,2006,2011,1,0.17,11.399
+"43","Carlos Beltran",2007,"Mets",144,13.571,15.279,5.4,"free agency",7,2005,2011,3,0.43,0.353
+"53","Grady Sizemore",2007,"Indians",162,0.917,1.032,5.5,"re-signinging",6,2006,2011,2,0.33,5.329
+"27","Alex Rodriguez",2008,"Yankees",138,28,30.359,6.8,"re-signinging",10,2008,2015,1,0.1,0.224
+"44","Carlos Beltran",2008,"Mets",161,18.623,20.192,6.9,"free agency",7,2005,2011,4,0.57,0.342
+"54","Grady Sizemore",2008,"Indians",157,3.167,3.433,5.9,"re-signinging",6,2006,2011,3,0.5,1.719
+"28","Alex Rodriguez",2009,"Yankees",124,33,35.907,4.2,"re-signinging",10,2008,2015,2,0.2,0.117
+"45","Carlos Beltran",2009,"Mets",81,19.244,20.939,3.6,"free agency",7,2005,2011,5,0.71,0.172
+"55","Grady Sizemore",2009,"Indians",106,4.767,5.187,2.2,"re-signinging",6,2006,2011,4,0.67,0.424
+"29","Alex Rodriguez",2010,"Yankees",137,33,35.327,4.2,"re-signinging",10,2008,2015,3,0.3,0.119
+"46","Carlos Beltran",2010,"Mets",64,19.402,20.769,0.7,"free agency",7,2005,2011,6,0.86,0.034
+"56","Grady Sizemore",2010,"Indians",33,5.767,6.173,-0.4,"re-signinging",6,2006,2011,5,0.83,-0.065
+"30","Alex Rodriguez",2011,"Yankees",99,32,33.207,3.8,"re-signinging",10,2008,2015,4,0.4,0.114
+"47","Carlos Beltran",2011,"Mets",142,19.325,20.054,2.725,"free agency",7,2005,2011,7,1,0.136
+"48","Carlos Beltran",2011,"Mets",142,19.325,20.054,2.725,"free agency",7,2005,2011,7,1,0.136
+"57","Grady Sizemore",2011,"Indians",71,7.667,7.956,0,"re-signinging",6,2006,2011,6,1,0
+"31","Alex Rodriguez",2012,"Yankees",122,29,29.488,2.3,"re-signinging",10,2008,2015,5,0.5,0.078
+"32","Alex Rodriguez",2013,"Yankees",44,28,28,0.3,"re-signinging",10,2008,2015,6,0.6,0.011

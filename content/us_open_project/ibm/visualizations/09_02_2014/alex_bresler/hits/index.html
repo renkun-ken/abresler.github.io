@@ -1,0 +1,503 @@
+<!doctype HTML>
+<title>Comparing Hits 2014 U.S. Open Quarterfinalists</title>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://aragorn.org/scripts/nv.d3.css'>
+    <link rel='stylesheet' href='http://aragorn.org/scripts/rNVD3.css'>
+    
+    <script src='http://aragorn.org/scripts/jquery-1.8.2.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/nv.d3.min-new.js' type='text/javascript'></script>
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 600px;
+      height: 400px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+        </style>
+        <script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+<style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style> 
+    
+  </head>
+  <body >
+  <center>
+       <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 450px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: -0.25px"><strong>Comparing Hit Consistency of the 2014 U.S. Open Women's Quarterfinalists</strong></div>
+    </div></center>
+    <center><a href = "http://www.ibm.com/us/en/" target = "_blank"><img src="http://www.aragorn.org/logos/ibm_630_100v3.jpg" alt="" width = "450" height="71" style="padding: 2.5px"></a></center>
+  <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='col-md-3'>
+      <form class='well'>
+        <label><b>Select Variable:</b></label>
+        <select class='form-control' ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+        </select>
+              </form>
+    </div>
+    <div class='col-md-7'>
+      <div class="bs-docs-example">
+        <div id='chart1dcf68ca7796' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart1dcf68ca7796",
+"width":    600,
+"height":    400,
+"x": "round",
+"y": "Points Played",
+"facet": {
+ "round": [ "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total" ],
+"player": [ "Sara Errani", "Sara Errani", "Sara Errani", "Sara Errani", "Sara Errani", "Caroline Wozniaki", "Caroline Wozniaki", "Caroline Wozniaki", "Caroline Wozniaki", "Caroline Wozniaki", "Belinda Bencic", "Belinda Bencic", "Belinda Bencic", "Belinda Bencic", "Belinda Bencic", "Peng Shuai", "Peng Shuai", "Peng Shuai", "Peng Shuai", "Peng Shuai", "Flavia Pennetta", "Flavia Pennetta", "Flavia Pennetta", "Flavia Pennetta", "Flavia Pennetta", "Serena Williams", "Serena Williams", "Serena Williams", "Serena Williams", "Serena Williams", "Ekaterina Makarova", "Ekaterina Makarova", "Ekaterina Makarova", "Ekaterina Makarova", "Ekaterina Makarova", "Victoria Azarenka", "Victoria Azarenka", "Victoria Azarenka", "Victoria Azarenka", "Victoria Azarenka" ],
+"Points Played": [ 118, 152, 168, 152, 590, 123, 107, 108, 181, 519, 0, 190, 127, 176, 493, 119, 121, 109, 101, 450, 160, 111, 116, 134, 521, 89, 88, 131, 104, 412, 103, 93, 109, 152, 457, 221, 142, 85, 183, 631 ],
+"Shots Hit": [ 407, 435, 531, 400, 1773, 330, 377, 361, 615, 1683, 0, 581, 408, 571, 1560, 362, 495, 362, 252, 1471, 370, 322, 335, 334, 1361, 167, 225, 338, 224, 954, 256, 248, 338, 355, 1197, 616, 488, 186, 561, 1851 ],
+"Shots Per Point": [   3.45,   2.86,   3.16,   2.63,   3.01,   2.68,   3.52,   3.34,    3.4,   3.24,      0,   3.06,   3.21,   3.24,   3.16,   3.04,   4.09,   3.32,    2.5,   3.27,   2.31,    2.9,   2.89,   2.49,   2.61,   1.88,   2.56,   2.58,   2.15,   2.32,   2.49,   2.67,    3.1,   2.34,   2.62,   2.79,   3.44,   2.19,   3.07,   2.93 ] 
+},
+"group": "player",
+"type": "multiBarChart",
+"id": "chart1dcf68ca7796" 
+}
+  $scope.data = [
+ {
+ "round": "Round 1",
+"player": "Sara Errani",
+"Points Played": 118,
+"Shots Hit": 407,
+"Shots Per Point":           3.45 
+},
+{
+ "round": "Round 2",
+"player": "Sara Errani",
+"Points Played": 152,
+"Shots Hit": 435,
+"Shots Per Point":           2.86 
+},
+{
+ "round": "Round 3",
+"player": "Sara Errani",
+"Points Played": 168,
+"Shots Hit": 531,
+"Shots Per Point":           3.16 
+},
+{
+ "round": "Round 4",
+"player": "Sara Errani",
+"Points Played": 152,
+"Shots Hit": 400,
+"Shots Per Point":           2.63 
+},
+{
+ "round": "Tournament Total",
+"player": "Sara Errani",
+"Points Played": 590,
+"Shots Hit": 1773,
+"Shots Per Point":           3.01 
+},
+{
+ "round": "Round 1",
+"player": "Caroline Wozniaki",
+"Points Played": 123,
+"Shots Hit": 330,
+"Shots Per Point":           2.68 
+},
+{
+ "round": "Round 2",
+"player": "Caroline Wozniaki",
+"Points Played": 107,
+"Shots Hit": 377,
+"Shots Per Point":           3.52 
+},
+{
+ "round": "Round 3",
+"player": "Caroline Wozniaki",
+"Points Played": 108,
+"Shots Hit": 361,
+"Shots Per Point":           3.34 
+},
+{
+ "round": "Round 4",
+"player": "Caroline Wozniaki",
+"Points Played": 181,
+"Shots Hit": 615,
+"Shots Per Point":            3.4 
+},
+{
+ "round": "Tournament Total",
+"player": "Caroline Wozniaki",
+"Points Played": 519,
+"Shots Hit": 1683,
+"Shots Per Point":           3.24 
+},
+{
+ "round": "Round 1",
+"player": "Belinda Bencic",
+"Points Played": 0,
+"Shots Hit": 0,
+"Shots Per Point":              0 
+},
+{
+ "round": "Round 2",
+"player": "Belinda Bencic",
+"Points Played": 190,
+"Shots Hit": 581,
+"Shots Per Point":           3.06 
+},
+{
+ "round": "Round 3",
+"player": "Belinda Bencic",
+"Points Played": 127,
+"Shots Hit": 408,
+"Shots Per Point":           3.21 
+},
+{
+ "round": "Round 4",
+"player": "Belinda Bencic",
+"Points Played": 176,
+"Shots Hit": 571,
+"Shots Per Point":           3.24 
+},
+{
+ "round": "Tournament Total",
+"player": "Belinda Bencic",
+"Points Played": 493,
+"Shots Hit": 1560,
+"Shots Per Point":           3.16 
+},
+{
+ "round": "Round 1",
+"player": "Peng Shuai",
+"Points Played": 119,
+"Shots Hit": 362,
+"Shots Per Point":           3.04 
+},
+{
+ "round": "Round 2",
+"player": "Peng Shuai",
+"Points Played": 121,
+"Shots Hit": 495,
+"Shots Per Point":           4.09 
+},
+{
+ "round": "Round 3",
+"player": "Peng Shuai",
+"Points Played": 109,
+"Shots Hit": 362,
+"Shots Per Point":           3.32 
+},
+{
+ "round": "Round 4",
+"player": "Peng Shuai",
+"Points Played": 101,
+"Shots Hit": 252,
+"Shots Per Point":            2.5 
+},
+{
+ "round": "Tournament Total",
+"player": "Peng Shuai",
+"Points Played": 450,
+"Shots Hit": 1471,
+"Shots Per Point":           3.27 
+},
+{
+ "round": "Round 1",
+"player": "Flavia Pennetta",
+"Points Played": 160,
+"Shots Hit": 370,
+"Shots Per Point":           2.31 
+},
+{
+ "round": "Round 2",
+"player": "Flavia Pennetta",
+"Points Played": 111,
+"Shots Hit": 322,
+"Shots Per Point":            2.9 
+},
+{
+ "round": "Round 3",
+"player": "Flavia Pennetta",
+"Points Played": 116,
+"Shots Hit": 335,
+"Shots Per Point":           2.89 
+},
+{
+ "round": "Round 4",
+"player": "Flavia Pennetta",
+"Points Played": 134,
+"Shots Hit": 334,
+"Shots Per Point":           2.49 
+},
+{
+ "round": "Tournament Total",
+"player": "Flavia Pennetta",
+"Points Played": 521,
+"Shots Hit": 1361,
+"Shots Per Point":           2.61 
+},
+{
+ "round": "Round 1",
+"player": "Serena Williams",
+"Points Played": 89,
+"Shots Hit": 167,
+"Shots Per Point":           1.88 
+},
+{
+ "round": "Round 2",
+"player": "Serena Williams",
+"Points Played": 88,
+"Shots Hit": 225,
+"Shots Per Point":           2.56 
+},
+{
+ "round": "Round 3",
+"player": "Serena Williams",
+"Points Played": 131,
+"Shots Hit": 338,
+"Shots Per Point":           2.58 
+},
+{
+ "round": "Round 4",
+"player": "Serena Williams",
+"Points Played": 104,
+"Shots Hit": 224,
+"Shots Per Point":           2.15 
+},
+{
+ "round": "Tournament Total",
+"player": "Serena Williams",
+"Points Played": 412,
+"Shots Hit": 954,
+"Shots Per Point":           2.32 
+},
+{
+ "round": "Round 1",
+"player": "Ekaterina Makarova",
+"Points Played": 103,
+"Shots Hit": 256,
+"Shots Per Point":           2.49 
+},
+{
+ "round": "Round 2",
+"player": "Ekaterina Makarova",
+"Points Played": 93,
+"Shots Hit": 248,
+"Shots Per Point":           2.67 
+},
+{
+ "round": "Round 3",
+"player": "Ekaterina Makarova",
+"Points Played": 109,
+"Shots Hit": 338,
+"Shots Per Point":            3.1 
+},
+{
+ "round": "Round 4",
+"player": "Ekaterina Makarova",
+"Points Played": 152,
+"Shots Hit": 355,
+"Shots Per Point":           2.34 
+},
+{
+ "round": "Tournament Total",
+"player": "Ekaterina Makarova",
+"Points Played": 457,
+"Shots Hit": 1197,
+"Shots Per Point":           2.62 
+},
+{
+ "round": "Round 1",
+"player": "Victoria Azarenka",
+"Points Played": 221,
+"Shots Hit": 616,
+"Shots Per Point":           2.79 
+},
+{
+ "round": "Round 2",
+"player": "Victoria Azarenka",
+"Points Played": 142,
+"Shots Hit": 488,
+"Shots Per Point":           3.44 
+},
+{
+ "round": "Round 3",
+"player": "Victoria Azarenka",
+"Points Played": 85,
+"Shots Hit": 186,
+"Shots Per Point":           2.19 
+},
+{
+ "round": "Round 4",
+"player": "Victoria Azarenka",
+"Points Played": 183,
+"Shots Hit": 561,
+"Shots Per Point":           3.07 
+},
+{
+ "round": "Tournament Total",
+"player": "Victoria Azarenka",
+"Points Played": 631,
+"Shots Hit": 1851,
+"Shots Per Point":           2.93 
+} 
+]
+  $scope.controls = {
+ "y": {
+ "name": "y",
+"value": "Points Played",
+"values": [ "Points Played", "Shots Hit", "Shots Per Point" ],
+"label": "Select  y :" 
+} 
+} 
+  $scope.filters = []
+  
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  
+  $scope.$watch('selected', function(){
+    var keys = _.pluck($scope.selected, "variable")
+    var values = _.pluck($scope.selected, "value")
+    $scope.opts.selected = _.zipObject(keys, values)
+  }) 
+  
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+  }, true)
+}  
+
+function drawChart(opts, data){ 
+  if (Object.keys(opts.selected).length > 0){
+    data = _.filter(data, opts.selected)
+  }
+  
+  if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+    var data = d3.nest()
+      .key(function(d){
+        //return opts.group === undefined ? 'main' : d[opts.group]
+        //instead of main would think a better default is opts.x
+       return opts.group === undefined ? opts.y : d[opts.group];
+      }).entries(data);
+  }
+      
+  if (opts.disabled != undefined){
+    data.map(function(d, i){
+      d.disabled = opts.disabled[i]
+    })
+  }
+  
+  nv.addGraph(function() {
+    var chart = nv.models[opts.type]()
+      .x(function(d) { return d[opts.x] })
+      .y(function(d) { return d[opts.y] })
+      .width(opts.width)
+      .height(opts.height)
+    
+  chart
+  .showControls(false)
+  .transitionDuration(   300)
+  .delay(   200)
+  .staggerLabels(false)
+  .clipEdge(true)
+  .groupSpacing(   0.1)
+  .color([ "#2b7479", "#000000", "#d2ba2f", "#749797", "#8ed5e5", "#AA66cc", "#FF4444", "#1d2098" ])
+  .margin({
+ "left":     50,
+"top":     50,
+"right":     10,
+"bottom":     20 
+})
+  .tooltipContent( function(key, x, y, e ){ 
+              var d = e.series.values[e.pointIndex];
+              return '<b>Player:</b> ' + d.player + '<br><b>U.S. Open Round: </b> ' + d.round + '<br><b>' + opts.y + ': </b>' + y
+              } )
+          
+  
+
+  
+  
+  chart.yAxis
+ .tickFormat(function(d) {return  d3.format('2f')(d)})
+ .width(    40)
+ .axisLabel( opts.y )
+
+  d3.select("#" + opts.id + ' svg')
+  // .empty()
+    .datum(data)
+    .transition().duration(300)
+    .call(chart);
+  
+   nv.utils.windowResize(chart.update);
+   return chart;
+  });
+};
+</script>
+<style>
+  svg text { font-size: 75%; ; }
+</style>    
+  </body>
+<center>
+<div style="display:table;width:220px;height:10px;font-size:12px" class='gray'>
+<center><strong>Distributed by</strong><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</center>
+</body>
+</html>

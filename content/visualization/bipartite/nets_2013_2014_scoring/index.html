@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+        <script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+</head>
+<style>
+body{
+	width:1200px;
+	margin:10px auto;
+}
+svg text{
+	font-size:6.75px;
+	margin
+}
+rect{
+	shape-rendering:crispEdges;
+}
+</style>
+<body>
+<center>
+       <center>
+       <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 850px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: 0.25px"><strong>Exploring the 2013-2014 Brooklyn Nets Scoring Distribution in biPartite</strong></div>
+    </div></center>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="biPartite.js"></script>
+<script>
+var data=
+[
+['SF','Alan Anderson',485,564],
+['PF-C','Andray Blatche',674,821],
+['SF-PF','Andrei Kirilenko',160,226],
+['C','Brook Lopez',229,352],
+['PG','Deron Williams',716,915],
+['C','Jason Collins',24,25],
+['SG','Jason Terry',152,159],
+['SF','Joe Johnson',1018,1245],
+['PG','Jorge Gutierrez',54,62],
+['PF-C','Kevin Garnett',356,352],
+['SG','Marcus Thornton',226,320],
+['PG','Marquis Teague',53,62],
+['C','Mason Plumlee',302,520],
+['PF','Mirza Teletovic',529,622],
+['SF-PF','Paul Pierce',712,1010],
+['PF','Reggie Evans',59,81],
+['PG','Shaun Livingston',487,629],
+['SF','Tornike Shengelia',24,25],
+['PG','Tyshawn Taylor',91,89]
+];
+
+var width = 1100, height = 610, margin ={b:0, t:40, l:170, r:80};
+
+var svg = d3.select("body")
+	.append("svg").attr('width',width).attr('height',(height+margin.b+margin.t))
+	.append("g").attr("transform","translate("+ margin.l+","+margin.t+")");
+
+var data = [ 
+	{data:bP.partData(data,2), id:'FieldGoalAttempts', header:["Position","Player", "Field Goal Attempts"]},
+	{data:bP.partData(data,3), id:'PointsScored', header:["Position","Player", "Points Scored"]}
+];
+
+bP.draw(data, svg);
+
+</script>
+</body>
+<div style="display:table;width:220px;height:10px;font-size:12px" class='gray'>
+<center><strong>Distributed by</strong><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</center>
+
+</html>

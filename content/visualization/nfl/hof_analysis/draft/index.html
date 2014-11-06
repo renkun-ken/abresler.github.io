@@ -1,0 +1,634 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>NFL Hall of Fame Draft Analysis</title>
+<head>
+<style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>     
+
+<link rel="canonical" href="http://aragorn.org/visualization/nfl/hof_analysis/draft" />
+<meta property="og:description" content="Analyzing NFL Hall of Famer's by Draft Since 1935" />
+<meta property="og:image" content="http://aragorn.org/visualization/nfl/hof_analysis/draft/screen.png" />
+<meta property="og:site_name" content="Aragorn" />
+<meta property="og:title" content="http://aragorn.org/visualization/nfl/hof_analysis/draft" />
+<meta property="og:type" content="article" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="http://aragorn.org/visualization/nfl/hof_analysis/draft" />
+        <meta name="twitter:title" content="Analyzing NFL Hall of Famer's by Draft Since 1935" />
+        <meta name="twitter:description" content="Analyzing NFL Hall of Famer's by Draft Since 1935" />
+        <meta name="twitter:image" content="http://aragorn.org/visualization/nfl/hof_analysis/draft/screen.png" />
+        <meta name="twitter:site" content="Aragorn" />
+     <!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  <center>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 75%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+<center>
+       <center>
+       <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 850px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: 0.25px"><strong>Exploring  <img src="http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png" height="50" width="50"> Hall of Famers by Position and Era</strong><br></div>
+     </div></center></center>
+  <center>
+
+</head>
+<body>
+ <!-- LineChart generated in R 3.1.0 by googleVis 0.5.1 package -->
+<!-- Tue May  6 17:36:43 2014 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataNFL_Hall_of_Famers_by_Position () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "QB",
+13,
+null,
+3,
+2,
+1,
+null,
+null,
+null,
+1,
+1,
+null,
+2,
+null,
+null,
+1,
+null,
+null,
+null,
+null,
+null,
+null 
+],
+[
+ "RB",
+24,
+2,
+1,
+null,
+null,
+null,
+null,
+1,
+1,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null 
+],
+[
+ "FB",
+1,
+3,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null 
+],
+[
+ "WR/FL",
+9,
+null,
+2,
+3,
+1,
+null,
+1,
+1,
+1,
+null,
+1,
+1,
+null,
+null,
+null,
+null,
+null,
+1,
+null,
+null,
+null 
+],
+[
+ "TE",
+3,
+2,
+1,
+null,
+null,
+null,
+2,
+null,
+null,
+1,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null 
+],
+[
+ "OL",
+18,
+5,
+6,
+null,
+2,
+null,
+3,
+null,
+1,
+null,
+null,
+null,
+1,
+null,
+null,
+null,
+null,
+null,
+null,
+1,
+1 
+],
+[
+ "DL",
+8,
+2,
+null,
+null,
+1,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+1,
+null,
+1,
+null,
+1,
+null,
+null 
+],
+[
+ "DE",
+7,
+3,
+1,
+null,
+null,
+null,
+null,
+1,
+null,
+null,
+null,
+null,
+1,
+1,
+null,
+null,
+1,
+null,
+null,
+null,
+null 
+],
+[
+ "LB",
+6,
+9,
+3,
+1,
+null,
+null,
+1,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+1,
+null,
+1,
+null,
+null,
+null 
+],
+[
+ "DB",
+8,
+3,
+2,
+null,
+1,
+1,
+1,
+null,
+2,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+null,
+1,
+null,
+null,
+null 
+] 
+];
+data.addColumn('string','position_group');
+data.addColumn('number','round.1');
+data.addColumn('number','round.2');
+data.addColumn('number','round.3');
+data.addColumn('number','round.4');
+data.addColumn('number','round.5');
+data.addColumn('number','round.6');
+data.addColumn('number','round.7');
+data.addColumn('number','round.8');
+data.addColumn('number','round.9');
+data.addColumn('number','round.10');
+data.addColumn('number','round.11');
+data.addColumn('number','round.12');
+data.addColumn('number','round.14');
+data.addColumn('number','round.15');
+data.addColumn('number','round.17');
+data.addColumn('number','round.18');
+data.addColumn('number','round.19');
+data.addColumn('number','round.20');
+data.addColumn('number','round.22');
+data.addColumn('number','round.26');
+data.addColumn('number','round.27');
+data.addRows(datajson);
+return(data);
+}
+
+
+// jsData 
+function gvisDataNFL_Hall_of_Famers_by_Position_Era () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "QB",
+2,
+7,
+4,
+4,
+3,
+4,
+null 
+],
+[
+ "RB",
+1,
+6,
+5,
+5,
+5,
+4,
+3 
+],
+[
+ "FB",
+1,
+null,
+3,
+null,
+null,
+null,
+null 
+],
+[
+ "WR/FL",
+1,
+4,
+4,
+5,
+4,
+3,
+null 
+],
+[
+ "TE",
+null,
+null,
+null,
+5,
+3,
+null,
+1 
+],
+[
+ "OL",
+4,
+3,
+8,
+8,
+5,
+7,
+3 
+],
+[
+ "DL",
+null,
+2,
+3,
+6,
+1,
+null,
+2 
+],
+[
+ "DE",
+null,
+null,
+4,
+3,
+4,
+4,
+null 
+],
+[
+ "LB",
+null,
+1,
+6,
+7,
+3,
+5,
+null 
+],
+[
+ "DB",
+null,
+1,
+4,
+8,
+2,
+4,
+null 
+] 
+];
+data.addColumn('string','position_group');
+data.addColumn('number','1930s');
+data.addColumn('number','1940s');
+data.addColumn('number','1950s');
+data.addColumn('number','1960s');
+data.addColumn('number','1970s');
+data.addColumn('number','1980s');
+data.addColumn('number','1990s');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartNFL_Hall_of_Famers_by_Position() {
+var data = gvisDataNFL_Hall_of_Famers_by_Position();
+var options = {};
+options["allowHtml"] = true;
+options["width"] =    600;
+options["height"] =    500;
+options["orientation"] = "vertical";
+options["selectionMode"] = "multiple";
+options["tooltip"] = "selection";
+options["aggregationTarget"] = "category";
+options["title"] = "NFL Hall of Famers by Position and Draft Round";
+options["hAxis"] = [{gridlines:{count:2}}];
+options["series"] = [{color:'#000000', targetAxisIndex: 0, 
+                                       lineWidth: 2, 
+                                       lineDashStyle: [2,2,20,2,20,2]},
+																				{color: '#0088CE',targetAxisIndex: 0, 
+                                       lineWidth: 2, 
+                                       lineDashStyle: [4, 1]}];
+
+
+    var chart = new google.visualization.LineChart(
+    document.getElementById('NFL_Hall_of_Famers_by_Position')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+
+
+// jsDrawChart
+function drawChartNFL_Hall_of_Famers_by_Position_Era() {
+var data = gvisDataNFL_Hall_of_Famers_by_Position_Era();
+var options = {};
+options["allowHtml"] = true;
+options["orientation"] = "vertical";
+options["isStacked"] = true;
+options["title"] = "NFL Hall of Famers by Position and Draft Era";
+options["titlePosition"] = "out";
+options["hAxis"] = [{gridlines:{count:10}}];
+options["width"] =    600;
+options["height"] =    500;
+options["bar"] = {groupWidth:'80%'};
+
+
+    var chart = new google.visualization.BarChart(
+    document.getElementById('NFL_Hall_of_Famers_by_Position_Era')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartNFL_Hall_of_Famers_by_Position);
+})();
+function displayChartNFL_Hall_of_Famers_by_Position() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+
+
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartNFL_Hall_of_Famers_by_Position_Era);
+})();
+function displayChartNFL_Hall_of_Famers_by_Position_Era() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartNFL_Hall_of_Famers_by_Position"></script>
+
+
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartNFL_Hall_of_Famers_by_Position_Era"></script>
+ 
+<table bgcolor="#CCCCCC" cellspacing=10>
+<tr>
+<td>
+
+<!-- divChart -->
+  
+<div id="NFL_Hall_of_Famers_by_Position"
+  style="width: 600px; height: 500px;">
+</div>
+
+</td>
+<td>
+
+<!-- divChart -->
+  
+<div id="NFL_Hall_of_Famers_by_Position_Era"
+  style="width: 600px; height: 500px;">
+</div>
+
+</td>
+</tr>
+</table>
+</body>
+<center><div style="display:table;width:320px;height:10px;font-size:12px" class='gray'>
+  <a href="http://twitter.com/abresler" target="_blank"><strong>Visualized and Analyzed by Alex Bresler</strong></a><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</html>

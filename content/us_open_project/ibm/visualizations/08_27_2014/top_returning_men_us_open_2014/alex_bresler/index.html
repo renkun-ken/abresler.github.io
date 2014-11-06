@@ -1,0 +1,350 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<title>Top Returning Men</title>
+<html>
+  <head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://nvd3.org/assets/css/nv.d3.css'>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+        <style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 630px;
+      height: 425px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+    <script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+  </head>
+  <center>
+       <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 450px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: -0.5px"><strong>Statistics of the Top U.S. Men's Return Serves</strong>
+       </div>
+    </div></center>
+    <center><a href = "http://www.ibm.com/us/en/" target = "_blank"><img src="http://www.aragorn.org/logos/ibm_630_100v3.jpg" alt="" width = "450" height="71" style="padding: 2.5px"></a></center>
+  <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='col-md-2'>
+      <form class='well'>
+        <label style = ";"><b>Select xVariable:</b></label>
+    		<select class='form-control' ng-model="opts.x" 
+          ng-options="ctl for ctl in controls.x.values" style = "; font-size: 10px">   
+    		</select><br>
+        <label style = ";"><b>Select  yVariable:</b></label>
+    		<select class='form-control' ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values" style = "; font-size: 10px">   
+    		</select>
+              </form>
+    </div>
+    <div class='col-md-7'>
+      <div class="bs-docs-example">
+        <div id='charte36957c5fded' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "charte36957c5fded",
+"width":    630,
+"height":    425,
+"x": "Serve Rank",
+"y": "Serve Games Won (pct)",
+"group": "Player",
+"type": "scatterChart",
+"id": "charte36957c5fded" 
+}
+  $scope.data = [
+ {
+ "Player": "John Isner",
+"Singles Ranking": 15,
+"Serve Games Won (pct)": 93,
+"Serve Rank": 1,
+"Return Games Won (pct)": 9,
+"RTN Rank": 68,
+"Age": 29,
+"Year Turned Pro": 2007,
+"imageURL": "http://www.atpworldtour.com/~/media/5AA3B8DBEF984C66B332E91CDA771992.ashx?w=148&h=198",
+"Career Prize Money (thousands)":       6765.878,
+"Height (inches)":      81.889808,
+"Weight (lbs)": 238,
+"Career Wins": 235,
+"Career Losses": 147,
+"Career Win Percentage": 61.51832460733,
+"Playing Hand": "R",
+"BMI":    24.95011642,
+"City (residence)": "Tampa",
+"State (residence)": "Florida",
+"size":            4.5,
+"image": "<div style='display:table;width:100px;height:90px;' class='gray'><img style='display:block;margin:0 auto;margin-left:auto;margin-right:auto;width:98.66px;height:132px;padding:0px' src='http://www.atpworldtour.com/~/media/5AA3B8DBEF984C66B332E91CDA771992.ashx?w=148&h=198'</div>" 
+},
+{
+ "Player": "Donald Young",
+"Singles Ranking": 47,
+"Serve Games Won (pct)": 74,
+"Serve Rank": 55,
+"Return Games Won (pct)": 25,
+"RTN Rank": 22,
+"Age": 25,
+"Year Turned Pro": 2004,
+"imageURL": "http://www.atpworldtour.com/~/media/8E66FCBBE68F4F7A940D5CF1C9E8D16D.ashx?w=148&h=198",
+"Career Prize Money (thousands)":       1935.169,
+"Height (inches)":      72.047283,
+"Weight (lbs)": 175,
+"Career Wins": 55,
+"Career Losses": 103,
+"Career Win Percentage": 34.81012658228,
+"Playing Hand": "L",
+"BMI":    23.70053548,
+"City (residence)": "Atlanta",
+"State (residence)": "Georgia",
+"size":           3.25,
+"image": "<div style='display:table;width:100px;height:90px;' class='gray'><img style='display:block;margin:0 auto;margin-left:auto;margin-right:auto;width:98.66px;height:132px;padding:0px' src='http://www.atpworldtour.com/~/media/8E66FCBBE68F4F7A940D5CF1C9E8D16D.ashx?w=148&h=198'</div>" 
+},
+{
+ "Player": "Steve Johnson",
+"Singles Ranking": 51,
+"Serve Games Won (pct)": 84,
+"Serve Rank": 20,
+"Return Games Won (pct)": 14,
+"RTN Rank": 67,
+"Age": 24,
+"Year Turned Pro": 2012,
+"imageURL": "http://www.atpworldtour.com/~/media/E0DDBE6F042945278C996D256C0F9D96.ashx?w=148&h=198",
+"Career Prize Money (thousands)":         911.44,
+"Height (inches)":      74.015788,
+"Weight (lbs)": 190,
+"Career Wins": 23,
+"Career Losses": 24,
+"Career Win Percentage": 48.93617021277,
+"Playing Hand": "R",
+"BMI":    24.38148714,
+"City (residence)": "Orange",
+"State (residence)": "California",
+"size":              3,
+"image": "<div style='display:table;width:100px;height:90px;' class='gray'><img style='display:block;margin:0 auto;margin-left:auto;margin-right:auto;width:98.66px;height:132px;padding:0px' src='http://www.atpworldtour.com/~/media/E0DDBE6F042945278C996D256C0F9D96.ashx?w=148&h=198'</div>" 
+},
+{
+ "Player": "Jack Sock",
+"Singles Ranking": 55,
+"Serve Games Won (pct)": 86,
+"Serve Rank": 13,
+"Return Games Won (pct)": 19,
+"RTN Rank": 54,
+"Age": 21,
+"Year Turned Pro": 2011,
+"imageURL": "http://www.atpworldtour.com/~/media/28B4EDBC7374448F81F2E29CEB186065.ashx?w=148&h=198",
+"Career Prize Money (thousands)":       1398.697,
+"Height (inches)":      72.834685,
+"Weight (lbs)": 180,
+"Career Wins": 36,
+"Career Losses": 38,
+"Career Win Percentage": 48.64864864865,
+"Playing Hand": "R",
+"BMI":    23.85345748,
+"City (residence)": "Tampa",
+"State (residence)": "Florida",
+"size":           2.75,
+"image": "<div style='display:table;width:100px;height:90px;' class='gray'><img style='display:block;margin:0 auto;margin-left:auto;margin-right:auto;width:98.66px;height:132px;padding:0px' src='http://www.atpworldtour.com/~/media/28B4EDBC7374448F81F2E29CEB186065.ashx?w=148&h=198'</div>" 
+},
+{
+ "Player": "Sam Querrey",
+"Singles Ranking": 57,
+"Serve Games Won (pct)": 87,
+"Serve Rank": 10,
+"Return Games Won (pct)": 16,
+"RTN Rank": 64,
+"Age": 26,
+"Year Turned Pro": 2006,
+"imageURL": "http://www.atpworldtour.com/~/media/0770BEE5D37F47CBA9659BD215861541.ashx?w=148&h=198",
+"Career Prize Money (thousands)":       5572.654,
+"Height (inches)":      77.952798,
+"Weight (lbs)": 200,
+"Career Wins": 232,
+"Career Losses": 187,
+"Career Win Percentage": 55.36992840095,
+"Playing Hand": "R",
+"BMI":    23.13779156,
+"City (residence)": "Las Vegas",
+"State (residence)": "Nevada",
+"size":              2,
+"image": "<div style='display:table;width:100px;height:90px;' class='gray'><img style='display:block;margin:0 auto;margin-left:auto;margin-right:auto;width:98.66px;height:132px;padding:0px' src='http://www.atpworldtour.com/~/media/0770BEE5D37F47CBA9659BD215861541.ashx?w=148&h=198'</div>" 
+},
+{
+ "Player": "Tim Smyczek",
+"Singles Ranking": 90,
+"Serve Games Won (pct)": 71,
+"Serve Rank": 68,
+"Return Games Won (pct)": 21,
+"RTN Rank": 43,
+"Age": 26,
+"Year Turned Pro": 2006,
+"imageURL": "http://www.atpworldtour.com/~/media/CA3D27B080154751A67BA578DE6A44FB.ashx?w=148&h=198",
+"Career Prize Money (thousands)":        850.577,
+"Height (inches)":      68.897675,
+"Weight (lbs)": 160,
+"Career Wins": 21,
+"Career Losses": 39,
+"Career Win Percentage":             35,
+"Playing Hand": "R",
+"BMI":    23.69551622,
+"City (residence)": "Tampa",
+"State (residence)": "Florida",
+"size":            1.5,
+"image": "<div style='display:table;width:100px;height:90px;' class='gray'><img style='display:block;margin:0 auto;margin-left:auto;margin-right:auto;width:98.66px;height:132px;padding:0px' src='http://www.atpworldtour.com/~/media/CA3D27B080154751A67BA578DE6A44FB.ashx?w=148&h=198'</div>" 
+} 
+]
+  $scope.controls = {
+ "x": {
+ "name": "x",
+"value": "Singles Rank",
+"values": [ "Singles Ranking", "Serve Games Won (pct)", "Serve Rank", "Return Games Won (pct)", "RTN Rank", "Age", "Year Turned Pro", "Career Prize Money (thousands)", "Height (inches)", "Weight (lbs)", "Career Wins", "Career Losses", "Career Win Percentage", "BMI" ],
+"label": "Select  x :" 
+},
+"y": {
+ "name": "y",
+"value": "Serve Rank",
+"values": [ "Serve Rank", "Serve Games Won (pct)", "Return Games Won (pct)", "RTN Rank", "Singles Ranking", "Career Prize Money (thousands)", "Height (inches)", "Weight (lbs)", "Career Wins", "Career Losses", "Career Win Percentage", "BMI", "Age", "Year Turned Pro" ],
+"label": "Select  y :" 
+}
+} 
+  $scope.filters = []
+  
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  
+  $scope.$watch('selected', function(){
+    var keys = _.pluck($scope.selected, "variable")
+    var values = _.pluck($scope.selected, "value")
+    $scope.opts.selected = _.zipObject(keys, values)
+  }) 
+  
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+	}, true)
+}  
+
+function drawChart(opts, data){ 
+  if (Object.keys(opts.selected).length > 0){
+    data = _.filter(data, opts.selected)
+  }
+  
+  if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+    var data = d3.nest()
+      .key(function(d){
+        //return opts.group === undefined ? 'main' : d[opts.group]
+        //instead of main would think a better default is opts.x
+       return opts.group === undefined ? opts.y : d[opts.group];
+      }).entries(data);
+  }
+      
+  if (opts.disabled != undefined){
+    data.map(function(d, i){
+      d.disabled = opts.disabled[i]
+    })
+  }
+	
+	nv.addGraph(function() {
+		var chart = nv.models[opts.type]()
+			.x(function(d) { return d[opts.x] })
+			.y(function(d) { return d[opts.y] })
+			.width(opts.width)
+			.height(opts.height)
+		
+	chart
+  .color([ "#000000", "#ff0000", "#b8860b", "#0000ff", "#008000", "#800080" ])
+  .showControls(false)
+  .showDistX(true)
+  .showDistY(true)
+  .tooltipContent( function(key, x, y, e ){ 
+  var d = e.series.values[e.pointIndex];
+  return '<table>' +'<p>' + e.point.image + '</p>' + '<p><b>Player:</b> ' + d.Player + '</p><p><b>xVariable: </b> ' + x + '</p><p><b>yVariable: </b>' + y + '</p></table>'
+} )
+          
+	chart.xAxis
+  .axisLabel("")
+  .tickFormat(function(d) {return d3.format(',f')(d)})
+
+	
+	
+	chart.yAxis
+  .axisLabel("")
+  .tickFormat(function(d) {return d3.format(',f')(d)})
+
+	d3.select("#" + opts.id + ' svg')
+  // .empty()
+		.datum(data)
+		.transition().duration(500)
+		.call(chart);
+	
+	 nv.utils.windowResize(chart.update);
+	 return chart;
+  });
+};
+</script>
+  <style>
+  svg text { font-size: 75%; ; }
+</style>
+<center><p style = ";font-size:10px">Sized by Player Ranking</p></center>
+  <center>
+       <div style="display:table;width:220px;height:25px;" class='gray'>
+        <div class='orange' style="font-size:10px; display:table-cell;height:20px;vertical-align:middle;background-color:#f3f3f4"></div>
+        <a href = "http://www.aragorn.org" target = "_blank"><img style="display:table-cell;width:200px;height:50px;padding:8px;background-color:#f3f3f4" src='http://www.aragorn.org/aragorn_logo.png' /></a></div></center>
+</html>

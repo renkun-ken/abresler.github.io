@@ -1,0 +1,511 @@
+<!doctype HTML>
+<title>Comparing Missed Shots 2014 U.S. Open Quarterfinalists</title>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://aragorn.org/scripts/nv.d3.css'>
+    <link rel='stylesheet' href='http://aragorn.org/scripts/rNVD3.css'>
+    
+    <script src='http://aragorn.org/scripts/jquery-1.8.2.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/nv.d3.min-new.js' type='text/javascript'></script>
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <style>
+    body { 
+  padding:0; 
+  margin:0; 
+  position:absolute; 
+  width:10%; 
+  height:100%; 
+  overflow:hidden
+}
+    </style>
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 600px;
+      height: 400px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+        </style>
+        <script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+<style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style> 
+    
+  </head>
+  <body >
+  <center>
+       <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 500px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: -0.25px"><strong>Comparing Unforced Error Data of the 2014 U.S. Open Women's Quarterfinalists</strong></div>
+    </div></center>
+    <center><a href = "http://www.ibm.com/us/en/" target = "_blank"><img src="http://www.aragorn.org/logos/ibm_630_100v3.jpg" alt="" width = "450" height="71" style="padding: 2.5px"></a></center>
+  <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='col-md-3'>
+      <form class='well'>
+        <label><b>Select Variable:</b></label>
+        <select class='form-control' ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+        </select>
+              </form>
+    </div>
+    <div class='col-md-7'>
+      <div class="bs-docs-example">
+        <div id='chart1dcf4782f5ab' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart1dcf4782f5ab",
+"width":    600,
+"height":    400,
+"x": "round",
+"y": "Player Unforced Errors",
+"facet": {
+ "round": [ "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total", "Round 1", "Round 2", "Round 3", "Round 4", "Tournament Total" ],
+"player": [ "Sara Errani", "Sara Errani", "Sara Errani", "Sara Errani", "Sara Errani", "Caroline Wozniaki", "Caroline Wozniaki", "Caroline Wozniaki", "Caroline Wozniaki", "Caroline Wozniaki", "Belinda Bencic", "Belinda Bencic", "Belinda Bencic", "Belinda Bencic", "Belinda Bencic", "Peng Shuai", "Peng Shuai", "Peng Shuai", "Peng Shuai", "Peng Shuai", "Flavia Pennetta", "Flavia Pennetta", "Flavia Pennetta", "Flavia Pennetta", "Flavia Pennetta", "Serena Williams", "Serena Williams", "Serena Williams", "Serena Williams", "Serena Williams", "Ekaterina Makarova", "Ekaterina Makarova", "Ekaterina Makarova", "Ekaterina Makarova", "Ekaterina Makarova", "Victoria Azarenka", "Victoria Azarenka", "Victoria Azarenka", "Victoria Azarenka", "Victoria Azarenka" ],
+"Player Unforced Errors": [ 12, 18, 25, 9, 64, 13, 15, 11, 17, 56, 0, 41, 18, 34, 93, 8, 22, 16, 7, 53, 16, 12, 19, 18, 65, 8, 15, 21, 16, 60, 18, 16, 23, 27, 84, 47, 24, 8, 40, 119 ],
+"Opponent Unforced Errors": [ 32, 40, 52, 69, 193, 37, 34, 34, 43, 148, 0, 40, 22, 38, 100, 21, 19, 19, 21, 80, 43, 33, 34, 35, 145, 20, 16, 32, 13, 81, 12, 17, 21, 31, 81, 49, 30, 26, 37, 142 ],
+"Net Unforced Error Margin": [ -20, -22, -27, -60, -129, -24, -19, -23, -26, -92, 0, 1, -4, -4, -7, -13, 3, -3, -14, -27, -27, -21, -15, -17, -80, -12, -1, -11, 3, -21, 6, -1, 2, -4, 3, -2, -6, -18, 3, -23 ] 
+},
+"group": "player",
+"type": "multiBarChart",
+"id": "chart1dcf4782f5ab" 
+}
+  $scope.data = [
+ {
+ "round": "Round 1",
+"player": "Sara Errani",
+"Player Unforced Errors": 12,
+"Opponent Unforced Errors": 32,
+"Net Unforced Error Margin": -20 
+},
+{
+ "round": "Round 2",
+"player": "Sara Errani",
+"Player Unforced Errors": 18,
+"Opponent Unforced Errors": 40,
+"Net Unforced Error Margin": -22 
+},
+{
+ "round": "Round 3",
+"player": "Sara Errani",
+"Player Unforced Errors": 25,
+"Opponent Unforced Errors": 52,
+"Net Unforced Error Margin": -27 
+},
+{
+ "round": "Round 4",
+"player": "Sara Errani",
+"Player Unforced Errors": 9,
+"Opponent Unforced Errors": 69,
+"Net Unforced Error Margin": -60 
+},
+{
+ "round": "Tournament Total",
+"player": "Sara Errani",
+"Player Unforced Errors": 64,
+"Opponent Unforced Errors": 193,
+"Net Unforced Error Margin": -129 
+},
+{
+ "round": "Round 1",
+"player": "Caroline Wozniaki",
+"Player Unforced Errors": 13,
+"Opponent Unforced Errors": 37,
+"Net Unforced Error Margin": -24 
+},
+{
+ "round": "Round 2",
+"player": "Caroline Wozniaki",
+"Player Unforced Errors": 15,
+"Opponent Unforced Errors": 34,
+"Net Unforced Error Margin": -19 
+},
+{
+ "round": "Round 3",
+"player": "Caroline Wozniaki",
+"Player Unforced Errors": 11,
+"Opponent Unforced Errors": 34,
+"Net Unforced Error Margin": -23 
+},
+{
+ "round": "Round 4",
+"player": "Caroline Wozniaki",
+"Player Unforced Errors": 17,
+"Opponent Unforced Errors": 43,
+"Net Unforced Error Margin": -26 
+},
+{
+ "round": "Tournament Total",
+"player": "Caroline Wozniaki",
+"Player Unforced Errors": 56,
+"Opponent Unforced Errors": 148,
+"Net Unforced Error Margin": -92 
+},
+{
+ "round": "Round 1",
+"player": "Belinda Bencic",
+"Player Unforced Errors": 0,
+"Opponent Unforced Errors": 0,
+"Net Unforced Error Margin": 0 
+},
+{
+ "round": "Round 2",
+"player": "Belinda Bencic",
+"Player Unforced Errors": 41,
+"Opponent Unforced Errors": 40,
+"Net Unforced Error Margin": 1 
+},
+{
+ "round": "Round 3",
+"player": "Belinda Bencic",
+"Player Unforced Errors": 18,
+"Opponent Unforced Errors": 22,
+"Net Unforced Error Margin": -4 
+},
+{
+ "round": "Round 4",
+"player": "Belinda Bencic",
+"Player Unforced Errors": 34,
+"Opponent Unforced Errors": 38,
+"Net Unforced Error Margin": -4 
+},
+{
+ "round": "Tournament Total",
+"player": "Belinda Bencic",
+"Player Unforced Errors": 93,
+"Opponent Unforced Errors": 100,
+"Net Unforced Error Margin": -7 
+},
+{
+ "round": "Round 1",
+"player": "Peng Shuai",
+"Player Unforced Errors": 8,
+"Opponent Unforced Errors": 21,
+"Net Unforced Error Margin": -13 
+},
+{
+ "round": "Round 2",
+"player": "Peng Shuai",
+"Player Unforced Errors": 22,
+"Opponent Unforced Errors": 19,
+"Net Unforced Error Margin": 3 
+},
+{
+ "round": "Round 3",
+"player": "Peng Shuai",
+"Player Unforced Errors": 16,
+"Opponent Unforced Errors": 19,
+"Net Unforced Error Margin": -3 
+},
+{
+ "round": "Round 4",
+"player": "Peng Shuai",
+"Player Unforced Errors": 7,
+"Opponent Unforced Errors": 21,
+"Net Unforced Error Margin": -14 
+},
+{
+ "round": "Tournament Total",
+"player": "Peng Shuai",
+"Player Unforced Errors": 53,
+"Opponent Unforced Errors": 80,
+"Net Unforced Error Margin": -27 
+},
+{
+ "round": "Round 1",
+"player": "Flavia Pennetta",
+"Player Unforced Errors": 16,
+"Opponent Unforced Errors": 43,
+"Net Unforced Error Margin": -27 
+},
+{
+ "round": "Round 2",
+"player": "Flavia Pennetta",
+"Player Unforced Errors": 12,
+"Opponent Unforced Errors": 33,
+"Net Unforced Error Margin": -21 
+},
+{
+ "round": "Round 3",
+"player": "Flavia Pennetta",
+"Player Unforced Errors": 19,
+"Opponent Unforced Errors": 34,
+"Net Unforced Error Margin": -15 
+},
+{
+ "round": "Round 4",
+"player": "Flavia Pennetta",
+"Player Unforced Errors": 18,
+"Opponent Unforced Errors": 35,
+"Net Unforced Error Margin": -17 
+},
+{
+ "round": "Tournament Total",
+"player": "Flavia Pennetta",
+"Player Unforced Errors": 65,
+"Opponent Unforced Errors": 145,
+"Net Unforced Error Margin": -80 
+},
+{
+ "round": "Round 1",
+"player": "Serena Williams",
+"Player Unforced Errors": 8,
+"Opponent Unforced Errors": 20,
+"Net Unforced Error Margin": -12 
+},
+{
+ "round": "Round 2",
+"player": "Serena Williams",
+"Player Unforced Errors": 15,
+"Opponent Unforced Errors": 16,
+"Net Unforced Error Margin": -1 
+},
+{
+ "round": "Round 3",
+"player": "Serena Williams",
+"Player Unforced Errors": 21,
+"Opponent Unforced Errors": 32,
+"Net Unforced Error Margin": -11 
+},
+{
+ "round": "Round 4",
+"player": "Serena Williams",
+"Player Unforced Errors": 16,
+"Opponent Unforced Errors": 13,
+"Net Unforced Error Margin": 3 
+},
+{
+ "round": "Tournament Total",
+"player": "Serena Williams",
+"Player Unforced Errors": 60,
+"Opponent Unforced Errors": 81,
+"Net Unforced Error Margin": -21 
+},
+{
+ "round": "Round 1",
+"player": "Ekaterina Makarova",
+"Player Unforced Errors": 18,
+"Opponent Unforced Errors": 12,
+"Net Unforced Error Margin": 6 
+},
+{
+ "round": "Round 2",
+"player": "Ekaterina Makarova",
+"Player Unforced Errors": 16,
+"Opponent Unforced Errors": 17,
+"Net Unforced Error Margin": -1 
+},
+{
+ "round": "Round 3",
+"player": "Ekaterina Makarova",
+"Player Unforced Errors": 23,
+"Opponent Unforced Errors": 21,
+"Net Unforced Error Margin": 2 
+},
+{
+ "round": "Round 4",
+"player": "Ekaterina Makarova",
+"Player Unforced Errors": 27,
+"Opponent Unforced Errors": 31,
+"Net Unforced Error Margin": -4 
+},
+{
+ "round": "Tournament Total",
+"player": "Ekaterina Makarova",
+"Player Unforced Errors": 84,
+"Opponent Unforced Errors": 81,
+"Net Unforced Error Margin": 3 
+},
+{
+ "round": "Round 1",
+"player": "Victoria Azarenka",
+"Player Unforced Errors": 47,
+"Opponent Unforced Errors": 49,
+"Net Unforced Error Margin": -2 
+},
+{
+ "round": "Round 2",
+"player": "Victoria Azarenka",
+"Player Unforced Errors": 24,
+"Opponent Unforced Errors": 30,
+"Net Unforced Error Margin": -6 
+},
+{
+ "round": "Round 3",
+"player": "Victoria Azarenka",
+"Player Unforced Errors": 8,
+"Opponent Unforced Errors": 26,
+"Net Unforced Error Margin": -18 
+},
+{
+ "round": "Round 4",
+"player": "Victoria Azarenka",
+"Player Unforced Errors": 40,
+"Opponent Unforced Errors": 37,
+"Net Unforced Error Margin": 3 
+},
+{
+ "round": "Tournament Total",
+"player": "Victoria Azarenka",
+"Player Unforced Errors": 119,
+"Opponent Unforced Errors": 142,
+"Net Unforced Error Margin": -23 
+} 
+]
+  $scope.controls = {
+ "y": {
+ "name": "y",
+"value": "Player Unforced Errors",
+"values": [ "Player Unforced Errors", "Opponent Unforced Errors", "Net Unforced Error Margin" ],
+"label": "Select  y :" 
+} 
+} 
+  $scope.filters = []
+  
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  
+  $scope.$watch('selected', function(){
+    var keys = _.pluck($scope.selected, "variable")
+    var values = _.pluck($scope.selected, "value")
+    $scope.opts.selected = _.zipObject(keys, values)
+  }) 
+  
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+  }, true)
+}  
+
+function drawChart(opts, data){ 
+  if (Object.keys(opts.selected).length > 0){
+    data = _.filter(data, opts.selected)
+  }
+  
+  if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+    var data = d3.nest()
+      .key(function(d){
+        //return opts.group === undefined ? 'main' : d[opts.group]
+        //instead of main would think a better default is opts.x
+       return opts.group === undefined ? opts.y : d[opts.group];
+      }).entries(data);
+  }
+      
+  if (opts.disabled != undefined){
+    data.map(function(d, i){
+      d.disabled = opts.disabled[i]
+    })
+  }
+  
+  nv.addGraph(function() {
+    var chart = nv.models[opts.type]()
+      .x(function(d) { return d[opts.x] })
+      .y(function(d) { return d[opts.y] })
+      .width(opts.width)
+      .height(opts.height)
+    
+  chart
+  .showControls(false)
+  .transitionDuration(   300)
+  .delay(   200)
+  .staggerLabels(false)
+  .clipEdge(true)
+  .groupSpacing(   0.1)
+  .color([ "#2b7479", "#000000", "#d2ba2f", "#749797", "#8ed5e5", "#AA66cc", "#FF4444", "#1d2098" ])
+  .margin({
+ "left":     50,
+"top":     50,
+"right":     10,
+"bottom":     20 
+})
+  .tooltipContent( function(key, x, y, e ){ 
+  var d = e.series.values[e.pointIndex];
+  return '<b>Player:</b> ' + d.player + '<br><b>U.S. Open Round: </b> ' + d.round + '<br><b>plotVariable Value: </b>' + y
+} )
+          
+  
+
+  
+  
+  chart.yAxis
+  .tickFormat(function(d) {return  d3.format('2f')(d)})
+  .width(    40)
+
+  d3.select("#" + opts.id + ' svg')
+  // .empty()
+    .datum(data)
+    .transition().duration(300)
+    .call(chart);
+  
+   nv.utils.windowResize(chart.update);
+   return chart;
+  });
+};
+</script>
+    
+  </body>
+<center>
+       <div style="display:table;width:220px;height:25px;" class='gray'>
+        <div class='orange' style="font-size:10px; display:table-cell;height:20px;vertical-align:middle;background-color:#f3f3f4"></div>
+        <a href = "https://twitter.com/abresler" target = "_blank"><img style="display:table-cell;width:200px;height:50px;padding:8px;background-color:#f3f3f4" src='http://www.aragorn.org/aragorn_logo.png' /></a></div></center>    
+          <script src="http://www.aragorn.org/scripts/pym.js" type="text/javascript"></script>
+    <script>var pymChild = new pym.Child();</script>    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js" type="text/javascript"></script>
+</html>

@@ -1,0 +1,1177 @@
+"","player","league","team","player_off_roster_13_14","season","id_contract_type","salary","agency","agent","salary_amnesty"
+"1","Aaron Brooks","nba","Kings",TRUE,"2013-2014","G",674194,"Creative Artists Agency","Leon Rose",FALSE
+"2","Aaron Brooks","nba","Rockets",FALSE,"2013-2014","G",884293,"Creative Artists Agency","Leon Rose",FALSE
+"3","Aaron Gray","nba","Raptors",FALSE,"2013-2014","G",2690875,"ASM Sports","Andy Miller",FALSE
+"4","Al Harrington","nba","Wizards",FALSE,"2013-2014","G",884293,"Relativity Sports","Dan Fegan",FALSE
+"5","Al Harrington","nba","Magic",TRUE,"2013-2014","G",3574300,"Relativity Sports","Dan Fegan",FALSE
+"6","Al Harrington","nba","Magic",TRUE,"2014-2015","G",3804900,"Relativity Sports","Dan Fegan",FALSE
+"7","Al Horford","nba","Hawks",FALSE,"2014-2015","G",12000000,"Wasserman Media Group","Arn Tellem",FALSE
+"8","Al Horford","nba","Hawks",FALSE,"2013-2014","G",12000000,"Wasserman Media Group","Arn Tellem",FALSE
+"9","Al Horford","nba","Hawks",FALSE,"2015-2016","G",12000000,"Wasserman Media Group","Arn Tellem",FALSE
+"10","Al Jefferson","nba","Bobcats",FALSE,"2013-2014","G",13500000,"Excel Sports Management","Jeff Schwartz",FALSE
+"11","Al Jefferson","nba","Bobcats",FALSE,"2014-2015","G",13500000,"Excel Sports Management","Jeff Schwartz",FALSE
+"12","Al Jefferson","nba","Bobcats",FALSE,"2015-2016","PO",13500000,"Excel Sports Management","Jeff Schwartz",FALSE
+"13","Al-Farouq Aminu","nba","Pelicans",FALSE,"2013-2014","G",3749602,"IAM Sports","Raymond Brothers",FALSE
+"14","Alan Anderson","nba","Nets",FALSE,"2014-2015","PO",1063384,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"15","Alan Anderson","nba","Nets",FALSE,"2013-2014","G",947907,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"16","Alec Burks","nba","Jazz",FALSE,"2013-2014","G",2202000,"ASM Sports","Andy Miller",FALSE
+"17","Alec Burks","nba","Jazz",FALSE,"2015-2016","QO",4175274,"ASM Sports","Andy Miller",FALSE
+"18","Alec Burks","nba","Jazz",FALSE,"2014-2015","TO",3034356,"ASM Sports","Andy Miller",FALSE
+"19","Alex Len","nba","Suns",FALSE,"2016-2017","TO",4823621,"Zucker International","Guy Zucker",FALSE
+"20","Alex Len","nba","Suns",FALSE,"2014-2015","G",3649920,"Zucker International","Guy Zucker",FALSE
+"21","Alex Len","nba","Suns",FALSE,"2017-2018","QO",6396121,"Zucker International","Guy Zucker",FALSE
+"22","Alex Len","nba","Suns",FALSE,"2013-2014","G",3492720,"Zucker International","Guy Zucker",FALSE
+"23","Alex Len","nba","Suns",FALSE,"2015-2016","TO",3807120,"Zucker International","Guy Zucker",FALSE
+"24","Alexey Shved","nba","Timberwolves",FALSE,"2014-2015","G",3282056,"Alti Sport","Obrad Fimic",FALSE
+"25","Alexey Shved","nba","Timberwolves",FALSE,"2013-2014","G",3150000,"Alti Sport","Obrad Fimic",FALSE
+"26","Alexey Shved","nba","Timberwolves",FALSE,"2015-2016","QO",4102570,"Alti Sport","Obrad Fimic",FALSE
+"27","Allen Crabbe","nba","Trail Blazers",FALSE,"2013-2014","G",825000,"Excel Sports Management","Sam Goldfeder",FALSE
+"28","Allen Crabbe","nba","Trail Blazers",FALSE,"2015-2016","U",947276,"Excel Sports Management","Sam Goldfeder",FALSE
+"29","Allen Crabbe","nba","Trail Blazers",FALSE,"2014-2015","G",862000,"Excel Sports Management","Sam Goldfeder",FALSE
+"30","Allen Crabbe","nba","Trail Blazers",FALSE,"2016-2017","QO",1215696,"Excel Sports Management","Sam Goldfeder",FALSE
+"31","Alonzo Gee","nba","Cavaliers",FALSE,"2014-2015","U",3000000,"Relativity Sports","Happy Walters",FALSE
+"32","Alonzo Gee","nba","Cavaliers",FALSE,"2013-2014","G",3250000,"Relativity Sports","Happy Walters",FALSE
+"33","Amar'e Stoudemire","nba","Knicks",FALSE,"2013-2014","G",21679893,"Relativity Sports","Dan Fegan",FALSE
+"34","Amar'e Stoudemire","nba","Knicks",FALSE,"2014-2015","ETO",23410988,"Relativity Sports","Dan Fegan",FALSE
+"35","Amir Johnson","nba","Raptors",FALSE,"2014-2015","U",7000000,"BDA Sports Management","Kevin Bradbury",FALSE
+"36","Amir Johnson","nba","Raptors",FALSE,"2013-2014","G",6500000,"BDA Sports Management","Kevin Bradbury",FALSE
+"37","Anderson Varejao","nba","Cavaliers",FALSE,"2014-2015","U",9704545,"Relativity Sports","Dan Fegan",FALSE
+"38","Anderson Varejao","nba","Cavaliers",FALSE,"2013-2014","G",9036364,"Relativity Sports","Dan Fegan",FALSE
+"39","Andray Blatche","nba","Nets",FALSE,"2014-2015","PO",1437506,"ASM Sports","Andy Miller",FALSE
+"40","Andray Blatche","nba","Nets",FALSE,"2013-2014","G",1375604,"ASM Sports","Andy Miller",FALSE
+"41","Andre Drummond","nba","Pistons",FALSE,"2013-2014","G",2462400,"Landmark Sports Agency","Rob Pelinka",FALSE
+"42","Andre Drummond","nba","Pistons",FALSE,"2016-2017","QO",4433683,"Landmark Sports Agency","Rob Pelinka",FALSE
+"43","Andre Drummond","nba","Pistons",FALSE,"2014-2015","TO",2568360,"Landmark Sports Agency","Rob Pelinka",FALSE
+"44","Andre Drummond","nba","Pistons",FALSE,"2015-2016","TO",3272091,"Landmark Sports Agency","Rob Pelinka",FALSE
+"45","Andre Iguodala","nba","Warriors",FALSE,"2014-2015","G",12289544,"Landmark Sports Agency","Rob Pelinka",FALSE
+"46","Andre Iguodala","nba","Warriors",FALSE,"2015-2016","G",11710456,"Landmark Sports Agency","Rob Pelinka",FALSE
+"47","Andre Iguodala","nba","Warriors",FALSE,"2013-2014","G",12868632,"Landmark Sports Agency","Rob Pelinka",FALSE
+"48","Andre Iguodala","nba","Warriors",FALSE,"2016-2017","G",11131368,"Landmark Sports Agency","Rob Pelinka",FALSE
+"49","Andre Miller","nba","Nuggets",FALSE,"2013-2014","G",5000000,"ASM Sports","Andy Miller",FALSE
+"50","Andre Miller","nba","Nuggets",FALSE,"2014-2015","U",4625000,"ASM Sports","Andy Miller",FALSE
+"51","Andre Roberson","nba","Thunder",FALSE,"2013-2014","G",740560,"BDA Sports Management","Bill Duffy",FALSE
+"52","Andre Roberson","nba","Thunder",FALSE,"2014-2015","G",1160880,"BDA Sports Management","Bill Duffy",FALSE
+"53","Andre Roberson","nba","Thunder",FALSE,"2016-2017","TO",2183072,"BDA Sports Management","Bill Duffy",FALSE
+"54","Andre Roberson","nba","Thunder",FALSE,"2015-2016","TO",1210800,"BDA Sports Management","Bill Duffy",FALSE
+"55","Andre Roberson","nba","Thunder",FALSE,"2017-2018","QO",3222215,"BDA Sports Management","Bill Duffy",FALSE
+"56","Andrea Bargnani","nba","Knicks",FALSE,"2013-2014","G",11862500,"Creative Artists Agency","Leon Rose",FALSE
+"57","Andrea Bargnani","nba","Knicks",FALSE,"2014-2015","ETO",11500000,"Creative Artists Agency","Leon Rose",FALSE
+"58","Andrei Kirilenko","nba","Nets",FALSE,"2013-2014","G",3183000,"Entersport","Marc Fleisher",FALSE
+"59","Andrei Kirilenko","nba","Nets",FALSE,"2014-2015","PO",3326235,"Entersport","Marc Fleisher",FALSE
+"60","Andrew Bogut","nba","Warriors",FALSE,"2013-2014","G",14000000,"Lagardere Unlimited","David Bauman",FALSE
+"61","Andrew Bynum","nba","Cavaliers",FALSE,"2013-2014","U",12250000,"David Lee Services","David Lee",FALSE
+"62","Andrew Bynum","nba","Cavaliers",FALSE,"2014-2015","U",12540000,"David Lee Services","David Lee",FALSE
+"63","Andrew Nicholson","nba","Magic",FALSE,"2016-2017","QO",3394726,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"64","Andrew Nicholson","nba","Magic",FALSE,"2015-2016","TO",2380594,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"65","Andrew Nicholson","nba","Magic",FALSE,"2014-2015","TO",1545840,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"66","Andrew Nicholson","nba","Magic",FALSE,"2013-2014","G",1482000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"67","Andris Biedrins","nba","Jazz",FALSE,"2013-2014","G",9000000,"BDA Sports Management","Bill Duffy",FALSE
+"68","Antawn Jamison","nba","Clippers",FALSE,"2013-2014","G",884293,"Wasserman Media Group","Arn Tellem",FALSE
+"69","Anthony Bennett","nba","Cavaliers",FALSE,"2014-2015","G",5563920,"Excel Sports Management","Jeff Schwartz",FALSE
+"70","Anthony Bennett","nba","Cavaliers",FALSE,"2013-2014","G",5324280,"Excel Sports Management","Jeff Schwartz",FALSE
+"71","Anthony Bennett","nba","Cavaliers",FALSE,"2015-2016","TO",5803560,"Excel Sports Management","Jeff Schwartz",FALSE
+"72","Anthony Bennett","nba","Cavaliers",FALSE,"2017-2018","QO",9513776,"Excel Sports Management","Jeff Schwartz",FALSE
+"73","Anthony Bennett","nba","Cavaliers",FALSE,"2016-2017","TO",7318289,"Excel Sports Management","Jeff Schwartz",FALSE
+"74","Anthony Davis","nba","Pelicans",FALSE,"2016-2017","QO",9191949,"Wasserman Media Group","Arn Tellem",FALSE
+"75","Anthony Davis","nba","Pelicans",FALSE,"2014-2015","TO",5607240,"Wasserman Media Group","Arn Tellem",FALSE
+"76","Anthony Davis","nba","Pelicans",FALSE,"2015-2016","TO",7070730,"Wasserman Media Group","Arn Tellem",FALSE
+"77","Anthony Davis","nba","Pelicans",FALSE,"2013-2014","G",5375760,"Wasserman Media Group","Arn Tellem",FALSE
+"78","Anthony Morrow","nba","Pelicans",FALSE,"2014-2015","PO",1145685,"Perennial","Wallace Prather",FALSE
+"79","Anthony Morrow","nba","Pelicans",FALSE,"2013-2014","G",1027424,"Perennial","Wallace Prather",FALSE
+"80","Anthony Randolph","nba","Nuggets",FALSE,"2013-2014","G",1750000,"BDA Sports Management","Bill Duffy",FALSE
+"81","Anthony Randolph","nba","Nuggets",FALSE,"2014-2015","G",1825359,"BDA Sports Management","Bill Duffy",FALSE
+"82","Anthony Tolliver","nba","Bobcats",FALSE,"2013-2014","G",884293,"Lee Basketball Services LTD","Larry Fox",FALSE
+"83","Archie Goodwin","nba","Suns",FALSE,"2016-2017","TO",2094089,"Briscoe Sports Management","Charlie Briscoe",FALSE
+"84","Archie Goodwin","nba","Suns",FALSE,"2017-2018","QO",3141133,"Briscoe Sports Management","Charlie Briscoe",FALSE
+"85","Archie Goodwin","nba","Suns",FALSE,"2014-2015","G",1112280,"Briscoe Sports Management","Charlie Briscoe",FALSE
+"86","Archie Goodwin","nba","Suns",FALSE,"2015-2016","TO",1160160,"Briscoe Sports Management","Charlie Briscoe",FALSE
+"87","Archie Goodwin","nba","Suns",FALSE,"2013-2014","G",1064400,"Briscoe Sports Management","Charlie Briscoe",FALSE
+"88","Arinze Onuaku","nba","Pelicans",FALSE,"2013-2014","U",490180,"Assist Sports","Eric Fleisher",FALSE
+"89","Arinze Onuaku","nba","Pelicans",FALSE,"2014-2015","U",816482,"Assist Sports","Eric Fleisher",FALSE
+"90","Arinze Onuaku","nba","Pelicans",FALSE,"2015-2016","QO",1147276,"Assist Sports","Eric Fleisher",FALSE
+"91","Arnett Moultrie","nba","Sixers",FALSE,"2015-2016","TO",2049633,"The Alliance Management Group","Derek Lafayette",FALSE
+"92","Arnett Moultrie","nba","Sixers",FALSE,"2016-2017","QO",3039605,"The Alliance Management Group","Derek Lafayette",FALSE
+"93","Arnett Moultrie","nba","Sixers",FALSE,"2013-2014","G",1089240,"The Alliance Management Group","Derek Lafayette",FALSE
+"94","Arnett Moultrie","nba","Sixers",FALSE,"2014-2015","TO",1136160,"The Alliance Management Group","Derek Lafayette",FALSE
+"95","Aron Baynes","nba","Spurs",FALSE,"2014-2015","QO",1115243,"Entersport","Marc Fleisher",FALSE
+"96","Aron Baynes","nba","Spurs",FALSE,"2013-2014","G",788872,"Entersport","Marc Fleisher",FALSE
+"97","Arron Afflalo","nba","Magic",FALSE,"2014-2015","G",7500000,"Excel Sports Management","Jeff Schwartz",FALSE
+"98","Arron Afflalo","nba","Magic",FALSE,"2013-2014","G",7500000,"Excel Sports Management","Jeff Schwartz",FALSE
+"99","Arron Afflalo","nba","Magic",FALSE,"2015-2016","PO",7500000,"Excel Sports Management","Jeff Schwartz",FALSE
+"100","Austin Daye","nba","Raptors",FALSE,"2013-2014","G",947907,"Landmark Sports Agency","Rob Pelinka",FALSE
+"101","Austin Daye","nba","Raptors",FALSE,"2014-2015","U",1063384,"Landmark Sports Agency","Rob Pelinka",FALSE
+"102","Austin Rivers","nba","Pelicans",FALSE,"2013-2014","G",2339040,"FAME","David Falk",FALSE
+"103","Austin Rivers","nba","Pelicans",FALSE,"2016-2017","QO",4236904,"FAME","David Falk",FALSE
+"104","Austin Rivers","nba","Pelicans",FALSE,"2014-2015","TO",2439840,"FAME","David Falk",FALSE
+"105","Austin Rivers","nba","Pelicans",FALSE,"2015-2016","TO",3110796,"FAME","David Falk",FALSE
+"106","Avery Bradley","nba","Celtics",FALSE,"2014-2015","QO",3581302,"Lagardere Unlimited","Mitchell Butler",FALSE
+"107","Avery Bradley","nba","Celtics",FALSE,"2013-2014","G",2511432,"Lagardere Unlimited","Mitchell Butler",FALSE
+"108","B.J. Young","nba","Rockets",FALSE,"2015-2016","U",947276,"Briscoe Sports Management","Charlie Briscoe",FALSE
+"109","B.J. Young","nba","Rockets",FALSE,"2016-2017","QO",1215696,"Briscoe Sports Management","Charlie Briscoe",FALSE
+"110","B.J. Young","nba","Rockets",FALSE,"2013-2014","U",490180,"Briscoe Sports Management","Charlie Briscoe",FALSE
+"111","B.J. Young","nba","Rockets",FALSE,"2014-2015","U",816482,"Briscoe Sports Management","Charlie Briscoe",FALSE
+"112","Ben Gordon","nba","Bobcats",FALSE,"2013-2014","G",13200000,"IAM Sports","Raymond Brothers",FALSE
+"113","Ben McLemore","nba","Kings",FALSE,"2017-2018","QO",5375911,"Rival Sports Group","Tony Dutt",FALSE
+"114","Ben McLemore","nba","Kings",FALSE,"2013-2014","G",2895960,"Rival Sports Group","Tony Dutt",FALSE
+"115","Ben McLemore","nba","Kings",FALSE,"2016-2017","TO",4008882,"Rival Sports Group","Tony Dutt",FALSE
+"116","Ben McLemore","nba","Kings",FALSE,"2015-2016","TO",3156600,"Rival Sports Group","Tony Dutt",FALSE
+"117","Ben McLemore","nba","Kings",FALSE,"2014-2015","G",3026280,"Rival Sports Group","Tony Dutt",FALSE
+"118","Beno Udrih","nba","Knicks",FALSE,"2013-2014","G",884293,"Pinnacle Management Corporation","Marc Cornstein",FALSE
+"119","Bernard James","nba","Mavericks",FALSE,"2013-2014","G",788872,"Relativity Sports","Dan Fegan",FALSE
+"120","Bernard James","nba","Mavericks",FALSE,"2014-2015","QO",1115243,"Relativity Sports","Dan Fegan",FALSE
+"121","Bismack Biyombo","nba","Bobcats",FALSE,"2013-2014","G",3049920,"Wasserman Media Group","Arn Tellem",FALSE
+"122","Bismack Biyombo","nba","Bobcats",FALSE,"2015-2016","QO",5194227,"Wasserman Media Group","Arn Tellem",FALSE
+"123","Bismack Biyombo","nba","Bobcats",FALSE,"2014-2015","TO",3873398,"Wasserman Media Group","Arn Tellem",FALSE
+"124","Blake Griffin","nba","Clippers",FALSE,"2015-2016","G",18907725,"Excel Sports Management","Jeff Schwartz",FALSE
+"125","Blake Griffin","nba","Clippers",FALSE,"2014-2015","G",17674613,"Excel Sports Management","Jeff Schwartz",FALSE
+"126","Blake Griffin","nba","Clippers",FALSE,"2017-2018","ETO",21373950,"Excel Sports Management","Jeff Schwartz",FALSE
+"127","Blake Griffin","nba","Clippers",FALSE,"2013-2014","G",16441500,"Excel Sports Management","Jeff Schwartz",FALSE
+"128","Blake Griffin","nba","Clippers",FALSE,"2016-2017","G",20140838,"Excel Sports Management","Jeff Schwartz",FALSE
+"129","Boris Diaw","nba","Spurs",FALSE,"2013-2014","G",4702500,"The Neustadt Group","Doug Neustadt",FALSE
+"130","Bradley Beal","nba","Wizards",FALSE,"2015-2016","TO",5694674,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"131","Bradley Beal","nba","Wizards",FALSE,"2016-2017","U",7471412,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"132","Bradley Beal","nba","Wizards",FALSE,"2013-2014","G",4319280,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"133","Bradley Beal","nba","Wizards",FALSE,"2014-2015","TO",4505280,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"134","Brandan Wright","nba","Mavericks",FALSE,"2014-2015","G",5000000,"Williams & Connolly","Jim Tanner",FALSE
+"135","Brandan Wright","nba","Mavericks",FALSE,"2013-2014","G",5000000,"Williams & Connolly","Jim Tanner",FALSE
+"136","Brandon Bass","nba","Celtics",FALSE,"2013-2014","G",6450000,"Rival Sports Group","Tony Dutt",FALSE
+"137","Brandon Bass","nba","Celtics",FALSE,"2014-2015","G",6900000,"Rival Sports Group","Tony Dutt",FALSE
+"138","Brandon Davies","nba","Clippers",FALSE,"2013-2014","U",490180,"BDA Sports Management","Bill Duffy",FALSE
+"139","Brandon Davies","nba","Clippers",FALSE,"2015-2016","QO",1147276,"BDA Sports Management","Bill Duffy",FALSE
+"140","Brandon Davies","nba","Clippers",FALSE,"2014-2015","U",816482,"BDA Sports Management","Bill Duffy",FALSE
+"141","Brandon Jennings","nba","Pistons",FALSE,"2013-2014","G",7655503,"Excel Sports Management","Jeff Schwartz",FALSE
+"142","Brandon Jennings","nba","Pistons",FALSE,"2014-2015","G",8000000,"Excel Sports Management","Jeff Schwartz",FALSE
+"143","Brandon Jennings","nba","Pistons",FALSE,"2015-2016","G",8344497,"Excel Sports Management","Jeff Schwartz",FALSE
+"144","Brandon Knight","nba","Bucks",FALSE,"2014-2015","TO",3553917,"Wasserman Media Group","Arn Tellem",FALSE
+"145","Brandon Knight","nba","Bucks",FALSE,"2013-2014","G",2793960,"Wasserman Media Group","Arn Tellem",FALSE
+"146","Brandon Knight","nba","Bucks",FALSE,"2015-2016","QO",4790680,"Wasserman Media Group","Arn Tellem",FALSE
+"147","Brandon Rush","nba","Jazz",FALSE,"2013-2014","G",4000000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"148","Brendan Haywood","nba","Bobcats",FALSE,"2013-2014","G",2050000,"ASM Sports","Andy Miller",FALSE
+"149","Brendan Haywood","nba","Bobcats",FALSE,"2014-2015","G",2213688,"ASM Sports","Andy Miller",FALSE
+"150","Brendan Haywood","nba","Bobcats",FALSE,"2015-2016","U",10522500,"ASM Sports","Andy Miller",FALSE
+"151","Brian Roberts","nba","Pelicans",FALSE,"2014-2015","QO",1115243,"ASM Sports","Andy Miller",FALSE
+"152","Brian Roberts","nba","Pelicans",FALSE,"2013-2014","G",788872,"ASM Sports","Andy Miller",FALSE
+"153","Brook Lopez","nba","Nets",FALSE,"2013-2014","G",14693906,"Wasserman Media Group","Arn Tellem",FALSE
+"154","Brook Lopez","nba","Nets",FALSE,"2014-2015","G",15719063,"Wasserman Media Group","Arn Tellem",FALSE
+"155","Brook Lopez","nba","Nets",FALSE,"2015-2016","PO",16744218,"Wasserman Media Group","Arn Tellem",FALSE
+"156","Byron Mullens","nba","Clippers",FALSE,"2013-2014","G",947907,"Wasserman Media Group","Arn Tellem",FALSE
+"157","Byron Mullens","nba","Clippers",FALSE,"2014-2015","PO",1063384,"Wasserman Media Group","Arn Tellem",FALSE
+"158","C.J. Leslie","nba","Knicks",FALSE,"2013-2014","U",490180,"Creative Artists Agency","Aaron Mintz",FALSE
+"159","C.J. Leslie","nba","Knicks",FALSE,"2014-2015","U",816482,"Creative Artists Agency","Aaron Mintz",FALSE
+"160","C.J. Leslie","nba","Knicks",FALSE,"2015-2016","QO",1147276,"Creative Artists Agency","Aaron Mintz",FALSE
+"161","C.J. McCollum","nba","Trail Blazers",FALSE,"2015-2016","TO",2525160,"Excel Sports Management","Jeff Schwartz",FALSE
+"162","C.J. McCollum","nba","Trail Blazers",FALSE,"2014-2015","G",2421000,"Excel Sports Management","Jeff Schwartz",FALSE
+"163","C.J. McCollum","nba","Trail Blazers",FALSE,"2013-2014","G",2316720,"Excel Sports Management","Jeff Schwartz",FALSE
+"164","C.J. McCollum","nba","Trail Blazers",FALSE,"2016-2017","TO",3219579,"Excel Sports Management","Jeff Schwartz",FALSE
+"165","C.J. McCollum","nba","Trail Blazers",FALSE,"2017-2018","QO",4385067,"Excel Sports Management","Jeff Schwartz",FALSE
+"166","C.J. Miles","nba","Cavaliers",FALSE,"2013-2014","G",2225000,"Independent","Billy Ceisler",FALSE
+"167","C.J. Watson","nba","Pacers",FALSE,"2014-2015","G",2077000,"Excel Sports Management","Jeff Schwartz",FALSE
+"168","C.J. Watson","nba","Pacers",FALSE,"2013-2014","G",2016000,"Excel Sports Management","Jeff Schwartz",FALSE
+"169","Carl Landry","nba","Kings",FALSE,"2013-2014","G",6500000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"170","Carl Landry","nba","Kings",FALSE,"2016-2017","G",6500000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"171","Carl Landry","nba","Kings",FALSE,"2014-2015","G",6500000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"172","Carl Landry","nba","Kings",FALSE,"2015-2016","G",6500000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"173","Carlos Boozer","nba","Bulls",FALSE,"2014-2015","G",16800000,"Landmark Sports Agency","Rob Pelinka",FALSE
+"174","Carlos Boozer","nba","Bulls",FALSE,"2013-2014","G",15300000,"Landmark Sports Agency","Rob Pelinka",FALSE
+"175","Carlos Delfino","nba","Bucks",FALSE,"2014-2015","G",3250000,"ASM Sports","Andy Miller",FALSE
+"176","Carlos Delfino","nba","Bucks",FALSE,"2013-2014","G",3250000,"ASM Sports","Andy Miller",FALSE
+"177","Carlos Delfino","nba","Bucks",FALSE,"2015-2016","U",3250000,"ASM Sports","Andy Miller",FALSE
+"178","Carmelo Anthony","nba","Knicks",FALSE,"2013-2014","G",21388954,"Creative Artists Agency","Leon Rose",FALSE
+"179","Carmelo Anthony","nba","Knicks",FALSE,"2014-2015","ETO",23333405,"Creative Artists Agency","Leon Rose",FALSE
+"180","Caron Butler","nba","Bucks",FALSE,"2013-2014","G",8000000,"IAM Sports","Raymond Brothers",FALSE
+"181","Carrick Felix","nba","Cavaliers",FALSE,"2015-2016","U",947276,"Stratosphere Sports","Todd Eley",FALSE
+"182","Carrick Felix","nba","Cavaliers",FALSE,"2013-2014","G",510000,"Stratosphere Sports","Todd Eley",FALSE
+"183","Carrick Felix","nba","Cavaliers",FALSE,"2014-2015","U",816482,"Stratosphere Sports","Todd Eley",FALSE
+"184","Carrick Felix","nba","Cavaliers",FALSE,"2016-2017","TO",1015696,"Stratosphere Sports","Todd Eley",FALSE
+"185","Chandler Parsons","nba","Rockets",FALSE,"2014-2015","U",964750,"Relativity Sports","Dan Fegan",FALSE
+"186","Chandler Parsons","nba","Rockets",FALSE,"2013-2014","G",926500,"Relativity Sports","Dan Fegan",FALSE
+"187","Channing Frye","nba","Suns",FALSE,"2013-2014","G",6400000,"Landmark Sports Agency","Rob Pelinka",FALSE
+"188","Channing Frye","nba","Suns",FALSE,"2014-2015","PO",6800000,"Landmark Sports Agency","Rob Pelinka",FALSE
+"189","Charlie Villanueva","nba","Pistons",FALSE,"2013-2014","G",8580000,"Excel Sports Management","Jeff Schwartz",FALSE
+"190","Chase Budinger","nba","Timberwolves",FALSE,"2014-2015","G",5000000,"BDA Sports Management","Kevin Bradbury",FALSE
+"191","Chase Budinger","nba","Timberwolves",FALSE,"2015-2016","PO",5000000,"BDA Sports Management","Kevin Bradbury",FALSE
+"192","Chase Budinger","nba","Timberwolves",FALSE,"2013-2014","G",5000000,"BDA Sports Management","Kevin Bradbury",FALSE
+"193","Chauncey Billups","nba","Pistons",FALSE,"2014-2015","TO",2500000,"ASM Sports","Andy Miller",FALSE
+"194","Chauncey Billups","nba","Pistons",FALSE,"2013-2014","G",2500000,"ASM Sports","Andy Miller",FALSE
+"195","Chris Andersen","nba","Heat",FALSE,"2014-2015","PO",1448490,"Creative Artists Agency","Steve Heumann",FALSE
+"196","Chris Andersen","nba","Heat",FALSE,"2013-2014","G",1399507,"Creative Artists Agency","Steve Heumann",FALSE
+"197","Chris Bosh","nba","Heat",FALSE,"2014-2015","ETO",20590000,"Creative Artists Agency","Henry Thomas",FALSE
+"198","Chris Bosh","nba","Heat",FALSE,"2013-2014","G",19067500,"Creative Artists Agency","Henry Thomas",FALSE
+"199","Chris Bosh","nba","Heat",FALSE,"2015-2016","PO",22112500,"Creative Artists Agency","Henry Thomas",FALSE
+"200","Chris Copeland","nba","Pacers",FALSE,"2014-2015","G",3135000,"540 Sports and Entertainment LLC","John Spencer",FALSE
+"201","Chris Copeland","nba","Pacers",FALSE,"2015-2016","QO",3918750,"540 Sports and Entertainment LLC","John Spencer",FALSE
+"202","Chris Copeland","nba","Pacers",FALSE,"2013-2014","G",3000000,"540 Sports and Entertainment LLC","John Spencer",FALSE
+"203","Chris Duhon","nba","Lakers",TRUE,"2013-2014","G",1500000,"BDA Sports Management","Kevin Bradbury",FALSE
+"204","Chris Johnson","nba","Timberwolves",FALSE,"2013-2014","G",916099,"Assist Sports","Eric Fleisher",FALSE
+"205","Chris Kaman","nba","Lakers",FALSE,"2013-2014","G",3183000,"Landmark Sports Agency","Rob Pelinka",FALSE
+"206","Chris Paul","nba","Clippers",FALSE,"2013-2014","G",18668431,"Creative Artists Agency","Leon Rose",FALSE
+"207","Chris Paul","nba","Clippers",FALSE,"2017-2018","ETO",24268959,"Creative Artists Agency","Leon Rose",FALSE
+"208","Chris Paul","nba","Clippers",FALSE,"2014-2015","G",20068563,"Creative Artists Agency","Leon Rose",FALSE
+"209","Chris Paul","nba","Clippers",FALSE,"2015-2016","G",21468695,"Creative Artists Agency","Leon Rose",FALSE
+"210","Chris Paul","nba","Clippers",FALSE,"2016-2017","G",22868827,"Creative Artists Agency","Leon Rose",FALSE
+"211","Chris Singleton","nba","Wizards",FALSE,"2015-2016","QO",3532643,"BDA Sports Management","Bill Duffy",FALSE
+"212","Chris Singleton","nba","Wizards",FALSE,"2013-2014","G",1618680,"BDA Sports Management","Bill Duffy",FALSE
+"213","Chris Singleton","nba","Wizards",FALSE,"2014-2015","TO",2489530,"BDA Sports Management","Bill Duffy",FALSE
+"214","Chris Smith","nba","Knicks",FALSE,"2013-2014","U",490180,"Creative Artists Agency","Leon Rose",FALSE
+"215","Chris Smith","nba","Knicks",FALSE,"2014-2015","U",816482,"Creative Artists Agency","Leon Rose",FALSE
+"216","Chris Smith","nba","Knicks",FALSE,"2015-2016","QO",1147276,"Creative Artists Agency","Leon Rose",FALSE
+"217","Chuck Hayes","nba","Kings",FALSE,"2014-2015","G",5958750,"BDA Sports Management","Bill Duffy",FALSE
+"218","Chuck Hayes","nba","Kings",FALSE,"2013-2014","G",5722500,"BDA Sports Management","Bill Duffy",FALSE
+"219","Cody Zeller","nba","Bobcats",FALSE,"2015-2016","TO",4204200,"Excel Sports Management","Jeff Schwartz",FALSE
+"220","Cody Zeller","nba","Bobcats",FALSE,"2014-2015","G",4030560,"Excel Sports Management","Jeff Schwartz",FALSE
+"221","Cody Zeller","nba","Bobcats",FALSE,"2016-2017","TO",5318313,"Excel Sports Management","Jeff Schwartz",FALSE
+"222","Cody Zeller","nba","Bobcats",FALSE,"2017-2018","QO",7014855,"Excel Sports Management","Jeff Schwartz",FALSE
+"223","Cody Zeller","nba","Bobcats",FALSE,"2013-2014","G",3857040,"Excel Sports Management","Jeff Schwartz",FALSE
+"224","Corey Brewer","nba","Timberwolves",FALSE,"2014-2015","G",4702500,"Relativity Sports","Dan Fegan",FALSE
+"225","Corey Brewer","nba","Timberwolves",FALSE,"2013-2014","G",4500000,"Relativity Sports","Dan Fegan",FALSE
+"226","Corey Brewer","nba","Timberwolves",FALSE,"2015-2016","PO",4905000,"Relativity Sports","Dan Fegan",FALSE
+"227","Cory Joseph","nba","Spurs",FALSE,"2014-2015","TO",2023261,"Klutch Sports Management","Rich Paul",FALSE
+"228","Cory Joseph","nba","Spurs",FALSE,"2013-2014","G",1120920,"Klutch Sports Management","Rich Paul",FALSE
+"229","Cory Joseph","nba","Spurs",FALSE,"2015-2016","QO",3034891,"Klutch Sports Management","Rich Paul",FALSE
+"230","Courtney Lee","nba","Celtics",FALSE,"2014-2015","G",5450000,"Relativity Sports","Dan Fegan",FALSE
+"231","Courtney Lee","nba","Celtics",FALSE,"2015-2016","G",5675000,"Relativity Sports","Dan Fegan",FALSE
+"232","Courtney Lee","nba","Celtics",FALSE,"2013-2014","G",5225000,"Relativity Sports","Dan Fegan",FALSE
+"233","D.J. Augustin","nba","Raptors",FALSE,"2013-2014","G",1267000,"IAM Sports","Raymond Brothers",FALSE
+"234","Damian Lillard","nba","Trail Blazers",FALSE,"2016-2017","QO",5651206,"Goodwin Management Group","Aaron Goodwin",FALSE
+"235","Damian Lillard","nba","Trail Blazers",FALSE,"2014-2015","TO",3340920,"Goodwin Management Group","Aaron Goodwin",FALSE
+"236","Damian Lillard","nba","Trail Blazers",FALSE,"2013-2014","G",3202920,"Goodwin Management Group","Aaron Goodwin",FALSE
+"237","Damian Lillard","nba","Trail Blazers",FALSE,"2015-2016","TO",4236287,"Goodwin Management Group","Aaron Goodwin",FALSE
+"238","Daniel Orton","nba","Thunder",FALSE,"2014-2015","U",981084,"Vartanian Sports Management","Ara Vartanian",FALSE
+"239","Daniel Orton","nba","Thunder",FALSE,"2013-2014","U",916099,"Vartanian Sports Management","Ara Vartanian",FALSE
+"240","Danilo Gallinari","nba","Nuggets",FALSE,"2015-2016","G",11559225,"Wasserman Media Group","Arn Tellem",FALSE
+"241","Danilo Gallinari","nba","Nuggets",FALSE,"2013-2014","G",10146925,"Wasserman Media Group","Arn Tellem",FALSE
+"242","Danilo Gallinari","nba","Nuggets",FALSE,"2014-2015","G",10854850,"Wasserman Media Group","Arn Tellem",FALSE
+"243","Danny Granger","nba","Pacers",FALSE,"2013-2014","G",14021788,"Creative Artists Agency","Aaron Mintz",FALSE
+"244","Danny Green","nba","Spurs",FALSE,"2013-2014","G",3762500,"BDA Sports Management","Bill Duffy",FALSE
+"245","Danny Green","nba","Spurs",FALSE,"2014-2015","G",4025000,"BDA Sports Management","Bill Duffy",FALSE
+"246","Dante Cunningham","nba","Timberwolves",FALSE,"2013-2014","G",2180000,"Bell Management","Joel Bell",FALSE
+"247","Darius Miller","nba","Pelicans",FALSE,"2013-2014","G",788872,"The Neustadt Group","Doug Neustadt",FALSE
+"248","Darius Miller","nba","Pelicans",FALSE,"2014-2015","QO",1115243,"The Neustadt Group","Doug Neustadt",FALSE
+"249","Darrell Arthur","nba","Nuggets",FALSE,"2013-2014","G",3231683,"Independent","Jerry Hicks",FALSE
+"250","Darrell Arthur","nba","Nuggets",FALSE,"2014-2015","PO",3457149,"Independent","Jerry Hicks",FALSE
+"251","Darren Collison","nba","Clippers",FALSE,"2014-2015","PO",1985500,"BDA Sports Management","Rade Filipovich",FALSE
+"252","Darren Collison","nba","Clippers",FALSE,"2013-2014","G",1900000,"BDA Sports Management","Rade Filipovich",FALSE
+"253","David Lee","nba","Warriors",FALSE,"2014-2015","G",15012000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"254","David Lee","nba","Warriors",FALSE,"2013-2014","G",13878000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"255","David Lee","nba","Warriors",FALSE,"2015-2016","G",15493680,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"256","David West","nba","Pacers",FALSE,"2014-2015","G",12000000,"Octagon Athlete Representation","Jeff Austin",FALSE
+"257","David West","nba","Pacers",FALSE,"2013-2014","G",12000000,"Octagon Athlete Representation","Jeff Austin",FALSE
+"258","David West","nba","Pacers",FALSE,"2015-2016","PO",12600000,"Octagon Athlete Representation","Jeff Austin",FALSE
+"259","DeAndre Jordan","nba","Clippers",FALSE,"2013-2014","G",10986550,"Wasserman Media Group","Arn Tellem",FALSE
+"260","DeAndre Jordan","nba","Clippers",FALSE,"2014-2015","G",11440123,"Wasserman Media Group","Arn Tellem",FALSE
+"261","Dee Bost","nba","Trail Blazers",FALSE,"2013-2014","U",490180,"540 Sports and Entertainment LLC","John Spencer",FALSE
+"262","Dee Bost","nba","Trail Blazers",FALSE,"2015-2016","QO",1147276,"540 Sports and Entertainment LLC","John Spencer",FALSE
+"263","Dee Bost","nba","Trail Blazers",FALSE,"2014-2015","U",816482,"540 Sports and Entertainment LLC","John Spencer",FALSE
+"264","DeJuan Blair","nba","Mavericks",FALSE,"2013-2014","G",884293,"Relativity Sports","Dan Fegan",FALSE
+"265","DeMar Derozan","nba","Raptors",FALSE,"2013-2014","G",9500000,"Goodwin Management Group","Aaron Goodwin",FALSE
+"266","DeMar Derozan","nba","Raptors",FALSE,"2015-2016","G",9500000,"Goodwin Management Group","Aaron Goodwin",FALSE
+"267","DeMar Derozan","nba","Raptors",FALSE,"2014-2015","G",9500000,"Goodwin Management Group","Aaron Goodwin",FALSE
+"268","DeMar Derozan","nba","Raptors",FALSE,"2016-2017","G",9500000,"Goodwin Management Group","Aaron Goodwin",FALSE
+"269","DeMarcus Cousins","nba","Kings",FALSE,"2013-2014","G",4916974,"Relativity Sports","Dan Fegan",FALSE
+"270","DeMarcus Cousins","nba","Kings",FALSE,"2014-2015","QO",6519907,"Relativity Sports","Dan Fegan",FALSE
+"271","DeMarre Carroll","nba","Hawks",FALSE,"2014-2015","G",2442455,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"272","DeMarre Carroll","nba","Hawks",FALSE,"2013-2014","G",2557545,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"273","Dennis Schroder","nba","Hawks",FALSE,"2016-2017","TO",2708582,"Octagon Athlete Representation","Jeff Austin",FALSE
+"274","Dennis Schroder","nba","Hawks",FALSE,"2015-2016","TO",1763400,"Octagon Athlete Representation","Jeff Austin",FALSE
+"275","Dennis Schroder","nba","Hawks",FALSE,"2014-2015","G",1690680,"Octagon Athlete Representation","Jeff Austin",FALSE
+"276","Dennis Schroder","nba","Hawks",FALSE,"2017-2018","QO",3824518,"Octagon Athlete Representation","Jeff Austin",FALSE
+"277","Dennis Schroder","nba","Hawks",FALSE,"2013-2014","G",1348200,"Octagon Athlete Representation","Jeff Austin",FALSE
+"278","Derek Fisher","nba","Thunder",FALSE,"2013-2014","G",884293,"Landmark Sports Agency","Rob Pelinka",FALSE
+"279","Deron Williams","nba","Nets",FALSE,"2015-2016","G",21042800,"Excel Sports Management","Jeff Schwartz",FALSE
+"280","Deron Williams","nba","Nets",FALSE,"2013-2014","G",18466130,"Excel Sports Management","Jeff Schwartz",FALSE
+"281","Deron Williams","nba","Nets",FALSE,"2014-2015","G",19754465,"Excel Sports Management","Jeff Schwartz",FALSE
+"282","Deron Williams","nba","Nets",FALSE,"2016-2017","ETO",22331135,"Excel Sports Management","Jeff Schwartz",FALSE
+"283","Derrick Favors","nba","Jazz",FALSE,"2013-2014","G",6008196,"Perennial","Wallace Prather",FALSE
+"284","Derrick Favors","nba","Jazz",FALSE,"2014-2015","QO",7882754,"Perennial","Wallace Prather",FALSE
+"285","Derrick Rose","nba","Bulls",FALSE,"2013-2014","G",17632688,"Wasserman Media Group","Arn Tellem",FALSE
+"286","Derrick Rose","nba","Bulls",FALSE,"2015-2016","G",20093064,"Wasserman Media Group","Arn Tellem",FALSE
+"287","Derrick Rose","nba","Bulls",FALSE,"2014-2015","G",18862876,"Wasserman Media Group","Arn Tellem",FALSE
+"288","Derrick Rose","nba","Bulls",FALSE,"2016-2017","G",21323252,"Wasserman Media Group","Arn Tellem",FALSE
+"289","Derrick Williams","nba","Timberwolves",FALSE,"2015-2016","QO",8262482,"Landmark Sports Agency","Rob Pelinka",FALSE
+"290","Derrick Williams","nba","Timberwolves",FALSE,"2014-2015","TO",6331404,"Landmark Sports Agency","Rob Pelinka",FALSE
+"291","Derrick Williams","nba","Timberwolves",FALSE,"2013-2014","G",5016960,"Landmark Sports Agency","Rob Pelinka",FALSE
+"292","Devin Harris","nba","Mavericks",FALSE,"2013-2014","G",884293,"Excel Sports Management","Jeff Schwartz",FALSE
+"293","Dewayne Dedmon","nba","Warriors",FALSE,"2014-2015","QO",1016482,"Athlete Management","Michael Silverman",FALSE
+"294","Dewayne Dedmon","nba","Warriors",FALSE,"2013-2014","U",490180,"Athlete Management","Michael Silverman",FALSE
+"295","Dion Waiters","nba","Cavaliers",FALSE,"2014-2015","TO",4062000,"Landmark Sports Agency","Rob Pelinka",FALSE
+"296","Dion Waiters","nba","Cavaliers",FALSE,"2016-2017","QO",6777589,"Landmark Sports Agency","Rob Pelinka",FALSE
+"297","Dion Waiters","nba","Cavaliers",FALSE,"2013-2014","G",3894240,"Landmark Sports Agency","Rob Pelinka",FALSE
+"298","Dion Waiters","nba","Cavaliers",FALSE,"2015-2016","TO",5138430,"Landmark Sports Agency","Rob Pelinka",FALSE
+"299","Dirk Nowitzki","nba","Mavericks",FALSE,"2013-2014","G",22721381,"Independent","Holger Geschwinder",FALSE
+"300","Donald Sloan","nba","Pacers",FALSE,"2013-2014","G",884293,"Impact Sports Basketball","Brian Elfus",FALSE
+"301","Donald Sloan","nba","Pacers",FALSE,"2014-2015","G",948163,"Impact Sports Basketball","Brian Elfus",FALSE
+"302","Donatas Motiejunas","nba","Rockets",FALSE,"2016-2017","QO",3278997,"Wasserman Media Group","Arn Tellem",FALSE
+"303","Donatas Motiejunas","nba","Rockets",FALSE,"2015-2016","TO",2288205,"Wasserman Media Group","Arn Tellem",FALSE
+"304","Donatas Motiejunas","nba","Rockets",FALSE,"2014-2015","TO",1483920,"Wasserman Media Group","Arn Tellem",FALSE
+"305","Donatas Motiejunas","nba","Rockets",FALSE,"2013-2014","G",1422720,"Wasserman Media Group","Arn Tellem",FALSE
+"306","Donte Greene","nba","Celtics",FALSE,"2014-2015","U",1145685,"Blackwave Media Group","Bill Strickland",FALSE
+"307","Donte Greene","nba","Celtics",FALSE,"2013-2014","U",1027424,"Blackwave Media Group","Bill Strickland",FALSE
+"308","Dorell Wright","nba","Trail Blazers",FALSE,"2013-2014","G",3000000,"Wasserman Media Group","Arn Tellem",FALSE
+"309","Dorell Wright","nba","Trail Blazers",FALSE,"2014-2015","G",3135000,"Wasserman Media Group","Arn Tellem",FALSE
+"310","Doron Lamb","nba","Magic",FALSE,"2015-2016","QO",1181348,"Wasserman Media Group","Arn Tellem",FALSE
+"311","Doron Lamb","nba","Magic",FALSE,"2014-2015","U",915243,"Wasserman Media Group","Arn Tellem",FALSE
+"312","Doron Lamb","nba","Magic",FALSE,"2013-2014","G",788872,"Wasserman Media Group","Arn Tellem",FALSE
+"313","Draymond Green","nba","Warriors",FALSE,"2013-2014","G",875500,"Interperformances","Ronald Shade",FALSE
+"314","Draymond Green","nba","Warriors",FALSE,"2015-2016","QO",1181348,"Interperformances","Ronald Shade",FALSE
+"315","Draymond Green","nba","Warriors",FALSE,"2014-2015","U",915243,"Interperformances","Ronald Shade",FALSE
+"316","Dwight Buycks","nba","Raptors",FALSE,"2014-2015","U",816482,"Relativity Sports","Chris Patrick",FALSE
+"317","Dwight Buycks","nba","Raptors",FALSE,"2015-2016","QO",1147276,"Relativity Sports","Chris Patrick",FALSE
+"318","Dwight Buycks","nba","Raptors",FALSE,"2013-2014","G",700000,"Relativity Sports","Chris Patrick",FALSE
+"319","Dwight Howard","nba","Rockets",FALSE,"2016-2017","PO",23282457,"Relativity Sports","Dan Fegan",FALSE
+"320","Dwight Howard","nba","Rockets",FALSE,"2013-2014","G",20513178,"Relativity Sports","Dan Fegan",FALSE
+"321","Dwight Howard","nba","Rockets",FALSE,"2014-2015","G",21436271,"Relativity Sports","Dan Fegan",FALSE
+"322","Dwight Howard","nba","Rockets",FALSE,"2015-2016","G",22359364,"Relativity Sports","Dan Fegan",FALSE
+"323","Dwyane Wade","nba","Heat",FALSE,"2013-2014","G",18673000,"Creative Artists Agency","Henry Thomas",FALSE
+"324","Dwyane Wade","nba","Heat",FALSE,"2015-2016","PO",21655000,"Creative Artists Agency","Henry Thomas",FALSE
+"325","Dwyane Wade","nba","Heat",FALSE,"2014-2015","ETO",20164000,"Creative Artists Agency","Henry Thomas",FALSE
+"326","E'Twaun Moore","nba","Magic",FALSE,"2014-2015","QO",1148163,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"327","E'Twaun Moore","nba","Magic",FALSE,"2013-2014","G",884293,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"328","Earl Clark","nba","Cavaliers",FALSE,"2014-2015","U",4250000,"BDA Sports Management","Kevin Bradbury",FALSE
+"329","Earl Clark","nba","Cavaliers",FALSE,"2013-2014","G",4250000,"BDA Sports Management","Kevin Bradbury",FALSE
+"330","Earl Watson","nba","Trail Blazers",FALSE,"2013-2014","G",884293,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"331","Ed Davis","nba","Grizzlies",FALSE,"2014-2015","QO",4361789,"Landmark Sports Agency","Rob Pelinka",FALSE
+"332","Ed Davis","nba","Grizzlies",FALSE,"2013-2014","G",3153860,"Landmark Sports Agency","Rob Pelinka",FALSE
+"333","Ekpe Udoh","nba","Bucks",FALSE,"2013-2014","G",4469548,"CGL Sports","Chris Grier Luchey",FALSE
+"334","Ekpe Udoh","nba","Bucks",FALSE,"2014-2015","QO",5962377,"CGL Sports","Chris Grier Luchey",FALSE
+"335","Elias Harris","nba","Lakers",FALSE,"2014-2015","U",816482,"Priority Sports & Entertainment","Brad Ames",FALSE
+"336","Elias Harris","nba","Lakers",FALSE,"2015-2016","QO",1147276,"Priority Sports & Entertainment","Brad Ames",FALSE
+"337","Elias Harris","nba","Lakers",FALSE,"2013-2014","U",490180,"Priority Sports & Entertainment","Brad Ames",FALSE
+"338","Elton Brand","nba","Hawks",FALSE,"2013-2014","G",4000000,"FAME","David Falk",FALSE
+"339","Emeka Okafor","nba","Wizards",FALSE,"2013-2014","G",14487500,"Excel Sports Management","Jeff Schwartz",FALSE
+"340","Enes Kanter","nba","Jazz",FALSE,"2013-2014","G",4505280,"Independent","Max Ergul",FALSE
+"341","Enes Kanter","nba","Jazz",FALSE,"2015-2016","QO",7471412,"Independent","Max Ergul",FALSE
+"342","Enes Kanter","nba","Jazz",FALSE,"2014-2015","TO",5694674,"Independent","Max Ergul",FALSE
+"343","Eric Bledsoe","nba","Suns",FALSE,"2013-2014","G",2626473,"Klutch Sports Management","Rich Paul",FALSE
+"344","Eric Bledsoe","nba","Suns",FALSE,"2014-2015","QO",3726966,"Klutch Sports Management","Rich Paul",FALSE
+"345","Eric Gordon","nba","Pelicans",FALSE,"2015-2016","PO",15514031,"Landmark Sports Agency","Rob Pelinka",FALSE
+"346","Eric Gordon","nba","Pelicans",FALSE,"2014-2015","G",14898938,"Landmark Sports Agency","Rob Pelinka",FALSE
+"347","Eric Gordon","nba","Pelicans",FALSE,"2013-2014","G",14283844,"Landmark Sports Agency","Rob Pelinka",FALSE
+"348","Eric Maynor","nba","Wizards",FALSE,"2013-2014","G",2016000,"ASM Sports","Andy Miller",FALSE
+"349","Eric Maynor","nba","Wizards",FALSE,"2014-2015","PO",2106720,"ASM Sports","Andy Miller",FALSE
+"350","Erik Murphy","nba","Bulls",FALSE,"2013-2014","U",490180,"ASM Sports","Andy Miller",FALSE
+"351","Erik Murphy","nba","Bulls",FALSE,"2014-2015","U",816482,"ASM Sports","Andy Miller",FALSE
+"352","Erik Murphy","nba","Bulls",FALSE,"2015-2016","QO",1147276,"ASM Sports","Andy Miller",FALSE
+"353","Ersan Ilyasova","nba","Bucks",FALSE,"2015-2016","G",7900000,"ASM Sports","Andy Miller",FALSE
+"354","Ersan Ilyasova","nba","Bucks",FALSE,"2016-2017","U",8400000,"ASM Sports","Andy Miller",FALSE
+"355","Ersan Ilyasova","nba","Bucks",FALSE,"2014-2015","G",7900000,"ASM Sports","Andy Miller",FALSE
+"356","Ersan Ilyasova","nba","Bucks",FALSE,"2013-2014","G",7900000,"ASM Sports","Andy Miller",FALSE
+"357","Evan Fournier","nba","Nuggets",FALSE,"2014-2015","TO",1483920,"Comsport","Bouna Ndiaye",FALSE
+"358","Evan Fournier","nba","Nuggets",FALSE,"2016-2017","QO",3278997,"Comsport","Bouna Ndiaye",FALSE
+"359","Evan Fournier","nba","Nuggets",FALSE,"2013-2014","G",1422720,"Comsport","Bouna Ndiaye",FALSE
+"360","Evan Fournier","nba","Nuggets",FALSE,"2015-2016","TO",2288205,"Comsport","Bouna Ndiaye",FALSE
+"361","Evan Turner","nba","Sixers",FALSE,"2013-2014","G",6679867,"FAME","David Falk",FALSE
+"362","Evan Turner","nba","Sixers",FALSE,"2014-2015","QO",8717226,"FAME","David Falk",FALSE
+"363","Fab Melo","nba","Grizzlies",TRUE,"2013-2014","G",437080,"Wasserman Media Group","BJ Armstrong",FALSE
+"364","Fab Melo","nba","Grizzlies",TRUE,"2015-2016","G",437080,"Wasserman Media Group","BJ Armstrong",FALSE
+"365","Fab Melo","nba","Grizzlies",TRUE,"2014-2015","G",437080,"Wasserman Media Group","BJ Armstrong",FALSE
+"366","Fab Melo","nba","Mavericks",FALSE,"2015-2016","QO",1181348,"Wasserman Media Group","BJ Armstrong",FALSE
+"367","Fab Melo","nba","Mavericks",FALSE,"2014-2015","U",915243,"Wasserman Media Group","BJ Armstrong",FALSE
+"368","Fab Melo","nba","Mavericks",FALSE,"2013-2014","U",788872,"Wasserman Media Group","BJ Armstrong",FALSE
+"369","Festus Ezeli","nba","Warriors",FALSE,"2013-2014","G",1066920,"BDA Sports Management","Bill Duffy",FALSE
+"370","Festus Ezeli","nba","Warriors",FALSE,"2014-2015","TO",1112880,"BDA Sports Management","Bill Duffy",FALSE
+"371","Festus Ezeli","nba","Warriors",FALSE,"2016-2017","QO",3013123,"BDA Sports Management","Bill Duffy",FALSE
+"372","Festus Ezeli","nba","Warriors",FALSE,"2015-2016","TO",2008748,"BDA Sports Management","Bill Duffy",FALSE
+"373","Francisco Garcia","nba","Rockets",FALSE,"2014-2015","PO",1316809,"Goodwin Management Group","Aaron Goodwin",FALSE
+"374","Francisco Garcia","nba","Rockets",FALSE,"2013-2014","G",1265977,"Goodwin Management Group","Aaron Goodwin",FALSE
+"375","Gal Mekel","nba","Mavericks",FALSE,"2015-2016","G",947276,"Exclusive Sports Group","Sam Porter",FALSE
+"376","Gal Mekel","nba","Mavericks",FALSE,"2014-2015","G",816482,"Exclusive Sports Group","Sam Porter",FALSE
+"377","Gal Mekel","nba","Mavericks",FALSE,"2016-2017","QO",1215696,"Exclusive Sports Group","Sam Porter",FALSE
+"378","Gal Mekel","nba","Mavericks",FALSE,"2013-2014","G",490180,"Exclusive Sports Group","Sam Porter",FALSE
+"379","Garrett Temple","nba","Wizards",FALSE,"2013-2014","G",884293,"Performance Sports Management","John Hamilton",FALSE
+"380","Gary Neal","nba","Bucks",FALSE,"2014-2015","G",3250000,"Lagardere Unlimited","David Bauman",FALSE
+"381","Gary Neal","nba","Bucks",FALSE,"2013-2014","G",3250000,"Lagardere Unlimited","David Bauman",FALSE
+"382","George Hill","nba","Pacers",FALSE,"2013-2014","G",8000000,"Saga Sports","Bill Neff",FALSE
+"383","George Hill","nba","Pacers",FALSE,"2014-2015","G",8000000,"Saga Sports","Bill Neff",FALSE
+"384","George Hill","nba","Pacers",FALSE,"2016-2017","G",8000000,"Saga Sports","Bill Neff",FALSE
+"385","George Hill","nba","Pacers",FALSE,"2015-2016","G",8000000,"Saga Sports","Bill Neff",FALSE
+"386","Gerald Green","nba","Suns",FALSE,"2014-2015","G",3500000,"Rival Sports Group","Colin Bryant",FALSE
+"387","Gerald Green","nba","Suns",FALSE,"2013-2014","G",3500000,"Rival Sports Group","Colin Bryant",FALSE
+"388","Gerald Henderson","nba","Bobcats",FALSE,"2015-2016","PO",6000000,"Wasserman Media Group","Arn Tellem",FALSE
+"389","Gerald Henderson","nba","Bobcats",FALSE,"2014-2015","G",6000000,"Wasserman Media Group","Arn Tellem",FALSE
+"390","Gerald Henderson","nba","Bobcats",FALSE,"2013-2014","G",6000000,"Wasserman Media Group","Arn Tellem",FALSE
+"391","Gerald Wallace","nba","Celtics",FALSE,"2014-2015","G",10105855,"Landmark Sports Agency","Rob Pelinka",FALSE
+"392","Gerald Wallace","nba","Celtics",FALSE,"2015-2016","G",10105855,"Landmark Sports Agency","Rob Pelinka",FALSE
+"393","Gerald Wallace","nba","Celtics",FALSE,"2013-2014","G",10105855,"Landmark Sports Agency","Rob Pelinka",FALSE
+"394","Giannis Antetokounmpo","nba","Bucks",FALSE,"2013-2014","G",1792560,"Octagon Athlete Representation","Alex Saratsis",FALSE
+"395","Giannis Antetokounmpo","nba","Bucks",FALSE,"2014-2015","G",1873200,"Octagon Athlete Representation","Alex Saratsis",FALSE
+"396","Giannis Antetokounmpo","nba","Bucks",FALSE,"2015-2016","TO",1953960,"Octagon Athlete Representation","Alex Saratsis",FALSE
+"397","Giannis Antetokounmpo","nba","Bucks",FALSE,"2016-2017","TO",2995421,"Octagon Athlete Representation","Alex Saratsis",FALSE
+"398","Giannis Antetokounmpo","nba","Bucks",FALSE,"2017-2018","QO",4187598,"Octagon Athlete Representation","Alex Saratsis",FALSE
+"399","Glen Davis","nba","Magic",FALSE,"2014-2015","G",6600000,"Performance Sports Management","John Hamilton",FALSE
+"400","Glen Davis","nba","Magic",FALSE,"2013-2014","G",6400000,"Performance Sports Management","John Hamilton",FALSE
+"401","Glen Rice Jr","nba","Wizards",FALSE,"2013-2014","G",490180,"24/7 Sports Management","Jeff Wechsler",FALSE
+"402","Glen Rice Jr","nba","Wizards",FALSE,"2015-2016","QO",1147276,"24/7 Sports Management","Jeff Wechsler",FALSE
+"403","Glen Rice Jr","nba","Wizards",FALSE,"2014-2015","U",816482,"24/7 Sports Management","Jeff Wechsler",FALSE
+"404","Goran Dragic","nba","Suns",FALSE,"2015-2016","PO",7500000,"BDA Sports Management","Rade Filipovich",FALSE
+"405","Goran Dragic","nba","Suns",FALSE,"2014-2015","G",7500000,"BDA Sports Management","Rade Filipovich",FALSE
+"406","Goran Dragic","nba","Suns",FALSE,"2013-2014","G",7500000,"BDA Sports Management","Rade Filipovich",FALSE
+"407","Gordon Hayward","nba","Jazz",FALSE,"2014-2015","QO",4677708,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"408","Gordon Hayward","nba","Jazz",FALSE,"2013-2014","G",3452183,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"409","Gorgui Dieng","nba","Timberwolves",FALSE,"2016-2017","TO",2348783,"Wasserman Media Group","Arn Tellem",FALSE
+"410","Gorgui Dieng","nba","Timberwolves",FALSE,"2015-2016","TO",1474440,"Wasserman Media Group","Arn Tellem",FALSE
+"411","Gorgui Dieng","nba","Timberwolves",FALSE,"2013-2014","G",1352640,"Wasserman Media Group","Arn Tellem",FALSE
+"412","Gorgui Dieng","nba","Timberwolves",FALSE,"2014-2015","G",1413480,"Wasserman Media Group","Arn Tellem",FALSE
+"413","Gorgui Dieng","nba","Timberwolves",FALSE,"2017-2018","QO",3384596,"Wasserman Media Group","Arn Tellem",FALSE
+"414","Greg Monroe","nba","Pistons",FALSE,"2014-2015","QO",5479934,"FAME","David Falk",FALSE
+"415","Greg Monroe","nba","Pistons",FALSE,"2013-2014","G",4086454,"FAME","David Falk",FALSE
+"416","Greg Oden","nba","Heat",FALSE,"2013-2014","G",884293,"BDA Sports Management","Mike Conley",FALSE
+"417","Greg Smith","nba","Rockets",FALSE,"2013-2014","U",884293,"Impact Sports Basketball","Brian Elfus",FALSE
+"418","Greg Smith","nba","Rockets",FALSE,"2014-2015","QO",1148163,"Impact Sports Basketball","Brian Elfus",FALSE
+"419","Greg Stiemsma","nba","Pelicans",FALSE,"2013-2014","G",2676000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"420","Greivis Vasquez","nba","Kings",FALSE,"2014-2015","QO",3203780,"Wasserman Media Group","Arn Tellem",FALSE
+"421","Greivis Vasquez","nba","Kings",FALSE,"2013-2014","G",2150188,"Wasserman Media Group","Arn Tellem",FALSE
+"422","Gustavo Ayon","nba","Hawks",FALSE,"2013-2014","G",1500000,"Duran International Sports Management","Emilio Duran",FALSE
+"423","Gustavo Ayon","nba","Hawks",FALSE,"2014-2015","QO",1875000,"Duran International Sports Management","Emilio Duran",FALSE
+"424","Hamed Haddadi","nba","Suns",TRUE,"2013-2014","G",200000,"Pinnacle Management Corporation","Marc Cornstein",FALSE
+"425","Harrison Barnes","nba","Warriors",FALSE,"2015-2016","TO",3873398,"24/7 Sports Management","Jeff Wechsler",FALSE
+"426","Harrison Barnes","nba","Warriors",FALSE,"2016-2017","QO",5194227,"24/7 Sports Management","Jeff Wechsler",FALSE
+"427","Harrison Barnes","nba","Warriors",FALSE,"2014-2015","TO",3049920,"24/7 Sports Management","Jeff Wechsler",FALSE
+"428","Harrison Barnes","nba","Warriors",FALSE,"2013-2014","G",2923920,"24/7 Sports Management","Jeff Wechsler",FALSE
+"429","Hasheem Thabeet","nba","Thunder",FALSE,"2014-2015","U",1250000,"BDA Sports Management","Ugo Udezue",FALSE
+"430","Hasheem Thabeet","nba","Thunder",FALSE,"2013-2014","U",1200000,"BDA Sports Management","Ugo Udezue",FALSE
+"431","Hidayet Turkoglu","nba","Magic",FALSE,"2013-2014","U",12000000,"Williams & Connolly","Jim Tanner",FALSE
+"432","Ian Clark","nba","Jazz",FALSE,"2014-2015","U",816482,"BDA Sports Management","David Mondress",FALSE
+"433","Ian Clark","nba","Jazz",FALSE,"2013-2014","U",490180,"BDA Sports Management","David Mondress",FALSE
+"434","Ian Clark","nba","Jazz",FALSE,"2015-2016","QO",1147276,"BDA Sports Management","David Mondress",FALSE
+"435","Ian Mahinmi","nba","Pacers",FALSE,"2013-2014","G",4000000,"Comsport","Bouna Ndiaye",FALSE
+"436","Ian Mahinmi","nba","Pacers",FALSE,"2015-2016","G",4000000,"Comsport","Bouna Ndiaye",FALSE
+"437","Ian Mahinmi","nba","Pacers",FALSE,"2014-2015","G",4000000,"Comsport","Bouna Ndiaye",FALSE
+"438","Iman Shumpert","nba","Knicks",FALSE,"2014-2015","TO",2616975,"Relativity Sports","Dan Fegan",FALSE
+"439","Iman Shumpert","nba","Knicks",FALSE,"2015-2016","QO",3695169,"Relativity Sports","Dan Fegan",FALSE
+"440","Iman Shumpert","nba","Knicks",FALSE,"2013-2014","G",1703760,"Relativity Sports","Dan Fegan",FALSE
+"441","Isaiah Canaan","nba","Rockets",FALSE,"2014-2015","G",816482,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"442","Isaiah Canaan","nba","Rockets",FALSE,"2016-2017","QO",1215696,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"443","Isaiah Canaan","nba","Rockets",FALSE,"2015-2016","U",947276,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"444","Isaiah Canaan","nba","Rockets",FALSE,"2013-2014","G",570515,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"445","Isaiah Thomas","nba","Kings",FALSE,"2013-2014","G",884293,"ASM Sports","Andy Miller",FALSE
+"446","Isaiah Thomas","nba","Kings",FALSE,"2014-2015","QO",1148163,"ASM Sports","Andy Miller",FALSE
+"447","Ish Smith","nba","Suns",FALSE,"2014-2015","U",992435,"IAM Sports","Raymond Brothers",FALSE
+"448","Ish Smith","nba","Suns",FALSE,"2013-2014","G",951463,"IAM Sports","Raymond Brothers",FALSE
+"449","J.J. Hickson","nba","Nuggets",FALSE,"2013-2014","G",5150000,"ASM Sports","Andy Miller",FALSE
+"450","J.J. Hickson","nba","Nuggets",FALSE,"2015-2016","G",5613500,"ASM Sports","Andy Miller",FALSE
+"451","J.J. Hickson","nba","Nuggets",FALSE,"2014-2015","G",5381750,"ASM Sports","Andy Miller",FALSE
+"452","J.J. Redick","nba","Clippers",FALSE,"2014-2015","G",6792500,"Wasserman Media Group","Arn Tellem",FALSE
+"453","J.J. Redick","nba","Clippers",FALSE,"2015-2016","G",7085000,"Wasserman Media Group","Arn Tellem",FALSE
+"454","J.J. Redick","nba","Clippers",FALSE,"2016-2017","G",7377500,"Wasserman Media Group","Arn Tellem",FALSE
+"455","J.J. Redick","nba","Clippers",FALSE,"2013-2014","G",6500000,"Wasserman Media Group","Arn Tellem",FALSE
+"456","J.R. Smith","nba","Knicks",FALSE,"2013-2014","G",5565000,"Creative Artists Agency","Leon Rose",FALSE
+"457","J.R. Smith","nba","Knicks",FALSE,"2014-2015","G",5982375,"Creative Artists Agency","Leon Rose",FALSE
+"458","J.R. Smith","nba","Knicks",FALSE,"2015-2016","PO",6399750,"Creative Artists Agency","Leon Rose",FALSE
+"459","Jae Crowder","nba","Mavericks",FALSE,"2013-2014","G",788872,"Alliance Sports Management","Glenn Schwartzman",FALSE
+"460","Jae Crowder","nba","Mavericks",FALSE,"2015-2016","QO",1181348,"Alliance Sports Management","Glenn Schwartzman",FALSE
+"461","Jae Crowder","nba","Mavericks",FALSE,"2014-2015","TO",915243,"Alliance Sports Management","Glenn Schwartzman",FALSE
+"462","Jamaal Franklin","nba","Grizzlies",FALSE,"2014-2015","G",816482,"Impact Sports Basketball","Brian Elfus",FALSE
+"463","Jamaal Franklin","nba","Grizzlies",FALSE,"2013-2014","G",535000,"Impact Sports Basketball","Brian Elfus",FALSE
+"464","Jamaal Franklin","nba","Grizzlies",FALSE,"2015-2016","U",947276,"Impact Sports Basketball","Brian Elfus",FALSE
+"465","Jamaal Franklin","nba","Grizzlies",FALSE,"2016-2017","QO",1215696,"Impact Sports Basketball","Brian Elfus",FALSE
+"466","Jamal Crawford","nba","Clippers",FALSE,"2014-2015","U",5450000,"ASM Sports","Andy Miller",FALSE
+"467","Jamal Crawford","nba","Clippers",FALSE,"2015-2016","U",5675000,"ASM Sports","Andy Miller",FALSE
+"468","Jamal Crawford","nba","Clippers",FALSE,"2013-2014","G",5225000,"ASM Sports","Andy Miller",FALSE
+"469","Jameer Nelson","nba","Magic",FALSE,"2013-2014","G",8600000,"Cornerstone Management","Steve Mountain",FALSE
+"470","Jameer Nelson","nba","Magic",FALSE,"2014-2015","U",8000000,"Cornerstone Management","Steve Mountain",FALSE
+"471","James Anderson","nba","Sixers",FALSE,"2014-2015","U",981084,"ASM Sports","Andy Miller",FALSE
+"472","James Anderson","nba","Sixers",FALSE,"2013-2014","U",916099,"ASM Sports","Andy Miller",FALSE
+"473","James Harden","nba","Rockets",FALSE,"2013-2014","G",13701250,"Landmark Sports Agency","Rob Pelinka",FALSE
+"474","James Harden","nba","Rockets",FALSE,"2017-2018","U",17811625,"Landmark Sports Agency","Rob Pelinka",FALSE
+"475","James Harden","nba","Rockets",FALSE,"2015-2016","G",15756438,"Landmark Sports Agency","Rob Pelinka",FALSE
+"476","James Harden","nba","Rockets",FALSE,"2014-2015","G",14728844,"Landmark Sports Agency","Rob Pelinka",FALSE
+"477","James Harden","nba","Rockets",FALSE,"2016-2017","G",16784031,"Landmark Sports Agency","Rob Pelinka",FALSE
+"478","James Jones","nba","Heat",FALSE,"2013-2014","G",1500000,"Bell Management","Joel Bell",FALSE
+"479","Jan Vesely","nba","Wizards",FALSE,"2013-2014","G",3340920,"Wasserman Media Group","Arn Tellem",FALSE
+"480","Jan Vesely","nba","Wizards",FALSE,"2015-2016","QO",5651206,"Wasserman Media Group","Arn Tellem",FALSE
+"481","Jan Vesely","nba","Wizards",FALSE,"2014-2015","TO",4236287,"Wasserman Media Group","Arn Tellem",FALSE
+"482","Jannero Pargo","nba","Bobcats",FALSE,"2013-2014","U",884293,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"483","Jared Cunningham","nba","Hawks",FALSE,"2016-2017","QO",3222788,"Excel Sports Management","Jeff Schwartz",FALSE
+"484","Jared Cunningham","nba","Hawks",FALSE,"2015-2016","TO",2204370,"Excel Sports Management","Jeff Schwartz",FALSE
+"485","Jared Cunningham","nba","Hawks",FALSE,"2014-2015","TO",1260360,"Excel Sports Management","Jeff Schwartz",FALSE
+"486","Jared Cunningham","nba","Hawks",FALSE,"2013-2014","G",1208400,"Excel Sports Management","Jeff Schwartz",FALSE
+"487","Jared Dudley","nba","Clippers",FALSE,"2014-2015","G",4250000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"488","Jared Dudley","nba","Clippers",FALSE,"2015-2016","ETO",4250000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"489","Jared Dudley","nba","Clippers",FALSE,"2013-2014","G",4250000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"490","Jared Sullinger","nba","Celtics",FALSE,"2013-2014","G",1365720,"FAME","David Falk",FALSE
+"491","Jared Sullinger","nba","Celtics",FALSE,"2015-2016","TO",2269260,"FAME","David Falk",FALSE
+"492","Jared Sullinger","nba","Celtics",FALSE,"2014-2015","TO",1424520,"FAME","David Falk",FALSE
+"493","Jared Sullinger","nba","Celtics",FALSE,"2016-2017","QO",3270004,"FAME","David Falk",FALSE
+"494","Jarrett Jack","nba","Cavaliers",FALSE,"2014-2015","G",6300000,"Excel Sports Management","Jeff Schwartz",FALSE
+"495","Jarrett Jack","nba","Cavaliers",FALSE,"2013-2014","G",6300000,"Excel Sports Management","Jeff Schwartz",FALSE
+"496","Jarrett Jack","nba","Cavaliers",FALSE,"2016-2017","U",6300000,"Excel Sports Management","Jeff Schwartz",FALSE
+"497","Jarrett Jack","nba","Cavaliers",FALSE,"2015-2016","QO",6300000,"Excel Sports Management","Jeff Schwartz",FALSE
+"498","Jarvis Varnado","nba","Heat",FALSE,"2014-2015","QO",1115243,"Impact Sports Basketball","Mitch Frankel",FALSE
+"499","Jarvis Varnado","nba","Heat",FALSE,"2013-2014","U",788872,"Impact Sports Basketball","Mitch Frankel",FALSE
+"500","Jason Maxiell","nba","Magic",FALSE,"2013-2014","G",2500000,"ASM Sports","Andy Miller",FALSE
+"501","Jason Maxiell","nba","Magic",FALSE,"2014-2015","G",2500000,"ASM Sports","Andy Miller",FALSE
+"502","Jason Richardson","nba","Sixers",FALSE,"2014-2015","PO",6601125,"Relativity Sports","Dan Fegan",FALSE
+"503","Jason Richardson","nba","Sixers",FALSE,"2013-2014","G",6204250,"Relativity Sports","Dan Fegan",FALSE
+"504","Jason Smith","nba","Pelicans",FALSE,"2013-2014","G",2500000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"505","Jason Terry","nba","Nets",FALSE,"2014-2015","G",5850313,"Wasserman Media Group","Arn Tellem",FALSE
+"506","Jason Terry","nba","Nets",FALSE,"2013-2014","G",5625313,"Wasserman Media Group","Arn Tellem",FALSE
+"507","Jason Thompson","nba","Kings",FALSE,"2013-2014","G",5643750,"Creative Artists Agency","Leon Rose",FALSE
+"508","Jason Thompson","nba","Kings",FALSE,"2014-2015","G",6037500,"Creative Artists Agency","Leon Rose",FALSE
+"509","Jason Thompson","nba","Kings",FALSE,"2016-2017","U",6825000,"Creative Artists Agency","Leon Rose",FALSE
+"510","Jason Thompson","nba","Kings",FALSE,"2015-2016","G",6431250,"Creative Artists Agency","Leon Rose",FALSE
+"511","JaVale McGee","nba","Nuggets",FALSE,"2013-2014","G",10750000,"Wasserman Media Group","BJ Armstrong",FALSE
+"512","JaVale McGee","nba","Nuggets",FALSE,"2014-2015","G",11250000,"Wasserman Media Group","BJ Armstrong",FALSE
+"513","JaVale McGee","nba","Nuggets",FALSE,"2015-2016","G",12000000,"Wasserman Media Group","BJ Armstrong",FALSE
+"514","Jeff Adrien","nba","Bobcats",FALSE,"2013-2014","U",916099,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"515","Jeff Green","nba","Celtics",FALSE,"2015-2016","PO",9200000,"FAME","David Falk",FALSE
+"516","Jeff Green","nba","Celtics",FALSE,"2014-2015","G",9200000,"FAME","David Falk",FALSE
+"517","Jeff Green","nba","Celtics",FALSE,"2013-2014","G",8700000,"FAME","David Falk",FALSE
+"518","Jeff Pendergraph","nba","Spurs",FALSE,"2014-2015","G",1828750,"Impact Sports Basketball","Mitch Frankel",FALSE
+"519","Jeff Pendergraph","nba","Spurs",FALSE,"2013-2014","G",1750000,"Impact Sports Basketball","Mitch Frankel",FALSE
+"520","Jeff Teague","nba","Hawks",FALSE,"2014-2015","G",8000000,"ASM Sports","Andy Miller",FALSE
+"521","Jeff Teague","nba","Hawks",FALSE,"2016-2017","G",8000000,"ASM Sports","Andy Miller",FALSE
+"522","Jeff Teague","nba","Hawks",FALSE,"2015-2016","G",8000000,"ASM Sports","Andy Miller",FALSE
+"523","Jeff Teague","nba","Hawks",FALSE,"2013-2014","G",8000000,"ASM Sports","Andy Miller",FALSE
+"524","Jeff Withey","nba","Pelicans",FALSE,"2014-2015","U",816482,"Wasserman Media Group","Arn Tellem",FALSE
+"525","Jeff Withey","nba","Pelicans",FALSE,"2015-2016","QO",1147276,"Wasserman Media Group","Arn Tellem",FALSE
+"526","Jeff Withey","nba","Pelicans",FALSE,"2013-2014","G",490180,"Wasserman Media Group","Arn Tellem",FALSE
+"527","Jeffery Taylor","nba","Bobcats",FALSE,"2014-2015","U",915243,"BDA Sports Management","Todd Ramasar",FALSE
+"528","Jeffery Taylor","nba","Bobcats",FALSE,"2013-2014","G",788872,"BDA Sports Management","Todd Ramasar",FALSE
+"529","Jeffery Taylor","nba","Bobcats",FALSE,"2015-2016","QO",1181348,"BDA Sports Management","Todd Ramasar",FALSE
+"530","Jerel McNeal","nba","Jazz",FALSE,"2014-2015","U",948163,"The Neustadt Group","Doug Neustadt",FALSE
+"531","Jerel McNeal","nba","Jazz",FALSE,"2013-2014","U",884293,"The Neustadt Group","Doug Neustadt",FALSE
+"532","Jeremy Evans","nba","Jazz",FALSE,"2014-2015","G",1794872,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"533","Jeremy Evans","nba","Jazz",FALSE,"2013-2014","G",1660257,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"534","Jeremy Lamb","nba","Thunder",FALSE,"2014-2015","TO",2202000,"Excel Sports Management","Jeff Schwartz",FALSE
+"535","Jeremy Lamb","nba","Thunder",FALSE,"2016-2017","QO",4175274,"Excel Sports Management","Jeff Schwartz",FALSE
+"536","Jeremy Lamb","nba","Thunder",FALSE,"2013-2014","G",2111160,"Excel Sports Management","Jeff Schwartz",FALSE
+"537","Jeremy Lamb","nba","Thunder",FALSE,"2015-2016","TO",3034356,"Excel Sports Management","Jeff Schwartz",FALSE
+"538","Jeremy Lin","nba","Rockets",FALSE,"2013-2014","G",8374646,"Williams & Connolly","Jim Tanner",FALSE
+"539","Jeremy Lin","nba","Rockets",FALSE,"2014-2015","G",8374646,"Williams & Connolly","Jim Tanner",FALSE
+"540","Jeremy Tyler","nba","Hawks",TRUE,"2013-2014","G",100000,"Wasserman Media Group","Arn Tellem",FALSE
+"541","Jeremy Tyler","nba","Knicks",FALSE,"2013-2014","U",884293,"Wasserman Media Group","Arn Tellem",FALSE
+"542","Jeremy Tyler","nba","Knicks",FALSE,"2014-2015","U",948163,"Wasserman Media Group","Arn Tellem",FALSE
+"543","Jermaine O'Neal","nba","Warriors",FALSE,"2013-2014","G",2000000,"Wasserman Media Group","Arn Tellem",FALSE
+"544","Jerryd Bayless","nba","Grizzlies",FALSE,"2013-2014","G",3135000,"Excel Sports Management","Jeff Schwartz",FALSE
+"545","Jimmer Fredette","nba","Kings",FALSE,"2013-2014","G",2439840,"Octagon Athlete Representation","Chris Emens",FALSE
+"546","Jimmer Fredette","nba","Kings",FALSE,"2015-2016","QO",4236904,"Octagon Athlete Representation","Chris Emens",FALSE
+"547","Jimmer Fredette","nba","Kings",FALSE,"2014-2015","TO",3110796,"Octagon Athlete Representation","Chris Emens",FALSE
+"548","Jimmy Butler","nba","Bulls",FALSE,"2013-2014","G",1112880,"Relativity Sports","Dan Fegan",FALSE
+"549","Jimmy Butler","nba","Bulls",FALSE,"2015-2016","QO",3013123,"Relativity Sports","Dan Fegan",FALSE
+"550","Jimmy Butler","nba","Bulls",FALSE,"2014-2015","TO",2008748,"Relativity Sports","Dan Fegan",FALSE
+"551","Joakim Noah","nba","Bulls",FALSE,"2014-2015","G",12200000,"BDA Sports Management","Bill Duffy",FALSE
+"552","Joakim Noah","nba","Bulls",FALSE,"2013-2014","G",11100000,"BDA Sports Management","Bill Duffy",FALSE
+"553","Joakim Noah","nba","Bulls",FALSE,"2015-2016","G",13400000,"BDA Sports Management","Bill Duffy",FALSE
+"554","Jodie Meeks","nba","Lakers",FALSE,"2013-2014","G",1550000,"Lagardere Unlimited","David Bauman",FALSE
+"555","Joe Johnson","nba","Nets",FALSE,"2013-2014","G",21466718,"Wasserman Media Group","Arn Tellem",FALSE
+"556","Joe Johnson","nba","Nets",FALSE,"2014-2015","G",23180790,"Wasserman Media Group","Arn Tellem",FALSE
+"557","Joe Johnson","nba","Nets",FALSE,"2015-2016","G",24894863,"Wasserman Media Group","Arn Tellem",FALSE
+"558","Joel Anthony","nba","Heat",FALSE,"2014-2015","PO",3800000,"Excel Sports Management","Mike Higgins",FALSE
+"559","Joel Anthony","nba","Heat",FALSE,"2013-2014","G",3800000,"Excel Sports Management","Mike Higgins",FALSE
+"560","Joel Freeland","nba","Trail Blazers",FALSE,"2015-2016","QO",3766890,"Elite Sports","Rafael Calvo",FALSE
+"561","Joel Freeland","nba","Trail Blazers",FALSE,"2013-2014","G",2897976,"Elite Sports","Rafael Calvo",FALSE
+"562","Joel Freeland","nba","Trail Blazers",FALSE,"2014-2015","G",3013512,"Elite Sports","Rafael Calvo",FALSE
+"563","John Henson","nba","Bucks",FALSE,"2014-2015","TO",1987320,"Williams & Connolly","Jim Tanner",FALSE
+"564","John Henson","nba","Bucks",FALSE,"2013-2014","G",1905360,"Williams & Connolly","Jim Tanner",FALSE
+"565","John Henson","nba","Bucks",FALSE,"2015-2016","TO",2943221,"Williams & Connolly","Jim Tanner",FALSE
+"566","John Henson","nba","Bucks",FALSE,"2016-2017","QO",4094020,"Williams & Connolly","Jim Tanner",FALSE
+"567","John Jenkins","nba","Hawks",FALSE,"2016-2017","QO",3241777,"BDA Sports Management","Bill Duffy",FALSE
+"568","John Jenkins","nba","Hawks",FALSE,"2014-2015","TO",1312920,"BDA Sports Management","Bill Duffy",FALSE
+"569","John Jenkins","nba","Hawks",FALSE,"2015-2016","TO",2228025,"BDA Sports Management","Bill Duffy",FALSE
+"570","John Jenkins","nba","Hawks",FALSE,"2013-2014","G",1258800,"BDA Sports Management","Bill Duffy",FALSE
+"571","John Lucas III","nba","Jazz",FALSE,"2013-2014","G",1600000,"Lee Basketball Services LTD","Bernie Lee",FALSE
+"572","John Lucas III","nba","Jazz",FALSE,"2014-2015","U",1600000,"Lee Basketball Services LTD","Bernie Lee",FALSE
+"573","John Salmons","nba","Kings",FALSE,"2013-2014","G",7583000,"Bell Management","Joel Bell",FALSE
+"574","John Salmons","nba","Kings",FALSE,"2014-2015","U",7000000,"Bell Management","Joel Bell",FALSE
+"575","John Wall","nba","Wizards",FALSE,"2016-2017","G",15756438,"Relativity Sports","Dan Fegan",FALSE
+"576","John Wall","nba","Wizards",FALSE,"2013-2014","G",7459925,"Relativity Sports","Dan Fegan",FALSE
+"577","John Wall","nba","Wizards",FALSE,"2017-2018","TO",16784031,"Relativity Sports","Dan Fegan",FALSE
+"578","John Wall","nba","Wizards",FALSE,"2018-2019","G",17811625,"Relativity Sports","Dan Fegan",FALSE
+"579","John Wall","nba","Wizards",FALSE,"2014-2015","G",13701250,"Relativity Sports","Dan Fegan",FALSE
+"580","John Wall","nba","Wizards",FALSE,"2015-2016","G",14728844,"Relativity Sports","Dan Fegan",FALSE
+"581","Jon Leuer","nba","Grizzlies",FALSE,"2014-2015","G",967500,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"582","Jon Leuer","nba","Grizzlies",FALSE,"2013-2014","G",900000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"583","Jon Leuer","nba","Grizzlies",FALSE,"2015-2016","U",1035000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"584","Jonas Jerebko","nba","Pistons",FALSE,"2013-2014","G",4500000,"The Neustadt Group","Doug Neustadt",FALSE
+"585","Jonas Jerebko","nba","Pistons",FALSE,"2014-2015","PO",4500000,"The Neustadt Group","Doug Neustadt",FALSE
+"586","Jonas Valanciunas","nba","Raptors",FALSE,"2015-2016","TO",4660482,"Creative Artists Agency","Leon Rose",FALSE
+"587","Jonas Valanciunas","nba","Raptors",FALSE,"2014-2015","U",3678360,"Creative Artists Agency","Leon Rose",FALSE
+"588","Jonas Valanciunas","nba","Raptors",FALSE,"2013-2014","G",3526440,"Creative Artists Agency","Leon Rose",FALSE
+"589","Jonas Valanciunas","nba","Raptors",FALSE,"2016-2017","QO",6179799,"Creative Artists Agency","Leon Rose",FALSE
+"590","Jordan Crawford","nba","Celtics",FALSE,"2014-2015","QO",3206867,"Creative Artists Agency","Aaron Mintz",FALSE
+"591","Jordan Crawford","nba","Celtics",FALSE,"2013-2014","G",2162419,"Creative Artists Agency","Aaron Mintz",FALSE
+"592","Jordan Farmar","nba","Lakers",FALSE,"2013-2014","G",884293,"Rival Sports Group","Tony Dutt",FALSE
+"593","Jordan Hamilton","nba","Nuggets",FALSE,"2015-2016","QO",3113317,"Premier Sports","Gregory Nunn",FALSE
+"594","Jordan Hamilton","nba","Nuggets",FALSE,"2014-2015","TO",2109294,"Premier Sports","Gregory Nunn",FALSE
+"595","Jordan Hamilton","nba","Nuggets",FALSE,"2013-2014","G",1169880,"Premier Sports","Gregory Nunn",FALSE
+"596","Jordan Henriquez","nba","Rockets",FALSE,"2014-2015","U",816482,"Premier Sports","Gregory Nunn",FALSE
+"597","Jordan Henriquez","nba","Rockets",FALSE,"2016-2017","QO",1215696,"Premier Sports","Gregory Nunn",FALSE
+"598","Jordan Henriquez","nba","Rockets",FALSE,"2015-2016","U",947276,"Premier Sports","Gregory Nunn",FALSE
+"599","Jordan Henriquez","nba","Rockets",FALSE,"2013-2014","U",490180,"Premier Sports","Gregory Nunn",FALSE
+"600","Jordan Hill","nba","Lakers",FALSE,"2013-2014","G",3500000,"BDA Sports Management","Kevin Bradbury",FALSE
+"601","Jose Calderon","nba","Mavericks",FALSE,"2013-2014","G",6791570,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"602","Jose Calderon","nba","Mavericks",FALSE,"2016-2017","G",7708427,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"603","Jose Calderon","nba","Mavericks",FALSE,"2015-2016","G",7402812,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"604","Jose Calderon","nba","Mavericks",FALSE,"2014-2015","G",7097191,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"605","Jose Juan Barea","nba","Timberwolves",FALSE,"2014-2015","G",4519500,"Relativity Sports","Dan Fegan",FALSE
+"606","Jose Juan Barea","nba","Timberwolves",FALSE,"2013-2014","G",4687000,"Relativity Sports","Dan Fegan",FALSE
+"607","Josh Akognon","nba","Grizzlies",FALSE,"2013-2014","U",788872,"Rize Management","Scott Nichols",FALSE
+"608","Josh Akognon","nba","Grizzlies",FALSE,"2014-2015","QO",1115243,"Rize Management","Scott Nichols",FALSE
+"609","Josh Harrellson","nba","Pistons",FALSE,"2014-2015","U",948163,"United Sports and Entertainment Group","Merle Scott",FALSE
+"610","Josh Harrellson","nba","Pistons",FALSE,"2013-2014","U",884293,"United Sports and Entertainment Group","Merle Scott",FALSE
+"611","Josh McRoberts","nba","Bobcats",FALSE,"2013-2014","G",2652000,"BDA Sports Management","Mike Conley",FALSE
+"612","Josh McRoberts","nba","Bobcats",FALSE,"2014-2015","PO",2771340,"BDA Sports Management","Mike Conley",FALSE
+"613","Josh Smith","nba","Pistons",FALSE,"2014-2015","G",13500000,"Perennial","Wallace Prather",FALSE
+"614","Josh Smith","nba","Pistons",FALSE,"2015-2016","G",13500000,"Perennial","Wallace Prather",FALSE
+"615","Josh Smith","nba","Pistons",FALSE,"2013-2014","G",13500000,"Perennial","Wallace Prather",FALSE
+"616","Josh Smith","nba","Pistons",FALSE,"2016-2017","G",13500000,"Perennial","Wallace Prather",FALSE
+"617","Jrue Holiday","nba","Pelicans",FALSE,"2015-2016","G",11095507,"Rival Sports Group","Tony Dutt",FALSE
+"618","Jrue Holiday","nba","Pelicans",FALSE,"2014-2015","G",10404495,"Rival Sports Group","Tony Dutt",FALSE
+"619","Jrue Holiday","nba","Pelicans",FALSE,"2016-2017","G",11786518,"Rival Sports Group","Tony Dutt",FALSE
+"620","Jrue Holiday","nba","Pelicans",FALSE,"2013-2014","G",9713484,"Rival Sports Group","Tony Dutt",FALSE
+"621","Justin Hamilton","nba","Heat",FALSE,"2013-2014","U",490180,"ASM Sports","J.R. Hensley",FALSE
+"622","Justin Hamilton","nba","Heat",FALSE,"2014-2015","QO",1016482,"ASM Sports","J.R. Hensley",FALSE
+"623","Kalin Lucas","nba","Bulls",FALSE,"2013-2014","U",490180,"Reid Entertainment","Michael Whitaker",FALSE
+"624","Kalin Lucas","nba","Bulls",FALSE,"2014-2015","QO",1016482,"Reid Entertainment","Michael Whitaker",FALSE
+"625","Kawhi Leonard","nba","Spurs",FALSE,"2015-2016","QO",4045894,"Impact Sports Basketball","Brian Elfus",FALSE
+"626","Kawhi Leonard","nba","Spurs",FALSE,"2014-2015","TO",2894059,"Impact Sports Basketball","Brian Elfus",FALSE
+"627","Kawhi Leonard","nba","Spurs",FALSE,"2013-2014","G",1887840,"Impact Sports Basketball","Brian Elfus",FALSE
+"628","Keith Bogans","nba","Celtics",FALSE,"2015-2016","U",5513435,"Relativity Sports","Dan Fegan",FALSE
+"629","Keith Bogans","nba","Celtics",FALSE,"2014-2015","U",5285817,"Relativity Sports","Dan Fegan",FALSE
+"630","Keith Bogans","nba","Celtics",FALSE,"2013-2014","G",5058198,"Relativity Sports","Dan Fegan",FALSE
+"631","Kelly Olynyk","nba","Celtics",FALSE,"2014-2015","G",2075760,"Wasserman Media Group","Arn Tellem",FALSE
+"632","Kelly Olynyk","nba","Celtics",FALSE,"2015-2016","TO",2165160,"Wasserman Media Group","Arn Tellem",FALSE
+"633","Kelly Olynyk","nba","Celtics",FALSE,"2013-2014","G",1986360,"Wasserman Media Group","Arn Tellem",FALSE
+"634","Kelly Olynyk","nba","Celtics",FALSE,"2016-2017","TO",3094013,"Wasserman Media Group","Arn Tellem",FALSE
+"635","Kelly Olynyk","nba","Celtics",FALSE,"2017-2018","QO",4279021,"Wasserman Media Group","Arn Tellem",FALSE
+"636","Kemba Walker","nba","Bobcats",FALSE,"2014-2015","TO",3272091,"Excel Sports Management","Jeff Schwartz",FALSE
+"637","Kemba Walker","nba","Bobcats",FALSE,"2013-2014","G",2568360,"Excel Sports Management","Jeff Schwartz",FALSE
+"638","Kemba Walker","nba","Bobcats",FALSE,"2015-2016","QO",4433683,"Excel Sports Management","Jeff Schwartz",FALSE
+"639","Kendall Marshall","nba","Suns",FALSE,"2014-2015","TO",2091840,"Octagon Athlete Representation","Jeff Austin",FALSE
+"640","Kendall Marshall","nba","Suns",FALSE,"2015-2016","TO",2989239,"Octagon Athlete Representation","Jeff Austin",FALSE
+"641","Kendall Marshall","nba","Suns",FALSE,"2016-2017","QO",4134118,"Octagon Athlete Representation","Jeff Austin",FALSE
+"642","Kendall Marshall","nba","Suns",FALSE,"2013-2014","G",2005560,"Octagon Athlete Representation","Jeff Austin",FALSE
+"643","Kendrick Perkins","nba","Thunder",FALSE,"2014-2015","G",9404342,"Wasserman Media Group","Arn Tellem",FALSE
+"644","Kendrick Perkins","nba","Thunder",FALSE,"2013-2014","G",8727437,"Wasserman Media Group","Arn Tellem",FALSE
+"645","Kenneth Faried","nba","Nuggets",FALSE,"2014-2015","TO",2249768,"Wasserman Media Group","Arn Tellem",FALSE
+"646","Kenneth Faried","nba","Nuggets",FALSE,"2013-2014","G",1367640,"Wasserman Media Group","Arn Tellem",FALSE
+"647","Kenneth Faried","nba","Nuggets",FALSE,"2015-2016","QO",3257664,"Wasserman Media Group","Arn Tellem",FALSE
+"648","Kent Bazemore","nba","Warriors",FALSE,"2013-2014","U",788872,"Walton Sports","Austin Walton",FALSE
+"649","Kent Bazemore","nba","Warriors",FALSE,"2014-2015","QO",1115243,"Walton Sports","Austin Walton",FALSE
+"650","Kentavious Caldwell-Pope","nba","Pistons",FALSE,"2013-2014","G",2653080,"Wasserman Media Group","Thaddeus Foucher",FALSE
+"651","Kentavious Caldwell-Pope","nba","Pistons",FALSE,"2017-2018","QO",4958374,"Wasserman Media Group","Thaddeus Foucher",FALSE
+"652","Kentavious Caldwell-Pope","nba","Pistons",FALSE,"2016-2017","TO",3678319,"Wasserman Media Group","Thaddeus Foucher",FALSE
+"653","Kentavious Caldwell-Pope","nba","Pistons",FALSE,"2015-2016","TO",2891760,"Wasserman Media Group","Thaddeus Foucher",FALSE
+"654","Kentavious Caldwell-Pope","nba","Pistons",FALSE,"2014-2015","G",2772480,"Wasserman Media Group","Thaddeus Foucher",FALSE
+"655","Kenyon Martin","nba","Knicks",FALSE,"2013-2014","G",884293,"ASM Sports","Andy Miller",FALSE
+"656","Kevin Durant","nba","Thunder",FALSE,"2013-2014","G",17832627,"Roc Nation Sports","Juan Perez",FALSE
+"657","Kevin Durant","nba","Thunder",FALSE,"2014-2015","G",18995624,"Roc Nation Sports","Juan Perez",FALSE
+"658","Kevin Durant","nba","Thunder",FALSE,"2015-2016","G",20158622,"Roc Nation Sports","Juan Perez",FALSE
+"659","Kevin Garnett","nba","Nets",FALSE,"2014-2015","G",12000000,"ASM Sports","Andy Miller",FALSE
+"660","Kevin Garnett","nba","Nets",FALSE,"2013-2014","G",12433735,"ASM Sports","Andy Miller",FALSE
+"661","Kevin Love","nba","Timberwolves",FALSE,"2013-2014","G",14693906,"Excel Sports Management","Jeff Schwartz",FALSE
+"662","Kevin Love","nba","Timberwolves",FALSE,"2014-2015","G",15719063,"Excel Sports Management","Jeff Schwartz",FALSE
+"663","Kevin Love","nba","Timberwolves",FALSE,"2015-2016","PO",16744219,"Excel Sports Management","Jeff Schwartz",FALSE
+"664","Kevin Martin","nba","Timberwolves",FALSE,"2016-2017","PO",7377500,"Relativity Sports","Dan Fegan",FALSE
+"665","Kevin Martin","nba","Timberwolves",FALSE,"2014-2015","G",6792500,"Relativity Sports","Dan Fegan",FALSE
+"666","Kevin Martin","nba","Timberwolves",FALSE,"2015-2016","G",7085000,"Relativity Sports","Dan Fegan",FALSE
+"667","Kevin Martin","nba","Timberwolves",FALSE,"2013-2014","G",6500000,"Relativity Sports","Dan Fegan",FALSE
+"668","Kevin Seraphin","nba","Wizards",FALSE,"2013-2014","G",2761114,"Klutch Sports Management","Rich Paul",FALSE
+"669","Kevin Seraphin","nba","Wizards",FALSE,"2014-2015","QO",3898692,"Klutch Sports Management","Rich Paul",FALSE
+"670","Khris Middleton","nba","Bucks",FALSE,"2014-2015","U",915243,"Excel Sports Management","Michael Lindeman",FALSE
+"671","Khris Middleton","nba","Bucks",FALSE,"2013-2014","G",788872,"Excel Sports Management","Michael Lindeman",FALSE
+"672","Khris Middleton","nba","Bucks",FALSE,"2015-2016","QO",1181348,"Excel Sports Management","Michael Lindeman",FALSE
+"673","Kirk Hinrich","nba","Bulls",FALSE,"2013-2014","G",4059000,"Octagon Athlete Representation","Jeff Austin",FALSE
+"674","Klay Thompson","nba","Warriors",FALSE,"2014-2015","TO",3075880,"BDA Sports Management","Bill Duffy",FALSE
+"675","Klay Thompson","nba","Warriors",FALSE,"2015-2016","WO",4210880,"BDA Sports Management","Bill Duffy",FALSE
+"676","Klay Thompson","nba","Warriors",FALSE,"2013-2014","G",2317920,"BDA Sports Management","Bill Duffy",FALSE
+"677","Kobe Bryant","nba","Lakers",FALSE,"2013-2014","G",30453805,"Landmark Sports Agency","Rob Pelinka",FALSE
+"678","Kosta Koufos","nba","Grizzlies",FALSE,"2014-2015","U",3000000,"Mark Termini Associates","Mark Termini",FALSE
+"679","Kosta Koufos","nba","Grizzlies",FALSE,"2013-2014","G",3000000,"Mark Termini Associates","Mark Termini",FALSE
+"680","Kris Humphries","nba","Celtics",FALSE,"2013-2014","G",12000000,"Wasserman Media Group","Arn Tellem",FALSE
+"681","Kwame Brown","nba","Sixers",FALSE,"2013-2014","G",2945901,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"682","Kyle Korver","nba","Hawks",FALSE,"2016-2017","G",5239437,"Excel Sports Management","Jeff Schwartz",FALSE
+"683","Kyle Korver","nba","Hawks",FALSE,"2015-2016","G",5746479,"Excel Sports Management","Jeff Schwartz",FALSE
+"684","Kyle Korver","nba","Hawks",FALSE,"2014-2015","G",6253521,"Excel Sports Management","Jeff Schwartz",FALSE
+"685","Kyle Korver","nba","Hawks",FALSE,"2013-2014","G",6760563,"Excel Sports Management","Jeff Schwartz",FALSE
+"686","Kyle Lowry","nba","Raptors",FALSE,"2013-2014","G",6210000,"ASM Sports","Andy Miller",FALSE
+"687","Kyle O'Quinn","nba","Magic",FALSE,"2014-2015","U",915243,"EBSA Sports","Alberto Ebanks",FALSE
+"688","Kyle O'Quinn","nba","Magic",FALSE,"2015-2016","QO",1181348,"EBSA Sports","Alberto Ebanks",FALSE
+"689","Kyle O'Quinn","nba","Magic",FALSE,"2013-2014","U",788872,"EBSA Sports","Alberto Ebanks",FALSE
+"690","Kyle Singler","nba","Pistons",FALSE,"2013-2014","G",1045000,"Wasserman Media Group","Arn Tellem",FALSE
+"691","Kyle Singler","nba","Pistons",FALSE,"2015-2016","QO",1362500,"Wasserman Media Group","Arn Tellem",FALSE
+"692","Kyle Singler","nba","Pistons",FALSE,"2014-2015","G",1090000,"Wasserman Media Group","Arn Tellem",FALSE
+"693","Kyrie Irving","nba","Cavaliers",FALSE,"2014-2015","TO",7070730,"24/7 Sports Management","Jeff Wechsler",FALSE
+"694","Kyrie Irving","nba","Cavaliers",FALSE,"2013-2014","G",5607240,"24/7 Sports Management","Jeff Wechsler",FALSE
+"695","Kyrie Irving","nba","Cavaliers",FALSE,"2015-2016","QO",9191949,"24/7 Sports Management","Jeff Wechsler",FALSE
+"696","LaMarcus Aldridge","nba","Trail Blazers",FALSE,"2013-2014","G",14878000,"Wasserman Media Group","Arn Tellem",FALSE
+"697","LaMarcus Aldridge","nba","Trail Blazers",FALSE,"2014-2015","G",16006000,"Wasserman Media Group","Arn Tellem",FALSE
+"698","Lance Stephenson","nba","Pacers",FALSE,"2013-2014","G",1005000,"EBSA Sports","Alberto Ebanks",FALSE
+"699","Lance Thomas","nba","Pelicans",FALSE,"2013-2014","U",884293,"540 Sports and Entertainment LLC","John Spencer",FALSE
+"700","Lance Thomas","nba","Pelicans",FALSE,"2014-2015","U",948163,"540 Sports and Entertainment LLC","John Spencer",FALSE
+"701","Landry Fields","nba","Raptors",FALSE,"2013-2014","G",6250000,"Octagon Athlete Representation","Chris Emens",FALSE
+"702","Landry Fields","nba","Raptors",FALSE,"2014-2015","G",6250000,"Octagon Athlete Representation","Chris Emens",FALSE
+"703","Larry Sanders","nba","Bucks",FALSE,"2016-2017","G",11000000,"Relativity Sports","Dan Fegan",FALSE
+"704","Larry Sanders","nba","Bucks",FALSE,"2013-2014","G",3053368,"Relativity Sports","Dan Fegan",FALSE
+"705","Larry Sanders","nba","Bucks",FALSE,"2014-2015","G",11000000,"Relativity Sports","Dan Fegan",FALSE
+"706","Larry Sanders","nba","Bucks",FALSE,"2015-2016","G",11000000,"Relativity Sports","Dan Fegan",FALSE
+"707","Larry Sanders","nba","Bucks",FALSE,"2017-2018","G",11000000,"Relativity Sports","Dan Fegan",FALSE
+"708","Lavoy Allen","nba","Sixers",FALSE,"2014-2015","QO",3825000,"ASM Sports","Andy Miller",FALSE
+"709","Lavoy Allen","nba","Sixers",FALSE,"2013-2014","G",3060000,"ASM Sports","Andy Miller",FALSE
+"710","LeBron James","nba","Heat",FALSE,"2013-2014","G",19067500,"Klutch Sports Management","Rich Paul",FALSE
+"711","LeBron James","nba","Heat",FALSE,"2014-2015","ETO",20590000,"Klutch Sports Management","Rich Paul",FALSE
+"712","LeBron James","nba","Heat",FALSE,"2015-2016","PO",22112500,"Klutch Sports Management","Rich Paul",FALSE
+"713","Lou Williams","nba","Hawks",FALSE,"2014-2015","G",5450000,"Creative Artists Agency","Leon Rose",FALSE
+"714","Lou Williams","nba","Hawks",FALSE,"2013-2014","G",5225000,"Creative Artists Agency","Leon Rose",FALSE
+"715","Luc Mbah A Moute","nba","Kings",FALSE,"2014-2015","G",4382576,"Excel Sports Management","Jeff Schwartz",FALSE
+"716","Luc Mbah A Moute","nba","Kings",FALSE,"2013-2014","G",4588384,"Excel Sports Management","Jeff Schwartz",FALSE
+"717","Luigi Datome","nba","Pistons",FALSE,"2015-2016","QO",2187500,"Side by Side","Stefano Meller",FALSE
+"718","Luigi Datome","nba","Pistons",FALSE,"2013-2014","G",1750000,"Side by Side","Stefano Meller",FALSE
+"719","Luigi Datome","nba","Pistons",FALSE,"2014-2015","G",1750000,"Side by Side","Stefano Meller",FALSE
+"720","Luis Scola","nba","Pacers",FALSE,"2013-2014","G",4508504,"AAI Sports","George Bass",FALSE
+"721","Luis Scola","nba","Pacers",FALSE,"2014-2015","U",4868499,"AAI Sports","George Bass",FALSE
+"722","Luke Ridnour","nba","Bucks",FALSE,"2013-2014","G",4420000,"Williams & Connolly","Jim Tanner",FALSE
+"723","Luol Deng","nba","Bulls",FALSE,"2013-2014","G",14275000,"Interperformances","Herb Rudoy",FALSE
+"724","Maalik Wayns","nba","Clippers",FALSE,"2014-2015","QO",1115243,"ASM Sports","Andy Miller",FALSE
+"725","Maalik Wayns","nba","Clippers",FALSE,"2013-2014","U",788872,"ASM Sports","Andy Miller",FALSE
+"726","Malcolm Lee","nba","Suns",FALSE,"2013-2014","G",884293,"Impact Sports Basketball","Mitch Frankel",FALSE
+"727","Malcolm Lee","nba","Suns",FALSE,"2014-2015","QO",1148163,"Impact Sports Basketball","Mitch Frankel",FALSE
+"728","Manu Ginobili","nba","Spurs",FALSE,"2014-2015","G",7000000,"Interperformances","Herb Rudoy",FALSE
+"729","Manu Ginobili","nba","Spurs",FALSE,"2013-2014","G",7500000,"Interperformances","Herb Rudoy",FALSE
+"730","Marc Gasol","nba","Grizzlies",FALSE,"2013-2014","G",14860523,"Wasserman Media Group","Arn Tellem",FALSE
+"731","Marc Gasol","nba","Grizzlies",FALSE,"2014-2015","G",15829688,"Wasserman Media Group","Arn Tellem",FALSE
+"732","Marcin Gortat","nba","Suns",FALSE,"2013-2014","G",7727280,"Zucker International","Guy Zucker",FALSE
+"733","Marco Belinelli","nba","Spurs",FALSE,"2013-2014","G",2750000,"Excel Sports Management","Jeff Schwartz",FALSE
+"734","Marco Belinelli","nba","Spurs",FALSE,"2014-2015","G",2873750,"Excel Sports Management","Jeff Schwartz",FALSE
+"735","Marcus Camby","nba","Raptors",TRUE,"2013-2014","G",2763054,"Independent","Richard Kaplan",FALSE
+"736","Marcus Camby","nba","Rockets",FALSE,"2013-2014","G",884293,"Independent","Richard Kaplan",FALSE
+"737","Marcus Camby","nba","Raptors",TRUE,"2014-2015","G",646609,"Independent","Richard Kaplan",FALSE
+"738","Marcus Morris","nba","Suns",FALSE,"2014-2015","TO",2943221,"Rival Sports Group","Tony Dutt",FALSE
+"739","Marcus Morris","nba","Suns",FALSE,"2013-2014","G",1987320,"Rival Sports Group","Tony Dutt",FALSE
+"740","Marcus Morris","nba","Suns",FALSE,"2015-2016","QO",4094020,"Rival Sports Group","Tony Dutt",FALSE
+"741","Marcus Thornton","nba","Kings",FALSE,"2014-2015","G",8575000,"Rival Sports Group","Tony Dutt",FALSE
+"742","Marcus Thornton","nba","Kings",FALSE,"2013-2014","G",8050000,"Rival Sports Group","Tony Dutt",FALSE
+"743","Mario Chalmers","nba","Heat",FALSE,"2013-2014","G",4000000,"Excel Sports Management","Jeff Schwartz",FALSE
+"744","Markieff Morris","nba","Suns",FALSE,"2014-2015","TO",2989239,"Rival Sports Group","Tony Dutt",FALSE
+"745","Markieff Morris","nba","Suns",FALSE,"2015-2016","QO",4134118,"Rival Sports Group","Tony Dutt",FALSE
+"746","Markieff Morris","nba","Suns",FALSE,"2013-2014","G",2091840,"Rival Sports Group","Tony Dutt",FALSE
+"747","Marquis Teague","nba","Bulls",FALSE,"2016-2017","QO",3034891,"ASM Sports","Andy Miller",FALSE
+"748","Marquis Teague","nba","Bulls",FALSE,"2013-2014","G",1074720,"ASM Sports","Andy Miller",FALSE
+"749","Marquis Teague","nba","Bulls",FALSE,"2014-2015","TO",1120920,"ASM Sports","Andy Miller",FALSE
+"750","Marquis Teague","nba","Bulls",FALSE,"2015-2016","TO",2023261,"ASM Sports","Andy Miller",FALSE
+"751","Marreese Speights","nba","Warriors",FALSE,"2014-2015","G",3657500,"ASM Sports","Andy Miller",FALSE
+"752","Marreese Speights","nba","Warriors",FALSE,"2015-2016","TO",3815000,"ASM Sports","Andy Miller",FALSE
+"753","Marreese Speights","nba","Warriors",FALSE,"2013-2014","G",3500000,"ASM Sports","Andy Miller",FALSE
+"754","MarShon Brooks","nba","Celtics",FALSE,"2015-2016","QO",3201471,"Verus Management Team","Seth Cohen",FALSE
+"755","MarShon Brooks","nba","Celtics",FALSE,"2014-2015","TO",2179354,"Verus Management Team","Seth Cohen",FALSE
+"756","MarShon Brooks","nba","Celtics",FALSE,"2013-2014","G",1210080,"Verus Management Team","Seth Cohen",FALSE
+"757","Marvin Williams","nba","Jazz",FALSE,"2013-2014","G",7500000,"Williams & Connolly","Jim Tanner",FALSE
+"758","Mason Plumlee","nba","Nets",FALSE,"2013-2014","G",1298640,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"759","Mason Plumlee","nba","Nets",FALSE,"2014-2015","G",1357080,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"760","Mason Plumlee","nba","Nets",FALSE,"2015-2016","TO",1415520,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"761","Mason Plumlee","nba","Nets",FALSE,"2016-2017","TO",2328530,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"762","Mason Plumlee","nba","Nets",FALSE,"2017-2018","QO",3371712,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"763","Matt Barnes","nba","Clippers",FALSE,"2014-2015","G",3396250,"Goodwin Management Group","Aaron Goodwin",FALSE
+"764","Matt Barnes","nba","Clippers",FALSE,"2015-2016","U",3542500,"Goodwin Management Group","Aaron Goodwin",FALSE
+"765","Matt Barnes","nba","Clippers",FALSE,"2013-2014","G",3250000,"Goodwin Management Group","Aaron Goodwin",FALSE
+"766","Matt Bonner","nba","Spurs",FALSE,"2013-2014","G",3945000,"Championship Sports","Kenny Grant",FALSE
+"767","Matthew Dellavedova","nba","Cavaliers",FALSE,"2015-2016","QO",1147276,"BDA Sports Management","Bill Duffy",FALSE
+"768","Matthew Dellavedova","nba","Cavaliers",FALSE,"2013-2014","U",490180,"BDA Sports Management","Bill Duffy",FALSE
+"769","Matthew Dellavedova","nba","Cavaliers",FALSE,"2014-2015","G",816482,"BDA Sports Management","Bill Duffy",FALSE
+"770","Maurice Harkless","nba","Magic",FALSE,"2016-2017","QO",4045894,"Relativity Sports","Dan Fegan",FALSE
+"771","Maurice Harkless","nba","Magic",FALSE,"2014-2015","TO",1887840,"Relativity Sports","Dan Fegan",FALSE
+"772","Maurice Harkless","nba","Magic",FALSE,"2013-2014","G",1809840,"Relativity Sports","Dan Fegan",FALSE
+"773","Maurice Harkless","nba","Magic",FALSE,"2015-2016","TO",2894059,"Relativity Sports","Dan Fegan",FALSE
+"774","Metta World Peace","nba","Knicks",FALSE,"2013-2014","G",1590000,"Pinnacle Management Corporation","Marc Cornstein",FALSE
+"775","Metta World Peace","nba","Knicks",FALSE,"2014-2015","PO",1661550,"Pinnacle Management Corporation","Marc Cornstein",FALSE
+"776","Meyers Leonard","nba","Trail Blazers",FALSE,"2015-2016","TO",3075880,"Excel Sports Management","Jeff Schwartz",FALSE
+"777","Meyers Leonard","nba","Trail Blazers",FALSE,"2014-2015","TO",2317920,"Excel Sports Management","Jeff Schwartz",FALSE
+"778","Meyers Leonard","nba","Trail Blazers",FALSE,"2013-2014","G",2222160,"Excel Sports Management","Jeff Schwartz",FALSE
+"779","Meyers Leonard","nba","Trail Blazers",FALSE,"2016-2017","QO",4210880,"Excel Sports Management","Jeff Schwartz",FALSE
+"780","Michael Beasley","nba","Heat",TRUE,"2013-2014","U",1027000,"Excel Sports Management","Jeff Schwartz",FALSE
+"781","Michael Kidd-Gilchrist","nba","Bobcats",FALSE,"2013-2014","G",4809840,"Creative Artists Agency","Leon Rose",FALSE
+"782","Michael Kidd-Gilchrist","nba","Bobcats",FALSE,"2016-2017","QO",8262482,"Creative Artists Agency","Leon Rose",FALSE
+"783","Michael Kidd-Gilchrist","nba","Bobcats",FALSE,"2015-2016","TO",6331404,"Creative Artists Agency","Leon Rose",FALSE
+"784","Michael Kidd-Gilchrist","nba","Bobcats",FALSE,"2014-2015","TO",5016960,"Creative Artists Agency","Leon Rose",FALSE
+"785","Mike Conley","nba","Grizzlies",FALSE,"2013-2014","G",8600001,"BDA Sports Management","Mike Conley",FALSE
+"786","Mike Conley","nba","Grizzlies",FALSE,"2014-2015","G",9294216,"BDA Sports Management","Mike Conley",FALSE
+"787","Mike Conley","nba","Grizzlies",FALSE,"2015-2016","G",9988426,"BDA Sports Management","Mike Conley",FALSE
+"788","Mike Dunleavy Jr","nba","Bulls",FALSE,"2014-2015","G",3326235,"Wasserman Media Group","Arn Tellem",FALSE
+"789","Mike Dunleavy Jr","nba","Bulls",FALSE,"2013-2014","G",3183000,"Wasserman Media Group","Arn Tellem",FALSE
+"790","Mike Miller","nba","Grizzlies",FALSE,"2013-2014","G",884293,"Wasserman Media Group","Arn Tellem",FALSE
+"791","Mike Scott","nba","Hawks",FALSE,"2013-2014","U",788872,"Creative Artists Agency","Aaron Mintz",FALSE
+"792","Mike Scott","nba","Hawks",FALSE,"2014-2015","QO",1115243,"Creative Artists Agency","Aaron Mintz",FALSE
+"793","Miles Plumlee","nba","Suns",FALSE,"2016-2017","QO",3113317,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"794","Miles Plumlee","nba","Suns",FALSE,"2013-2014","G",1121520,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"795","Miles Plumlee","nba","Suns",FALSE,"2014-2015","TO",1169880,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"796","Miles Plumlee","nba","Suns",FALSE,"2015-2016","TO",2109294,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"797","Miroslav Raduljica","nba","Bucks",FALSE,"2013-2014","G",1500000,"Norton Sports Management","Matt Babcock",FALSE
+"798","Miroslav Raduljica","nba","Bucks",FALSE,"2016-2017","QO",1959375,"Norton Sports Management","Matt Babcock",FALSE
+"799","Miroslav Raduljica","nba","Bucks",FALSE,"2015-2016","U",1567500,"Norton Sports Management","Matt Babcock",FALSE
+"800","Miroslav Raduljica","nba","Bucks",FALSE,"2014-2015","G",1500000,"Norton Sports Management","Matt Babcock",FALSE
+"801","Mirza Teletovic","nba","Nets",FALSE,"2014-2015","G",3368100,"Excel Sports Management","Jeff Schwartz",FALSE
+"802","Mirza Teletovic","nba","Nets",FALSE,"2013-2014","G",3229050,"Excel Sports Management","Jeff Schwartz",FALSE
+"803","Mirza Teletovic","nba","Nets",FALSE,"2015-2016","QO",4210125,"Excel Sports Management","Jeff Schwartz",FALSE
+"804","Mo Williams","nba","Trail Blazers",FALSE,"2014-2015","PO",2771340,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"805","Mo Williams","nba","Trail Blazers",FALSE,"2013-2014","G",2652000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"806","Monta Ellis","nba","Mavericks",FALSE,"2014-2015","G",8360000,"Relativity Sports","Happy Walters",FALSE
+"807","Monta Ellis","nba","Mavericks",FALSE,"2013-2014","G",8000000,"Relativity Sports","Happy Walters",FALSE
+"808","Monta Ellis","nba","Mavericks",FALSE,"2015-2016","PO",8720000,"Relativity Sports","Happy Walters",FALSE
+"809","Nando De Colo","nba","Spurs",FALSE,"2013-2014","G",1463000,"Creative Artists Agency","Steve Heumann",FALSE
+"810","Nando De Colo","nba","Spurs",FALSE,"2014-2015","QO",1828750,"Creative Artists Agency","Steve Heumann",FALSE
+"811","Nate Robinson","nba","Nuggets",FALSE,"2013-2014","G",2016000,"Goodwin Management Group","Aaron Goodwin",FALSE
+"812","Nate Robinson","nba","Nuggets",FALSE,"2014-2015","PO",2106720,"Goodwin Management Group","Aaron Goodwin",FALSE
+"813","Nate Wolters","nba","Bucks",FALSE,"2014-2015","G",816482,"Allegiant Athletic Agency","Jared Karnes",FALSE
+"814","Nate Wolters","nba","Bucks",FALSE,"2013-2014","G",500000,"Allegiant Athletic Agency","Jared Karnes",FALSE
+"815","Nate Wolters","nba","Bucks",FALSE,"2016-2017","QO",1215696,"Allegiant Athletic Agency","Jared Karnes",FALSE
+"816","Nate Wolters","nba","Bucks",FALSE,"2015-2016","U",947276,"Allegiant Athletic Agency","Jared Karnes",FALSE
+"817","Nazr Mohammed","nba","Bulls",FALSE,"2013-2014","G",884293,"Excel Sports Management","Mike Higgins",FALSE
+"818","Nemanja Nedovic","nba","Warriors",FALSE,"2013-2014","G",1056720,"Excel Sports Management","Jeff Schwartz",FALSE
+"819","Nemanja Nedovic","nba","Warriors",FALSE,"2014-2015","G",1104240,"Excel Sports Management","Jeff Schwartz",FALSE
+"820","Nemanja Nedovic","nba","Warriors",FALSE,"2016-2017","TO",2078927,"Excel Sports Management","Jeff Schwartz",FALSE
+"821","Nemanja Nedovic","nba","Warriors",FALSE,"2017-2018","QO",3118390,"Excel Sports Management","Jeff Schwartz",FALSE
+"822","Nemanja Nedovic","nba","Warriors",FALSE,"2015-2016","TO",1151760,"Excel Sports Management","Jeff Schwartz",FALSE
+"823","Nene","nba","Wizards",FALSE,"2013-2014","G",13000000,"Relativity Sports","Dan Fegan",FALSE
+"824","Nene","nba","Wizards",FALSE,"2014-2015","G",13000000,"Relativity Sports","Dan Fegan",FALSE
+"825","Nene","nba","Wizards",FALSE,"2015-2016","G",13000000,"Relativity Sports","Dan Fegan",FALSE
+"826","Nick Calathes","nba","Grizzlies",FALSE,"2014-2015","U",816482,"Relativity Sports","Dan Fegan",FALSE
+"827","Nick Calathes","nba","Grizzlies",FALSE,"2013-2014","G",490180,"Relativity Sports","Dan Fegan",FALSE
+"828","Nick Calathes","nba","Grizzlies",FALSE,"2015-2016","QO",1147276,"Relativity Sports","Dan Fegan",FALSE
+"829","Nick Collison","nba","Thunder",FALSE,"2014-2015","G",2242003,"Excel Sports Management","Mike Higgins",FALSE
+"830","Nick Collison","nba","Thunder",FALSE,"2013-2014","G",2585668,"Excel Sports Management","Mike Higgins",FALSE
+"831","Nick Young","nba","Lakers",FALSE,"2013-2014","G",1106942,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"832","Nick Young","nba","Lakers",FALSE,"2014-2015","PO",1227985,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"833","Nicolas Batum","nba","Trail Blazers",FALSE,"2015-2016","G",12235750,"Comsport","Bouna Ndiaye",FALSE
+"834","Nicolas Batum","nba","Trail Blazers",FALSE,"2013-2014","G",11295250,"Comsport","Bouna Ndiaye",FALSE
+"835","Nicolas Batum","nba","Trail Blazers",FALSE,"2014-2015","G",11765500,"Comsport","Bouna Ndiaye",FALSE
+"836","Nikola Pekovic","nba","Timberwolves",FALSE,"2014-2015","G",12100000,"Excel Sports Management","Jeff Schwartz",FALSE
+"837","Nikola Pekovic","nba","Timberwolves",FALSE,"2017-2018","G",11600000,"Excel Sports Management","Jeff Schwartz",FALSE
+"838","Nikola Pekovic","nba","Timberwolves",FALSE,"2016-2017","G",12100000,"Excel Sports Management","Jeff Schwartz",FALSE
+"839","Nikola Pekovic","nba","Timberwolves",FALSE,"2015-2016","G",12100000,"Excel Sports Management","Jeff Schwartz",FALSE
+"840","Nikola Pekovic","nba","Timberwolves",FALSE,"2013-2014","G",12100000,"Excel Sports Management","Jeff Schwartz",FALSE
+"841","Nikola Vucevic","nba","Magic",FALSE,"2014-2015","TO",2751260,"BDA Sports Management","Rade Filipovich",FALSE
+"842","Nikola Vucevic","nba","Magic",FALSE,"2013-2014","G",1793520,"BDA Sports Management","Rade Filipovich",FALSE
+"843","Nikola Vucevic","nba","Magic",FALSE,"2015-2016","QO",3865520,"BDA Sports Management","Rade Filipovich",FALSE
+"844","Norris Cole","nba","Heat",FALSE,"2013-2014","G",1129200,"Bell Management","Joel Bell",FALSE
+"845","Norris Cole","nba","Heat",FALSE,"2015-2016","QO",3036927,"Bell Management","Joel Bell",FALSE
+"846","Norris Cole","nba","Heat",FALSE,"2014-2015","TO",2038206,"Bell Management","Joel Bell",FALSE
+"847","O.J. Mayo","nba","Bucks",FALSE,"2013-2014","G",8000000,"Landmark Sports Agency","Rob Pelinka",FALSE
+"848","O.J. Mayo","nba","Bucks",FALSE,"2014-2015","G",8000000,"Landmark Sports Agency","Rob Pelinka",FALSE
+"849","O.J. Mayo","nba","Bucks",FALSE,"2015-2016","G",8000000,"Landmark Sports Agency","Rob Pelinka",FALSE
+"850","Omer Asik","nba","Rockets",FALSE,"2013-2014","G",8374646,"ASM Sports","Andy Miller",FALSE
+"851","Omer Asik","nba","Rockets",FALSE,"2014-2015","G",8374646,"ASM Sports","Andy Miller",FALSE
+"852","Omri Casspi","nba","Rockets",FALSE,"2014-2015","U",1063384,"Creative Artists Agency","Steve Heumann",FALSE
+"853","Omri Casspi","nba","Rockets",FALSE,"2013-2014","G",947907,"Creative Artists Agency","Steve Heumann",FALSE
+"854","Orlando Johnson","nba","Pacers",FALSE,"2014-2015","U",915243,"BDA Sports Management","Bill Duffy",FALSE
+"855","Orlando Johnson","nba","Pacers",FALSE,"2015-2016","QO",1181348,"BDA Sports Management","Bill Duffy",FALSE
+"856","Orlando Johnson","nba","Pacers",FALSE,"2013-2014","G",788872,"BDA Sports Management","Bill Duffy",FALSE
+"857","Otto Porter","nba","Wizards",FALSE,"2017-2018","QO",7732904,"FAME","David Falk",FALSE
+"858","Otto Porter","nba","Wizards",FALSE,"2016-2017","QO",5893981,"FAME","David Falk",FALSE
+"859","Otto Porter","nba","Wizards",FALSE,"2014-2015","G",4470480,"FAME","David Falk",FALSE
+"860","Otto Porter","nba","Wizards",FALSE,"2013-2014","G",4278000,"FAME","David Falk",FALSE
+"861","Otto Porter","nba","Wizards",FALSE,"2015-2016","TO",4662960,"FAME","David Falk",FALSE
+"862","P.J. Tucker","nba","Suns",FALSE,"2014-2015","QO",1148163,"Arete Sports Agency","Andre Buck",FALSE
+"863","P.J. Tucker","nba","Suns",FALSE,"2013-2014","G",884293,"Arete Sports Agency","Andre Buck",FALSE
+"864","Pablo Prigioni","nba","Knicks",FALSE,"2014-2015","G",1662961,"AAI Sports","George Bass",FALSE
+"865","Pablo Prigioni","nba","Knicks",FALSE,"2013-2014","G",1591350,"AAI Sports","George Bass",FALSE
+"866","Pablo Prigioni","nba","Knicks",FALSE,"2015-2016","U",1734572,"AAI Sports","George Bass",FALSE
+"867","Patrick Beverley","nba","Rockets",FALSE,"2014-2015","U",915243,"BDA Sports Management","Kevin Bradbury",FALSE
+"868","Patrick Beverley","nba","Rockets",FALSE,"2015-2016","QO",1181348,"BDA Sports Management","Kevin Bradbury",FALSE
+"869","Patrick Beverley","nba","Rockets",FALSE,"2013-2014","U",788872,"BDA Sports Management","Kevin Bradbury",FALSE
+"870","Patrick Christopher","nba","Bulls",FALSE,"2013-2014","U",490180,"Relativity Sports","Chris Patrick",FALSE
+"871","Patrick Christopher","nba","Bulls",FALSE,"2014-2015","QO",1016482,"Relativity Sports","Chris Patrick",FALSE
+"872","Patrick Mills","nba","Spurs",FALSE,"2013-2014","G",1133950,"Creative Artists Agency","Steve Heumann",FALSE
+"873","Patrick Patterson","nba","Kings",FALSE,"2014-2015","QO",4319474,"Excel Sports Management","Sam Goldfeder",FALSE
+"874","Patrick Patterson","nba","Kings",FALSE,"2013-2014","G",3105301,"Excel Sports Management","Sam Goldfeder",FALSE
+"875","Pau Gasol","nba","Lakers",FALSE,"2013-2014","G",19285850,"Wasserman Media Group","Arn Tellem",FALSE
+"876","Paul George","nba","Pacers",FALSE,"2014-2015","QO",4470088,"Creative Artists Agency","Aaron Mintz",FALSE
+"877","Paul George","nba","Pacers",FALSE,"2013-2014","G",3282003,"Creative Artists Agency","Aaron Mintz",FALSE
+"878","Paul Millsap","nba","Hawks",FALSE,"2013-2014","G",9500000,"BDS Sports","DeAngelo Simmons",FALSE
+"879","Paul Millsap","nba","Hawks",FALSE,"2014-2015","G",9500000,"BDS Sports","DeAngelo Simmons",FALSE
+"880","Paul Pierce","nba","Nets",FALSE,"2013-2014","G",15333334,"Excel Sports Management","Jeff Schwartz",FALSE
+"881","Pero Antic","nba","Hawks",FALSE,"2014-2015","U",1250000,"Excel Sports Management","Michael Lindeman",FALSE
+"882","Pero Antic","nba","Hawks",FALSE,"2013-2014","G",1200000,"Excel Sports Management","Michael Lindeman",FALSE
+"883","Pero Antic","nba","Hawks",FALSE,"2015-2016","QO",1562500,"Excel Sports Management","Michael Lindeman",FALSE
+"884","Perry Jones","nba","Thunder",FALSE,"2016-2017","QO",3036927,"BDA Sports Management","Bill Duffy",FALSE
+"885","Perry Jones","nba","Thunder",FALSE,"2014-2015","TO",1129200,"BDA Sports Management","Bill Duffy",FALSE
+"886","Perry Jones","nba","Thunder",FALSE,"2015-2016","TO",2038206,"BDA Sports Management","Bill Duffy",FALSE
+"887","Perry Jones","nba","Thunder",FALSE,"2013-2014","G",1082520,"BDA Sports Management","Bill Duffy",FALSE
+"888","Peyton Siva","nba","Pistons",FALSE,"2013-2014","U",490180,"ASM Sports","Andy Miller",FALSE
+"889","Peyton Siva","nba","Pistons",FALSE,"2015-2016","QO",1147276,"ASM Sports","Andy Miller",FALSE
+"890","Peyton Siva","nba","Pistons",FALSE,"2014-2015","U",816482,"ASM Sports","Andy Miller",FALSE
+"891","Phil Pressey","nba","Celtics",FALSE,"2014-2015","U",816482,"Creative Artists Agency","Aaron Mintz",FALSE
+"892","Phil Pressey","nba","Celtics",FALSE,"2015-2016","U",947276,"Creative Artists Agency","Aaron Mintz",FALSE
+"893","Phil Pressey","nba","Celtics",FALSE,"2013-2014","G",490180,"Creative Artists Agency","Aaron Mintz",FALSE
+"894","Phil Pressey","nba","Celtics",FALSE,"2016-2017","QO",1215696,"Creative Artists Agency","Aaron Mintz",FALSE
+"895","Quentin Richardson","nba","Magic",TRUE,"2013-2014","G",2808600,"24/7 Sports Management","Jeff Wechsler",FALSE
+"896","Quentin Richardson","nba","Raptors",TRUE,"2013-2014","G",1399507,"24/7 Sports Management","Jeff Wechsler",FALSE
+"897","Quincy Acy","nba","Raptors",FALSE,"2013-2014","G",788872,"Athlete Management","Michael Silverman",FALSE
+"898","Quincy Acy","nba","Raptors",FALSE,"2014-2015","U",915243,"Athlete Management","Michael Silverman",FALSE
+"899","Quincy Acy","nba","Raptors",FALSE,"2015-2016","QO",1181348,"Athlete Management","Michael Silverman",FALSE
+"900","Quincy Miller","nba","Nuggets",FALSE,"2013-2014","U",788872,"Envision Sports Agency","Dwon Clifton",FALSE
+"901","Quincy Miller","nba","Nuggets",FALSE,"2015-2016","QO",1181348,"Envision Sports Agency","Dwon Clifton",FALSE
+"902","Quincy Miller","nba","Nuggets",FALSE,"2014-2015","U",915243,"Envision Sports Agency","Dwon Clifton",FALSE
+"903","Quincy Pondexter","nba","Grizzlies",FALSE,"2013-2014","G",2225479,"Wasserman Media Group","Arn Tellem",FALSE
+"904","Quincy Pondexter","nba","Grizzlies",FALSE,"2014-2015","QO",3284807,"Wasserman Media Group","Arn Tellem",FALSE
+"905","Rajon Rondo","nba","Celtics",FALSE,"2013-2014","G",11954545,"BDA Sports Management","Bill Duffy",FALSE
+"906","Rajon Rondo","nba","Celtics",FALSE,"2014-2015","G",12909091,"BDA Sports Management","Bill Duffy",FALSE
+"907","Ramon Sessions","nba","Bobcats",FALSE,"2013-2014","G",5000000,"Allegiant Athletic Agency","Jared Karnes",FALSE
+"908","Randy Foye","nba","Nuggets",FALSE,"2014-2015","G",3000000,"Creative Artists Agency","Steve Heumann",FALSE
+"909","Randy Foye","nba","Nuggets",FALSE,"2015-2016","G",3135000,"Creative Artists Agency","Steve Heumann",FALSE
+"910","Randy Foye","nba","Nuggets",FALSE,"2013-2014","G",3000000,"Creative Artists Agency","Steve Heumann",FALSE
+"911","Rashard Lewis","nba","Heat",FALSE,"2013-2014","G",1399507,"Rival Sports Group","Tony Dutt",FALSE
+"912","Ray Allen","nba","Heat",FALSE,"2013-2014","G",3229050,"Williams & Connolly","Jim Tanner",FALSE
+"913","Ray McCallum","nba","Kings",FALSE,"2015-2016","U",947276,"Wasserman Media Group","Thaddeus Foucher",FALSE
+"914","Ray McCallum","nba","Kings",FALSE,"2013-2014","G",524616,"Wasserman Media Group","Thaddeus Foucher",FALSE
+"915","Ray McCallum","nba","Kings",FALSE,"2014-2015","G",816482,"Wasserman Media Group","Thaddeus Foucher",FALSE
+"916","Ray McCallum","nba","Kings",FALSE,"2016-2017","QO",1215696,"Wasserman Media Group","Thaddeus Foucher",FALSE
+"917","Raymond Felton","nba","Knicks",FALSE,"2015-2016","PO",3950313,"Rival Sports Group","Colin Bryant",FALSE
+"918","Raymond Felton","nba","Knicks",FALSE,"2013-2014","G",3637073,"Rival Sports Group","Colin Bryant",FALSE
+"919","Raymond Felton","nba","Knicks",FALSE,"2014-2015","G",3793693,"Rival Sports Group","Colin Bryant",FALSE
+"920","Reggie Bullock","nba","Clippers",FALSE,"2013-2014","G",1149000,"Excel Sports Management","Jeff Schwartz",FALSE
+"921","Reggie Bullock","nba","Clippers",FALSE,"2015-2016","TO",1252440,"Excel Sports Management","Jeff Schwartz",FALSE
+"922","Reggie Bullock","nba","Clippers",FALSE,"2014-2015","G",1200720,"Excel Sports Management","Jeff Schwartz",FALSE
+"923","Reggie Bullock","nba","Clippers",FALSE,"2016-2017","TO",2255644,"Excel Sports Management","Jeff Schwartz",FALSE
+"924","Reggie Bullock","nba","Clippers",FALSE,"2017-2018","QO",3313542,"Excel Sports Management","Jeff Schwartz",FALSE
+"925","Reggie Evans","nba","Nets",FALSE,"2014-2015","G",1768653,"ASM Sports","Andy Miller",FALSE
+"926","Reggie Evans","nba","Nets",FALSE,"2013-2014","G",1695635,"ASM Sports","Andy Miller",FALSE
+"927","Reggie Jackson","nba","Thunder",FALSE,"2013-2014","G",1260360,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"928","Reggie Jackson","nba","Thunder",FALSE,"2015-2016","QO",3222788,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"929","Reggie Jackson","nba","Thunder",FALSE,"2014-2015","TO",2204369,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"930","Reggie Williams","nba","Rockets",FALSE,"2014-2015","U",1063384,"Interperformances","Ronald Shade",FALSE
+"931","Reggie Williams","nba","Rockets",FALSE,"2013-2014","U",947907,"Interperformances","Ronald Shade",FALSE
+"932","Richard Hamilton","nba","Bulls",TRUE,"2013-2014","G",333334,"Creative Artists Agency","Leon Rose",FALSE
+"933","Richard Hamilton","nba","Bulls",TRUE,"2015-2016","G",333334,"Creative Artists Agency","Leon Rose",FALSE
+"934","Richard Hamilton","nba","Bulls",TRUE,"2014-2015","G",333334,"Creative Artists Agency","Leon Rose",FALSE
+"935","Richard Jefferson","nba","Jazz",FALSE,"2013-2014","G",11046000,"Stratosphere Sports","Todd Eley",FALSE
+"936","Ricky Ledo","nba","Mavericks",FALSE,"2015-2016","U",947276,"Verus Management Team","Seth Cohen",FALSE
+"937","Ricky Ledo","nba","Mavericks",FALSE,"2014-2015","G",816482,"Verus Management Team","Seth Cohen",FALSE
+"938","Ricky Ledo","nba","Mavericks",FALSE,"2016-2017","U",1015696,"Verus Management Team","Seth Cohen",FALSE
+"939","Ricky Ledo","nba","Mavericks",FALSE,"2013-2014","G",544000,"Verus Management Team","Seth Cohen",FALSE
+"940","Ricky Rubio","nba","Timberwolves",FALSE,"2014-2015","TO",4660479,"Relativity Sports","Dan Fegan",FALSE
+"941","Ricky Rubio","nba","Timberwolves",FALSE,"2013-2014","G",3678358,"Relativity Sports","Dan Fegan",FALSE
+"942","Ricky Rubio","nba","Timberwolves",FALSE,"2015-2016","QO",6179795,"Relativity Sports","Dan Fegan",FALSE
+"943","Robert Covington","nba","Rockets",FALSE,"2014-2015","U",816482,"Relativity Sports","Happy Walters",FALSE
+"944","Robert Covington","nba","Rockets",FALSE,"2016-2017","QO",1215696,"Relativity Sports","Happy Walters",FALSE
+"945","Robert Covington","nba","Rockets",FALSE,"2015-2016","U",947276,"Relativity Sports","Happy Walters",FALSE
+"946","Robert Covington","nba","Rockets",FALSE,"2013-2014","G",490180,"Relativity Sports","Happy Walters",FALSE
+"947","Robert Sacre","nba","Lakers",FALSE,"2013-2014","G",788872,"Edge Sports","Keith Kreiter",FALSE
+"948","Robert Sacre","nba","Lakers",FALSE,"2014-2015","G",915243,"Edge Sports","Keith Kreiter",FALSE
+"949","Robert Sacre","nba","Lakers",FALSE,"2015-2016","U",981348,"Edge Sports","Keith Kreiter",FALSE
+"950","Robin Lopez","nba","Trail Blazers",FALSE,"2013-2014","G",5904261,"Wasserman Media Group","Arn Tellem",FALSE
+"951","Robin Lopez","nba","Trail Blazers",FALSE,"2014-2015","G",6124728,"Wasserman Media Group","Arn Tellem",FALSE
+"952","Rodney Stuckey","nba","Pistons",FALSE,"2013-2014","G",8500000,"Creative Artists Agency","Leon Rose",FALSE
+"953","Ron Howard","nba","Pacers",FALSE,"2014-2015","QO",1016482,"Lee Basketball Services LTD","Bernie Lee",FALSE
+"954","Ron Howard","nba","Pacers",FALSE,"2013-2014","U",490180,"Lee Basketball Services LTD","Bernie Lee",FALSE
+"955","Ronnie Brewer","nba","Rockets",FALSE,"2014-2015","U",1310286,"Creative Artists Agency","Henry Thomas",FALSE
+"956","Ronnie Brewer","nba","Rockets",FALSE,"2013-2014","U",1186459,"Creative Artists Agency","Henry Thomas",FALSE
+"957","Ronnie Price","nba","Magic",FALSE,"2014-2015","U",1316809,"Excel Sports Management","Mike Higgins",FALSE
+"958","Ronnie Price","nba","Magic",FALSE,"2013-2014","G",1265977,"Excel Sports Management","Mike Higgins",FALSE
+"959","Ronny Turiaf","nba","Timberwolves",FALSE,"2014-2015","G",1500000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"960","Ronny Turiaf","nba","Timberwolves",FALSE,"2013-2014","G",1500000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"961","Roy Hibbert","nba","Pacers",FALSE,"2014-2015","G",14898938,"FAME","David Falk",FALSE
+"962","Roy Hibbert","nba","Pacers",FALSE,"2013-2014","G",14283844,"FAME","David Falk",FALSE
+"963","Roy Hibbert","nba","Pacers",FALSE,"2015-2016","PO",15514031,"FAME","David Falk",FALSE
+"964","Royce White","nba","Sixers",FALSE,"2013-2014","G",1719480,"ASM Sports","Andy Miller",FALSE
+"965","Royce White","nba","Sixers",FALSE,"2016-2017","QO",3865520,"ASM Sports","Andy Miller",FALSE
+"966","Royce White","nba","Sixers",FALSE,"2014-2015","TO",1793520,"ASM Sports","Andy Miller",FALSE
+"967","Royce White","nba","Sixers",FALSE,"2015-2016","TO",2751260,"ASM Sports","Andy Miller",FALSE
+"968","Rudy Gay","nba","Raptors",FALSE,"2014-2015","PO",19317326,"Octagon Athlete Representation","Jeff Austin",FALSE
+"969","Rudy Gay","nba","Raptors",FALSE,"2013-2014","G",17888932,"Octagon Athlete Representation","Jeff Austin",FALSE
+"970","Rudy Gobert","nba","Jazz",FALSE,"2016-2017","TO",2121288,"Comsport","Bouna Ndiaye",FALSE
+"971","Rudy Gobert","nba","Jazz",FALSE,"2014-2015","G",1127400,"Comsport","Bouna Ndiaye",FALSE
+"972","Rudy Gobert","nba","Jazz",FALSE,"2013-2014","G",1078800,"Comsport","Bouna Ndiaye",FALSE
+"973","Rudy Gobert","nba","Jazz",FALSE,"2015-2016","TO",1175880,"Comsport","Bouna Ndiaye",FALSE
+"974","Rudy Gobert","nba","Jazz",FALSE,"2017-2018","QO",3145869,"Comsport","Bouna Ndiaye",FALSE
+"975","Russell Westbrook","nba","Thunder",FALSE,"2015-2016","G",16744219,"Wasserman Media Group","Arn Tellem",FALSE
+"976","Russell Westbrook","nba","Thunder",FALSE,"2016-2017","G",17769374,"Wasserman Media Group","Arn Tellem",FALSE
+"977","Russell Westbrook","nba","Thunder",FALSE,"2013-2014","G",14693906,"Wasserman Media Group","Arn Tellem",FALSE
+"978","Russell Westbrook","nba","Thunder",FALSE,"2014-2015","G",15719063,"Wasserman Media Group","Arn Tellem",FALSE
+"979","Ryan Anderson","nba","Pelicans",FALSE,"2015-2016","G",8500000,"Octagon Athlete Representation","Jeff Austin",FALSE
+"980","Ryan Anderson","nba","Pelicans",FALSE,"2014-2015","G",8491500,"Octagon Athlete Representation","Jeff Austin",FALSE
+"981","Ryan Anderson","nba","Pelicans",FALSE,"2013-2014","G",8308500,"Octagon Athlete Representation","Jeff Austin",FALSE
+"982","Ryan Gomes","nba","Thunder",FALSE,"2013-2014","U",884293,"Wasserman Media Group","Dan Tobin",FALSE
+"983","Ryan Hollins","nba","Clippers",FALSE,"2013-2014","G",884293,"BDA Sports Management","Todd Ramasar",FALSE
+"984","Samuel Dalembert","nba","Mavericks",FALSE,"2014-2015","U",3867282,"Pinnacle Management Corporation","Marc Cornstein",FALSE
+"985","Samuel Dalembert","nba","Mavericks",FALSE,"2013-2014","G",3700748,"Pinnacle Management Corporation","Marc Cornstein",FALSE
+"986","Serge Ibaka","nba","Thunder",FALSE,"2014-2015","G",12350000,"ASM Sports","Andy Miller",FALSE
+"987","Serge Ibaka","nba","Thunder",FALSE,"2013-2014","G",12350000,"ASM Sports","Andy Miller",FALSE
+"988","Serge Ibaka","nba","Thunder",FALSE,"2016-2017","G",12350000,"ASM Sports","Andy Miller",FALSE
+"989","Serge Ibaka","nba","Thunder",FALSE,"2015-2016","G",12350000,"ASM Sports","Andy Miller",FALSE
+"990","Sergey Karasev","nba","Cavaliers",FALSE,"2015-2016","TO",1599840,"ASM Sports","Andy Miller",FALSE
+"991","Sergey Karasev","nba","Cavaliers",FALSE,"2014-2015","G",1533840,"ASM Sports","Andy Miller",FALSE
+"992","Sergey Karasev","nba","Cavaliers",FALSE,"2017-2018","QO",3513313,"ASM Sports","Andy Miller",FALSE
+"993","Sergey Karasev","nba","Cavaliers",FALSE,"2013-2014","G",1467840,"ASM Sports","Andy Miller",FALSE
+"994","Sergey Karasev","nba","Cavaliers",FALSE,"2016-2017","TO",2463754,"ASM Sports","Andy Miller",FALSE
+"995","Seth Curry","nba","Warriors",FALSE,"2014-2015","QO",1016482,"Octagon Athlete Representation","Alex Saratsis",FALSE
+"996","Seth Curry","nba","Warriors",FALSE,"2013-2014","U",490180,"Octagon Athlete Representation","Alex Saratsis",FALSE
+"997","Shabazz Muhammad","nba","Timberwolves",FALSE,"2015-2016","TO",2056920,"BDA Sports Management","Bill Duffy",FALSE
+"998","Shabazz Muhammad","nba","Timberwolves",FALSE,"2013-2014","G",1887120,"BDA Sports Management","Bill Duffy",FALSE
+"999","Shabazz Muhammad","nba","Timberwolves",FALSE,"2017-2018","QO",4237401,"BDA Sports Management","Bill Duffy",FALSE
+"1000","Shabazz Muhammad","nba","Timberwolves",FALSE,"2016-2017","TO",3046299,"BDA Sports Management","Bill Duffy",FALSE
+"1001","Shabazz Muhammad","nba","Timberwolves",FALSE,"2014-2015","G",1971960,"BDA Sports Management","Bill Duffy",FALSE
+"1002","Shane Battier","nba","Heat",FALSE,"2013-2014","G",3270000,"Williams & Connolly","Jim Tanner",FALSE
+"1003","Shane Larkin","nba","Mavericks",FALSE,"2016-2017","TO",2576642,"Relativity Sports","Happy Walters",FALSE
+"1004","Shane Larkin","nba","Mavericks",FALSE,"2013-2014","G",1536960,"Relativity Sports","Happy Walters",FALSE
+"1005","Shane Larkin","nba","Mavericks",FALSE,"2014-2015","G",1606080,"Relativity Sports","Happy Walters",FALSE
+"1006","Shane Larkin","nba","Mavericks",FALSE,"2017-2018","QO",3656255,"Relativity Sports","Happy Walters",FALSE
+"1007","Shane Larkin","nba","Mavericks",FALSE,"2015-2016","TO",1675320,"Relativity Sports","Happy Walters",FALSE
+"1008","Shannon Brown","nba","Suns",FALSE,"2013-2014","G",3500000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1009","Shaun Livingston","nba","Nets",FALSE,"2013-2014","G",884293,"Creative Artists Agency","Henry Thomas",FALSE
+"1010","Shawn Marion","nba","Mavericks",FALSE,"2013-2014","G",9316796,"Relativity Sports","Dan Fegan",FALSE
+"1011","Shawne Williams","nba","Lakers",FALSE,"2013-2014","G",884293,"Relativity Sports","Dan Fegan",FALSE
+"1012","Shelvin Mack","nba","Hawks",FALSE,"2014-2015","QO",1148163,"The Neustadt Group","Doug Neustadt",FALSE
+"1013","Shelvin Mack","nba","Hawks",FALSE,"2013-2014","U",884293,"The Neustadt Group","Doug Neustadt",FALSE
+"1014","Solomon Hill","nba","Pacers",FALSE,"2014-2015","G",1302840,"Octagon Athlete Representation","Chris Emens",FALSE
+"1015","Solomon Hill","nba","Pacers",FALSE,"2015-2016","TO",1358880,"Octagon Athlete Representation","Chris Emens",FALSE
+"1016","Solomon Hill","nba","Pacers",FALSE,"2013-2014","G",1246680,"Octagon Athlete Representation","Chris Emens",FALSE
+"1017","Solomon Hill","nba","Pacers",FALSE,"2017-2018","QO",3355258,"Octagon Athlete Representation","Chris Emens",FALSE
+"1018","Solomon Hill","nba","Pacers",FALSE,"2016-2017","TO",2306019,"Octagon Athlete Representation","Chris Emens",FALSE
+"1019","Spencer Hawes","nba","Sixers",FALSE,"2013-2014","G",6600000,"Wasserman Media Group","Arn Tellem",FALSE
+"1020","Stephen Curry","nba","Warriors",FALSE,"2014-2015","G",10629213,"Octagon Athlete Representation","Jeff Austin",FALSE
+"1021","Stephen Curry","nba","Warriors",FALSE,"2015-2016","G",11370786,"Octagon Athlete Representation","Jeff Austin",FALSE
+"1022","Stephen Curry","nba","Warriors",FALSE,"2016-2017","G",12112359,"Octagon Athlete Representation","Jeff Austin",FALSE
+"1023","Stephen Curry","nba","Warriors",FALSE,"2013-2014","G",9887642,"Octagon Athlete Representation","Jeff Austin",FALSE
+"1024","Steve Blake","nba","Lakers",FALSE,"2013-2014","G",4000000,"Bell Management","Joel Bell",FALSE
+"1025","Steve Nash","nba","Lakers",FALSE,"2013-2014","G",9300500,"BDA Sports Management","Bill Duffy",FALSE
+"1026","Steve Nash","nba","Lakers",FALSE,"2014-2015","G",9701000,"BDA Sports Management","Bill Duffy",FALSE
+"1027","Steve Novak","nba","Raptors",FALSE,"2013-2014","G",3750001,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1028","Steve Novak","nba","Raptors",FALSE,"2014-2015","TO",3445947,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1029","Steve Novak","nba","Raptors",FALSE,"2015-2016","G",3750001,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1030","Steven Adams","nba","Thunder",FALSE,"2014-2015","G",2184960,"Wasserman Media Group","Arn Tellem",FALSE
+"1031","Steven Adams","nba","Thunder",FALSE,"2016-2017","TO",3140518,"Wasserman Media Group","Arn Tellem",FALSE
+"1032","Steven Adams","nba","Thunder",FALSE,"2015-2016","TO",2279040,"Wasserman Media Group","Arn Tellem",FALSE
+"1033","Steven Adams","nba","Thunder",FALSE,"2013-2014","G",2090880,"Wasserman Media Group","Arn Tellem",FALSE
+"1034","Steven Adams","nba","Thunder",FALSE,"2017-2018","QO",4321352,"Wasserman Media Group","Arn Tellem",FALSE
+"1035","Taj Gibson","nba","Bulls",FALSE,"2014-2015","G",8000000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1036","Taj Gibson","nba","Bulls",FALSE,"2016-2017","G",8950000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1037","Taj Gibson","nba","Bulls",FALSE,"2013-2014","G",7550000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1038","Taj Gibson","nba","Bulls",FALSE,"2015-2016","G",8500000,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1039","Tayshaun Prince","nba","Grizzlies",FALSE,"2014-2015","G",7707865,"BDA Sports Management","Bill Duffy",FALSE
+"1040","Tayshaun Prince","nba","Grizzlies",FALSE,"2013-2014","G",7235955,"BDA Sports Management","Bill Duffy",FALSE
+"1041","Terrel Harris","nba","Trail Blazers",FALSE,"2014-2015","QO",1148163,"Impact Sports Basketball","Brian Elfus",FALSE
+"1042","Terrel Harris","nba","Trail Blazers",FALSE,"2013-2014","U",884293,"Impact Sports Basketball","Brian Elfus",FALSE
+"1043","Terrence Jones","nba","Rockets",FALSE,"2015-2016","TO",2489530,"Wasserman Media Group","Arn Tellem",FALSE
+"1044","Terrence Jones","nba","Rockets",FALSE,"2016-2017","QO",3532643,"Wasserman Media Group","Arn Tellem",FALSE
+"1045","Terrence Jones","nba","Rockets",FALSE,"2013-2014","G",1551840,"Wasserman Media Group","Arn Tellem",FALSE
+"1046","Terrence Jones","nba","Rockets",FALSE,"2014-2015","TO",1618680,"Wasserman Media Group","Arn Tellem",FALSE
+"1047","Terrence Ross","nba","Raptors",FALSE,"2014-2015","TO",2793960,"Creative Artists Agency","Aaron Mintz",FALSE
+"1048","Terrence Ross","nba","Raptors",FALSE,"2013-2014","G",2678640,"Creative Artists Agency","Aaron Mintz",FALSE
+"1049","Terrence Ross","nba","Raptors",FALSE,"2016-2017","QO",4790680,"Creative Artists Agency","Aaron Mintz",FALSE
+"1050","Terrence Ross","nba","Raptors",FALSE,"2015-2016","TO",3553917,"Creative Artists Agency","Aaron Mintz",FALSE
+"1051","Thabo Sefolosha","nba","Thunder",FALSE,"2013-2014","G",3900000,"Zucker International","Guy Zucker",FALSE
+"1052","Thaddeus Young","nba","Sixers",FALSE,"2013-2014","G",8850000,"Williams & Connolly","Jim Tanner",FALSE
+"1053","Thaddeus Young","nba","Sixers",FALSE,"2015-2016","ETO",9971739,"Williams & Connolly","Jim Tanner",FALSE
+"1054","Thaddeus Young","nba","Sixers",FALSE,"2014-2015","G",9410869,"Williams & Connolly","Jim Tanner",FALSE
+"1055","Thomas Robinson","nba","Trail Blazers",FALSE,"2016-2017","QO",6179799,"BDA Sports Management","Bill Duffy",FALSE
+"1056","Thomas Robinson","nba","Trail Blazers",FALSE,"2014-2015","TO",3678360,"BDA Sports Management","Bill Duffy",FALSE
+"1057","Thomas Robinson","nba","Trail Blazers",FALSE,"2013-2014","G",3526440,"BDA Sports Management","Bill Duffy",FALSE
+"1058","Thomas Robinson","nba","Trail Blazers",FALSE,"2015-2016","TO",4660482,"BDA Sports Management","Bill Duffy",FALSE
+"1059","Tiago Splitter","nba","Spurs",FALSE,"2014-2015","G",9250000,"Wasserman Media Group","Arn Tellem",FALSE
+"1060","Tiago Splitter","nba","Spurs",FALSE,"2015-2016","G",8500000,"Wasserman Media Group","Arn Tellem",FALSE
+"1061","Tiago Splitter","nba","Spurs",FALSE,"2013-2014","G",10000000,"Wasserman Media Group","Arn Tellem",FALSE
+"1062","Tiago Splitter","nba","Spurs",FALSE,"2016-2017","G",8250000,"Wasserman Media Group","Arn Tellem",FALSE
+"1063","Tim Duncan","nba","Spurs",FALSE,"2014-2015","PO",10000000,"Williams & Connolly","Jim Tanner",FALSE
+"1064","Tim Duncan","nba","Spurs",FALSE,"2013-2014","G",10361446,"Williams & Connolly","Jim Tanner",FALSE
+"1065","Tim Hardaway Jr","nba","Knicks",FALSE,"2013-2014","G",1196760,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1066","Tim Hardaway Jr","nba","Knicks",FALSE,"2016-2017","TO",2281605,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1067","Tim Hardaway Jr","nba","Knicks",FALSE,"2014-2015","G",1250640,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1068","Tim Hardaway Jr","nba","Knicks",FALSE,"2015-2016","TO",1304520,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1069","Tim Hardaway Jr","nba","Knicks",FALSE,"2017-2018","QO",3335707,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1070","Tim Ohlbrecht","nba","Sixers",FALSE,"2014-2015","U",915243,"OTG Entertainment","Tyler Glass",FALSE
+"1071","Tim Ohlbrecht","nba","Sixers",FALSE,"2015-2016","QO",1181348,"OTG Entertainment","Tyler Glass",FALSE
+"1072","Tim Ohlbrecht","nba","Sixers",FALSE,"2013-2014","U",788872,"OTG Entertainment","Tyler Glass",FALSE
+"1073","Timofey Mozgov","nba","Nuggets",FALSE,"2015-2016","TO",4950000,"ASM Sports","Andy Miller",FALSE
+"1074","Timofey Mozgov","nba","Nuggets",FALSE,"2014-2015","G",4650000,"ASM Sports","Andy Miller",FALSE
+"1075","Timofey Mozgov","nba","Nuggets",FALSE,"2013-2014","G",4400000,"ASM Sports","Andy Miller",FALSE
+"1076","Tobias Harris","nba","Magic",FALSE,"2013-2014","G",1545840,"Creative Artists Agency","Henry Thomas",FALSE
+"1077","Tobias Harris","nba","Magic",FALSE,"2015-2016","QO",3394726,"Creative Artists Agency","Henry Thomas",FALSE
+"1078","Tobias Harris","nba","Magic",FALSE,"2014-2015","TO",2380594,"Creative Artists Agency","Henry Thomas",FALSE
+"1079","Toney Douglas","nba","Warriors",FALSE,"2013-2014","G",1600000,"FAME","David Falk",FALSE
+"1080","Tony Allen","nba","Grizzlies",FALSE,"2014-2015","G",4831461,"IAM Sports","Raymond Brothers",FALSE
+"1081","Tony Allen","nba","Grizzlies",FALSE,"2015-2016","G",5168539,"IAM Sports","Raymond Brothers",FALSE
+"1082","Tony Allen","nba","Grizzlies",FALSE,"2016-2017","G",5505618,"IAM Sports","Raymond Brothers",FALSE
+"1083","Tony Allen","nba","Grizzlies",FALSE,"2013-2014","G",4494383,"IAM Sports","Raymond Brothers",FALSE
+"1084","Tony Mitchell","nba","Pistons",FALSE,"2014-2015","G",816482,"Wasserman Media Group","Arn Tellem",FALSE
+"1085","Tony Mitchell","nba","Pistons",FALSE,"2013-2014","G",500000,"Wasserman Media Group","Arn Tellem",FALSE
+"1086","Tony Mitchell","nba","Pistons",FALSE,"2015-2016","U",947276,"Wasserman Media Group","Arn Tellem",FALSE
+"1087","Tony Mitchell","nba","Pistons",FALSE,"2016-2017","QO",1215696,"Wasserman Media Group","Arn Tellem",FALSE
+"1088","Tony Parker","nba","Spurs",FALSE,"2013-2014","G",12500000,"Creative Artists Agency","Steve Heumann",FALSE
+"1089","Tony Parker","nba","Spurs",FALSE,"2014-2015","G",12500000,"Creative Artists Agency","Steve Heumann",FALSE
+"1090","Tony Snell","nba","Bulls",FALSE,"2013-2014","G",1409040,"Lagardere Unlimited","Mitchell Butler",FALSE
+"1091","Tony Snell","nba","Bulls",FALSE,"2014-2015","G",1472400,"Lagardere Unlimited","Mitchell Butler",FALSE
+"1092","Tony Snell","nba","Bulls",FALSE,"2016-2017","TO",2368327,"Lagardere Unlimited","Mitchell Butler",FALSE
+"1093","Tony Snell","nba","Bulls",FALSE,"2017-2018","QO",3393813,"Lagardere Unlimited","Mitchell Butler",FALSE
+"1094","Tony Snell","nba","Bulls",FALSE,"2015-2016","TO",1535880,"Lagardere Unlimited","Mitchell Butler",FALSE
+"1095","Tony Wroten","nba","Sixers",FALSE,"2016-2017","QO",3201471,"Wasserman Media Group","Greg Lawrence",FALSE
+"1096","Tony Wroten","nba","Sixers",FALSE,"2015-2016","TO",2179354,"Wasserman Media Group","Greg Lawrence",FALSE
+"1097","Tony Wroten","nba","Sixers",FALSE,"2014-2015","TO",1210080,"Wasserman Media Group","Greg Lawrence",FALSE
+"1098","Tony Wroten","nba","Sixers",FALSE,"2013-2014","G",1160040,"Wasserman Media Group","Greg Lawrence",FALSE
+"1099","Tornike Shengelia","nba","Nets",FALSE,"2013-2014","G",788872,"Zucker International","Guy Zucker",FALSE
+"1100","Tornike Shengelia","nba","Nets",FALSE,"2014-2015","QO",1115243,"Zucker International","Guy Zucker",FALSE
+"1101","Travis Outlaw","nba","Kings",FALSE,"2013-2014","G",3000000,"BDA Sports Management","Bill Duffy",FALSE
+"1102","Travis Outlaw","nba","Kings",FALSE,"2014-2015","G",3000000,"BDA Sports Management","Bill Duffy",FALSE
+"1103","Trent Lockett","nba","Kings",FALSE,"2014-2015","U",816482,"CGL Sports","Chris Grier Luchey",FALSE
+"1104","Trent Lockett","nba","Kings",FALSE,"2013-2014","U",490180,"CGL Sports","Chris Grier Luchey",FALSE
+"1105","Trent Lockett","nba","Kings",FALSE,"2015-2016","QO",1147276,"CGL Sports","Chris Grier Luchey",FALSE
+"1106","Trevor Ariza","nba","Wizards",FALSE,"2013-2014","G",7727280,"David Lee Services","David Lee",FALSE
+"1107","Trevor Booker","nba","Wizards",FALSE,"2013-2014","G",2350820,"ASM Sports","Andy Miller",FALSE
+"1108","Trevor Booker","nba","Wizards",FALSE,"2014-2015","QO",3420443,"ASM Sports","Andy Miller",FALSE
+"1109","Trey Burke","nba","Jazz",FALSE,"2014-2015","G",2548560,"Infinite Sports Concepts","Benji Burke",FALSE
+"1110","Trey Burke","nba","Jazz",FALSE,"2015-2016","TO",2658240,"Infinite Sports Concepts","Benji Burke",FALSE
+"1111","Trey Burke","nba","Jazz",FALSE,"2017-2018","QO",4588840,"Infinite Sports Concepts","Benji Burke",FALSE
+"1112","Trey Burke","nba","Jazz",FALSE,"2016-2017","TO",3386598,"Infinite Sports Concepts","Benji Burke",FALSE
+"1113","Trey Burke","nba","Jazz",FALSE,"2013-2014","G",2438760,"Infinite Sports Concepts","Benji Burke",FALSE
+"1114","Tristan Thompson","nba","Cavaliers",FALSE,"2014-2015","TO",5138430,"Klutch Sports Management","Rich Paul",FALSE
+"1115","Tristan Thompson","nba","Cavaliers",FALSE,"2013-2014","G",4062000,"Klutch Sports Management","Rich Paul",FALSE
+"1116","Tristan Thompson","nba","Cavaliers",FALSE,"2015-2016","QO",6777589,"Klutch Sports Management","Rich Paul",FALSE
+"1117","Ty Lawson","nba","Nuggets",FALSE,"2013-2014","G",10786517,"Relativity Sports","Happy Walters",FALSE
+"1118","Ty Lawson","nba","Nuggets",FALSE,"2014-2015","G",11595506,"Relativity Sports","Happy Walters",FALSE
+"1119","Ty Lawson","nba","Nuggets",FALSE,"2015-2016","G",12404495,"Relativity Sports","Happy Walters",FALSE
+"1120","Ty Lawson","nba","Nuggets",FALSE,"2016-2017","G",13213482,"Relativity Sports","Happy Walters",FALSE
+"1121","Tyler Hansbrough","nba","Raptors",FALSE,"2014-2015","G",3326235,"Excel Sports Management","Jeff Schwartz",FALSE
+"1122","Tyler Hansbrough","nba","Raptors",FALSE,"2013-2014","G",3183000,"Excel Sports Management","Jeff Schwartz",FALSE
+"1123","Tyler Honeycutt","nba","Rockets",TRUE,"2013-2014","G",100000,"Rival Sports Group","Tony Dutt",FALSE
+"1124","Tyler Zeller","nba","Cavaliers",FALSE,"2016-2017","QO",3695169,"Excel Sports Management","Jeff Schwartz",FALSE
+"1125","Tyler Zeller","nba","Cavaliers",FALSE,"2015-2016","TO",2616975,"Excel Sports Management","Jeff Schwartz",FALSE
+"1126","Tyler Zeller","nba","Cavaliers",FALSE,"2013-2014","G",1633440,"Excel Sports Management","Jeff Schwartz",FALSE
+"1127","Tyler Zeller","nba","Cavaliers",FALSE,"2014-2015","TO",1703760,"Excel Sports Management","Jeff Schwartz",FALSE
+"1128","Tyreke Evans","nba","Pelicans",FALSE,"2016-2017","G",10203755,"Wasserman Media Group","Arn Tellem",FALSE
+"1129","Tyreke Evans","nba","Pelicans",FALSE,"2013-2014","G",11796247,"Wasserman Media Group","Arn Tellem",FALSE
+"1130","Tyreke Evans","nba","Pelicans",FALSE,"2014-2015","G",11265416,"Wasserman Media Group","Arn Tellem",FALSE
+"1131","Tyreke Evans","nba","Pelicans",FALSE,"2015-2016","G",10734586,"Wasserman Media Group","Arn Tellem",FALSE
+"1132","Tyshawn Taylor","nba","Nets",FALSE,"2014-2015","QO",1115243,"Excel Sports Management","Mike Higgins",FALSE
+"1133","Tyshawn Taylor","nba","Nets",FALSE,"2013-2014","G",788872,"Excel Sports Management","Mike Higgins",FALSE
+"1134","Tyson Chandler","nba","Knicks",FALSE,"2014-2015","G",14596888,"Excel Sports Management","Jeff Schwartz",FALSE
+"1135","Tyson Chandler","nba","Knicks",FALSE,"2013-2014","G",14100538,"Excel Sports Management","Jeff Schwartz",FALSE
+"1136","Udonis Haslem","nba","Heat",FALSE,"2013-2014","G",4340000,"Creative Artists Agency","Henry Thomas",FALSE
+"1137","Udonis Haslem","nba","Heat",FALSE,"2014-2015","PO",4620000,"Creative Artists Agency","Henry Thomas",FALSE
+"1138","Viacheslav Kravtsov","nba","Suns",FALSE,"2013-2014","G",1500000,"Excel Sports Management","Misko Raznatovic",FALSE
+"1139","Viacheslav Kravtsov","nba","Suns",FALSE,"2014-2015","QO",1875000,"Excel Sports Management","Misko Raznatovic",FALSE
+"1140","Victor Claver","nba","Trail Blazers",FALSE,"2014-2015","G",1370000,"Wasserman Media Group","Arn Tellem",FALSE
+"1141","Victor Claver","nba","Trail Blazers",FALSE,"2013-2014","G",1330000,"Wasserman Media Group","Arn Tellem",FALSE
+"1142","Victor Claver","nba","Trail Blazers",FALSE,"2015-2016","QO",1712500,"Wasserman Media Group","Arn Tellem",FALSE
+"1143","Victor Faverani","nba","Celtics",FALSE,"2014-2015","G",2090000,"Interperformances","Herb Rudoy",FALSE
+"1144","Victor Faverani","nba","Celtics",FALSE,"2013-2014","G",2000000,"Interperformances","Herb Rudoy",FALSE
+"1145","Victor Faverani","nba","Celtics",FALSE,"2016-2017","QO",2725000,"Interperformances","Herb Rudoy",FALSE
+"1146","Victor Faverani","nba","Celtics",FALSE,"2015-2016","U",2180000,"Interperformances","Herb Rudoy",FALSE
+"1147","Victor Oladipo","nba","Magic",FALSE,"2014-2015","G",4978200,"IAM Sports","Raymond Brothers",FALSE
+"1148","Victor Oladipo","nba","Magic",FALSE,"2015-2016","TO",5192520,"IAM Sports","Raymond Brothers",FALSE
+"1149","Victor Oladipo","nba","Magic",FALSE,"2016-2017","TO",6552961,"IAM Sports","Raymond Brothers",FALSE
+"1150","Victor Oladipo","nba","Magic",FALSE,"2013-2014","G",4763760,"IAM Sports","Raymond Brothers",FALSE
+"1151","Victor Oladipo","nba","Magic",FALSE,"2017-2018","QO",8551613,"IAM Sports","Raymond Brothers",FALSE
+"1152","Vince Carter","nba","Mavericks",FALSE,"2013-2014","G",3180000,"IMG","Kurt Schoeppler",FALSE
+"1153","Wayne Ellington","nba","Mavericks",FALSE,"2014-2015","G",2771340,"Wasserman Media Group","Arn Tellem",FALSE
+"1154","Wayne Ellington","nba","Mavericks",FALSE,"2013-2014","G",2652000,"Wasserman Media Group","Arn Tellem",FALSE
+"1155","Wesley Johnson","nba","Lakers",FALSE,"2013-2014","G",884293,"Landmark Sports Agency","Rob Pelinka",FALSE
+"1156","Wesley Matthews","nba","Trail Blazers",FALSE,"2013-2014","G",6875480,"Octagon Athlete Representation","Jeff Austin",FALSE
+"1157","Wesley Matthews","nba","Trail Blazers",FALSE,"2014-2015","G",7245640,"Octagon Athlete Representation","Jeff Austin",FALSE
+"1158","Will Barton","nba","Trail Blazers",FALSE,"2015-2016","QO",1181348,"Impact Sports Basketball","Brian Elfus",FALSE
+"1159","Will Barton","nba","Trail Blazers",FALSE,"2013-2014","G",788872,"Impact Sports Basketball","Brian Elfus",FALSE
+"1160","Will Barton","nba","Trail Blazers",FALSE,"2014-2015","U",915243,"Impact Sports Basketball","Brian Elfus",FALSE
+"1161","Will Bynum","nba","Pistons",FALSE,"2013-2014","G",2790343,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1162","Will Bynum","nba","Pistons",FALSE,"2014-2015","G",2915908,"Priority Sports & Entertainment","Mark Bartelstein",FALSE
+"1163","Willie Green","nba","Clippers",FALSE,"2014-2015","U",1448490,"Goodwin Management Group","Noah Croom",FALSE
+"1164","Willie Green","nba","Clippers",FALSE,"2013-2014","G",1399507,"Goodwin Management Group","Noah Croom",FALSE
+"1165","Willie Reed","nba","Grizzlies",FALSE,"2014-2015","U",915243,"Bell Management","Joel Bell",FALSE
+"1166","Willie Reed","nba","Grizzlies",FALSE,"2013-2014","U",788872,"Bell Management","Joel Bell",FALSE
+"1167","Willie Reed","nba","Grizzlies",FALSE,"2015-2016","QO",1181348,"Bell Management","Joel Bell",FALSE
+"1168","Wilson Chandler","nba","Nuggets",FALSE,"2014-2015","G",6757913,"Relativity Sports","Dan Fegan",FALSE
+"1169","Wilson Chandler","nba","Nuggets",FALSE,"2015-2016","U",7171662,"Relativity Sports","Dan Fegan",FALSE
+"1170","Wilson Chandler","nba","Nuggets",FALSE,"2013-2014","G",6344164,"Relativity Sports","Dan Fegan",FALSE
+"1171","Xavier Henry","nba","Lakers",FALSE,"2013-2014","U",884293,"Wasserman Media Group","Arn Tellem",FALSE
+"1172","Zach Randolph","nba","Grizzlies",FALSE,"2013-2014","G",18238333,"IAM Sports","Raymond Brothers",FALSE
+"1173","Zach Randolph","nba","Grizzlies",FALSE,"2014-2015","PO",16938333,"IAM Sports","Raymond Brothers",FALSE
+"1174","Zaza Pachulia","nba","Bucks",FALSE,"2015-2016","G",5200000,"Williams & Connolly","Jim Tanner",FALSE
+"1175","Zaza Pachulia","nba","Bucks",FALSE,"2014-2015","G",5200000,"Williams & Connolly","Jim Tanner",FALSE
+"1176","Zaza Pachulia","nba","Bucks",FALSE,"2013-2014","G",5200000,"Williams & Connolly","Jim Tanner",FALSE

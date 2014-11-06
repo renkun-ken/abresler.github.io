@@ -1,0 +1,500 @@
+<!doctype HTML>
+<title>Comparing Federer vs Monfils</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://aragorn.org/scripts/nv.d3.css'>
+    <link rel='stylesheet' href='http://aragorn.org/scripts/rNVD3.css'>
+    
+    <script src='http://aragorn.org/scripts/jquery-1.8.2.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/nv.d3.min-new.js' type='text/javascript'></script>
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 610px;
+      height: 400px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+        </style>
+        <script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+<style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style> 
+    
+  </head>
+  <body >
+  <center>
+       <center>
+       <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 450px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: 0.25px"><strong>Analyzing the 2014 U.S. Open Match Statistics by Round and Draw</strong></div>
+    </div></center>
+    <center><a href = "http://www.ibm.com/sports" target = "_blank"><img src="http://www.aragorn.org/logos/ibm_630_100v3.jpg" alt="" width = "450" height="71" style="padding: 2.5px"></a></center>
+  <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='col-md-3'>
+      <form class='well'>
+        <label><b>Select Variable:</b></label>
+    		<select class='form-control' ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+    		</select>
+              </form>
+    </div>
+    <div class='col-md-7'>
+      <div class="bs-docs-example">
+        <div id='chart476eac2f58f' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart476eac2f58f",
+"width":    610,
+"height":    400,
+"x": "round",
+"y": "Winners",
+"facet": {
+ "round": [ "Round 1", "Round 1", "Round 2", "Round 2", "Round 3", "Round 3", "Round 4", "Round 4", "Quarter Finals", "Quarter Finals" ],
+"draw": [ "Women's", "Men's", "Women's", "Men's", "Women's", "Men's", "Women's", "Men's", "Women's", "Men's" ],
+"Matches": [     64,     64,     32,     32,     16,     16,      8,      8,      4,      2 ],
+"Three Set Matches": [     22,     31,     15,     17,      4,      8,      3,      5,      0,      0 ],
+"Two Set Matches": [     40, null,     17, null,     12, null,      5, null,      4, null ],
+"Retirements": [      2,      6,      0,      2,      0,      0,      0,      0,      0,      0 ],
+"Walkovers": [      0,      0,      0,      1,      0,      1,      0,      0,      0,      0 ],
+"Sets Played": [    151,    231,     79,    107,     36,     52,     19,     29,      8,      9 ],
+"Tie Breaks Played": [     11,     38,      7,     16,      4,      7,      2,      5,      0,      4 ],
+"Games": [   1316,   2234,    739,   1035,    327,    490,    181,    306,     63,    101 ],
+"Winners": [   1223,   3104,   1272,   1898,    672,   1009,    370,    645,    163,    202 ],
+"Unforced Errors": [   1793,   2921,   1840,   1902,    854,    977,    455,    605,    132,    242 ],
+"Service Points Won": [   4870,   8897,   2706,   4199,   1221,   1902,    683,   1247,    224,    412 ],
+"Return Games Won": [    448,    466,    254,    192,    117,    115,     56,     48,     23,     16 ],
+"Points": [   8543,  14051,   4845,   6505,   2192,   3048,   1183,   1883,    403,    643 ],
+"First Serves In": [   5127,   8366,   2994,   3898,   1350,   1831,    735,   1077,    250,    377 ],
+"First Serves In Pct": [     60,     60,     62,     60,     62,     60,     62,     57,     62,     59 ],
+"Aces": [    298,   1177,    158,    567,     87,    273,     55,    184,     33,     38 ],
+"Double Faults": [    506,    633,    263,    288,    124,    120,     55,     70,     19,     20 ],
+"First Serve Points Won": [   3311,   5997,   1877,   2853,    848,   1311,    475,    808,    150,    277 ],
+"First Serve Points Won Pct": [     65,     72,     63,     73,     63,     72,     65,     75,     60,     73 ],
+"Second Serve Points Won Pct": [     46,     51,     45,     52,     44,     49,     46,     54,     48,     51 ],
+"Five Set Matches": [ null,     11, null,      5, null,      0, null,      2, null,      1 ],
+"Four Set Matches": [ null,     16, null,      7, null,      7, null,      1, null,      1 ] 
+},
+"group": "draw",
+"type": "multiBarHorizontalChart",
+"id": "chart476eac2f58f" 
+}
+  $scope.data = [
+ {
+ "round": "Round 1",
+"draw": "Women's",
+"Matches":             64,
+"Three Set Matches":             22,
+"Two Set Matches":             40,
+"Retirements":              2,
+"Walkovers":              0,
+"Sets Played":            151,
+"Tie Breaks Played":             11,
+"Games":           1316,
+"Winners":           1223,
+"Unforced Errors":           1793,
+"Service Points Won":           4870,
+"Return Games Won":            448,
+"Points":           8543,
+"First Serves In":           5127,
+"First Serves In Pct":             60,
+"Aces":            298,
+"Double Faults":            506,
+"First Serve Points Won":           3311,
+"First Serve Points Won Pct":             65,
+"Second Serve Points Won Pct":             46,
+"Five Set Matches": null,
+"Four Set Matches": null 
+},
+{
+ "round": "Round 1",
+"draw": "Men's",
+"Matches":             64,
+"Three Set Matches":             31,
+"Two Set Matches": null,
+"Retirements":              6,
+"Walkovers":              0,
+"Sets Played":            231,
+"Tie Breaks Played":             38,
+"Games":           2234,
+"Winners":           3104,
+"Unforced Errors":           2921,
+"Service Points Won":           8897,
+"Return Games Won":            466,
+"Points":          14051,
+"First Serves In":           8366,
+"First Serves In Pct":             60,
+"Aces":           1177,
+"Double Faults":            633,
+"First Serve Points Won":           5997,
+"First Serve Points Won Pct":             72,
+"Second Serve Points Won Pct":             51,
+"Five Set Matches":             11,
+"Four Set Matches":             16 
+},
+{
+ "round": "Round 2",
+"draw": "Women's",
+"Matches":             32,
+"Three Set Matches":             15,
+"Two Set Matches":             17,
+"Retirements":              0,
+"Walkovers":              0,
+"Sets Played":             79,
+"Tie Breaks Played":              7,
+"Games":            739,
+"Winners":           1272,
+"Unforced Errors":           1840,
+"Service Points Won":           2706,
+"Return Games Won":            254,
+"Points":           4845,
+"First Serves In":           2994,
+"First Serves In Pct":             62,
+"Aces":            158,
+"Double Faults":            263,
+"First Serve Points Won":           1877,
+"First Serve Points Won Pct":             63,
+"Second Serve Points Won Pct":             45,
+"Five Set Matches": null,
+"Four Set Matches": null 
+},
+{
+ "round": "Round 2",
+"draw": "Men's",
+"Matches":             32,
+"Three Set Matches":             17,
+"Two Set Matches": null,
+"Retirements":              2,
+"Walkovers":              1,
+"Sets Played":            107,
+"Tie Breaks Played":             16,
+"Games":           1035,
+"Winners":           1898,
+"Unforced Errors":           1902,
+"Service Points Won":           4199,
+"Return Games Won":            192,
+"Points":           6505,
+"First Serves In":           3898,
+"First Serves In Pct":             60,
+"Aces":            567,
+"Double Faults":            288,
+"First Serve Points Won":           2853,
+"First Serve Points Won Pct":             73,
+"Second Serve Points Won Pct":             52,
+"Five Set Matches":              5,
+"Four Set Matches":              7 
+},
+{
+ "round": "Round 3",
+"draw": "Women's",
+"Matches":             16,
+"Three Set Matches":              4,
+"Two Set Matches":             12,
+"Retirements":              0,
+"Walkovers":              0,
+"Sets Played":             36,
+"Tie Breaks Played":              4,
+"Games":            327,
+"Winners":            672,
+"Unforced Errors":            854,
+"Service Points Won":           1221,
+"Return Games Won":            117,
+"Points":           2192,
+"First Serves In":           1350,
+"First Serves In Pct":             62,
+"Aces":             87,
+"Double Faults":            124,
+"First Serve Points Won":            848,
+"First Serve Points Won Pct":             63,
+"Second Serve Points Won Pct":             44,
+"Five Set Matches": null,
+"Four Set Matches": null 
+},
+{
+ "round": "Round 3",
+"draw": "Men's",
+"Matches":             16,
+"Three Set Matches":              8,
+"Two Set Matches": null,
+"Retirements":              0,
+"Walkovers":              1,
+"Sets Played":             52,
+"Tie Breaks Played":              7,
+"Games":            490,
+"Winners":           1009,
+"Unforced Errors":            977,
+"Service Points Won":           1902,
+"Return Games Won":            115,
+"Points":           3048,
+"First Serves In":           1831,
+"First Serves In Pct":             60,
+"Aces":            273,
+"Double Faults":            120,
+"First Serve Points Won":           1311,
+"First Serve Points Won Pct":             72,
+"Second Serve Points Won Pct":             49,
+"Five Set Matches":              0,
+"Four Set Matches":              7 
+},
+{
+ "round": "Round 4",
+"draw": "Women's",
+"Matches":              8,
+"Three Set Matches":              3,
+"Two Set Matches":              5,
+"Retirements":              0,
+"Walkovers":              0,
+"Sets Played":             19,
+"Tie Breaks Played":              2,
+"Games":            181,
+"Winners":            370,
+"Unforced Errors":            455,
+"Service Points Won":            683,
+"Return Games Won":             56,
+"Points":           1183,
+"First Serves In":            735,
+"First Serves In Pct":             62,
+"Aces":             55,
+"Double Faults":             55,
+"First Serve Points Won":            475,
+"First Serve Points Won Pct":             65,
+"Second Serve Points Won Pct":             46,
+"Five Set Matches": null,
+"Four Set Matches": null 
+},
+{
+ "round": "Round 4",
+"draw": "Men's",
+"Matches":              8,
+"Three Set Matches":              5,
+"Two Set Matches": null,
+"Retirements":              0,
+"Walkovers":              0,
+"Sets Played":             29,
+"Tie Breaks Played":              5,
+"Games":            306,
+"Winners":            645,
+"Unforced Errors":            605,
+"Service Points Won":           1247,
+"Return Games Won":             48,
+"Points":           1883,
+"First Serves In":           1077,
+"First Serves In Pct":             57,
+"Aces":            184,
+"Double Faults":             70,
+"First Serve Points Won":            808,
+"First Serve Points Won Pct":             75,
+"Second Serve Points Won Pct":             54,
+"Five Set Matches":              2,
+"Four Set Matches":              1 
+},
+{
+ "round": "Quarter Finals",
+"draw": "Women's",
+"Matches":              4,
+"Three Set Matches":              0,
+"Two Set Matches":              4,
+"Retirements":              0,
+"Walkovers":              0,
+"Sets Played":              8,
+"Tie Breaks Played":              0,
+"Games":             63,
+"Winners":            163,
+"Unforced Errors":            132,
+"Service Points Won":            224,
+"Return Games Won":             23,
+"Points":            403,
+"First Serves In":            250,
+"First Serves In Pct":             62,
+"Aces":             33,
+"Double Faults":             19,
+"First Serve Points Won":            150,
+"First Serve Points Won Pct":             60,
+"Second Serve Points Won Pct":             48,
+"Five Set Matches": null,
+"Four Set Matches": null 
+},
+{
+ "round": "Quarter Finals",
+"draw": "Men's",
+"Matches":              2,
+"Three Set Matches":              0,
+"Two Set Matches": null,
+"Retirements":              0,
+"Walkovers":              0,
+"Sets Played":              9,
+"Tie Breaks Played":              4,
+"Games":            101,
+"Winners":            202,
+"Unforced Errors":            242,
+"Service Points Won":            412,
+"Return Games Won":             16,
+"Points":            643,
+"First Serves In":            377,
+"First Serves In Pct":             59,
+"Aces":             38,
+"Double Faults":             20,
+"First Serve Points Won":            277,
+"First Serve Points Won Pct":             73,
+"Second Serve Points Won Pct":             51,
+"Five Set Matches":              1,
+"Four Set Matches":              1 
+} 
+]
+  $scope.controls = {
+ "y": {
+ "name": "y",
+"value": "Winners",
+"values": [ "Winners", "Three Set Matches", "Two Set Matches", "Retirements", "Walkovers", "Sets Played", "Tie Breaks Played", "Games", "Unforced Errors", "Service Points Won", "Return Games Won", "Points", "First Serves In", "First Serves In Pct", "Aces", "Double Faults", "First Serve Points Won", "First Serve Points Won Pct", "Second Serve Points Won Pct", "Five Set Matches", "Four Set Matches", "Matches" ],
+"label": "Select  y :" 
+} 
+} 
+  $scope.filters = []
+  
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  
+  $scope.$watch('selected', function(){
+    var keys = _.pluck($scope.selected, "variable")
+    var values = _.pluck($scope.selected, "value")
+    $scope.opts.selected = _.zipObject(keys, values)
+  }) 
+  
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+	}, true)
+}  
+
+function drawChart(opts, data){ 
+  if (Object.keys(opts.selected).length > 0){
+    data = _.filter(data, opts.selected)
+  }
+  
+  if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+    var data = d3.nest()
+      .key(function(d){
+        //return opts.group === undefined ? 'main' : d[opts.group]
+        //instead of main would think a better default is opts.x
+       return opts.group === undefined ? opts.y : d[opts.group];
+      }).entries(data);
+  }
+      
+  if (opts.disabled != undefined){
+    data.map(function(d, i){
+      d.disabled = opts.disabled[i]
+    })
+  }
+	
+	nv.addGraph(function() {
+		var chart = nv.models[opts.type]()
+			.x(function(d) { return d[opts.x] })
+			.y(function(d) { return d[opts.y] })
+			.width(opts.width)
+			.height(opts.height)
+		
+	chart
+  .color([ "#FF4444", "#002865" ])
+  .margin({
+ "left":    100,
+"top":     20,
+"right":     40,
+"bottom":     20 
+})
+  .tooltipContent( function(key, x, y, e ){ 
+  var d = e.series.values[e.pointIndex];
+  return '<b>Draw:</b> ' + d.draw + '<br>' + '<b>Round:</b> ' + d.round + '<br><b>' + opts.y + ': </b>' + y
+} )
+          
+	
+
+	
+	
+	chart.yAxis
+ .tickFormat(function(d) {return  d3.format(',2f')(d)})
+ .width(100)
+ .width(500)
+ .axisLabel( opts.x )
+
+
+	d3.select("#" + opts.id + ' svg')
+  // .empty()
+		.datum(data)
+		.transition().duration(300)
+		.call(chart);
+	
+	 nv.utils.windowResize(chart.update);
+	 return chart;
+  });
+};
+</script>
+<center>
+<div style="display:table;width:220px;height:10px;font-size:12px" class='gray'>
+<center><strong>Distributed by</strong><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</center>
+</body>
+</html>

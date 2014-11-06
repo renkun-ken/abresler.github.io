@@ -1,0 +1,865 @@
+
+
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <title>Project Baseball WAR Sample Bar Chart</title>
+    
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/cosmo/bootstrap.min.css">
+     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" >
+    <link rel='stylesheet' href="http://getbootstrap.com/2.3.2/assets/js/google-code-prettify/prettify.css">
+    <link rel='stylesheet' href="http://aozora.github.io/bootplus/assets/css/docs.css">
+    <link rel='stylesheet' href='http://nvd3.org/src/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v2.min.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/nv.d3.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 150%;
+      height: 440px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+            <!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+
+<meta name="description" content="Peyton Manning's having an incredible 2013 season; will his performance this season break any NFL passing records?  Follow Peyton's quest each week with Aragorn's interactive visualization of Peyton's journey to record book glory." />
+<link rel="canonical" href="http://aragorn.org/visualization/nfl/features/peyton_manning/peyton_quest_2013/week_6" />
+<meta property="og:description" content="Peyton Manning's having an incredible 2013 season; will his performance this season break any NFL passing records?  Follow Peyton's quest each week with Aragorn's interactive visualization of Peyton's journey to record book glory." />
+<meta property="og:image" content="http://aragorn.org/visualization/nfl/features/peyton_manning/peyton_quest_2013/week_6/screen.png" />
+<meta property="og:site_name" content="Aragorn" />
+<meta property="og:title" content="Peyton's Quest 2013" />
+<meta property="og:type" content="article" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="Peyton's Quest 2013" />
+        <meta name="twitter:title" content="Peyton's Quest 2013" />
+        <meta name="twitter:description" content="Peyton Manning's having an incredible 2013 season; will his performance this season break any NFL passing records?  Follow Peyton's quest each week with Aragorn's interactive visualization of Peyton's journey to record book glory." />
+        <meta name="twitter:image" content="http://aragorn.org/visualization/nfl/features/peyton_manning/peyton_quest_2013/week_6/screen.png" />
+        <meta name="twitter:site" content="Aragorn" />
+  </head>
+  <body ng-app>
+       <center>
+       
+      <h2>Project Baseball WAR Sample Analysis; Bar Chart <b>EMPOWERED by <a href="http://aragorn.org/"><img src="http://aragorn.org/img/aragorn.png" height="26" width="137" alt="aragorn"></a></b></h2>
+    </center>
+  </head>
+   <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='span3'>
+      <form class='well'>
+        <label><b>Select  y :</b></label>
+        <select ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+        </select><br>
+      </form>
+    </div>
+    <div class='span8'>
+      <div class="bs-docs-example">
+        <div id='chart34441dc7964b' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart34441dc7964b",
+"width":    700,
+"height":    400,
+"x": "season",
+"y": "war",
+"group": "label",
+"type": "multiBarChart",
+"id": "chart34441dc7964b" 
+}
+  $scope.data = [
+ {
+ "player": "Reggie Jackson",
+"team": "Yankees",
+"season": 1977,
+"games": 146,
+"salary_m":          0.525,
+"salary_2013_m":          2.022,
+"war":            4.5,
+"source": "free agency",
+"term": 5,
+"start": 1977,
+"end": 1981,
+"year_of_contract": 1,
+"complete":            0.2,
+"real_war_per_m":          2.226,
+"war_6M_value":             27,
+"label": "Reggie Jackson-Yankees",
+"over_under_payment":         24.978,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Reggie Jackson-Yankees</th></tr><tr><td><img src='http://3.bp.blogspot.com/-2yC1QvTcoS8/UdDsQZfg-5I/AAAAAAAAN-E/wqhA_7CwpFU/s354/rj.png' height='125' width='100'></td><td align='left'>Season: 1977<br>Year of Contract: 1<br>WAR: 4.5<br>Salary (m): $0.525<br>2013 Salary (m): $2.022<br>Value at $6M WAR: $27<br>Over/Underpayment (m): $24.978</td></tr></table>",
+"date":           2875,
+"pos_date":   248400000000 
+},
+{
+ "player": "Reggie Jackson",
+"team": "Yankees",
+"season": 1978,
+"games": 139,
+"salary_m":          0.525,
+"salary_2013_m":          1.879,
+"war":            3.5,
+"source": "free agency",
+"term": 5,
+"start": 1977,
+"end": 1981,
+"year_of_contract": 2,
+"complete":            0.4,
+"real_war_per_m":          1.863,
+"war_6M_value":             21,
+"label": "Reggie Jackson-Yankees",
+"over_under_payment":         19.121,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Reggie Jackson-Yankees</th></tr><tr><td><img src='http://3.bp.blogspot.com/-2yC1QvTcoS8/UdDsQZfg-5I/AAAAAAAAN-E/wqhA_7CwpFU/s354/rj.png' height='125' width='100'></td><td align='left'>Season: 1978<br>Year of Contract: 2<br>WAR: 3.5<br>Salary (m): $0.525<br>2013 Salary (m): $1.879<br>Value at $6M WAR: $21<br>Over/Underpayment (m): $19.121</td></tr></table>",
+"date":           3240,
+"pos_date":   279936000000 
+},
+{
+ "player": "Reggie Jackson",
+"team": "Yankees",
+"season": 1979,
+"games": 131,
+"salary_m":          0.525,
+"salary_2013_m":          1.689,
+"war":            3.5,
+"source": "free agency",
+"term": 5,
+"start": 1977,
+"end": 1981,
+"year_of_contract": 3,
+"complete":            0.6,
+"real_war_per_m":          2.072,
+"war_6M_value":             21,
+"label": "Reggie Jackson-Yankees",
+"over_under_payment":         19.311,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Reggie Jackson-Yankees</th></tr><tr><td><img src='http://3.bp.blogspot.com/-2yC1QvTcoS8/UdDsQZfg-5I/AAAAAAAAN-E/wqhA_7CwpFU/s354/rj.png' height='125' width='100'></td><td align='left'>Season: 1979<br>Year of Contract: 3<br>WAR: 3.5<br>Salary (m): $0.525<br>2013 Salary (m): $1.689<br>Value at $6M WAR: $21<br>Over/Underpayment (m): $19.311</td></tr></table>",
+"date":           3605,
+"pos_date":   311472000000 
+},
+{
+ "player": "Reggie Jackson",
+"team": "Yankees",
+"season": 1980,
+"games": 143,
+"salary_m":          0.525,
+"salary_2013_m":          1.487,
+"war":            4.8,
+"source": "free agency",
+"term": 5,
+"start": 1977,
+"end": 1981,
+"year_of_contract": 4,
+"complete":            0.8,
+"real_war_per_m":          3.228,
+"war_6M_value":           28.8,
+"label": "Reggie Jackson-Yankees",
+"over_under_payment":         27.313,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Reggie Jackson-Yankees</th></tr><tr><td><img src='http://3.bp.blogspot.com/-2yC1QvTcoS8/UdDsQZfg-5I/AAAAAAAAN-E/wqhA_7CwpFU/s354/rj.png' height='125' width='100'></td><td align='left'>Season: 1980<br>Year of Contract: 4<br>WAR: 4.8<br>Salary (m): $0.525<br>2013 Salary (m): $1.487<br>Value at $6M WAR: $28.8<br>Over/Underpayment (m): $27.313</td></tr></table>",
+"date":           3971,
+"pos_date":   343094400000 
+},
+{
+ "player": "Reggie Jackson",
+"team": "Yankees",
+"season": 1981,
+"games": 94,
+"salary_m":          0.588,
+"salary_2013_m":           1.51,
+"war":              1,
+"source": "free agency",
+"term": 5,
+"start": 1977,
+"end": 1981,
+"year_of_contract": 5,
+"complete":              1,
+"real_war_per_m":          0.662,
+"war_6M_value":              6,
+"label": "Reggie Jackson-Yankees",
+"over_under_payment":           4.49,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Reggie Jackson-Yankees</th></tr><tr><td><img src='http://3.bp.blogspot.com/-2yC1QvTcoS8/UdDsQZfg-5I/AAAAAAAAN-E/wqhA_7CwpFU/s354/rj.png' height='125' width='100'></td><td align='left'>Season: 1981<br>Year of Contract: 5<br>WAR: 1<br>Salary (m): $0.588<br>2013 Salary (m): $1.51<br>Value at $6M WAR: $6<br>Over/Underpayment (m): $4.49</td></tr></table>",
+"date":           4336,
+"pos_date":   374630400000 
+},
+{
+ "player": "Reggie Jackson",
+"team": "Angels",
+"season": 1982,
+"games": 153,
+"salary_m":          1.103,
+"salary_2013_m":          2.668,
+"war":            3.1,
+"source": "free agency",
+"term": 4,
+"start": 1982,
+"end": 1985,
+"year_of_contract": 1,
+"complete":           0.25,
+"real_war_per_m":          1.162,
+"war_6M_value":           18.6,
+"label": "Reggie Jackson-Angels",
+"over_under_payment":         15.932,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Reggie Jackson-Angels</th></tr><tr><td><img src='http://cdn.bleacherreport.net/images_root/slides/photos/001/302/201/52446705_display_image.jpg?1316006255' height='125' width='100'></td><td align='left'>Season: 1982<br>Year of Contract: 1<br>WAR: 3.1<br>Salary (m): $1.103<br>2013 Salary (m): $2.668<br>Value at $6M WAR: $18.6<br>Over/Underpayment (m): $15.932</td></tr></table>",
+"date":           4701,
+"pos_date":   406166400000 
+},
+{
+ "player": "Reggie Jackson",
+"team": "Angels",
+"season": 1983,
+"games": 116,
+"salary_m":          0.975,
+"salary_2013_m":          2.285,
+"war":           -1.8,
+"source": "free agency",
+"term": 4,
+"start": 1982,
+"end": 1985,
+"year_of_contract": 2,
+"complete":            0.5,
+"real_war_per_m":         -0.788,
+"war_6M_value":          -10.8,
+"label": "Reggie Jackson-Angels",
+"over_under_payment":        -13.085,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Reggie Jackson-Angels</th></tr><tr><td><img src='http://cdn.bleacherreport.net/images_root/slides/photos/001/302/201/52446705_display_image.jpg?1316006255' height='125' width='100'></td><td align='left'>Season: 1983<br>Year of Contract: 2<br>WAR: -1.8<br>Salary (m): $0.975<br>2013 Salary (m): $2.285<br>Value at $6M WAR: $-10.8<br>Over/Underpayment (m): $-13.085</td></tr></table>",
+"date":           5066,
+"pos_date":   437702400000 
+},
+{
+ "player": "Reggie Jackson",
+"team": "Angels",
+"season": 1984,
+"games": 143,
+"salary_m":          0.975,
+"salary_2013_m":          2.191,
+"war":           -0.2,
+"source": "free agency",
+"term": 4,
+"start": 1982,
+"end": 1985,
+"year_of_contract": 3,
+"complete":           0.75,
+"real_war_per_m":         -0.091,
+"war_6M_value":           -1.2,
+"label": "Reggie Jackson-Angels",
+"over_under_payment":         -3.391,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Reggie Jackson-Angels</th></tr><tr><td><img src='http://cdn.bleacherreport.net/images_root/slides/photos/001/302/201/52446705_display_image.jpg?1316006255' height='125' width='100'></td><td align='left'>Season: 1984<br>Year of Contract: 3<br>WAR: -0.2<br>Salary (m): $0.975<br>2013 Salary (m): $2.191<br>Value at $6M WAR: $-1.2<br>Over/Underpayment (m): $-3.391</td></tr></table>",
+"date":           5432,
+"pos_date":   469324800000 
+},
+{
+ "player": "Reggie Jackson",
+"team": "Angels",
+"season": 1985,
+"games": 143,
+"salary_m":          1.059,
+"salary_2013_m":          2.298,
+"war":              1,
+"source": "free agency",
+"term": 4,
+"start": 1982,
+"end": 1985,
+"year_of_contract": 4,
+"complete":              1,
+"real_war_per_m":          0.435,
+"war_6M_value":              6,
+"label": "Reggie Jackson-Angels",
+"over_under_payment":          3.702,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Reggie Jackson-Angels</th></tr><tr><td><img src='http://cdn.bleacherreport.net/images_root/slides/photos/001/302/201/52446705_display_image.jpg?1316006255' height='125' width='100'></td><td align='left'>Season: 1985<br>Year of Contract: 4<br>WAR: 1<br>Salary (m): $1.059<br>2013 Salary (m): $2.298<br>Value at $6M WAR: $6<br>Over/Underpayment (m): $3.702</td></tr></table>",
+"date":           5797,
+"pos_date":   500860800000 
+},
+{
+ "player": "Albert Belle",
+"team": "Orioles",
+"season": 1999,
+"games": 161,
+"salary_m":          11.95,
+"salary_2013_m":         16.745,
+"war":            3.4,
+"source": "free agency",
+"term": 5,
+"start": 1999,
+"end": 2003,
+"year_of_contract": 1,
+"complete":            0.2,
+"real_war_per_m":          0.203,
+"war_6M_value":           20.4,
+"label": "Albert Belle-Orioles",
+"over_under_payment":          3.655,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Albert Belle-Orioles</th></tr><tr><td><img src='http://assets.sbnation.com/imported_assets/1540/p1_belle_pensinger2.jpg' height='125' width='100'></td><td align='left'>Season: 1999<br>Year of Contract: 1<br>WAR: 3.4<br>Salary (m): $11.95<br>2013 Salary (m): $16.745<br>Value at $6M WAR: $20.4<br>Over/Underpayment (m): $3.655</td></tr></table>",
+"date":          10910,
+"pos_date":   942624000000 
+},
+{
+ "player": "Albert Belle",
+"team": "Orioles",
+"season": 2000,
+"games": 141,
+"salary_m":         12.869,
+"salary_2013_m":         17.444,
+"war":            0.6,
+"source": "free agency",
+"term": 5,
+"start": 1999,
+"end": 2003,
+"year_of_contract": 2,
+"complete":            0.4,
+"real_war_per_m":          0.034,
+"war_6M_value":            3.6,
+"label": "Albert Belle-Orioles",
+"over_under_payment":        -13.844,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Albert Belle-Orioles</th></tr><tr><td><img src='http://assets.sbnation.com/imported_assets/1540/p1_belle_pensinger2.jpg' height='125' width='100'></td><td align='left'>Season: 2000<br>Year of Contract: 2<br>WAR: 0.6<br>Salary (m): $12.869<br>2013 Salary (m): $17.444<br>Value at $6M WAR: $3.6<br>Over/Underpayment (m): $-13.844</td></tr></table>",
+"date":          11276,
+"pos_date":   974246400000 
+},
+{
+ "player": "Carlos Beltran",
+"team": "Mets",
+"season": 2005,
+"games": 151,
+"salary_m":         11.571,
+"salary_2013_m":         13.831,
+"war":            2.9,
+"source": "free agency",
+"term": 7,
+"start": 2005,
+"end": 2011,
+"year_of_contract": 1,
+"complete":           0.14,
+"real_war_per_m":           0.21,
+"war_6M_value":           17.4,
+"label": "Carlos Beltran-Mets",
+"over_under_payment":          3.569,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Carlos Beltran-Mets</th></tr><tr><td><img src='http://www4.pictures.zimbio.com/gi/Carlos+Beltran+New+York+Mets+Photo+Day+tV5v0vaHXfdl.jpg' height='125' width='100'></td><td align='left'>Season: 2005<br>Year of Contract: 1<br>WAR: 2.9<br>Salary (m): $11.571<br>2013 Salary (m): $13.831<br>Value at $6M WAR: $17.4<br>Over/Underpayment (m): $3.569</td></tr></table>",
+"date":          13102,
+"pos_date":  1132012800000 
+},
+{
+ "player": "Carlos Beltran",
+"team": "Mets",
+"season": 2006,
+"games": 140,
+"salary_m":         13.571,
+"salary_2013_m":         15.715,
+"war":            8.2,
+"source": "free agency",
+"term": 7,
+"start": 2005,
+"end": 2011,
+"year_of_contract": 2,
+"complete":           0.29,
+"real_war_per_m":          0.522,
+"war_6M_value":           49.2,
+"label": "Carlos Beltran-Mets",
+"over_under_payment":         33.485,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Carlos Beltran-Mets</th></tr><tr><td><img src='http://www4.pictures.zimbio.com/gi/Carlos+Beltran+New+York+Mets+Photo+Day+tV5v0vaHXfdl.jpg' height='125' width='100'></td><td align='left'>Season: 2006<br>Year of Contract: 2<br>WAR: 8.2<br>Salary (m): $13.571<br>2013 Salary (m): $15.715<br>Value at $6M WAR: $49.2<br>Over/Underpayment (m): $33.485</td></tr></table>",
+"date":          13467,
+"pos_date":  1163548800000 
+},
+{
+ "player": "Grady Sizemore",
+"team": "Indians",
+"season": 2006,
+"games": 162,
+"salary_m":            0.5,
+"salary_2013_m":          0.579,
+"war":            6.6,
+"source": "re-signinging",
+"term": 6,
+"start": 2006,
+"end": 2011,
+"year_of_contract": 1,
+"complete":           0.17,
+"real_war_per_m":         11.399,
+"war_6M_value":           39.6,
+"label": "Grady Sizemore-Indians",
+"over_under_payment":         39.021,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Grady Sizemore-Indians</th></tr><tr><td><img src='http://www.clevescene.com/binary/8085/1297283990-grady-sizemore.jpg' height='125' width='100'></td><td align='left'>Season: 2006<br>Year of Contract: 1<br>WAR: 6.6<br>Salary (m): $0.5<br>2013 Salary (m): $0.579<br>Value at $6M WAR: $39.6<br>Over/Underpayment (m): $39.021</td></tr></table>",
+"date":          13467,
+"pos_date":  1163548800000 
+},
+{
+ "player": "Carlos Beltran",
+"team": "Mets",
+"season": 2007,
+"games": 144,
+"salary_m":         13.571,
+"salary_2013_m":         15.279,
+"war":            5.4,
+"source": "free agency",
+"term": 7,
+"start": 2005,
+"end": 2011,
+"year_of_contract": 3,
+"complete":           0.43,
+"real_war_per_m":          0.353,
+"war_6M_value":           32.4,
+"label": "Carlos Beltran-Mets",
+"over_under_payment":         17.121,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Carlos Beltran-Mets</th></tr><tr><td><img src='http://www4.pictures.zimbio.com/gi/Carlos+Beltran+New+York+Mets+Photo+Day+tV5v0vaHXfdl.jpg' height='125' width='100'></td><td align='left'>Season: 2007<br>Year of Contract: 3<br>WAR: 5.4<br>Salary (m): $13.571<br>2013 Salary (m): $15.279<br>Value at $6M WAR: $32.4<br>Over/Underpayment (m): $17.121</td></tr></table>",
+"date":          13832,
+"pos_date":  1195084800000 
+},
+{
+ "player": "Grady Sizemore",
+"team": "Indians",
+"season": 2007,
+"games": 162,
+"salary_m":          0.917,
+"salary_2013_m":          1.032,
+"war":            5.5,
+"source": "re-signinging",
+"term": 6,
+"start": 2006,
+"end": 2011,
+"year_of_contract": 2,
+"complete":           0.33,
+"real_war_per_m":          5.329,
+"war_6M_value":             33,
+"label": "Grady Sizemore-Indians",
+"over_under_payment":         31.968,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Grady Sizemore-Indians</th></tr><tr><td><img src='http://www.clevescene.com/binary/8085/1297283990-grady-sizemore.jpg' height='125' width='100'></td><td align='left'>Season: 2007<br>Year of Contract: 2<br>WAR: 5.5<br>Salary (m): $0.917<br>2013 Salary (m): $1.032<br>Value at $6M WAR: $33<br>Over/Underpayment (m): $31.968</td></tr></table>",
+"date":          13832,
+"pos_date":  1195084800000 
+},
+{
+ "player": "Alex Rodriguez",
+"team": "Yankees",
+"season": 2008,
+"games": 138,
+"salary_m":             28,
+"salary_2013_m":         30.359,
+"war":            6.8,
+"source": "re-signinging",
+"term": 10,
+"start": 2008,
+"end": 2015,
+"year_of_contract": 1,
+"complete":            0.1,
+"real_war_per_m":          0.224,
+"war_6M_value":           40.8,
+"label": "Alex Rodriguez-Yankees",
+"over_under_payment":         10.441,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Alex Rodriguez-Yankees</th></tr><tr><td><img src='http://www.gannett-cdn.com/-mm-/f40f3606fa7f520417c0c9e02d7aa7a371d004ba/r=x513&c=680x510/local/-/media/USATODAY/USATODAY/2012/10/18/10-17-2012-alex-rodriguez-4_3.jpg' height='125' width='100'></td><td align='left'>Season: 2008<br>Year of Contract: 1<br>WAR: 6.8<br>Salary (m): $28<br>2013 Salary (m): $30.359<br>Value at $6M WAR: $40.8<br>Over/Underpayment (m): $10.441</td></tr></table>",
+"date":          14198,
+"pos_date":  1226707200000 
+},
+{
+ "player": "Carlos Beltran",
+"team": "Mets",
+"season": 2008,
+"games": 161,
+"salary_m":         18.623,
+"salary_2013_m":         20.192,
+"war":            6.9,
+"source": "free agency",
+"term": 7,
+"start": 2005,
+"end": 2011,
+"year_of_contract": 4,
+"complete":           0.57,
+"real_war_per_m":          0.342,
+"war_6M_value":           41.4,
+"label": "Carlos Beltran-Mets",
+"over_under_payment":         21.208,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Carlos Beltran-Mets</th></tr><tr><td><img src='http://www4.pictures.zimbio.com/gi/Carlos+Beltran+New+York+Mets+Photo+Day+tV5v0vaHXfdl.jpg' height='125' width='100'></td><td align='left'>Season: 2008<br>Year of Contract: 4<br>WAR: 6.9<br>Salary (m): $18.623<br>2013 Salary (m): $20.192<br>Value at $6M WAR: $41.4<br>Over/Underpayment (m): $21.208</td></tr></table>",
+"date":          14198,
+"pos_date":  1226707200000 
+},
+{
+ "player": "Grady Sizemore",
+"team": "Indians",
+"season": 2008,
+"games": 157,
+"salary_m":          3.167,
+"salary_2013_m":          3.433,
+"war":            5.9,
+"source": "re-signinging",
+"term": 6,
+"start": 2006,
+"end": 2011,
+"year_of_contract": 3,
+"complete":            0.5,
+"real_war_per_m":          1.719,
+"war_6M_value":           35.4,
+"label": "Grady Sizemore-Indians",
+"over_under_payment":         31.967,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Grady Sizemore-Indians</th></tr><tr><td><img src='http://www.clevescene.com/binary/8085/1297283990-grady-sizemore.jpg' height='125' width='100'></td><td align='left'>Season: 2008<br>Year of Contract: 3<br>WAR: 5.9<br>Salary (m): $3.167<br>2013 Salary (m): $3.433<br>Value at $6M WAR: $35.4<br>Over/Underpayment (m): $31.967</td></tr></table>",
+"date":          14198,
+"pos_date":  1226707200000 
+},
+{
+ "player": "Alex Rodriguez",
+"team": "Yankees",
+"season": 2009,
+"games": 124,
+"salary_m":             33,
+"salary_2013_m":         35.907,
+"war":            4.2,
+"source": "re-signinging",
+"term": 10,
+"start": 2008,
+"end": 2015,
+"year_of_contract": 2,
+"complete":            0.2,
+"real_war_per_m":          0.117,
+"war_6M_value":           25.2,
+"label": "Alex Rodriguez-Yankees",
+"over_under_payment":        -10.707,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Alex Rodriguez-Yankees</th></tr><tr><td><img src='http://www.gannett-cdn.com/-mm-/f40f3606fa7f520417c0c9e02d7aa7a371d004ba/r=x513&c=680x510/local/-/media/USATODAY/USATODAY/2012/10/18/10-17-2012-alex-rodriguez-4_3.jpg' height='125' width='100'></td><td align='left'>Season: 2009<br>Year of Contract: 2<br>WAR: 4.2<br>Salary (m): $33<br>2013 Salary (m): $35.907<br>Value at $6M WAR: $25.2<br>Over/Underpayment (m): $-10.707</td></tr></table>",
+"date":          14563,
+"pos_date":  1258243200000 
+},
+{
+ "player": "Carlos Beltran",
+"team": "Mets",
+"season": 2009,
+"games": 81,
+"salary_m":         19.244,
+"salary_2013_m":         20.939,
+"war":            3.6,
+"source": "free agency",
+"term": 7,
+"start": 2005,
+"end": 2011,
+"year_of_contract": 5,
+"complete":           0.71,
+"real_war_per_m":          0.172,
+"war_6M_value":           21.6,
+"label": "Carlos Beltran-Mets",
+"over_under_payment":          0.661,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Carlos Beltran-Mets</th></tr><tr><td><img src='http://www4.pictures.zimbio.com/gi/Carlos+Beltran+New+York+Mets+Photo+Day+tV5v0vaHXfdl.jpg' height='125' width='100'></td><td align='left'>Season: 2009<br>Year of Contract: 5<br>WAR: 3.6<br>Salary (m): $19.244<br>2013 Salary (m): $20.939<br>Value at $6M WAR: $21.6<br>Over/Underpayment (m): $0.661000000000001</td></tr></table>",
+"date":          14563,
+"pos_date":  1258243200000 
+},
+{
+ "player": "Grady Sizemore",
+"team": "Indians",
+"season": 2009,
+"games": 106,
+"salary_m":          4.767,
+"salary_2013_m":          5.187,
+"war":            2.2,
+"source": "re-signinging",
+"term": 6,
+"start": 2006,
+"end": 2011,
+"year_of_contract": 4,
+"complete":           0.67,
+"real_war_per_m":          0.424,
+"war_6M_value":           13.2,
+"label": "Grady Sizemore-Indians",
+"over_under_payment":          8.013,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Grady Sizemore-Indians</th></tr><tr><td><img src='http://www.clevescene.com/binary/8085/1297283990-grady-sizemore.jpg' height='125' width='100'></td><td align='left'>Season: 2009<br>Year of Contract: 4<br>WAR: 2.2<br>Salary (m): $4.767<br>2013 Salary (m): $5.187<br>Value at $6M WAR: $13.2<br>Over/Underpayment (m): $8.013</td></tr></table>",
+"date":          14563,
+"pos_date":  1258243200000 
+},
+{
+ "player": "Alex Rodriguez",
+"team": "Yankees",
+"season": 2010,
+"games": 137,
+"salary_m":             33,
+"salary_2013_m":         35.327,
+"war":            4.2,
+"source": "re-signinging",
+"term": 10,
+"start": 2008,
+"end": 2015,
+"year_of_contract": 3,
+"complete":            0.3,
+"real_war_per_m":          0.119,
+"war_6M_value":           25.2,
+"label": "Alex Rodriguez-Yankees",
+"over_under_payment":        -10.127,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Alex Rodriguez-Yankees</th></tr><tr><td><img src='http://www.gannett-cdn.com/-mm-/f40f3606fa7f520417c0c9e02d7aa7a371d004ba/r=x513&c=680x510/local/-/media/USATODAY/USATODAY/2012/10/18/10-17-2012-alex-rodriguez-4_3.jpg' height='125' width='100'></td><td align='left'>Season: 2010<br>Year of Contract: 3<br>WAR: 4.2<br>Salary (m): $33<br>2013 Salary (m): $35.327<br>Value at $6M WAR: $25.2<br>Over/Underpayment (m): $-10.127</td></tr></table>",
+"date":          14928,
+"pos_date":  1289779200000 
+},
+{
+ "player": "Carlos Beltran",
+"team": "Mets",
+"season": 2010,
+"games": 64,
+"salary_m":         19.402,
+"salary_2013_m":         20.769,
+"war":            0.7,
+"source": "free agency",
+"term": 7,
+"start": 2005,
+"end": 2011,
+"year_of_contract": 6,
+"complete":           0.86,
+"real_war_per_m":          0.034,
+"war_6M_value":            4.2,
+"label": "Carlos Beltran-Mets",
+"over_under_payment":        -16.569,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Carlos Beltran-Mets</th></tr><tr><td><img src='http://www4.pictures.zimbio.com/gi/Carlos+Beltran+New+York+Mets+Photo+Day+tV5v0vaHXfdl.jpg' height='125' width='100'></td><td align='left'>Season: 2010<br>Year of Contract: 6<br>WAR: 0.7<br>Salary (m): $19.402<br>2013 Salary (m): $20.769<br>Value at $6M WAR: $4.2<br>Over/Underpayment (m): $-16.569</td></tr></table>",
+"date":          14928,
+"pos_date":  1289779200000 
+},
+{
+ "player": "Grady Sizemore",
+"team": "Indians",
+"season": 2010,
+"games": 33,
+"salary_m":          5.767,
+"salary_2013_m":          6.173,
+"war":           -0.4,
+"source": "re-signinging",
+"term": 6,
+"start": 2006,
+"end": 2011,
+"year_of_contract": 5,
+"complete":           0.83,
+"real_war_per_m":         -0.065,
+"war_6M_value":           -2.4,
+"label": "Grady Sizemore-Indians",
+"over_under_payment":         -8.573,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Grady Sizemore-Indians</th></tr><tr><td><img src='http://www.clevescene.com/binary/8085/1297283990-grady-sizemore.jpg' height='125' width='100'></td><td align='left'>Season: 2010<br>Year of Contract: 5<br>WAR: -0.4<br>Salary (m): $5.767<br>2013 Salary (m): $6.173<br>Value at $6M WAR: $-2.4<br>Over/Underpayment (m): $-8.573</td></tr></table>",
+"date":          14928,
+"pos_date":  1289779200000 
+},
+{
+ "player": "Alex Rodriguez",
+"team": "Yankees",
+"season": 2011,
+"games": 99,
+"salary_m":             32,
+"salary_2013_m":         33.207,
+"war":            3.8,
+"source": "re-signinging",
+"term": 10,
+"start": 2008,
+"end": 2015,
+"year_of_contract": 4,
+"complete":            0.4,
+"real_war_per_m":          0.114,
+"war_6M_value":           22.8,
+"label": "Alex Rodriguez-Yankees",
+"over_under_payment":        -10.407,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Alex Rodriguez-Yankees</th></tr><tr><td><img src='http://www.gannett-cdn.com/-mm-/f40f3606fa7f520417c0c9e02d7aa7a371d004ba/r=x513&c=680x510/local/-/media/USATODAY/USATODAY/2012/10/18/10-17-2012-alex-rodriguez-4_3.jpg' height='125' width='100'></td><td align='left'>Season: 2011<br>Year of Contract: 4<br>WAR: 3.8<br>Salary (m): $32<br>2013 Salary (m): $33.207<br>Value at $6M WAR: $22.8<br>Over/Underpayment (m): $-10.407</td></tr></table>",
+"date":          15293,
+"pos_date":  1321315200000 
+},
+{
+ "player": "Carlos Beltran",
+"team": "Mets",
+"season": 2011,
+"games": 142,
+"salary_m":         19.325,
+"salary_2013_m":         20.054,
+"war":          2.725,
+"source": "free agency",
+"term": 7,
+"start": 2005,
+"end": 2011,
+"year_of_contract": 7,
+"complete":              1,
+"real_war_per_m":          0.136,
+"war_6M_value":          16.35,
+"label": "Carlos Beltran-Mets",
+"over_under_payment":         -3.704,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Carlos Beltran-Mets</th></tr><tr><td><img src='http://www4.pictures.zimbio.com/gi/Carlos+Beltran+New+York+Mets+Photo+Day+tV5v0vaHXfdl.jpg' height='125' width='100'></td><td align='left'>Season: 2011<br>Year of Contract: 7<br>WAR: 2.725<br>Salary (m): $19.325<br>2013 Salary (m): $20.054<br>Value at $6M WAR: $16.35<br>Over/Underpayment (m): $-3.704</td></tr></table>",
+"date":          15293,
+"pos_date":  1321315200000 
+},
+{
+ "player": "Carlos Beltran",
+"team": "Mets",
+"season": 2011,
+"games": 142,
+"salary_m":         19.325,
+"salary_2013_m":         20.054,
+"war":          2.725,
+"source": "free agency",
+"term": 7,
+"start": 2005,
+"end": 2011,
+"year_of_contract": 7,
+"complete":              1,
+"real_war_per_m":          0.136,
+"war_6M_value":          16.35,
+"label": "Carlos Beltran-Mets",
+"over_under_payment":         -3.704,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Carlos Beltran-Mets</th></tr><tr><td><img src='http://www4.pictures.zimbio.com/gi/Carlos+Beltran+New+York+Mets+Photo+Day+tV5v0vaHXfdl.jpg' height='125' width='100'></td><td align='left'>Season: 2011<br>Year of Contract: 7<br>WAR: 2.725<br>Salary (m): $19.325<br>2013 Salary (m): $20.054<br>Value at $6M WAR: $16.35<br>Over/Underpayment (m): $-3.704</td></tr></table>",
+"date":          15293,
+"pos_date":  1321315200000 
+},
+{
+ "player": "Grady Sizemore",
+"team": "Indians",
+"season": 2011,
+"games": 71,
+"salary_m":          7.667,
+"salary_2013_m":          7.956,
+"war":              0,
+"source": "re-signinging",
+"term": 6,
+"start": 2006,
+"end": 2011,
+"year_of_contract": 6,
+"complete":              1,
+"real_war_per_m":              0,
+"war_6M_value":              0,
+"label": "Grady Sizemore-Indians",
+"over_under_payment":         -7.956,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Grady Sizemore-Indians</th></tr><tr><td><img src='http://www.clevescene.com/binary/8085/1297283990-grady-sizemore.jpg' height='125' width='100'></td><td align='left'>Season: 2011<br>Year of Contract: 6<br>WAR: 0<br>Salary (m): $7.667<br>2013 Salary (m): $7.956<br>Value at $6M WAR: $0<br>Over/Underpayment (m): $-7.956</td></tr></table>",
+"date":          15293,
+"pos_date":  1321315200000 
+},
+{
+ "player": "Alex Rodriguez",
+"team": "Yankees",
+"season": 2012,
+"games": 122,
+"salary_m":             29,
+"salary_2013_m":         29.488,
+"war":            2.3,
+"source": "re-signinging",
+"term": 10,
+"start": 2008,
+"end": 2015,
+"year_of_contract": 5,
+"complete":            0.5,
+"real_war_per_m":          0.078,
+"war_6M_value":           13.8,
+"label": "Alex Rodriguez-Yankees",
+"over_under_payment":        -15.688,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Alex Rodriguez-Yankees</th></tr><tr><td><img src='http://www.gannett-cdn.com/-mm-/f40f3606fa7f520417c0c9e02d7aa7a371d004ba/r=x513&c=680x510/local/-/media/USATODAY/USATODAY/2012/10/18/10-17-2012-alex-rodriguez-4_3.jpg' height='125' width='100'></td><td align='left'>Season: 2012<br>Year of Contract: 5<br>WAR: 2.3<br>Salary (m): $29<br>2013 Salary (m): $29.488<br>Value at $6M WAR: $13.8<br>Over/Underpayment (m): $-15.688</td></tr></table>",
+"date":          15659,
+"pos_date":  1352937600000 
+},
+{
+ "player": "Alex Rodriguez",
+"team": "Yankees",
+"season": 2013,
+"games": 44,
+"salary_m":             28,
+"salary_2013_m":             28,
+"war":            0.3,
+"source": "re-signinging",
+"term": 10,
+"start": 2008,
+"end": 2015,
+"year_of_contract": 6,
+"complete":            0.6,
+"real_war_per_m":          0.011,
+"war_6M_value":            1.8,
+"label": "Alex Rodriguez-Yankees",
+"over_under_payment":          -26.2,
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Alex Rodriguez-Yankees</th></tr><tr><td><img src='http://www.gannett-cdn.com/-mm-/f40f3606fa7f520417c0c9e02d7aa7a371d004ba/r=x513&c=680x510/local/-/media/USATODAY/USATODAY/2012/10/18/10-17-2012-alex-rodriguez-4_3.jpg' height='125' width='100'></td><td align='left'>Season: 2013<br>Year of Contract: 6<br>WAR: 0.3<br>Salary (m): $28<br>2013 Salary (m): $28<br>Value at $6M WAR: $1.8<br>Over/Underpayment (m): $-26.2</td></tr></table>",
+"date":          16024,
+"pos_date":  1384473600000 
+} 
+]
+  $scope.controls = {
+ "y": {
+ "name": "y",
+"value": "war",
+"values": [ "war", "war_6M_value", "over_under_payment", "games", "salary_m", "salary_2013_m", "real_war_per_m" ],
+"label": "Select  y :" 
+} 
+}           
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+  }, true)
+}  
+ 
+function drawChart(opts, data){  
+  var data = d3.nest()
+    .key(function(d){
+      return opts.group === undefined ? 'main' : d[opts.group]
+    })
+    .entries(data)
+  
+  nv.addGraph(function() {
+    var chart = nv.models[opts.type]()
+      .x(function(d) { return d[opts.x] })
+      .y(function(d) { return d[opts.y] })
+      .width(opts.width)
+      .height(opts.height)
+    
+  chart
+  .showControls(false)
+  .tooltip( function(key, x, y, e, graph) {
+return '<p>' + e.point.detail + '</p>' +
+'<p>' + ''  + '</p>'
+})
+  .color([ "#1C2841", "#B71234", "#000000", "#FB4F14", "#003366", "#808080" ])
+          
+  
+ 
+  
+  
+  chart.yAxis
+  .tickFormat(function(d) {return d3.format('.02f')(d)})
+ 
+  d3.select("#" + opts.id + ' svg')
+    .datum(data)
+    .transition().duration(500)
+    .call(chart);
+  
+   nv.utils.windowResize(chart.update);
+   return chart;
+  });
+};
+</script>
+     <script>
+  var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  </body>
+  <!-- Google Prettify -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script 
+    src='https://google-code-prettify.googlecode.com/svn-history/r232/trunk/src/lang-r.js'>
+  </script>
+  <script>
+    var pres = document.getElementsByTagName("pre");
+    for (var i=0; i < pres.length; ++i) {
+      pres[i].className = "prettyprint linenums";
+    }
+    prettyPrint();
+  </script>
+</html>

@@ -1,0 +1,82 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://marketplace.aragorntech.com/css/app.css"/>
+  <link rel="stylesheet" href="http://marketplace.aragorntech.com/css/elusive-webfont.css" />
+  <script src="http://marketplace.aragorntech.com/js/vendor/packery.pkgd.js"></script>
+</head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+      <script type="text/ng-template" id="template/modal/backdrop.html">
+    <div class="modal-backdrop fade {{ backdropClass }}"
+         ng-class="{in: animate}"
+         ng-style="{'z-index': 1040 + (index && 1 || 0) + index*10}"
+    ></div>
+  </script>
+    <meta name="description" content="Exploring NFL Franchise Sales Since 1922 in ggvis" />
+<link rel="canonical" href="http://aragorn.org/visualization/nfl/franchise_sales" />
+<meta property="og:description" content="Exploring NFL Franchise Sales Since 1922 in ggvis" />
+<meta property="og:image" content="http://aragorn.org/visualization/nfl/franchise_sales/screen.png" />
+<meta property="og:site_name" content="Aragorn" />
+<meta property="og:title" content="http://aragorn.org/visualization/nfl/franchise_sales" />
+<meta property="og:type" content="article" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="http://aragorn.org/visualization/nfl/franchise_sales" />
+        <meta name="twitter:title" content="Exploring NFL Franchise Sales Since 1922 in ggvis" />
+        <meta name="twitter:description" content="Exploring NFL Franchise Sales Since 1922 in ggvis" />
+        <meta name="twitter:image" content="http://aragorn.org/visualization/nfl/franchise_sales/screen.png" />
+        <meta name="twitter:site" content="Aragorn" />
+    <center>
+<h4><p class="sansserif">Exploring Historic <img src="http://img3.wikia.nocookie.net/__cb20140711021414/looneytunes/images/4/49/NFL-logo.png" height="50" width="50"> Franchise Sales For Active Teams Since 1922 by <a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></p></h4>
+<h6>Click on Point for Tooltip -- Highlight Over Area for Summary Data</h6></center>
+  </head>
+
+<div id='payload'>
+<iframe width = 100% height = 520 frameborder="0"
+src="https://abresler.shinyapps.io/franchise_values_nfl/nfl_transactions.Rmd">
+Your browser does not support iframe
+</iframe>
+</div>
+     <script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+  </body>
+<center><h6>Data Source: Multiple Historic NFL Data Sources</h6></center>
+</html>

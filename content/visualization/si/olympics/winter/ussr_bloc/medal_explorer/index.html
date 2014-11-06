@@ -1,0 +1,626 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<title>Soviet Bloc Country Medal Performance</title>
+<html>
+  <head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://aragorn.org/scripts/nv.d3.css'>
+    <link rel='stylesheet' href='http://aragorn.org/scripts/rNVD3.css'>
+    
+    <script src='http://aragorn.org/scripts/jquery-1.8.2.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://aragorn.org/scripts/nv.d3.min-new.js' type='text/javascript'></script>
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 700px;
+      height: 550px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+          <!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+<style type="text/css" media="all">@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/global.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_base/styles/ui.css?nawt0v");
+@import url("http://www.si.com/sites/all/themes/custom/si_desktop/styles/bookmark-overlay.css?nawt0v");</style>     
+  </head>
+<center>
+       <center>
+       <div class='orange' style="padding-top:10px;padding-bottom:5px; text-align:middle; font-size:24px; width: 850px; display:table-cell;height:40px;vertical-align:middle;letter-spacing: 0.25px"><strong>Winter Olympic Medal Performance of Soviet Bloc Nations</strong><br></div>
+     </div></center></center>
+  <center>
+  
+  <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='col-md-3'>
+      <form class='well'>
+        <label><b>Select  yVariable:</b></label>
+    		<select class='form-control' ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+    		</select>
+              </form>
+    </div>
+    <div class='col-md-8'>
+      <div class="bs-docs-example">
+        <div id='chart9bfe65cb86a2' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart9bfe65cb86a2",
+"width":    700,
+"height":    550,
+"x": "year",
+"y": "total_medals",
+"group": "country",
+"type": "scatterChart",
+"id": "chart9bfe65cb86a2" 
+}
+  $scope.data = [
+ {
+ "country": "USSR",
+"year_code":           1956,
+"athletes":             30,
+"total_medals":             21,
+"gold_medals":             10,
+"silver_medals":              5,
+"bronze_medals":              6,
+"rgb_color": "rgb(193,0,0)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>USSR</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png' height='150' width='120'></td><td align='left'>Year: 1956<br>Total Medals: 21<br>Gold Medals: 10<br>Silver Medals: 5<br>Bronze Medals: 6<br>Athletes: 30</td></tr></table>",
+"year": "1956",
+"bin": "3" 
+},
+{
+ "country": "USSR",
+"year_code":           1960,
+"athletes":             35,
+"total_medals":             26,
+"gold_medals":              7,
+"silver_medals":              7,
+"bronze_medals":             12,
+"rgb_color": "rgb(193,0,0)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>USSR</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png' height='150' width='120'></td><td align='left'>Year: 1960<br>Total Medals: 26<br>Gold Medals: 7<br>Silver Medals: 7<br>Bronze Medals: 12<br>Athletes: 35</td></tr></table>",
+"year": "1960",
+"bin": "3" 
+},
+{
+ "country": "USSR",
+"year_code":           1964,
+"athletes":             38,
+"total_medals":             31,
+"gold_medals":             14,
+"silver_medals":              8,
+"bronze_medals":              9,
+"rgb_color": "rgb(193,0,0)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>USSR</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png' height='150' width='120'></td><td align='left'>Year: 1964<br>Total Medals: 31<br>Gold Medals: 14<br>Silver Medals: 8<br>Bronze Medals: 9<br>Athletes: 38</td></tr></table>",
+"year": "1964",
+"bin": "4" 
+},
+{
+ "country": "USSR",
+"year_code":           1968,
+"athletes":             32,
+"total_medals":             20,
+"gold_medals":              9,
+"silver_medals":              6,
+"bronze_medals":              5,
+"rgb_color": "rgb(193,0,0)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>USSR</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png' height='150' width='120'></td><td align='left'>Year: 1968<br>Total Medals: 20<br>Gold Medals: 9<br>Silver Medals: 6<br>Bronze Medals: 5<br>Athletes: 32</td></tr></table>",
+"year": "1968",
+"bin": "3" 
+},
+{
+ "country": "USSR",
+"year_code":           1972,
+"athletes":             39,
+"total_medals":             26,
+"gold_medals":             17,
+"silver_medals":              6,
+"bronze_medals":              3,
+"rgb_color": "rgb(193,0,0)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>USSR</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png' height='150' width='120'></td><td align='left'>Year: 1972<br>Total Medals: 26<br>Gold Medals: 17<br>Silver Medals: 6<br>Bronze Medals: 3<br>Athletes: 39</td></tr></table>",
+"year": "1972",
+"bin": "3" 
+},
+{
+ "country": "USSR",
+"year_code":           1976,
+"athletes":             42,
+"total_medals":             39,
+"gold_medals":             21,
+"silver_medals":              7,
+"bronze_medals":             11,
+"rgb_color": "rgb(193,0,0)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>USSR</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png' height='150' width='120'></td><td align='left'>Year: 1976<br>Total Medals: 39<br>Gold Medals: 21<br>Silver Medals: 7<br>Bronze Medals: 11<br>Athletes: 42</td></tr></table>",
+"year": "1976",
+"bin": "5" 
+},
+{
+ "country": "USSR",
+"year_code":           1980,
+"athletes":             46,
+"total_medals":             35,
+"gold_medals":             18,
+"silver_medals":             10,
+"bronze_medals":              7,
+"rgb_color": "rgb(193,0,0)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>USSR</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png' height='150' width='120'></td><td align='left'>Year: 1980<br>Total Medals: 35<br>Gold Medals: 18<br>Silver Medals: 10<br>Bronze Medals: 7<br>Athletes: 46</td></tr></table>",
+"year": "1980",
+"bin": "4" 
+},
+{
+ "country": "USSR",
+"year_code":           1984,
+"athletes":             50,
+"total_medals":             37,
+"gold_medals":             10,
+"silver_medals":             15,
+"bronze_medals":             12,
+"rgb_color": "rgb(193,0,0)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>USSR</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png' height='150' width='120'></td><td align='left'>Year: 1984<br>Total Medals: 37<br>Gold Medals: 10<br>Silver Medals: 15<br>Bronze Medals: 12<br>Athletes: 50</td></tr></table>",
+"year": "1984",
+"bin": "4" 
+},
+{
+ "country": "USSR",
+"year_code":           1988,
+"athletes":             52,
+"total_medals":             46,
+"gold_medals":             20,
+"silver_medals":             14,
+"bronze_medals":             12,
+"rgb_color": "rgb(193,0,0)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>USSR</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Russian_SFSR_%281918-1937%29.svg/200px-Flag_of_Russian_SFSR_%281918-1937%29.svg.png' height='150' width='120'></td><td align='left'>Year: 1988<br>Total Medals: 46<br>Gold Medals: 20<br>Silver Medals: 14<br>Bronze Medals: 12<br>Athletes: 52</td></tr></table>",
+"year": "1988",
+"bin": "5" 
+},
+{
+ "country": "Unified Countries",
+"year_code":           1992,
+"athletes":            132,
+"total_medals":             23,
+"gold_medals":              9,
+"silver_medals":              6,
+"bronze_medals":              8,
+"rgb_color": "#000000",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Olympic_flag.svg/360px-Olympic_flag.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Unified Countries</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Olympic_flag.svg/360px-Olympic_flag.svg.png' height='150' width='120'></td><td align='left'>Year: 1992<br>Total Medals: 23<br>Gold Medals: 9<br>Silver Medals: 6<br>Bronze Medals: 8<br>Athletes: 132</td></tr></table>",
+"year": "1992",
+"bin": "3" 
+},
+{
+ "country": "Belarus",
+"year_code":           1994,
+"athletes":              2,
+"total_medals":              2,
+"gold_medals":              0,
+"silver_medals":              2,
+"bronze_medals":              0,
+"rgb_color": "rgb(58, 154, 66)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/200px-Flag_of_Belarus.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Belarus</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/200px-Flag_of_Belarus.svg.png' height='150' width='120'></td><td align='left'>Year: 1994<br>Total Medals: 2<br>Gold Medals: 0<br>Silver Medals: 2<br>Bronze Medals: 0<br>Athletes: 2</td></tr></table>",
+"year": "1994",
+"bin": "1" 
+},
+{
+ "country": "Kazakhstan",
+"year_code":           1994,
+"athletes":              1,
+"total_medals":              3,
+"gold_medals":              1,
+"silver_medals":              2,
+"bronze_medals":              0,
+"rgb_color": "rgb(0,159,191)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/200px-Flag_of_Kazakhstan.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Kazakhstan</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/200px-Flag_of_Kazakhstan.svg.png' height='150' width='120'></td><td align='left'>Year: 1994<br>Total Medals: 3<br>Gold Medals: 1<br>Silver Medals: 2<br>Bronze Medals: 0<br>Athletes: 1</td></tr></table>",
+"year": "1994",
+"bin": "1" 
+},
+{
+ "country": "Russia",
+"year_code":           1994,
+"athletes":             28,
+"total_medals":             36,
+"gold_medals":             19,
+"silver_medals":             13,
+"bronze_medals":              4,
+"rgb_color": "rgb(0,31,152)",
+"image_url": "http://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/200px-Flag_of_Russia.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Russia</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/200px-Flag_of_Russia.svg.png' height='150' width='120'></td><td align='left'>Year: 1994<br>Total Medals: 36<br>Gold Medals: 19<br>Silver Medals: 13<br>Bronze Medals: 4<br>Athletes: 28</td></tr></table>",
+"year": "1994",
+"bin": "4" 
+},
+{
+ "country": "Ukraine",
+"year_code":           1994,
+"athletes":              2,
+"total_medals":              2,
+"gold_medals":              1,
+"silver_medals":              0,
+"bronze_medals":              1,
+"rgb_color": "rgb(255,208,0)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/200px-Flag_of_Ukraine.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Ukraine</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/200px-Flag_of_Ukraine.svg.png' height='150' width='120'></td><td align='left'>Year: 1994<br>Total Medals: 2<br>Gold Medals: 1<br>Silver Medals: 0<br>Bronze Medals: 1<br>Athletes: 2</td></tr></table>",
+"year": "1994",
+"bin": "1" 
+},
+{
+ "country": "Uzbekistan",
+"year_code":           1994,
+"athletes":              1,
+"total_medals":              1,
+"gold_medals":              1,
+"silver_medals":              0,
+"bronze_medals":              0,
+"rgb_color": "rgb(0,135,168)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/200px-Flag_of_Uzbekistan.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Uzbekistan</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/200px-Flag_of_Uzbekistan.svg.png' height='150' width='120'></td><td align='left'>Year: 1994<br>Total Medals: 1<br>Gold Medals: 1<br>Silver Medals: 0<br>Bronze Medals: 0<br>Athletes: 1</td></tr></table>",
+"year": "1994",
+"bin": "1" 
+},
+{
+ "country": "Belarus",
+"year_code":           1998,
+"athletes":              2,
+"total_medals":              2,
+"gold_medals":              0,
+"silver_medals":              0,
+"bronze_medals":              2,
+"rgb_color": "rgb(58, 154, 66)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/200px-Flag_of_Belarus.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Belarus</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/200px-Flag_of_Belarus.svg.png' height='150' width='120'></td><td align='left'>Year: 1998<br>Total Medals: 2<br>Gold Medals: 0<br>Silver Medals: 0<br>Bronze Medals: 2<br>Athletes: 2</td></tr></table>",
+"year": "1998",
+"bin": "1" 
+},
+{
+ "country": "Kazakhstan",
+"year_code":           1998,
+"athletes":              2,
+"total_medals":              2,
+"gold_medals":              0,
+"silver_medals":              0,
+"bronze_medals":              2,
+"rgb_color": "rgb(0,159,191)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/200px-Flag_of_Kazakhstan.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Kazakhstan</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/200px-Flag_of_Kazakhstan.svg.png' height='150' width='120'></td><td align='left'>Year: 1998<br>Total Medals: 2<br>Gold Medals: 0<br>Silver Medals: 0<br>Bronze Medals: 2<br>Athletes: 2</td></tr></table>",
+"year": "1998",
+"bin": "1" 
+},
+{
+ "country": "Russia",
+"year_code":           1998,
+"athletes":             45,
+"total_medals":             31,
+"gold_medals":             14,
+"silver_medals":             11,
+"bronze_medals":              6,
+"rgb_color": "rgb(0,31,152)",
+"image_url": "http://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/200px-Flag_of_Russia.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Russia</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/200px-Flag_of_Russia.svg.png' height='150' width='120'></td><td align='left'>Year: 1998<br>Total Medals: 31<br>Gold Medals: 14<br>Silver Medals: 11<br>Bronze Medals: 6<br>Athletes: 45</td></tr></table>",
+"year": "1998",
+"bin": "4" 
+},
+{
+ "country": "Ukraine",
+"year_code":           1998,
+"athletes":              1,
+"total_medals":              1,
+"gold_medals":              0,
+"silver_medals":              1,
+"bronze_medals":              0,
+"rgb_color": "rgb(255,208,0)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/200px-Flag_of_Ukraine.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Ukraine</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/200px-Flag_of_Ukraine.svg.png' height='150' width='120'></td><td align='left'>Year: 1998<br>Total Medals: 1<br>Gold Medals: 0<br>Silver Medals: 1<br>Bronze Medals: 0<br>Athletes: 1</td></tr></table>",
+"year": "1998",
+"bin": "1" 
+},
+{
+ "country": "Belarus",
+"year_code":           2002,
+"athletes":              1,
+"total_medals":              1,
+"gold_medals":              0,
+"silver_medals":              0,
+"bronze_medals":              1,
+"rgb_color": "rgb(58, 154, 66)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/200px-Flag_of_Belarus.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Belarus</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/200px-Flag_of_Belarus.svg.png' height='150' width='120'></td><td align='left'>Year: 2002<br>Total Medals: 1<br>Gold Medals: 0<br>Silver Medals: 0<br>Bronze Medals: 1<br>Athletes: 1</td></tr></table>",
+"year": "2002",
+"bin": "1" 
+},
+{
+ "country": "Estonia",
+"year_code":           2002,
+"athletes":              2,
+"total_medals":              3,
+"gold_medals":              1,
+"silver_medals":              1,
+"bronze_medals":              1,
+"rgb_color": "rgb(55, 122, 11)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/200px-Flag_of_Estonia.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Estonia</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/200px-Flag_of_Estonia.svg.png' height='150' width='120'></td><td align='left'>Year: 2002<br>Total Medals: 3<br>Gold Medals: 1<br>Silver Medals: 1<br>Bronze Medals: 1<br>Athletes: 2</td></tr></table>",
+"year": "2002",
+"bin": "1" 
+},
+{
+ "country": "Russia",
+"year_code":           2002,
+"athletes":             35,
+"total_medals":             18,
+"gold_medals":              6,
+"silver_medals":              5,
+"bronze_medals":              7,
+"rgb_color": "rgb(0,31,152)",
+"image_url": "http://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/200px-Flag_of_Russia.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Russia</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/200px-Flag_of_Russia.svg.png' height='150' width='120'></td><td align='left'>Year: 2002<br>Total Medals: 18<br>Gold Medals: 6<br>Silver Medals: 5<br>Bronze Medals: 7<br>Athletes: 35</td></tr></table>",
+"year": "2002",
+"bin": "2" 
+},
+{
+ "country": "Belarus",
+"year_code":           2006,
+"athletes":              1,
+"total_medals":              1,
+"gold_medals":              0,
+"silver_medals":              1,
+"bronze_medals":              0,
+"rgb_color": "rgb(58, 154, 66)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/200px-Flag_of_Belarus.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Belarus</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/200px-Flag_of_Belarus.svg.png' height='150' width='120'></td><td align='left'>Year: 2006<br>Total Medals: 1<br>Gold Medals: 0<br>Silver Medals: 1<br>Bronze Medals: 0<br>Athletes: 1</td></tr></table>",
+"year": "2006",
+"bin": "1" 
+},
+{
+ "country": "Estonia",
+"year_code":           2006,
+"athletes":              2,
+"total_medals":              3,
+"gold_medals":              3,
+"silver_medals":              0,
+"bronze_medals":              0,
+"rgb_color": "rgb(55, 122, 11)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/200px-Flag_of_Estonia.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Estonia</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/200px-Flag_of_Estonia.svg.png' height='150' width='120'></td><td align='left'>Year: 2006<br>Total Medals: 3<br>Gold Medals: 3<br>Silver Medals: 0<br>Bronze Medals: 0<br>Athletes: 2</td></tr></table>",
+"year": "2006",
+"bin": "1" 
+},
+{
+ "country": "Latvia",
+"year_code":           2006,
+"athletes":              1,
+"total_medals":              1,
+"gold_medals":              0,
+"silver_medals":              0,
+"bronze_medals":              1,
+"rgb_color": "rgb(130,40,42)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/200px-Flag_of_Latvia.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Latvia</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/200px-Flag_of_Latvia.svg.png' height='150' width='120'></td><td align='left'>Year: 2006<br>Total Medals: 1<br>Gold Medals: 0<br>Silver Medals: 0<br>Bronze Medals: 1<br>Athletes: 1</td></tr></table>",
+"year": "2006",
+"bin": "1" 
+},
+{
+ "country": "Russia",
+"year_code":           2006,
+"athletes":             35,
+"total_medals":             41,
+"gold_medals":             16,
+"silver_medals":             12,
+"bronze_medals":             13,
+"rgb_color": "rgb(0,31,152)",
+"image_url": "http://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/200px-Flag_of_Russia.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Russia</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/200px-Flag_of_Russia.svg.png' height='150' width='120'></td><td align='left'>Year: 2006<br>Total Medals: 41<br>Gold Medals: 16<br>Silver Medals: 12<br>Bronze Medals: 13<br>Athletes: 35</td></tr></table>",
+"year": "2006",
+"bin": "5" 
+},
+{
+ "country": "Ukraine",
+"year_code":           2006,
+"athletes":              3,
+"total_medals":              3,
+"gold_medals":              0,
+"silver_medals":              0,
+"bronze_medals":              3,
+"rgb_color": "rgb(255,208,0)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/200px-Flag_of_Ukraine.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Ukraine</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/200px-Flag_of_Ukraine.svg.png' height='150' width='120'></td><td align='left'>Year: 2006<br>Total Medals: 3<br>Gold Medals: 0<br>Silver Medals: 0<br>Bronze Medals: 3<br>Athletes: 3</td></tr></table>",
+"year": "2006",
+"bin": "1" 
+},
+{
+ "country": "Belarus",
+"year_code":           2010,
+"athletes":              3,
+"total_medals":              3,
+"gold_medals":              1,
+"silver_medals":              1,
+"bronze_medals":              1,
+"rgb_color": "rgb(58, 154, 66)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/200px-Flag_of_Belarus.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Belarus</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/200px-Flag_of_Belarus.svg.png' height='150' width='120'></td><td align='left'>Year: 2010<br>Total Medals: 3<br>Gold Medals: 1<br>Silver Medals: 1<br>Bronze Medals: 1<br>Athletes: 3</td></tr></table>",
+"year": "2010",
+"bin": "1" 
+},
+{
+ "country": "Estonia",
+"year_code":           2010,
+"athletes":              1,
+"total_medals":              1,
+"gold_medals":              0,
+"silver_medals":              1,
+"bronze_medals":              0,
+"rgb_color": "rgb(55, 122, 11)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/200px-Flag_of_Estonia.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Estonia</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/200px-Flag_of_Estonia.svg.png' height='150' width='120'></td><td align='left'>Year: 2010<br>Total Medals: 1<br>Gold Medals: 0<br>Silver Medals: 1<br>Bronze Medals: 0<br>Athletes: 1</td></tr></table>",
+"year": "2010",
+"bin": "1" 
+},
+{
+ "country": "Kazakhstan",
+"year_code":           2010,
+"athletes":              1,
+"total_medals":              1,
+"gold_medals":              0,
+"silver_medals":              1,
+"bronze_medals":              0,
+"rgb_color": "rgb(0,159,191)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/200px-Flag_of_Kazakhstan.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Kazakhstan</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/200px-Flag_of_Kazakhstan.svg.png' height='150' width='120'></td><td align='left'>Year: 2010<br>Total Medals: 1<br>Gold Medals: 0<br>Silver Medals: 1<br>Bronze Medals: 0<br>Athletes: 1</td></tr></table>",
+"year": "2010",
+"bin": "1" 
+},
+{
+ "country": "Latvia",
+"year_code":           2010,
+"athletes":              3,
+"total_medals":              3,
+"gold_medals":              0,
+"silver_medals":              3,
+"bronze_medals":              0,
+"rgb_color": "rgb(130,40,42)",
+"image_url": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/200px-Flag_of_Latvia.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Latvia</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/200px-Flag_of_Latvia.svg.png' height='150' width='120'></td><td align='left'>Year: 2010<br>Total Medals: 3<br>Gold Medals: 0<br>Silver Medals: 3<br>Bronze Medals: 0<br>Athletes: 3</td></tr></table>",
+"year": "2010",
+"bin": "1" 
+},
+{
+ "country": "Russia",
+"year_code":           2010,
+"athletes":             22,
+"total_medals":             25,
+"gold_medals":              6,
+"silver_medals":              5,
+"bronze_medals":             14,
+"rgb_color": "rgb(0,31,152)",
+"image_url": "http://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/200px-Flag_of_Russia.svg.png",
+"detail": "<table cellpadding='3' style='line-height:1.25'><tr><th colspan='2.5'>Russia</th></tr><tr><td><img src='http://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/200px-Flag_of_Russia.svg.png' height='150' width='120'></td><td align='left'>Year: 2010<br>Total Medals: 25<br>Gold Medals: 6<br>Silver Medals: 5<br>Bronze Medals: 14<br>Athletes: 22</td></tr></table>",
+"year": "2010",
+"bin": "3" 
+} 
+]
+  $scope.controls = {
+ "y": {
+ "name": "y",
+"value": "total_medals",
+"values": [ "gold_medals", "silver_medals", "bronze_medals", "total_medals" ],
+"label": "Select  y :" 
+} 
+} 
+  $scope.filters = []
+  
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  
+  $scope.$watch('selected', function(){
+    var keys = _.pluck($scope.selected, "variable")
+    var values = _.pluck($scope.selected, "value")
+    $scope.opts.selected = _.zipObject(keys, values)
+  }) 
+  
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+	}, true)
+}  
+
+function drawChart(opts, data){ 
+  if (Object.keys(opts.selected).length > 0){
+    data = _.filter(data, opts.selected)
+  }
+  
+	var data = d3.nest()
+		.key(function(d){
+			return opts.group === undefined ? 'main' : d[opts.group]
+		})
+		.entries(data)
+	
+	nv.addGraph(function() {
+		var chart = nv.models[opts.type]()
+			.x(function(d) { return d[opts.x] })
+			.y(function(d) { return d[opts.y] })
+			.width(opts.width)
+			.height(opts.height)
+		
+	chart
+  .color([ "rgb(193,0,0)", "#000000", "rgb(58, 154, 66)", "rgb(0,159,191)", "rgb(0,31,152)", "rgb(255,208,0)", "rgb(0,135,168)", "rgb(55, 122, 11)", "rgb(130,40,42)" ])
+  .showControls(false)
+  .showDistX(true)
+  .showDistY(true)
+  .size( function(d){return d.bin} )
+  .tooltipContent( function(key, x, y, e){
+return '<p>' + e.point.detail + '</p>'
+'<p><b>'+ 'yAxis: '+ '</b>' + y +'</p>'
+} )
+     .margin({
+ "left":     90,
+"top":     50,
+"right":     20,
+"bottom":     40 
+})      
+	chart.xAxis
+  .tickValues([ "1956", "1960", "1964", "1968", "1972", "1976", "1980", "1984", "1988", "1992", "1994", "1998", "2002", "2006", "2010" ])
+  .rotateLabels(   -20)
+
+	
+	
+	chart.yAxis
+  .tickFormat(function(d) {return d3.format('.02f')(d)})
+  .width(    70)
+ .axisLabel( opts.y )
+
+
+	d3.select("#" + opts.id + ' svg')
+  // .empty()
+		.datum(data)
+		.transition().duration(300)
+		.call(chart);
+	
+	 nv.utils.windowResize(chart.update);
+	 return chart;
+  });
+};
+</script>
+  </body>
+<center><div style="display:table;width:320px;height:10px;font-size:12px" class='gray'>
+  <a href="http://twitter.com/abresler" target="_blank"><strong>Visualized and Analyzed by Alex Bresler</strong></a><a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center></div>
+</html>

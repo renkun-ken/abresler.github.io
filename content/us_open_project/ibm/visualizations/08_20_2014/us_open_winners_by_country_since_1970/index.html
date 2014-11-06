@@ -1,0 +1,283 @@
+<!doctype HTML>
+<title>Exploring US Open Winners by Country Since 1970</title>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://marketplace.aragorntech.com/css/app.css"/>
+  <link rel="stylesheet" href="http://marketplace.aragorntech.com/css/elusive-webfont.css" />
+  <script src="http://marketplace.aragorntech.com/js/vendor/packery.pkgd.js"></script>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://nvd3.org/assets/css/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/assets/lib/fisheye.js' type='text/javascript'></script>
+    
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+      <script type="text/ng-template" id="template/modal/backdrop.html">
+    <div class="modal-backdrop fade {{ backdropClass }}"
+         ng-class="{in: animate}"
+         ng-style="{'z-index': 1040 + (index && 1 || 0) + index*10}"
+    ></div>
+  </script>
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 825px;
+      height: 500px;
+    }  
+    </style>
+     <meta name="description" content="US Open Winners by Country and Tour Since 1970" />
+<link rel="canonical" href="http://aragorn.org/us_open_project/ibm/visualizations/08_20_2014/us_open_winners_by_country_since_1970/" />
+<meta property="og:description" content="US Open Winners by Country and Tour Since 1970" />
+<meta property="og:image" content="http://aragorn.org/us_open_project/ibm/visualizations/08_20_2014/us_open_winners_by_country_since_1970/screen.png" />
+<meta property="og:site_name" content="Aragorn" />
+<meta property="og:title" content="http://aragorn.org/us_open_project/ibm/visualizations/08_20_2014/us_open_winners_by_country_since_1970/" />
+<meta property="og:type" content="article" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="http://aragorn.org/us_open_project/ibm/visualizations/08_20_2014/us_open_winners_by_country_since_1970/" />
+        <meta name="twitter:title" content="US Open Winners by Country and Tour Since 1970" />
+        <meta name="twitter:description" content="US Open Winners by Country and Tour Since 1970" />
+        <meta name="twitter:image" content="http://aragorn.org/us_open_project/ibm/visualizations/08_20_2014/us_open_winners_by_country_since_1970/screen.png" />
+        <meta name="twitter:site" content="Aragorn" />
+    <center>
+    <h3><p class="sansserif"><img src="http://www.atpworldtour.com/media/main_logo.png" height="50" width="50"> and <img src="http://whatsupusana.com/wp-content/uploads/2012/07/WTA_gradient1.jpg" height="50" width="50"> <img src="http://www.essentialtennis.com/wp-content/uploads/2013/09/US-Open-logo.jpg" height="50" width="50"> Winners by Country Since 1970
+</p></h3>
+</center>
+  </head>
+  <body >
+    
+    <div id = 'chart603755c4866c' class = 'rChart nvd3'></div>    
+    <script type='text/javascript'>
+ $(document).ready(function(){
+      drawchart603755c4866c()
+    });
+    function drawchart603755c4866c(){  
+      var opts = {
+ "dom": "chart603755c4866c",
+"width":    825,
+"height":    500,
+"x": "country",
+"y": "count",
+"group": "tour",
+"type": "multiBarHorizontalChart",
+"id": "chart603755c4866c" 
+},
+        data = [
+ {
+ "country": "United States",
+"tour": "ATP",
+"count": 18 
+},
+{
+ "country": "United States",
+"tour": "WTA",
+"count": 23 
+},
+{
+ "country": "Australia",
+"tour": "ATP",
+"count": 5 
+},
+{
+ "country": "Australia",
+"tour": "WTA",
+"count": 3 
+},
+{
+ "country": "Germany",
+"tour": "ATP",
+"count": 1 
+},
+{
+ "country": "Germany",
+"tour": "WTA",
+"count": 5 
+},
+{
+ "country": "Switzerland",
+"tour": "ATP",
+"count": 5 
+},
+{
+ "country": "Switzerland",
+"tour": "WTA",
+"count": 1 
+},
+{
+ "country": "Belgium",
+"tour": "WTA",
+"count": 5 
+},
+{
+ "country": "Czechoslovakia",
+"tour": "ATP",
+"count": 3 
+},
+{
+ "country": "Czechoslovakia",
+"tour": "WTA",
+"count": 1 
+},
+{
+ "country": "Spain",
+"tour": "ATP",
+"count": 3 
+},
+{
+ "country": "Spain",
+"tour": "WTA",
+"count": 1 
+},
+{
+ "country": "Argentina",
+"tour": "ATP",
+"count": 2 
+},
+{
+ "country": "Argentina",
+"tour": "WTA",
+"count": 1 
+},
+{
+ "country": "Russia",
+"tour": "ATP",
+"count": 1 
+},
+{
+ "country": "Russia",
+"tour": "WTA",
+"count": 2 
+},
+{
+ "country": "Sweden",
+"tour": "ATP",
+"count": 3 
+},
+{
+ "country": "Yugoslavia",
+"tour": "WTA",
+"count": 2 
+},
+{
+ "country": "Romania",
+"tour": "ATP",
+"count": 1 
+},
+{
+ "country": "Serbia",
+"tour": "ATP",
+"count": 1 
+},
+{
+ "country": "United Kingdom",
+"tour": "ATP",
+"count": 1 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != "bulletChart"){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        chart
+  .showControls(false)
+  .showValues(true)
+  .tooltips(false)
+  .color([ "#32bff2", "#830f58" ])
+  .margin({
+ "left":    100 
+})
+          
+        
+
+        
+        
+          chart.yAxis
+  .tickFormat(function(d) {return  d3.format(',.02f')(d)})
+  .width(    40)
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(300)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+    
+<center>Visualized by <a href="http://aragorn.org/" target="_blank"><img src="http://www.aragorn.org/aragorn_logo.png" height="26" width="137" alt="aragorn"></a></b></center>
+    
+  </body>
+<script type='text/javascript'>
+var _qevents = _qevents || [];
+               
+               (function() {
+               var elem = document.createElement('script');
+               elem.src = (document.location.protocol == 'https:' ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+               elem.async = true;
+               elem.type = 'text/javascript';
+               var scpt = document.getElementsByTagName('script')[0];
+               scpt.parentNode.insertBefore(elem, scpt);
+               })();
+               
+               _qevents.push({
+               qacct:'p-S9mx3XF_GwU-x'
+               });
+               </script>
+               
+               <script>
+               var _gaq=[['_setAccount','UA-34398972-1'],['_trackPageview']];
+               (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+               g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+               s.parentNode.insertBefore(g,s)}(document,'script'));
+               </script>
+              <script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-S9mx3XF_GwU-x"
+});
+</script>
+</html>
