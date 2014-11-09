@@ -22,7 +22,7 @@ In order to partake in this adventure you will need these powerful weapons in yo
 
 Now that we are ready, we must decide what exactly to explore.  Being a huge fan of THE <img src="http://www.thefoxisblack.com/blogimages/Brooklyn-Nets-logo.jpg" alt="" height = "75px" width = "75px"> and still being on cloud 9 from our recent beatdown of the despised New York Knickerbockers I've decided to explore <a href="http://www.nba.com" target='_blank'>NBA</a> team data from my favorite NBA data site <a href="http://www.basketball-reference.com" target='_blank'>Basketball Reference</a>.
 
-After some navigation on the through the links on the home we find what we want the <a href="http://www.basketball-reference.com/leagues/" target='_blank'>Seasons Index</a> page.  Let's look at <http://www.basketball-reference.com/leagues/NBA_2014.html" target='_blank'>2013-2014</a> season to see what it has.
+After some navigation on the through the links on the home we find what we want the <a href="http://www.basketball-reference.com/leagues/" target='_blank'>Seasons Index</a> page.  Let's look at the <a href ="http://www.basketball-reference.com/leagues/NBA_2014.html" target='_blank'>2013-2014</a> season to see what it has.
 
 Looks like the page is essentially a bunch of tables, fantastic news for <a href="http://en.wikipedia.org/wiki/Data_scraping" target='_blank'>data scraping</a>.  Let's try to pull in the **Team** stats table.  
 
