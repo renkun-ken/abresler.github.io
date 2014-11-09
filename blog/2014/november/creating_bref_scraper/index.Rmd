@@ -1,0 +1,213 @@
+---
+title: "The 5 Minute Scraper"
+author: <a href="https://twitter.com/abresler" target="_blank">Alex Bresler</a>
+date: "November 9, 2014"
+output:
+  html_document:
+  includes:
+   css: ~/Desktop/webpage/abresler.github.io/style/style.min.css
+---
+
+If you are like me and love sports, data, and visualization this post is for you.  In this tutorial you will learn how to harness power of <a href="http://cran.r-project.org/" target='_blank'>R</a> to build a function that gives you access to data from <a href="http://www.basketball-reference.com" target='_blank'>Basketball Reference</a>.
+
+---
+
+<h3>Arm Yourself <img src="http://ww2db.com/images/vehicle_sherman3.jpg" alt="" height = "100px" width = "130px"></h3> 
+
+In order to partake in this adventure you will need these powerful weapons in your arsenal.  First make sure you have <a href="http://cran.r-project.org/" target='_blank'>R</a> and <a href="http://www.rstudio.com/products/rstudio/" target='_blank'>RStudio</a> installed.  Then if you don't already use <a href="https://www.mozilla.org/en-US/firefox/new/" target='_blank'>Firefox</a> or <a href="http://www.google.com/chrome/" target='_blank'>Chrome</a> pick a browser horse and install it.  Finally, launch your chosen browse and install the **fantastic** <a href="http://selectorgadget.com/" target='_blank'>SelectorGadget</a> widget. Fire up <img src="http://www.rstudio.com/wp-content/uploads/2014/06/RStudio-Ball.png" alt="" height = "30px" width = "30px">, crack your knuckles and finish any other pre-game routines, it's game time.
+
+---
+
+<h3>Party Time <img src="http://images.dazedcdn.com/786x700/dd/1050/5/1055696.jpg" alt="" height = "100px" width = "130px"></h3> 
+
+Now that we are ready, we must decide what exactly to explore.  Being a huge fan of THE <img src="http://www.thefoxisblack.com/blogimages/Brooklyn-Nets-logo.jpg" alt="" height = "75px" width = "75px"> and still being on cloud 9 from our recent beatdown of the despised New York Knickerbockers I've decided to explore <a href="http://www.nba.com" target='_blank'>NBA</a> team data from my favorite NBA data site <a href="http://www.basketball-reference.com" target='_blank'>Basketball Reference</a>.
+
+After some navigation on the through the links on the home we find what we want the <a href="http://www.basketball-reference.com/leagues/" target='_blank'>Seasons Index</a> page.  Let's look at <http://www.basketball-reference.com/leagues/NBA_2014.html" target='_blank'>2013-2014</a> season to see what it has.
+
+Looks like the page is essentially a bunch of tables, fantastic news for <a href="http://en.wikipedia.org/wiki/Data_scraping" target='_blank'>data scraping</a>.  Let's try to pull in the **Team** stats table.  
+
+Use the Selector widget and navigate to the bottom of the <a href="http://www.basketball-reference.com/leagues/NBA_2014.html#team::none" target='_blank'>Team Stats</a> and click such that an orange box surrounds the table.  A pop up with the text **#team** should appear.  
+
+Booya, that's the <a href=""http://www.w3schools.com/cssref/css_selectors.asp"" target='_blank'>CSS Selector </a>for the table.  With this information you know what you need to bring this data into R.  Navigate back into RStudio, fire up a new R Script file because its data scraping time.
+
+---
+
+<h3>Ready, Aim, Fire <img src="http://ww2db.com/images/weapon_75mmhowm1_4.jpg" alt="" height = "100px" width = "130px"></h3> 
+
+Once in your script you need to load the needed packages bring you to victory.  I am about to start embedding code but before I do here a few quick notes.  As a self taught coder I like to code left to right and assign using **->**, something for some strange reason, is frowned upon by **the authority**. Most people code right to left and assign using **<- ** but it's a free country and I like to code how I read but you can do it however you like, there is no wrong answer just being able to do things or not.  
+
+Next point, there is a new craze hitting R that *all* the cool kids are using, it's called piping and it is used with the symbols *%>%* or *%>>%*, think of it like the word **THEN**, I prefer the %>>% syntax from the fantastic pipeR package.  Finally anytime you see # it is a comment that the code will skip, please pardon my jibberish but I hope you can understand most of my comments.
+
+### Load the Necessary Packages
+```{r eval=T, echo=F, warning=FALSE}
+c('rvest','dplyr','pipeR', 'knitr') -> packages # you don't need knitr but I do to make this post
+#dplyr or pipeR use the install.packages function to install them, install.packages('dplyr') and install.packages('pipeR')
+#If you don't have rvest do the following - install devtools, install.packages('devtools')
+#Load devtools using library(devtools) and then install rvest by using install_github('hadley/rvest')
+lapply(packages, library, character.only = T) #loops through the packages and loads them
+```
+### Start Scraping 
+Step 1 lets get the table into R.  Since we want scale this to other tables we are going to turn off the headers and see if we can find the row with the column names.  In Basketball-References all the stats tables *usually* start with a column called **Rk** or rank.
+
+It looks like the headers are in the first row [but in some cases its the second].  Let's extract out that row and place it into a character vector.  Next we use that vector to name our <a href=""http://www.w3schools.com/cssref/css_selectors.asp"" target='_blank'>Data Frame </a>[what r calls the table with all the data in it].  Since R is a case sensitive language it's good practice to use lower case headers and we will do that here.  Also R **hates** things likes spaces or characters like % or / in headers so let's replace any of those with a period.
+
+Finally we want to skip the row with the headers, in order to prepare ourselves for the function we will soon write, we want to find the row the headers are in and then use the row below that through the final row to capture the data portion of the data frame.
+
+```{r}
+'http://www.basketball-reference.com/leagues/NBA_2014.html' -> url
+'#team' -> css_page
+url %>>%
+	html %>>%
+	html_nodes(css_page) %>>%
+	html_table(header = F) %>>%
+	data.frame() %>>%
+	tbl_df() -> total_table
+total_table %>>%
+	filter(X.1 == 'Rk') %>>% as.character -> names
+'Rk' %>>% grep(x = total_table$X.1) -> row_of_header #find where rank is
+names %>>% tolower -> names(total_table)
+names(total_table) %>>% (gsub('\\%|/','\\.',.)) -> names(total_table)
+(row_of_header + 1) %>>% (total_table[.:nrow(total_table),]) -> total_table #skip that row and go to the end row and go to the end
+total_table %>>% head
+```
+
+###Booya It's In R
+<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+<style type="text/css">
+p{clear:both;}
+</style>
+Now you will see a Data Frame in your workspace called total_table, we already found and replaced the headers but there are still a few more quick data cleaning chores remaining before you have a clean dataset.
+
+It looks like there are asterisks at the end of some of the team's that indicate whether the team made the playoffs, sorry Knicks fans.  Let's add a logical column for teams that made the playoffs and then remove the astericks.
+
+```{r echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+total_table$team %>>% grepl(pattern = '\\*') -> total_table$playoff_team #playoff team?
+total_table$team %>>% (gsub('\\*','',.)) -> total_table$team #rmove asteric
+```
+
+Next let's remove the rank column and get rid of the row with the league averages since that is not an actual team and we can easily recalculate summary statistics when we need them.
+
+
+<h3>We Did It, Look at That Clean Data Frame</h3>
+<div><img src="http://1.bp.blogspot.com/-kqAdBumQCwg/T751amxxtjI/AAAAAAAABPA/0v6-CQ2kNQE/s1600/nets-fan.gif" alt="" height = "210px" width = "528px"></div>
+```{r echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+total_table %>>%
+	filter(!team == 'League Average') -> total_table # filter out averages{the character ! means NOT}
+NULL -> total_table$rk #add the logical names
+```
+
+```{r cool, results='asis', eval=TRUE, echo=FALSE}
+total_table %>>% kable('html', table.attr='id="total_table"')
+```
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+  $('#total_table').dataTable();
+} );
+</script>
+
+---
+
+<h3>That Was Easy, Let's Kick This Up and Turn Our Code Into a Function<img src="http://assets.sbnation.com/assets/1213616/netskid.gif" alt="" height = "100px" width = "130px"></h3>
+
+Now that we know how to pull the table from page let's teach R how to do this as a function with inputs.  If we accomplish this we can do cool things like loop through all the seasons since 1951 or pull in different tables from the page.  We will become masters of all NBA team data with just a few inputs, an internet connection and R.
+
+The key to making this work is understanding the structure of the URL.  Thankfully our friends at <a href="http://www.sports-reference.com/" target='_blank'>Sports Reference</a> make it easy for us.  The URL structure conisist of 3 things, the base, the league and the year end of the season.  We can easily teach our function to create this by pasting the 3 inputs together them to form a URL.  
+
+We know how to scrape the table once we have a URL from earlier.  I also want to extract out the team ID's which I can get from the URL's on the page mirroring how we scrape a table except looking for XML tags with //a and a hyperlink.  This process requires some data cleaning as well to extract out just the team id.
+
+Since we can scale this function I want add to the Data Frame the season and table name from the page [team, opponent, and misc are in every season but there are more you can use if you look through various years] as this function will find whichever table you ask it to.  Finally we want to give you the ability to timestamp if you want to keep track of changes in the data for the current season or run a <a href="http://www.r-bloggers.com/batch-processing-vs-interactive-sessions/" target='_blank'>Sports Reference</a> to automatically scrape the data each day of the season.
+
+So here's our beloved **getBREFTeamStats** function.
+
+```{r eval=TRUE, tidy=F, warning= F}
+getBREFTeamStatTable <- function(season_end = 2015, table_name = 'team', date = T){
+	c('rvest','dplyr','pipeR') -> packages
+	lapply(packages, library, character.only = T)
+	'http://www.basketball-reference.com/leagues/' -> base
+	'NBA' -> league
+	'#' %>>% paste0(table_name) -> css_page
+	css_page %>>% paste0(" , ", css_page,' a') -> css_id
+	table_name %>>% tolower -> table_name
+	table_name %>>% paste('stats', sep = "_") -> table
+	base %>>% paste0(league,'_',season_end,".html") -> url
+	url %>>% ## get table
+		html %>>%
+		html_nodes(css_page) %>>%
+		html_table(header = F) %>>% data.frame() %>>% tbl_df() -> df
+
+	if(df$X.1[1] == 'Rk'){
+		df %>>%
+			filter(X.1 == "Rk") %>>% as.character -> names
+		'Rk' %>>% grep(x = df$X.1) -> row_of_header #find where rank is
+		(row_of_header + 1) %>>% (df[.:nrow(df),]) -> df #skip that row and go to the end
+		names %>>% tolower-> names(df)} else{
+			df %>>%
+				filter(X.1 == "Rk") %>>% as.character -> names
+			'Rk' %>>% grep(x = df$X.1) -> row_of_header #find where rank is
+			(row_of_header + 1) %>>% (df[.:nrow(df),]) -> df #skip that row and go to the end
+			names %>>% tolower-> names(df)
+		}
+	names(df) %>>% (gsub('\\%|/','\\.',.)) -> names(df)
+	NULL -> df$rk
+	c('team','arena') -> table_name_character
+	df[,!(df %>>% names) %in% table_name_character] %>>% 
+		apply(2, function(x) gsub('\\,','',x) %>>% as.numeric(x))  -> 
+		df[,!(df %>>% names) %in% table_name_character] #get rid of commas and make numeric
+	df$team %>>% grepl(pattern = '\\*') -> df$playoff_team
+	df$team %>>% (gsub('\\*','',.)) -> df$team
+	df %>>% nrow() -1  -> rows
+	df[1:rows,] -> df
+	(season_end-1) %>>% paste0("-",season_end) -> season
+	##Grab Team Ids
+	url %>>% ## get table
+		html %>>%
+		html_nodes(css_id) %>>%
+		html_attrs() %>>% unlist %>>% as.character -> stems
+	stems[3:length(stems)] -> stems #skip the 1st 2 rows since they are labels
+	stems %>>% (gsub('\\/|.html|teams','',.)) %>>% #strip out the text
+		(gsub(season_end,'',.)) -> bref_team_id #strip out the year to get the team id
+	data.frame(season,table_name = table, bref_team_id, df) -> df  #combine into 1 df
+	if(date == T){
+		Sys.time() -> df$scrape_time #add scrape time if you want it
+	}
+	return(df)
+}
+```
+
+Let's test it out.  Note I auto-populated the function so you can have this year's team data ready to go without entering parameters.  Let's try it, fingers crossed!
+
+```{r 2015 Team, results='asis', eval=TRUE, echo=TRUE}
+getBREFTeamStatTable() -> team2015 
+team2015 %>>% kable('html', table.attr='id="team2015"')
+```
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+  $('#team2015').dataTable();
+} );
+</script>
+<div><img src="http://gif.mocksession.com/wp-content/uploads/2012/05/EXCITED-GRIZZLIES-KID.gif" alt="yeah" height = "360px" width = "640px"></div>
+It worked!  Now let's try one last thing to make sure it **REALLY** works.  Lets test another season and different table name.  How about the my first season on this earth, the **1983-1984** and the **Miscellaneous** table.
+
+```{r 1984 Misc, results='asis', eval=TRUE, echo=TRUE}
+getBREFTeamStatTable(season_end = 1984,table_name = 'misc',date = F) -> misc1984
+misc1984 %>>% kable('html', table.attr='id="misc1984"')
+```
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+  $('#misc1984').dataTable();
+} );
+</script>
+
+<div><img src="http://media.giphy.com/media/zjTi9mrQcmXUQ/giphy.gif" alt="jeah" height = "316px" width = "500px"></div>
+
+### Wrapping It Up
+Hope you found this tutorial fun, enlightening, and fairly easy to follow.  Please feel free to peruse the <a href="https://github.com/abresler/blog_code/blob/master/nba/team_scraper_code.R" target='_blank'>source code</a>
+and **ABSOLUTELY** make use of the <a href="https://github.com/abresler/blog_code/blob/master/nba/functions/getBREFTeamStats.R" target='_blank'>function</a> we created however you please.
+
+For my next post I will use our beautiful new function to create a few interactive data visualizations and explore some quiche algorithms that may help you see data in a new and even more empowering light.
+
+Until then stay keep on keeping on and as always feel free to reach out to me if you have any questions or comments on the <a href="https://twitter.com/abresler" target='_blank'>here</a>.
