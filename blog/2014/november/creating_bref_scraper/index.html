@@ -100,6 +100,11 @@ Ready, Aim, Fire <img src="http://ww2db.com/images/weapon_75mmhowm1_4.jpg" alt h
 <p>Next point, there is a new craze hitting R that <em>all</em> the cool kids are using, it’s called piping and it is used with the symbols <em>%&gt;%</em> or <em>%&gt;&gt;%</em>, think of it like the word <strong>THEN</strong>, I prefer the %&gt;&gt;% syntax from the fantastic <a href="hhttps://github.com/renkun-ken/pipeR" target="_blank">pipeR</a> package. Finally anytime you see # it is a comment that the code will skip, please pardon my jibberish but I hope you can understand most of my comments.</p>
 <div id="load-the-necessary-packages" class="section level3">
 <h3>Load the Necessary Packages</h3>
+<pre class="r"><code>c('rvest','dplyr','pipeR', 'knitr') -&gt; packages # you don't need knitr but I do to make this post
+#dplyr or pipeR use the install.packages function to install them, install.packages('dplyr') and install.packages('pipeR')
+#If you don't have rvest do the following - install devtools, install.packages('devtools')
+#Load devtools using library(devtools) and then install rvest by using install_github('hadley/rvest')
+lapply(packages, library, character.only = T) #loops through the packages and loads them</code></pre>
 <pre><code>## 
 ## Attaching package: 'rvest'
 ## 
